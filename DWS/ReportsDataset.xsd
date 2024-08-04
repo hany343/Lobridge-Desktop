@@ -1,0 +1,1086 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReportsDataset" targetNamespace="http://tempuri.org/ReportsDataset.xsd" xmlns:mstns="http://tempuri.org/ReportsDataset.xsd" xmlns="http://tempuri.org/ReportsDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="wdbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="wdbConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LoBridge.Properties.Settings.GlobalReference.Default.wdbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LastLadingoutTableAdapter" GeneratorDataComponentClassName="LastLadingoutTableAdapter" Name="LastLadingout" UserDataComponentName="LastLadingoutTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="wdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        TOP (20) Lading_Out.ladingID, Lading_Out.Qty, Lading_Out.Date, Drivers.Driver_Name, Customers.Cust_NAME, [Order].Order_Number, Commodity.Comm_NAME, Contract.Contract_Number, Truck.Truck_number, 
+                         Lading_Out.LOusername
+FROM            Contract INNER JOIN
+                         Commodity ON Contract.Comm_ID = Commodity.Comm_ID INNER JOIN
+                         [Order] ON Contract.Contract_ID = [Order].Contract_ID INNER JOIN
+                         Customers ON [Order].Cust_ID = Customers.Cust_ID INNER JOIN
+                         Lading_Out INNER JOIN
+                         Drivers ON Lading_Out.Driver_ID = Drivers.Driver_ID ON [Order].Order_ID = Lading_Out.Order_ID INNER JOIN
+                         Truck ON Lading_Out.Truck_ID = Truck.Truck_ID
+ORDER BY Lading_Out.ladingID DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ladingID" DataSetColumn="ladingID" />
+              <Mapping SourceColumn="Qty" DataSetColumn="Qty" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="Driver_Name" DataSetColumn="Driver_Name" />
+              <Mapping SourceColumn="Cust_NAME" DataSetColumn="Cust_NAME" />
+              <Mapping SourceColumn="Order_Number" DataSetColumn="Order_Number" />
+              <Mapping SourceColumn="Comm_NAME" DataSetColumn="Comm_NAME" />
+              <Mapping SourceColumn="Contract_Number" DataSetColumn="Contract_Number" />
+              <Mapping SourceColumn="Truck_number" DataSetColumn="Truck_number" />
+              <Mapping SourceColumn="LOusername" DataSetColumn="LOusername" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Lcacrd1TableAdapter" GeneratorDataComponentClassName="Lcacrd1TableAdapter" Name="Lcacrd1" UserDataComponentName="Lcacrd1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="wdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillForLadout" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillForLadout" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="FillForLadout">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Lading_Out.ladingID, Lading_Out.Qty, Lading_Out.Date, Lading_Out.LOusername, Lading_Out.Loading_Station, Lading_Out.F_weight, Lading_Out.S_weight, Lading_Out.Net_Weight, Commodity.Comm_NAME, 
+                         Lading_Out.Trans_type, Lading_Out.Representative, Lading_Out.Fill_Type, [Order].Order_Number, Contract.Contract_Number, Lading_Out.Bags_Count, Lading_Out.Stack_Bar, WcardID.WCardID, Lading_Out.F_Wdate, 
+                         Lading_Out.S_Wdate, Contract.Contract_Type, Customers.Cust_NAME, Transport_Co.Company_Name, Truck.Truck_number, Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_traffic, Truck.Owner, Drivers.Driver_Name, 
+                         Drivers.Liscense_num
+FROM            Lading_Out INNER JOIN
+                         [Order] ON Lading_Out.Order_ID = [Order].Order_ID INNER JOIN
+                         Contract ON [Order].Contract_ID = Contract.Contract_ID INNER JOIN
+                         Commodity ON Contract.Comm_ID = Commodity.Comm_ID INNER JOIN
+                         WcardID ON Lading_Out.ladingID = WcardID.LADOUT_ID INNER JOIN
+                         Customers ON [Order].Cust_ID = Customers.Cust_ID INNER JOIN
+                         Transport_Co ON Lading_Out.TransC_ID = Transport_Co.Company_ID INNER JOIN
+                         Truck ON Lading_Out.Truck_ID = Truck.Truck_ID INNER JOIN
+                         Drivers ON Lading_Out.Driver_ID = Drivers.Driver_ID
+WHERE        (Lading_Out.ladingID = @lcard) AND (Lading_Out.Status = N'تم')</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="lcard" ColumnName="ladingID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@lcard" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ladingID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ladingID" DataSetColumn="ladingID" />
+              <Mapping SourceColumn="Qty" DataSetColumn="Qty" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="LOusername" DataSetColumn="LOusername" />
+              <Mapping SourceColumn="Loading_Station" DataSetColumn="Loading_Station" />
+              <Mapping SourceColumn="Cust_NAME" DataSetColumn="Cust_NAME" />
+              <Mapping SourceColumn="Comm_NAME" DataSetColumn="Comm_NAME" />
+              <Mapping SourceColumn="Truck_number" DataSetColumn="Truck_number" />
+              <Mapping SourceColumn="Truck_traffic" DataSetColumn="Truck_traffic" />
+              <Mapping SourceColumn="Trailer_number" DataSetColumn="Trailer_number" />
+              <Mapping SourceColumn="Trailer_traffic" DataSetColumn="Trailer_traffic" />
+              <Mapping SourceColumn="Trans_type" DataSetColumn="Trans_type" />
+              <Mapping SourceColumn="Representative" DataSetColumn="Representative" />
+              <Mapping SourceColumn="Fill_Type" DataSetColumn="Fill_Type" />
+              <Mapping SourceColumn="Owner" DataSetColumn="Owner" />
+              <Mapping SourceColumn="Order_Number" DataSetColumn="Order_Number" />
+              <Mapping SourceColumn="Contract_Number" DataSetColumn="Contract_Number" />
+              <Mapping SourceColumn="Driver_Name" DataSetColumn="Driver_Name" />
+              <Mapping SourceColumn="Liscense_num" DataSetColumn="Liscense_num" />
+              <Mapping SourceColumn="Bags_Count" DataSetColumn="Bags_Count" />
+              <Mapping SourceColumn="Stack_Bar" DataSetColumn="Stack_Bar" />
+              <Mapping SourceColumn="Company_Name" DataSetColumn="Company_Name" />
+              <Mapping SourceColumn="F_Wdate" DataSetColumn="F_Wdate" />
+              <Mapping SourceColumn="S_Wdate" DataSetColumn="S_Wdate" />
+              <Mapping SourceColumn="WCardID" DataSetColumn="WCardID" />
+              <Mapping SourceColumn="Contract_Type" DataSetColumn="Contract_Type" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="wdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillAllbyLID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy4" GeneratorSourceName="FillAllbyLID" GetMethodModifier="Public" GetMethodName="GetDataBy4" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="FillAllbyLID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Lading_Out.ladingID, Lading_Out.Qty, Lading_Out.Date, Lading_Out.LOusername, Lading_Out.Loading_Station, Lading_Out.F_weight, Lading_Out.S_weight, Lading_Out.Net_Weight, Commodity.Comm_NAME, 
+                         Lading_Out.Trans_type, Lading_Out.Representative, Lading_Out.Fill_Type, [Order].Order_Number, Contract.Contract_Number, Lading_Out.Bags_Count, Lading_Out.Stack_Bar, WcardID.WCardID, Lading_Out.F_Wdate, 
+                         Lading_Out.S_Wdate, Contract.Contract_Type, Customers.Cust_NAME, Transport_Co.Company_Name, Truck.Truck_number, Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_traffic, Truck.Owner, Drivers.Driver_Name, 
+                         Drivers.Liscense_num
+FROM            Lading_Out INNER JOIN
+                         [Order] ON Lading_Out.Order_ID = [Order].Order_ID INNER JOIN
+                         Contract ON [Order].Contract_ID = Contract.Contract_ID INNER JOIN
+                         Commodity ON Contract.Comm_ID = Commodity.Comm_ID INNER JOIN
+                         WcardID ON Lading_Out.ladingID = WcardID.LADOUT_ID INNER JOIN
+                         Customers ON [Order].Cust_ID = Customers.Cust_ID INNER JOIN
+                         Transport_Co ON Lading_Out.TransC_ID = Transport_Co.Company_ID INNER JOIN
+                         Truck ON Lading_Out.Truck_ID = Truck.Truck_ID INNER JOIN
+                         Drivers ON Lading_Out.Driver_ID = Drivers.Driver_ID
+WHERE        (Lading_Out.ladingID = @lcard)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="lcard" ColumnName="ladingID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@lcard" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ladingID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="wdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBLading" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBLading" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBLading">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT   Lading_Out.ladingID, Lading_Out.Qty, Lading_Out.Date, Lading_Out.LOusername, Lading_Out.Loading_Station, Lading_Out.F_weight, Lading_Out.S_weight, Lading_Out.Net_Weight, 
+                         Commodity.Comm_NAME, Truck.Truck_number, Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_traffic, Lading_Out.Trans_type, Lading_Out.Representative, 
+                         Lading_Out.Fill_Type, Truck.Owner, [Order].Order_Number, Contract.Contract_Number, Drivers.Driver_Name, Drivers.N_Card, Drivers.Liscense_num, Drivers.driver_traffic, 
+                         Lading_Out.Bags_Count, Lading_Out.Stack_Bar, Transport_Co.Company_Name, WcardID.WCardID, Lading_Out.F_Wdate, Lading_Out.S_Wdate, Contract.Contract_Type, 
+                         Customers.Cust_NAME, Customers.CITY, Customers.ADDRESS
+FROM         Lading_Out INNER JOIN
+                         Truck ON Lading_Out.Truck_ID = Truck.Truck_ID INNER JOIN
+                         [Order] ON Lading_Out.Order_ID = [Order].Order_ID INNER JOIN
+                         Drivers ON Lading_Out.Driver_ID = Drivers.Driver_ID INNER JOIN
+                         Contract ON [Order].Contract_ID = Contract.Contract_ID INNER JOIN
+                         Commodity ON Contract.Comm_ID = Commodity.Comm_ID INNER JOIN
+                         Transport_Co ON Lading_Out.TransC_ID = Transport_Co.Company_ID INNER JOIN
+                         WcardID ON Lading_Out.ladingID = WcardID.LADOUT_ID INNER JOIN
+                         Customers ON [Order].Cust_ID = Customers.Cust_ID
+WHERE     (Lading_Out.ladingID = @lcard) AND (Lading_Out.Status = N'تم')</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="lcard" ColumnName="ladingID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@lcard" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ladingID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="wdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Lading_Out.ladingID, Lading_Out.Qty, Lading_Out.Date, Lading_Out.LOusername, Lading_Out.Loading_Station, Lading_Out.F_weight, Lading_Out.S_weight, Lading_Out.Net_Weight, Commodity.Comm_NAME, 
+                         Truck.Truck_number, Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_traffic, Lading_Out.Trans_type, Lading_Out.Representative, Lading_Out.Fill_Type, Truck.Owner, [Order].Order_Number, Contract.Contract_Number, 
+                         Drivers.Driver_Name, Drivers.N_Card, Drivers.Liscense_num, Drivers.driver_traffic, Lading_Out.Bags_Count, Lading_Out.Stack_Bar, Transport_Co.Company_Name, WcardID.WCardID, Lading_Out.F_Wdate, 
+                         Lading_Out.S_Wdate, Contract.Contract_Type, Customers.Cust_NAME
+FROM            Lading_Out INNER JOIN
+                         Truck ON Lading_Out.Truck_ID = Truck.Truck_ID INNER JOIN
+                         [Order] ON Lading_Out.Order_ID = [Order].Order_ID INNER JOIN
+                         Drivers ON Lading_Out.Driver_ID = Drivers.Driver_ID INNER JOIN
+                         Contract ON [Order].Contract_ID = Contract.Contract_ID INNER JOIN
+                         Commodity ON Contract.Comm_ID = Commodity.Comm_ID INNER JOIN
+                         Transport_Co ON Lading_Out.TransC_ID = Transport_Co.Company_ID INNER JOIN
+                         WcardID ON Lading_Out.ladingID = WcardID.LADOUT_ID INNER JOIN
+                         Customers ON [Order].Cust_ID = Customers.Cust_ID
+WHERE        (Lading_Out.ladingID = @lcard)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="lcard" ColumnName="ladingID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@lcard" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ladingID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="wdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByCnumber" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy6" GeneratorSourceName="FillByCnumber" GetMethodModifier="Public" GetMethodName="GetDataBy6" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="FillByCnumber">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Lading_Out.ladingID, Lading_Out.Qty, Lading_Out.Date, Lading_Out.LOusername, Lading_Out.Loading_Station, Lading_Out.Net_Weight, Commodity.Comm_NAME, Truck.Truck_number, Lading_Out.Trans_type, 
+                         Lading_Out.Representative, Lading_Out.Fill_Type, [Order].Order_Number, Contract.Contract_Number, Lading_Out.Bags_Count, Lading_Out.Stack_Bar, Lading_Out.F_Wdate, Lading_Out.S_Wdate, Customers.Cust_NAME, 
+                         Transport_Co.Company_Name, Drivers.Driver_Name, Drivers.N_Card, Drivers.Liscense_num, Lading_Out.F_weight, Lading_Out.S_weight, Truck.Trailer_number, Truck.Truck_traffic
+FROM            Lading_Out INNER JOIN
+                         Truck ON Lading_Out.Truck_ID = Truck.Truck_ID INNER JOIN
+                         [Order] ON Lading_Out.Order_ID = [Order].Order_ID INNER JOIN
+                         Contract ON [Order].Contract_ID = Contract.Contract_ID INNER JOIN
+                         Commodity ON Contract.Comm_ID = Commodity.Comm_ID INNER JOIN
+                         Customers ON [Order].Cust_ID = Customers.Cust_ID INNER JOIN
+                         Transport_Co ON Lading_Out.TransC_ID = Transport_Co.Company_ID INNER JOIN
+                         Drivers ON Lading_Out.Driver_ID = Drivers.Driver_ID
+WHERE        (Contract.Contract_Number = @cnumber)
+ORDER BY Lading_Out.ladingID DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="cnumber" ColumnName="Contract_Number" DataSourceName="" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@cnumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Contract_Number" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="wdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByDateInBetween" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy7" GeneratorSourceName="FillByDateInBetween" GetMethodModifier="Public" GetMethodName="GetDataBy7" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="FillByDateInBetween">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Lading_Out.ladingID, Lading_Out.Qty, Lading_Out.Date, Lading_Out.LOusername, Lading_Out.Loading_Station, Lading_Out.F_weight, Lading_Out.S_weight, Lading_Out.Net_Weight, Commodity.Comm_NAME, 
+                         Lading_Out.Trans_type, Lading_Out.Representative, Lading_Out.Fill_Type, [Order].Order_Number, Contract.Contract_Number, Lading_Out.Bags_Count, Lading_Out.Stack_Bar, WcardID.WCardID, Lading_Out.F_Wdate, 
+                         Lading_Out.S_Wdate, Contract.Contract_Type, Customers.Cust_NAME, Transport_Co.Company_Name, Truck.Truck_number, Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_traffic, Truck.Owner, Drivers.Driver_Name, 
+                         Drivers.Liscense_num
+FROM            Lading_Out INNER JOIN
+                         [Order] ON Lading_Out.Order_ID = [Order].Order_ID INNER JOIN
+                         Contract ON [Order].Contract_ID = Contract.Contract_ID INNER JOIN
+                         Commodity ON Contract.Comm_ID = Commodity.Comm_ID INNER JOIN
+                         WcardID ON Lading_Out.ladingID = WcardID.LADOUT_ID INNER JOIN
+                         Customers ON [Order].Cust_ID = Customers.Cust_ID INNER JOIN
+                         Transport_Co ON Lading_Out.TransC_ID = Transport_Co.Company_ID INNER JOIN
+                         Truck ON Lading_Out.Truck_ID = Truck.Truck_ID INNER JOIN
+                         Drivers ON Lading_Out.Driver_ID = Drivers.Driver_ID
+WHERE        (Lading_Out.Status = N'تم') AND (Lading_Out.S_Wdate &gt;= @sdate) AND (Lading_Out.S_Wdate &lt; @edate)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="sdate" ColumnName="S_Wdate" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@sdate" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="S_Wdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="edate" ColumnName="S_Wdate" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@edate" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="S_Wdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="wdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByOrdernumber" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy5" GeneratorSourceName="FillByOrdernumber" GetMethodModifier="Public" GetMethodName="GetDataBy5" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="FillByOrdernumber">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Lading_Out.ladingID, Lading_Out.Qty, Lading_Out.Date, Lading_Out.LOusername, Lading_Out.Loading_Station, Lading_Out.Net_Weight, Commodity.Comm_NAME, Truck.Truck_number, Lading_Out.Trans_type, 
+                         Lading_Out.Representative, Lading_Out.Fill_Type, [Order].Order_Number, Contract.Contract_Number, Lading_Out.Bags_Count, Lading_Out.Stack_Bar, Lading_Out.F_Wdate, Lading_Out.S_Wdate, Customers.Cust_NAME, 
+                         Transport_Co.Company_Name, Drivers.Driver_Name, Drivers.N_Card, Drivers.Liscense_num, Lading_Out.F_weight, Lading_Out.S_weight, Truck.Trailer_number, Truck.Truck_traffic
+FROM            Lading_Out INNER JOIN
+                         Truck ON Lading_Out.Truck_ID = Truck.Truck_ID INNER JOIN
+                         [Order] ON Lading_Out.Order_ID = [Order].Order_ID INNER JOIN
+                         Contract ON [Order].Contract_ID = Contract.Contract_ID INNER JOIN
+                         Commodity ON Contract.Comm_ID = Commodity.Comm_ID INNER JOIN
+                         Customers ON [Order].Cust_ID = Customers.Cust_ID INNER JOIN
+                         Transport_Co ON Lading_Out.TransC_ID = Transport_Co.Company_ID INNER JOIN
+                         Drivers ON Lading_Out.Driver_ID = Drivers.Driver_ID
+WHERE        ([Order].Order_Number = @Onumber)
+ORDER BY Lading_Out.ladingID DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Onumber" ColumnName="Order_Number" DataSourceName="" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Onumber" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="Order_Number" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="wdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillLastNlading" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy3" GeneratorSourceName="FillLastNlading" GetMethodModifier="Public" GetMethodName="GetDataBy3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="FillLastNlading">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        TOP (@lcount) Lading_Out.ladingID, Lading_Out.Qty, Lading_Out.Date, Lading_Out.LOusername, Lading_Out.Loading_Station, Lading_Out.Net_Weight, Commodity.Comm_NAME, Truck.Truck_number, Lading_Out.Trans_type, 
+                         Lading_Out.Representative, Lading_Out.Fill_Type, [Order].Order_Number, Contract.Contract_Number, Lading_Out.Bags_Count, Lading_Out.Stack_Bar, Lading_Out.F_Wdate, Lading_Out.S_Wdate, Customers.Cust_NAME, 
+                         Transport_Co.Company_Name, Drivers.Driver_Name, Drivers.N_Card, Drivers.Liscense_num, Lading_Out.F_weight, Lading_Out.S_weight, Truck.Trailer_number, Truck.Truck_traffic
+FROM            Lading_Out INNER JOIN
+                         Truck ON Lading_Out.Truck_ID = Truck.Truck_ID INNER JOIN
+                         [Order] ON Lading_Out.Order_ID = [Order].Order_ID INNER JOIN
+                         Contract ON [Order].Contract_ID = Contract.Contract_ID INNER JOIN
+                         Commodity ON Contract.Comm_ID = Commodity.Comm_ID INNER JOIN
+                         Customers ON [Order].Cust_ID = Customers.Cust_ID INNER JOIN
+                         Transport_Co ON Lading_Out.TransC_ID = Transport_Co.Company_ID INNER JOIN
+                         Drivers ON Lading_Out.Driver_ID = Drivers.Driver_ID
+ORDER BY Lading_Out.ladingID DESC</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="lcount" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="Int32" Direction="Input" ParameterName="@lcount" Precision="0" Scale="0" Size="0" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="wdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FilllLast" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="FilllLast" GetMethodModifier="Public" GetMethodName="GetDataBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FilllLast">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        TOP (10) Lading_Out.ladingID, Lading_Out.Qty, Lading_Out.Date, Lading_Out.LOusername, Lading_Out.Loading_Station, Lading_Out.Net_Weight, Commodity.Comm_NAME, Truck.Truck_number, Lading_Out.Trans_type, 
+                         Lading_Out.Representative, Lading_Out.Fill_Type, [Order].Order_Number, Contract.Contract_Number, Drivers.Driver_Name, Drivers.N_Card, Drivers.Liscense_num, Drivers.driver_traffic, Lading_Out.Bags_Count, 
+                         Lading_Out.Stack_Bar, Lading_Out.F_Wdate, Lading_Out.S_Wdate, Customers.Cust_NAME, Transport_Co.Company_Name
+FROM            Lading_Out INNER JOIN
+                         Truck ON Lading_Out.Truck_ID = Truck.Truck_ID INNER JOIN
+                         [Order] ON Lading_Out.Order_ID = [Order].Order_ID INNER JOIN
+                         Drivers ON Lading_Out.Driver_ID = Drivers.Driver_ID INNER JOIN
+                         Contract ON [Order].Contract_ID = Contract.Contract_ID INNER JOIN
+                         Commodity ON Contract.Comm_ID = Commodity.Comm_ID INNER JOIN
+                         Customers ON [Order].Cust_ID = Customers.Cust_ID INNER JOIN
+                         Transport_Co ON Lading_Out.TransC_ID = Transport_Co.Company_ID
+ORDER BY Lading_Out.ladingID DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="INCardsReportTableAdapter" GeneratorDataComponentClassName="INCardsReportTableAdapter" Name="INCardsReport" UserDataComponentName="INCardsReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="wdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillINCards" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataINcards" GeneratorSourceName="FillINCards" GetMethodModifier="Public" GetMethodName="GetDataINcards" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataINcards" UserSourceName="FillINCards">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Commodity.Comm_NAME, Commodity.CofOrigin, Drivers.Driver_Name, Drivers.N_Card, Shipment.Contract, Shipment.Qty, Lading.Qty AS Expr1, Lading.Date, Lading.F_weight, Lading.S_weight, Lading.S_weigherName, 
+                         Lading.S_wbridge, Lading.F_Wdate, Lading.F_weigherName, Lading.F_wbridge, Lading.S_Wdate, Lading.Net_Weight, Lading.Shrink, Lading.Representative, Lading.BLading, WcardID.WCardID, Truck.Truck_number, 
+                         Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_traffic, Truck.Owner, Transport_Co.Company_Name, SUPPLIERS.SUP_NAME, Lading.ladingID, INBatch.Serial, Shipment.Shipping
+FROM            SUPPLIERS INNER JOIN
+                         Shipment INNER JOIN
+                         Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
+                         Transport_Co ON Shipment.Trans_Co = Transport_Co.Company_ID ON SUPPLIERS.SUP_ID = Shipment.Supp_ID INNER JOIN
+                         INBatch ON Shipment.Ship_ID = INBatch.Ship_ID INNER JOIN
+                         Truck INNER JOIN
+                         Lading INNER JOIN
+                         Drivers ON Lading.Driver_ID = Drivers.Driver_ID ON Truck.Truck_ID = Lading.Truck_ID INNER JOIN
+                         WcardID ON Lading.ladingID = WcardID.LAD_ID ON INBatch.Batch_ID = Lading.BatchID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Comm_NAME" DataSetColumn="Comm_NAME" />
+              <Mapping SourceColumn="CofOrigin" DataSetColumn="CofOrigin" />
+              <Mapping SourceColumn="Driver_Name" DataSetColumn="Driver_Name" />
+              <Mapping SourceColumn="N_Card" DataSetColumn="N_Card" />
+              <Mapping SourceColumn="Contract" DataSetColumn="Contract" />
+              <Mapping SourceColumn="Qty" DataSetColumn="Qty" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="F_weight" DataSetColumn="F_weight" />
+              <Mapping SourceColumn="S_weight" DataSetColumn="S_weight" />
+              <Mapping SourceColumn="S_weigherName" DataSetColumn="S_weigherName" />
+              <Mapping SourceColumn="S_wbridge" DataSetColumn="S_wbridge" />
+              <Mapping SourceColumn="F_Wdate" DataSetColumn="F_Wdate" />
+              <Mapping SourceColumn="F_weigherName" DataSetColumn="F_weigherName" />
+              <Mapping SourceColumn="F_wbridge" DataSetColumn="F_wbridge" />
+              <Mapping SourceColumn="S_Wdate" DataSetColumn="S_Wdate" />
+              <Mapping SourceColumn="Net_Weight" DataSetColumn="Net_Weight" />
+              <Mapping SourceColumn="Shrink" DataSetColumn="Shrink" />
+              <Mapping SourceColumn="Representative" DataSetColumn="Representative" />
+              <Mapping SourceColumn="BLading" DataSetColumn="BLading" />
+              <Mapping SourceColumn="WCardID" DataSetColumn="WCardID" />
+              <Mapping SourceColumn="Truck_number" DataSetColumn="Truck_number" />
+              <Mapping SourceColumn="Truck_traffic" DataSetColumn="Truck_traffic" />
+              <Mapping SourceColumn="Trailer_number" DataSetColumn="Trailer_number" />
+              <Mapping SourceColumn="Trailer_traffic" DataSetColumn="Trailer_traffic" />
+              <Mapping SourceColumn="Owner" DataSetColumn="Owner" />
+              <Mapping SourceColumn="Company_Name" DataSetColumn="Company_Name" />
+              <Mapping SourceColumn="SUP_NAME" DataSetColumn="SUP_NAME" />
+              <Mapping SourceColumn="ladingID" DataSetColumn="ladingID" />
+              <Mapping SourceColumn="Serial" DataSetColumn="Serial" />
+              <Mapping SourceColumn="Shipping" DataSetColumn="Shipping" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OutWcard1TableAdapter" GeneratorDataComponentClassName="OutWcard1TableAdapter" Name="OutWcard1" UserDataComponentName="OutWcard1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="wdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillWcard" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillWcard" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="FillWcard">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT   Lading_Out.F_weight, Lading_Out.F_Wdate, Lading_Out.S_weigherName, Lading_Out.S_weight, Lading_Out.S_Wdate, Lading_Out.Net_Weight, Lading_Out.Stack_Bar, 
+                         Lading_Out.Fill_Type, Lading_Out.Bags_Count, Drivers.Driver_Name, Truck.Truck_number, Truck.Trailer_number, WcardID.WCardID, Commodity.Comm_NAME, 
+                         Customers.Cust_NAME
+FROM         Lading_Out INNER JOIN
+                         [Order] ON Lading_Out.Order_ID = [Order].Order_ID INNER JOIN
+                         Drivers ON Lading_Out.Driver_ID = Drivers.Driver_ID INNER JOIN
+                         Contract ON [Order].Contract_ID = Contract.Contract_ID INNER JOIN
+                         Truck ON Lading_Out.Truck_ID = Truck.Truck_ID INNER JOIN
+                         WcardID ON Lading_Out.ladingID = WcardID.LADOUT_ID INNER JOIN
+                         Commodity ON Contract.Comm_ID = Commodity.Comm_ID INNER JOIN
+                         Customers ON [Order].Cust_ID = Customers.Cust_ID
+WHERE     (Lading_Out.ladingID = @lc)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="lc" ColumnName="ladingID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@lc" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ladingID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="F_weight" DataSetColumn="F_weight" />
+              <Mapping SourceColumn="F_Wdate" DataSetColumn="F_Wdate" />
+              <Mapping SourceColumn="S_weigherName" DataSetColumn="S_weigherName" />
+              <Mapping SourceColumn="S_weight" DataSetColumn="S_weight" />
+              <Mapping SourceColumn="S_Wdate" DataSetColumn="S_Wdate" />
+              <Mapping SourceColumn="Net_Weight" DataSetColumn="Net_Weight" />
+              <Mapping SourceColumn="Stack_Bar" DataSetColumn="Stack_Bar" />
+              <Mapping SourceColumn="Fill_Type" DataSetColumn="Fill_Type" />
+              <Mapping SourceColumn="Bags_Count" DataSetColumn="Bags_Count" />
+              <Mapping SourceColumn="Driver_Name" DataSetColumn="Driver_Name" />
+              <Mapping SourceColumn="Truck_number" DataSetColumn="Truck_number" />
+              <Mapping SourceColumn="Trailer_number" DataSetColumn="Trailer_number" />
+              <Mapping SourceColumn="Cust_NAME" DataSetColumn="Cust_NAME" />
+              <Mapping SourceColumn="WCardID" DataSetColumn="WCardID" />
+              <Mapping SourceColumn="Comm_NAME" DataSetColumn="Comm_NAME" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Rcard1TableAdapter" GeneratorDataComponentClassName="Rcard1TableAdapter" Name="Rcard1" UserDataComponentName="Rcard1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="wdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillRCard" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillRCard" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="FillRCard">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Lading.ladingID, Lading.Qty, Lading.Date, Lading.Loading_Station, Lading.Net_Weight, Lading.Shrink, Lading.Fill_Type, Lading.Bags_Count, Lading.Stack_Bar, Commodity.Comm_NAME, Commodity.CofOrigin, 
+                         Commodity.Comm_TYPE, Transport_Co.Company_Name, Shipment.Contract, Shipment.Shipping, Shipment.Qty AS Shqty, Drivers.Driver_Name, Drivers.N_Card, Drivers.Liscense_num, INBatch.Serial, SUPPLIERS.SUP_NAME, 
+                         INBatch.Qty AS Bqty, Truck.Truck_number, Truck.Truck_License, Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_License, Truck.Trailer_traffic, Truck.Owner, Lading.BLading, Lading.Lusername
+FROM            Lading INNER JOIN
+                         Drivers ON Lading.Driver_ID = Drivers.Driver_ID INNER JOIN
+                         INBatch ON Lading.BatchID = INBatch.Batch_ID INNER JOIN
+                         Shipment ON INBatch.Ship_ID = Shipment.Ship_ID INNER JOIN
+                         Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
+                         SUPPLIERS ON Shipment.Supp_ID = SUPPLIERS.SUP_ID INNER JOIN
+                         Transport_Co ON Shipment.Trans_Co = Transport_Co.Company_ID INNER JOIN
+                         Truck ON Lading.Truck_ID = Truck.Truck_ID
+WHERE        (Lading.ladingID = @Lid)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Lid" ColumnName="ladingID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Lid" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ladingID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ladingID" DataSetColumn="ladingID" />
+              <Mapping SourceColumn="Qty" DataSetColumn="Qty" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="Loading_Station" DataSetColumn="Loading_Station" />
+              <Mapping SourceColumn="Fill_Type" DataSetColumn="Fill_Type" />
+              <Mapping SourceColumn="Bags_Count" DataSetColumn="Bags_Count" />
+              <Mapping SourceColumn="Stack_Bar" DataSetColumn="Stack_Bar" />
+              <Mapping SourceColumn="Comm_NAME" DataSetColumn="Comm_NAME" />
+              <Mapping SourceColumn="CofOrigin" DataSetColumn="CofOrigin" />
+              <Mapping SourceColumn="Comm_TYPE" DataSetColumn="Comm_TYPE" />
+              <Mapping SourceColumn="Company_Name" DataSetColumn="Company_Name" />
+              <Mapping SourceColumn="Contract" DataSetColumn="Contract" />
+              <Mapping SourceColumn="Shipping" DataSetColumn="Shipping" />
+              <Mapping SourceColumn="Driver_Name" DataSetColumn="Driver_Name" />
+              <Mapping SourceColumn="N_Card" DataSetColumn="N_Card" />
+              <Mapping SourceColumn="Liscense_num" DataSetColumn="Liscense_num" />
+              <Mapping SourceColumn="Serial" DataSetColumn="Serial" />
+              <Mapping SourceColumn="SUP_NAME" DataSetColumn="SUP_NAME" />
+              <Mapping SourceColumn="Shqty" DataSetColumn="Shqty" />
+              <Mapping SourceColumn="Bqty" DataSetColumn="Bqty" />
+              <Mapping SourceColumn="Truck_number" DataSetColumn="Truck_number" />
+              <Mapping SourceColumn="Truck_License" DataSetColumn="Truck_License" />
+              <Mapping SourceColumn="Truck_traffic" DataSetColumn="Truck_traffic" />
+              <Mapping SourceColumn="Trailer_number" DataSetColumn="Trailer_number" />
+              <Mapping SourceColumn="Trailer_License" DataSetColumn="Trailer_License" />
+              <Mapping SourceColumn="Trailer_traffic" DataSetColumn="Trailer_traffic" />
+              <Mapping SourceColumn="Owner" DataSetColumn="Owner" />
+              <Mapping SourceColumn="Net_Weight" DataSetColumn="Net_Weight1" />
+              <Mapping SourceColumn="Shrink" DataSetColumn="Shrink1" />
+              <Mapping SourceColumn="BLading" DataSetColumn="BLading" />
+              <Mapping SourceColumn="Lusername" DataSetColumn="Lusername" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="wdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillAll" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillAll" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillAll">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Lading.ladingID, Lading.Qty, Lading.Date, Lading.Loading_Station, Lading.Net_Weight, Lading.Shrink, Lading.Fill_Type, Lading.Bags_Count, Lading.Stack_Bar, Commodity.Comm_NAME, Commodity.CofOrigin, 
+                         Commodity.Comm_TYPE, Transport_Co.Company_Name, Shipment.Contract, Shipment.Shipping, Shipment.Qty AS Shqty, Drivers.Driver_Name, Drivers.N_Card, Drivers.Liscense_num, INBatch.Serial, SUPPLIERS.SUP_NAME, 
+                         INBatch.Qty AS Bqty, Truck.Truck_number, Truck.Truck_License, Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_License, Truck.Trailer_traffic, Truck.Owner, Lading.BLading, Lading.Lusername
+FROM            Lading INNER JOIN
+                         Drivers ON Lading.Driver_ID = Drivers.Driver_ID INNER JOIN
+                         INBatch ON Lading.BatchID = INBatch.Batch_ID INNER JOIN
+                         Shipment ON INBatch.Ship_ID = Shipment.Ship_ID INNER JOIN
+                         Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
+                         SUPPLIERS ON Shipment.Supp_ID = SUPPLIERS.SUP_ID INNER JOIN
+                         Transport_Co ON Shipment.Trans_Co = Transport_Co.Company_ID INNER JOIN
+                         Truck ON Lading.Truck_ID = Truck.Truck_ID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReportsDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReportsDataset" msprop:Generator_UserDSName="ReportsDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LastLadingout" msprop:Generator_TableClassName="LastLadingoutDataTable" msprop:Generator_TableVarName="tableLastLadingout" msprop:Generator_TablePropName="LastLadingout" msprop:Generator_RowDeletingName="LastLadingoutRowDeleting" msprop:Generator_RowChangingName="LastLadingoutRowChanging" msprop:Generator_RowEvHandlerName="LastLadingoutRowChangeEventHandler" msprop:Generator_RowDeletedName="LastLadingoutRowDeleted" msprop:Generator_UserTableName="LastLadingout" msprop:Generator_RowChangedName="LastLadingoutRowChanged" msprop:Generator_RowEvArgName="LastLadingoutRowChangeEvent" msprop:Generator_RowClassName="LastLadingoutRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ladingID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnladingID" msprop:Generator_ColumnPropNameInRow="ladingID" msprop:Generator_ColumnPropNameInTable="ladingIDColumn" msprop:Generator_UserColumnName="ladingID" type="xs:int" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:decimal" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" />
+              <xs:element name="Driver_Name" msprop:Generator_ColumnVarNameInTable="columnDriver_Name" msprop:Generator_ColumnPropNameInRow="Driver_Name" msprop:Generator_ColumnPropNameInTable="Driver_NameColumn" msprop:Generator_UserColumnName="Driver_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cust_NAME" msprop:Generator_ColumnVarNameInTable="columnCust_NAME" msprop:Generator_ColumnPropNameInRow="Cust_NAME" msprop:Generator_ColumnPropNameInTable="Cust_NAMEColumn" msprop:Generator_UserColumnName="Cust_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Order_Number" msprop:Generator_ColumnVarNameInTable="columnOrder_Number" msprop:Generator_ColumnPropNameInRow="Order_Number" msprop:Generator_ColumnPropNameInTable="Order_NumberColumn" msprop:Generator_UserColumnName="Order_Number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Comm_NAME" msprop:Generator_ColumnVarNameInTable="columnComm_NAME" msprop:Generator_ColumnPropNameInRow="Comm_NAME" msprop:Generator_ColumnPropNameInTable="Comm_NAMEColumn" msprop:Generator_UserColumnName="Comm_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Contract_Number" msprop:Generator_ColumnVarNameInTable="columnContract_Number" msprop:Generator_ColumnPropNameInRow="Contract_Number" msprop:Generator_ColumnPropNameInTable="Contract_NumberColumn" msprop:Generator_UserColumnName="Contract_Number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Truck_number" msprop:Generator_ColumnVarNameInTable="columnTruck_number" msprop:Generator_ColumnPropNameInRow="Truck_number" msprop:Generator_ColumnPropNameInTable="Truck_numberColumn" msprop:Generator_UserColumnName="Truck_number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LOusername" msprop:Generator_ColumnVarNameInTable="columnLOusername" msprop:Generator_ColumnPropNameInRow="LOusername" msprop:Generator_ColumnPropNameInTable="LOusernameColumn" msprop:Generator_UserColumnName="LOusername">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Lcacrd1" msprop:Generator_TableClassName="Lcacrd1DataTable" msprop:Generator_TableVarName="tableLcacrd1" msprop:Generator_TablePropName="Lcacrd1" msprop:Generator_RowDeletingName="Lcacrd1RowDeleting" msprop:Generator_RowChangingName="Lcacrd1RowChanging" msprop:Generator_RowEvHandlerName="Lcacrd1RowChangeEventHandler" msprop:Generator_RowDeletedName="Lcacrd1RowDeleted" msprop:Generator_UserTableName="Lcacrd1" msprop:Generator_RowChangedName="Lcacrd1RowChanged" msprop:Generator_RowEvArgName="Lcacrd1RowChangeEvent" msprop:Generator_RowClassName="Lcacrd1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ladingID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnladingID" msprop:Generator_ColumnPropNameInRow="ladingID" msprop:Generator_ColumnPropNameInTable="ladingIDColumn" msprop:Generator_UserColumnName="ladingID" type="xs:int" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:decimal" />
+              <xs:element name="Date" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" />
+              <xs:element name="LOusername" msprop:Generator_ColumnVarNameInTable="columnLOusername" msprop:Generator_ColumnPropNameInRow="LOusername" msprop:Generator_ColumnPropNameInTable="LOusernameColumn" msprop:Generator_UserColumnName="LOusername">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Loading_Station" msprop:Generator_ColumnVarNameInTable="columnLoading_Station" msprop:Generator_ColumnPropNameInRow="Loading_Station" msprop:Generator_ColumnPropNameInTable="Loading_StationColumn" msprop:Generator_UserColumnName="Loading_Station" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="F_weight" msprop:Generator_ColumnVarNameInTable="columnF_weight" msprop:Generator_ColumnPropNameInRow="F_weight" msprop:Generator_ColumnPropNameInTable="F_weightColumn" msprop:Generator_UserColumnName="F_weight" type="xs:double" default="0" />
+              <xs:element name="S_weight" msprop:Generator_ColumnVarNameInTable="columnS_weight" msprop:Generator_ColumnPropNameInRow="S_weight" msprop:Generator_ColumnPropNameInTable="S_weightColumn" msprop:Generator_UserColumnName="S_weight" type="xs:double" default="0" />
+              <xs:element name="Net_Weight" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNet_Weight" msprop:Generator_ColumnPropNameInRow="Net_Weight" msprop:Generator_ColumnPropNameInTable="Net_WeightColumn" msprop:Generator_UserColumnName="Net_Weight" type="xs:double" default="0" minOccurs="0" />
+              <xs:element name="Cust_NAME" msprop:Generator_ColumnVarNameInTable="columnCust_NAME" msprop:Generator_ColumnPropNameInRow="Cust_NAME" msprop:Generator_ColumnPropNameInTable="Cust_NAMEColumn" msprop:Generator_UserColumnName="Cust_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Comm_NAME" msprop:Generator_ColumnVarNameInTable="columnComm_NAME" msprop:Generator_ColumnPropNameInRow="Comm_NAME" msprop:Generator_ColumnPropNameInTable="Comm_NAMEColumn" msprop:Generator_UserColumnName="Comm_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Truck_number" msprop:Generator_ColumnVarNameInTable="columnTruck_number" msprop:Generator_ColumnPropNameInRow="Truck_number" msprop:Generator_ColumnPropNameInTable="Truck_numberColumn" msprop:Generator_UserColumnName="Truck_number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Truck_traffic" msprop:Generator_ColumnVarNameInTable="columnTruck_traffic" msprop:Generator_ColumnPropNameInRow="Truck_traffic" msprop:Generator_ColumnPropNameInTable="Truck_trafficColumn" msprop:Generator_UserColumnName="Truck_traffic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Trailer_number" msprop:Generator_ColumnVarNameInTable="columnTrailer_number" msprop:Generator_ColumnPropNameInRow="Trailer_number" msprop:Generator_ColumnPropNameInTable="Trailer_numberColumn" msprop:Generator_UserColumnName="Trailer_number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Trailer_traffic" msprop:Generator_ColumnVarNameInTable="columnTrailer_traffic" msprop:Generator_ColumnPropNameInRow="Trailer_traffic" msprop:Generator_ColumnPropNameInTable="Trailer_trafficColumn" msprop:Generator_UserColumnName="Trailer_traffic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Trans_type" msprop:Generator_ColumnVarNameInTable="columnTrans_type" msprop:Generator_ColumnPropNameInRow="Trans_type" msprop:Generator_ColumnPropNameInTable="Trans_typeColumn" msprop:Generator_UserColumnName="Trans_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Representative" msprop:Generator_ColumnVarNameInTable="columnRepresentative" msprop:Generator_ColumnPropNameInRow="Representative" msprop:Generator_ColumnPropNameInTable="RepresentativeColumn" msprop:Generator_UserColumnName="Representative" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fill_Type" msprop:Generator_ColumnVarNameInTable="columnFill_Type" msprop:Generator_ColumnPropNameInRow="Fill_Type" msprop:Generator_ColumnPropNameInTable="Fill_TypeColumn" msprop:Generator_UserColumnName="Fill_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner" msprop:Generator_ColumnVarNameInTable="columnOwner" msprop:Generator_ColumnPropNameInRow="Owner" msprop:Generator_ColumnPropNameInTable="OwnerColumn" msprop:Generator_UserColumnName="Owner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Order_Number" msprop:Generator_ColumnVarNameInTable="columnOrder_Number" msprop:Generator_ColumnPropNameInRow="Order_Number" msprop:Generator_ColumnPropNameInTable="Order_NumberColumn" msprop:Generator_UserColumnName="Order_Number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Contract_Number" msprop:Generator_ColumnVarNameInTable="columnContract_Number" msprop:Generator_ColumnPropNameInRow="Contract_Number" msprop:Generator_ColumnPropNameInTable="Contract_NumberColumn" msprop:Generator_UserColumnName="Contract_Number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Driver_Name" msprop:Generator_ColumnVarNameInTable="columnDriver_Name" msprop:Generator_ColumnPropNameInRow="Driver_Name" msprop:Generator_ColumnPropNameInTable="Driver_NameColumn" msprop:Generator_UserColumnName="Driver_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Liscense_num" msprop:Generator_ColumnVarNameInTable="columnLiscense_num" msprop:Generator_ColumnPropNameInRow="Liscense_num" msprop:Generator_ColumnPropNameInTable="Liscense_numColumn" msprop:Generator_UserColumnName="Liscense_num">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bags_Count" msprop:Generator_ColumnVarNameInTable="columnBags_Count" msprop:Generator_ColumnPropNameInRow="Bags_Count" msprop:Generator_ColumnPropNameInTable="Bags_CountColumn" msprop:Generator_UserColumnName="Bags_Count" type="xs:int" minOccurs="0" />
+              <xs:element name="Stack_Bar" msprop:Generator_ColumnVarNameInTable="columnStack_Bar" msprop:Generator_ColumnPropNameInRow="Stack_Bar" msprop:Generator_ColumnPropNameInTable="Stack_BarColumn" msprop:Generator_UserColumnName="Stack_Bar" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Company_Name" msprop:Generator_ColumnVarNameInTable="columnCompany_Name" msprop:Generator_ColumnPropNameInRow="Company_Name" msprop:Generator_ColumnPropNameInTable="Company_NameColumn" msprop:Generator_UserColumnName="Company_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="F_Wdate" msprop:Generator_ColumnVarNameInTable="columnF_Wdate" msprop:Generator_ColumnPropNameInRow="F_Wdate" msprop:Generator_ColumnPropNameInTable="F_WdateColumn" msprop:Generator_UserColumnName="F_Wdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="S_Wdate" msprop:Generator_ColumnVarNameInTable="columnS_Wdate" msprop:Generator_ColumnPropNameInRow="S_Wdate" msprop:Generator_ColumnPropNameInTable="S_WdateColumn" msprop:Generator_UserColumnName="S_Wdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="WCardID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWCardID" msprop:Generator_ColumnPropNameInRow="WCardID" msprop:Generator_ColumnPropNameInTable="WCardIDColumn" msprop:Generator_UserColumnName="WCardID" type="xs:int" />
+              <xs:element name="Contract_Type" msprop:Generator_ColumnVarNameInTable="columnContract_Type" msprop:Generator_ColumnPropNameInRow="Contract_Type" msprop:Generator_ColumnPropNameInTable="Contract_TypeColumn" msprop:Generator_UserColumnName="Contract_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="INCardsReport" msprop:Generator_TableClassName="INCardsReportDataTable" msprop:Generator_TableVarName="tableINCardsReport" msprop:Generator_TablePropName="INCardsReport" msprop:Generator_RowDeletingName="INCardsReportRowDeleting" msprop:Generator_RowChangingName="INCardsReportRowChanging" msprop:Generator_RowEvHandlerName="INCardsReportRowChangeEventHandler" msprop:Generator_RowDeletedName="INCardsReportRowDeleted" msprop:Generator_UserTableName="INCardsReport" msprop:Generator_RowChangedName="INCardsReportRowChanged" msprop:Generator_RowEvArgName="INCardsReportRowChangeEvent" msprop:Generator_RowClassName="INCardsReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Comm_NAME" msprop:Generator_ColumnVarNameInTable="columnComm_NAME" msprop:Generator_ColumnPropNameInRow="Comm_NAME" msprop:Generator_ColumnPropNameInTable="Comm_NAMEColumn" msprop:Generator_UserColumnName="Comm_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CofOrigin" msprop:Generator_ColumnVarNameInTable="columnCofOrigin" msprop:Generator_ColumnPropNameInRow="CofOrigin" msprop:Generator_ColumnPropNameInTable="CofOriginColumn" msprop:Generator_UserColumnName="CofOrigin">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Driver_Name" msprop:Generator_ColumnVarNameInTable="columnDriver_Name" msprop:Generator_ColumnPropNameInRow="Driver_Name" msprop:Generator_ColumnPropNameInTable="Driver_NameColumn" msprop:Generator_UserColumnName="Driver_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="N_Card" msprop:Generator_ColumnVarNameInTable="columnN_Card" msprop:Generator_ColumnPropNameInRow="N_Card" msprop:Generator_ColumnPropNameInTable="N_CardColumn" msprop:Generator_UserColumnName="N_Card" type="xs:decimal" />
+              <xs:element name="Contract" msprop:Generator_ColumnVarNameInTable="columnContract" msprop:Generator_ColumnPropNameInRow="Contract" msprop:Generator_ColumnPropNameInTable="ContractColumn" msprop:Generator_UserColumnName="Contract" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:decimal" />
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:decimal" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" />
+              <xs:element name="F_weight" msprop:Generator_ColumnVarNameInTable="columnF_weight" msprop:Generator_ColumnPropNameInRow="F_weight" msprop:Generator_ColumnPropNameInTable="F_weightColumn" msprop:Generator_UserColumnName="F_weight" type="xs:decimal" />
+              <xs:element name="S_weight" msprop:Generator_ColumnVarNameInTable="columnS_weight" msprop:Generator_ColumnPropNameInRow="S_weight" msprop:Generator_ColumnPropNameInTable="S_weightColumn" msprop:Generator_UserColumnName="S_weight" type="xs:decimal" />
+              <xs:element name="S_weigherName" msprop:Generator_ColumnVarNameInTable="columnS_weigherName" msprop:Generator_ColumnPropNameInRow="S_weigherName" msprop:Generator_ColumnPropNameInTable="S_weigherNameColumn" msprop:Generator_UserColumnName="S_weigherName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="S_wbridge" msprop:Generator_ColumnVarNameInTable="columnS_wbridge" msprop:Generator_ColumnPropNameInRow="S_wbridge" msprop:Generator_ColumnPropNameInTable="S_wbridgeColumn" msprop:Generator_UserColumnName="S_wbridge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="F_Wdate" msprop:Generator_ColumnVarNameInTable="columnF_Wdate" msprop:Generator_ColumnPropNameInRow="F_Wdate" msprop:Generator_ColumnPropNameInTable="F_WdateColumn" msprop:Generator_UserColumnName="F_Wdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="F_weigherName" msprop:Generator_ColumnVarNameInTable="columnF_weigherName" msprop:Generator_ColumnPropNameInRow="F_weigherName" msprop:Generator_ColumnPropNameInTable="F_weigherNameColumn" msprop:Generator_UserColumnName="F_weigherName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="F_wbridge" msprop:Generator_ColumnVarNameInTable="columnF_wbridge" msprop:Generator_ColumnPropNameInRow="F_wbridge" msprop:Generator_ColumnPropNameInTable="F_wbridgeColumn" msprop:Generator_UserColumnName="F_wbridge" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="S_Wdate" msprop:Generator_ColumnVarNameInTable="columnS_Wdate" msprop:Generator_ColumnPropNameInRow="S_Wdate" msprop:Generator_ColumnPropNameInTable="S_WdateColumn" msprop:Generator_UserColumnName="S_Wdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Net_Weight" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNet_Weight" msprop:Generator_ColumnPropNameInRow="Net_Weight" msprop:Generator_ColumnPropNameInTable="Net_WeightColumn" msprop:Generator_UserColumnName="Net_Weight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Shrink" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShrink" msprop:Generator_ColumnPropNameInRow="Shrink" msprop:Generator_ColumnPropNameInTable="ShrinkColumn" msprop:Generator_UserColumnName="Shrink" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Representative" msprop:Generator_ColumnVarNameInTable="columnRepresentative" msprop:Generator_ColumnPropNameInRow="Representative" msprop:Generator_ColumnPropNameInTable="RepresentativeColumn" msprop:Generator_UserColumnName="Representative" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BLading" msprop:Generator_ColumnVarNameInTable="columnBLading" msprop:Generator_ColumnPropNameInRow="BLading" msprop:Generator_ColumnPropNameInTable="BLadingColumn" msprop:Generator_UserColumnName="BLading" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WCardID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWCardID" msprop:Generator_ColumnPropNameInRow="WCardID" msprop:Generator_ColumnPropNameInTable="WCardIDColumn" msprop:Generator_UserColumnName="WCardID" type="xs:int" />
+              <xs:element name="Truck_number" msprop:Generator_ColumnVarNameInTable="columnTruck_number" msprop:Generator_ColumnPropNameInRow="Truck_number" msprop:Generator_ColumnPropNameInTable="Truck_numberColumn" msprop:Generator_UserColumnName="Truck_number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Truck_traffic" msprop:Generator_ColumnVarNameInTable="columnTruck_traffic" msprop:Generator_ColumnPropNameInRow="Truck_traffic" msprop:Generator_ColumnPropNameInTable="Truck_trafficColumn" msprop:Generator_UserColumnName="Truck_traffic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Trailer_number" msprop:Generator_ColumnVarNameInTable="columnTrailer_number" msprop:Generator_ColumnPropNameInRow="Trailer_number" msprop:Generator_ColumnPropNameInTable="Trailer_numberColumn" msprop:Generator_UserColumnName="Trailer_number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Trailer_traffic" msprop:Generator_ColumnVarNameInTable="columnTrailer_traffic" msprop:Generator_ColumnPropNameInRow="Trailer_traffic" msprop:Generator_ColumnPropNameInTable="Trailer_trafficColumn" msprop:Generator_UserColumnName="Trailer_traffic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner" msprop:Generator_ColumnVarNameInTable="columnOwner" msprop:Generator_ColumnPropNameInRow="Owner" msprop:Generator_ColumnPropNameInTable="OwnerColumn" msprop:Generator_UserColumnName="Owner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Company_Name" msprop:Generator_ColumnVarNameInTable="columnCompany_Name" msprop:Generator_ColumnPropNameInRow="Company_Name" msprop:Generator_ColumnPropNameInTable="Company_NameColumn" msprop:Generator_UserColumnName="Company_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SUP_NAME" msprop:Generator_ColumnVarNameInTable="columnSUP_NAME" msprop:Generator_ColumnPropNameInRow="SUP_NAME" msprop:Generator_ColumnPropNameInTable="SUP_NAMEColumn" msprop:Generator_UserColumnName="SUP_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ladingID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnladingID" msprop:Generator_ColumnPropNameInRow="ladingID" msprop:Generator_ColumnPropNameInTable="ladingIDColumn" msprop:Generator_UserColumnName="ladingID" type="xs:int" />
+              <xs:element name="Serial" msprop:Generator_ColumnVarNameInTable="columnSerial" msprop:Generator_ColumnPropNameInRow="Serial" msprop:Generator_ColumnPropNameInTable="SerialColumn" msprop:Generator_UserColumnName="Serial">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shipping" msprop:Generator_ColumnVarNameInTable="columnShipping" msprop:Generator_ColumnPropNameInRow="Shipping" msprop:Generator_ColumnPropNameInTable="ShippingColumn" msprop:Generator_UserColumnName="Shipping">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OutWcard1" msprop:Generator_TableClassName="OutWcard1DataTable" msprop:Generator_TableVarName="tableOutWcard1" msprop:Generator_TablePropName="OutWcard1" msprop:Generator_RowDeletingName="OutWcard1RowDeleting" msprop:Generator_RowChangingName="OutWcard1RowChanging" msprop:Generator_RowEvHandlerName="OutWcard1RowChangeEventHandler" msprop:Generator_RowDeletedName="OutWcard1RowDeleted" msprop:Generator_UserTableName="OutWcard1" msprop:Generator_RowChangedName="OutWcard1RowChanged" msprop:Generator_RowEvArgName="OutWcard1RowChangeEvent" msprop:Generator_RowClassName="OutWcard1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="F_weight" msprop:Generator_ColumnVarNameInTable="columnF_weight" msprop:Generator_ColumnPropNameInRow="F_weight" msprop:Generator_ColumnPropNameInTable="F_weightColumn" msprop:Generator_UserColumnName="F_weight" type="xs:decimal" />
+              <xs:element name="F_Wdate" msprop:Generator_ColumnVarNameInTable="columnF_Wdate" msprop:Generator_ColumnPropNameInRow="F_Wdate" msprop:Generator_ColumnPropNameInTable="F_WdateColumn" msprop:Generator_UserColumnName="F_Wdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="S_weigherName" msprop:Generator_ColumnVarNameInTable="columnS_weigherName" msprop:Generator_ColumnPropNameInRow="S_weigherName" msprop:Generator_ColumnPropNameInTable="S_weigherNameColumn" msprop:Generator_UserColumnName="S_weigherName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="S_weight" msprop:Generator_ColumnVarNameInTable="columnS_weight" msprop:Generator_ColumnPropNameInRow="S_weight" msprop:Generator_ColumnPropNameInTable="S_weightColumn" msprop:Generator_UserColumnName="S_weight" type="xs:decimal" />
+              <xs:element name="S_Wdate" msprop:Generator_ColumnVarNameInTable="columnS_Wdate" msprop:Generator_ColumnPropNameInRow="S_Wdate" msprop:Generator_ColumnPropNameInTable="S_WdateColumn" msprop:Generator_UserColumnName="S_Wdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Net_Weight" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNet_Weight" msprop:Generator_ColumnPropNameInRow="Net_Weight" msprop:Generator_ColumnPropNameInTable="Net_WeightColumn" msprop:Generator_UserColumnName="Net_Weight" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Stack_Bar" msprop:Generator_ColumnVarNameInTable="columnStack_Bar" msprop:Generator_ColumnPropNameInRow="Stack_Bar" msprop:Generator_ColumnPropNameInTable="Stack_BarColumn" msprop:Generator_UserColumnName="Stack_Bar" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fill_Type" msprop:Generator_ColumnVarNameInTable="columnFill_Type" msprop:Generator_ColumnPropNameInRow="Fill_Type" msprop:Generator_ColumnPropNameInTable="Fill_TypeColumn" msprop:Generator_UserColumnName="Fill_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bags_Count" msprop:Generator_ColumnVarNameInTable="columnBags_Count" msprop:Generator_ColumnPropNameInRow="Bags_Count" msprop:Generator_ColumnPropNameInTable="Bags_CountColumn" msprop:Generator_UserColumnName="Bags_Count" type="xs:int" minOccurs="0" />
+              <xs:element name="Driver_Name" msprop:Generator_ColumnVarNameInTable="columnDriver_Name" msprop:Generator_ColumnPropNameInRow="Driver_Name" msprop:Generator_ColumnPropNameInTable="Driver_NameColumn" msprop:Generator_UserColumnName="Driver_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Truck_number" msprop:Generator_ColumnVarNameInTable="columnTruck_number" msprop:Generator_ColumnPropNameInRow="Truck_number" msprop:Generator_ColumnPropNameInTable="Truck_numberColumn" msprop:Generator_UserColumnName="Truck_number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Trailer_number" msprop:Generator_ColumnVarNameInTable="columnTrailer_number" msprop:Generator_ColumnPropNameInRow="Trailer_number" msprop:Generator_ColumnPropNameInTable="Trailer_numberColumn" msprop:Generator_UserColumnName="Trailer_number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cust_NAME" msprop:Generator_ColumnVarNameInTable="columnCust_NAME" msprop:Generator_ColumnPropNameInRow="Cust_NAME" msprop:Generator_ColumnPropNameInTable="Cust_NAMEColumn" msprop:Generator_UserColumnName="Cust_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WCardID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnWCardID" msprop:Generator_ColumnPropNameInRow="WCardID" msprop:Generator_ColumnPropNameInTable="WCardIDColumn" msprop:Generator_UserColumnName="WCardID" type="xs:int" />
+              <xs:element name="Comm_NAME" msprop:Generator_ColumnVarNameInTable="columnComm_NAME" msprop:Generator_ColumnPropNameInRow="Comm_NAME" msprop:Generator_ColumnPropNameInTable="Comm_NAMEColumn" msprop:Generator_UserColumnName="Comm_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Rcard1" msprop:Generator_TableClassName="Rcard1DataTable" msprop:Generator_TableVarName="tableRcard1" msprop:Generator_TablePropName="Rcard1" msprop:Generator_RowDeletingName="Rcard1RowDeleting" msprop:Generator_RowChangingName="Rcard1RowChanging" msprop:Generator_RowEvHandlerName="Rcard1RowChangeEventHandler" msprop:Generator_RowDeletedName="Rcard1RowDeleted" msprop:Generator_UserTableName="Rcard1" msprop:Generator_RowChangedName="Rcard1RowChanged" msprop:Generator_RowEvArgName="Rcard1RowChangeEvent" msprop:Generator_RowClassName="Rcard1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ladingID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnladingID" msprop:Generator_ColumnPropNameInRow="ladingID" msprop:Generator_ColumnPropNameInTable="ladingIDColumn" msprop:Generator_UserColumnName="ladingID" type="xs:int" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:decimal" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" />
+              <xs:element name="Loading_Station" msprop:Generator_ColumnVarNameInTable="columnLoading_Station" msprop:Generator_ColumnPropNameInRow="Loading_Station" msprop:Generator_ColumnPropNameInTable="Loading_StationColumn" msprop:Generator_UserColumnName="Loading_Station" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Net_Weight" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNet_Weight" msprop:Generator_ColumnPropNameInRow="Net_Weight" msprop:Generator_ColumnPropNameInTable="Net_WeightColumn" msprop:Generator_UserColumnName="Net_Weight" type="xs:double" minOccurs="0" />
+              <xs:element name="Shrink" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShrink" msprop:Generator_ColumnPropNameInRow="Shrink" msprop:Generator_ColumnPropNameInTable="ShrinkColumn" msprop:Generator_UserColumnName="Shrink" type="xs:double" minOccurs="0" />
+              <xs:element name="Fill_Type" msprop:Generator_ColumnVarNameInTable="columnFill_Type" msprop:Generator_ColumnPropNameInRow="Fill_Type" msprop:Generator_ColumnPropNameInTable="Fill_TypeColumn" msprop:Generator_UserColumnName="Fill_Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Bags_Count" msprop:Generator_ColumnVarNameInTable="columnBags_Count" msprop:Generator_ColumnPropNameInRow="Bags_Count" msprop:Generator_ColumnPropNameInTable="Bags_CountColumn" msprop:Generator_UserColumnName="Bags_Count" type="xs:int" minOccurs="0" />
+              <xs:element name="Stack_Bar" msprop:Generator_ColumnVarNameInTable="columnStack_Bar" msprop:Generator_ColumnPropNameInRow="Stack_Bar" msprop:Generator_ColumnPropNameInTable="Stack_BarColumn" msprop:Generator_UserColumnName="Stack_Bar" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Comm_NAME" msprop:Generator_ColumnVarNameInTable="columnComm_NAME" msprop:Generator_ColumnPropNameInRow="Comm_NAME" msprop:Generator_ColumnPropNameInTable="Comm_NAMEColumn" msprop:Generator_UserColumnName="Comm_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CofOrigin" msprop:Generator_ColumnVarNameInTable="columnCofOrigin" msprop:Generator_ColumnPropNameInRow="CofOrigin" msprop:Generator_ColumnPropNameInTable="CofOriginColumn" msprop:Generator_UserColumnName="CofOrigin">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Comm_TYPE" msprop:Generator_ColumnVarNameInTable="columnComm_TYPE" msprop:Generator_ColumnPropNameInRow="Comm_TYPE" msprop:Generator_ColumnPropNameInTable="Comm_TYPEColumn" msprop:Generator_UserColumnName="Comm_TYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Company_Name" msprop:Generator_ColumnVarNameInTable="columnCompany_Name" msprop:Generator_ColumnPropNameInRow="Company_Name" msprop:Generator_ColumnPropNameInTable="Company_NameColumn" msprop:Generator_UserColumnName="Company_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Contract" msprop:Generator_ColumnVarNameInTable="columnContract" msprop:Generator_ColumnPropNameInRow="Contract" msprop:Generator_ColumnPropNameInTable="ContractColumn" msprop:Generator_UserColumnName="Contract" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shipping" msprop:Generator_ColumnVarNameInTable="columnShipping" msprop:Generator_ColumnPropNameInRow="Shipping" msprop:Generator_ColumnPropNameInTable="ShippingColumn" msprop:Generator_UserColumnName="Shipping">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Driver_Name" msprop:Generator_ColumnVarNameInTable="columnDriver_Name" msprop:Generator_ColumnPropNameInRow="Driver_Name" msprop:Generator_ColumnPropNameInTable="Driver_NameColumn" msprop:Generator_UserColumnName="Driver_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="N_Card" msprop:Generator_ColumnVarNameInTable="columnN_Card" msprop:Generator_ColumnPropNameInRow="N_Card" msprop:Generator_ColumnPropNameInTable="N_CardColumn" msprop:Generator_UserColumnName="N_Card" type="xs:decimal" />
+              <xs:element name="Liscense_num" msprop:Generator_ColumnVarNameInTable="columnLiscense_num" msprop:Generator_ColumnPropNameInRow="Liscense_num" msprop:Generator_ColumnPropNameInTable="Liscense_numColumn" msprop:Generator_UserColumnName="Liscense_num">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Serial" msprop:Generator_ColumnVarNameInTable="columnSerial" msprop:Generator_ColumnPropNameInRow="Serial" msprop:Generator_ColumnPropNameInTable="SerialColumn" msprop:Generator_UserColumnName="Serial">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SUP_NAME" msprop:Generator_ColumnVarNameInTable="columnSUP_NAME" msprop:Generator_ColumnPropNameInRow="SUP_NAME" msprop:Generator_ColumnPropNameInTable="SUP_NAMEColumn" msprop:Generator_UserColumnName="SUP_NAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shqty" msprop:Generator_ColumnVarNameInTable="columnShqty" msprop:Generator_ColumnPropNameInRow="Shqty" msprop:Generator_ColumnPropNameInTable="ShqtyColumn" msprop:Generator_UserColumnName="Shqty" type="xs:decimal" />
+              <xs:element name="Bqty" msprop:Generator_ColumnVarNameInTable="columnBqty" msprop:Generator_ColumnPropNameInRow="Bqty" msprop:Generator_ColumnPropNameInTable="BqtyColumn" msprop:Generator_UserColumnName="Bqty" type="xs:decimal" />
+              <xs:element name="Truck_number" msprop:Generator_ColumnVarNameInTable="columnTruck_number" msprop:Generator_ColumnPropNameInRow="Truck_number" msprop:Generator_ColumnPropNameInTable="Truck_numberColumn" msprop:Generator_UserColumnName="Truck_number">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Truck_License" msprop:Generator_ColumnVarNameInTable="columnTruck_License" msprop:Generator_ColumnPropNameInRow="Truck_License" msprop:Generator_ColumnPropNameInTable="Truck_LicenseColumn" msprop:Generator_UserColumnName="Truck_License" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Truck_traffic" msprop:Generator_ColumnVarNameInTable="columnTruck_traffic" msprop:Generator_ColumnPropNameInRow="Truck_traffic" msprop:Generator_ColumnPropNameInTable="Truck_trafficColumn" msprop:Generator_UserColumnName="Truck_traffic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Trailer_number" msprop:Generator_ColumnVarNameInTable="columnTrailer_number" msprop:Generator_ColumnPropNameInRow="Trailer_number" msprop:Generator_ColumnPropNameInTable="Trailer_numberColumn" msprop:Generator_UserColumnName="Trailer_number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Trailer_License" msprop:Generator_ColumnVarNameInTable="columnTrailer_License" msprop:Generator_ColumnPropNameInRow="Trailer_License" msprop:Generator_ColumnPropNameInTable="Trailer_LicenseColumn" msprop:Generator_UserColumnName="Trailer_License" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Trailer_traffic" msprop:Generator_ColumnVarNameInTable="columnTrailer_traffic" msprop:Generator_ColumnPropNameInRow="Trailer_traffic" msprop:Generator_ColumnPropNameInTable="Trailer_trafficColumn" msprop:Generator_UserColumnName="Trailer_traffic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner" msprop:Generator_ColumnVarNameInTable="columnOwner" msprop:Generator_ColumnPropNameInRow="Owner" msprop:Generator_ColumnPropNameInTable="OwnerColumn" msprop:Generator_UserColumnName="Owner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Net_Weight1" msdata:ReadOnly="true" msdata:Caption="Net_Weight" msprop:Generator_ColumnVarNameInTable="columnNet_Weight1" msprop:Generator_ColumnPropNameInRow="Net_Weight1" msprop:Generator_ColumnPropNameInTable="Net_Weight1Column" msprop:Generator_UserColumnName="Net_Weight1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Shrink1" msdata:ReadOnly="true" msdata:Caption="Shrink" msprop:Generator_ColumnVarNameInTable="columnShrink1" msprop:Generator_ColumnPropNameInRow="Shrink1" msprop:Generator_ColumnPropNameInTable="Shrink1Column" msprop:Generator_UserColumnName="Shrink1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BLading" msprop:Generator_ColumnVarNameInTable="columnBLading" msprop:Generator_ColumnPropNameInRow="BLading" msprop:Generator_ColumnPropNameInTable="BLadingColumn" msprop:Generator_UserColumnName="BLading" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Lusername" msprop:Generator_ColumnVarNameInTable="columnLusername" msprop:Generator_ColumnPropNameInRow="Lusername" msprop:Generator_ColumnPropNameInTable="LusernameColumn" msprop:Generator_UserColumnName="Lusername">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LastLadingout" />
+      <xs:field xpath="mstns:ladingID" />
+    </xs:unique>
+    <xs:unique name="Lcacrd1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Lcacrd1" />
+      <xs:field xpath="mstns:ladingID" />
+    </xs:unique>
+    <xs:unique name="INCardsReport_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:INCardsReport" />
+      <xs:field xpath="mstns:WCardID" />
+    </xs:unique>
+    <xs:unique name="OutWcard1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:OutWcard1" />
+      <xs:field xpath="mstns:WCardID" />
+    </xs:unique>
+    <xs:unique name="Rcard1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Rcard1" />
+      <xs:field xpath="mstns:ladingID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

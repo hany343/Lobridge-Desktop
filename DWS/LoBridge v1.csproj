@@ -1,0 +1,911 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E06DEF02-E4D8-4BB6-9F93-2FAFC2A111B0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LoBridge</RootNamespace>
+    <AssemblyName>LoBridge</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>F:\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>\\192.168.1.9\workplace\Public\Updater\</UpdateUrl>
+    <ProductName>LoBridge</ProductName>
+    <PublisherName>Hany Ragab</PublisherName>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>4.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsUrl>\\ITADMIN\Publish2</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LBI.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>BD4D5457A0678834234AA1E19881F80E42F09C92</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DWS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DWS_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LoBridge.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedDataGridView">
+      <HintPath>..\packages\DG.AdvancedDataGridView.1.1.24722.8\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net40\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DataGridExtensions, Version=2.4.5.0, Culture=neutral, PublicKeyToken=43de855f87de903a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DataGridExtensions.2.4.5\lib\net45\DataGridExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DataGridViewAutoFilter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DataGridViewAutoFilterEnglish.1.1.0\lib\DataGridViewAutoFilter.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Spreadsheet, Version=45.0.0.1225, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <HintPath>..\packages\GemBox.Spreadsheet.45.0.1225\lib\net35\GemBox.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Spreadsheet.WinFormsUtilities, Version=45.0.0.1225, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <HintPath>..\packages\GemBox.Spreadsheet.WinFormsUtilities.45.0.1225\lib\net35\GemBox.Spreadsheet.WinFormsUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>C:\Users\hany.ragab\Downloads\C# Mobile Shop Icons\Mobile Shop Icons\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.3.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.3.6\lib\net45\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="NSpanel">
+      <HintPath>bin\Debug\DLL\NSpanel.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Activate.Designer.cs">
+      <DependentUpon>Activate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppSetting.cs" />
+    <Compile Include="Bridge\BridgeIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bridge\BridgeIN.Designer.cs">
+      <DependentUpon>BridgeIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bridge\BridgeOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bridge\BridgeOut.designer.cs">
+      <DependentUpon>BridgeOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bridge\Bridgereport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bridge\Bridgereport.Designer.cs">
+      <DependentUpon>Bridgereport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cams.Designer.cs">
+      <DependentUpon>Cams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataQuery.cs" />
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inbound\InAdvEditing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbound\InAdvEditing.Designer.cs">
+      <DependentUpon>InAdvEditing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inbound\INReportingViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbound\INReportingViewer.Designer.cs">
+      <DependentUpon>INReportingViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inbound\INSHiftViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbound\INSHiftViewer.Designer.cs">
+      <DependentUpon>INSHiftViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outbound\LadOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\LadOut.Designer.cs">
+      <DependentUpon>LadOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="comListComm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="comListComm.Designer.cs">
+      <DependentUpon>comListComm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logs.Designer.cs">
+      <DependentUpon>Logs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outbound\Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\Orders.Designer.cs">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outbound\OUTContractView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\OUTContractView.Designer.cs">
+      <DependentUpon>OUTContractView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomReport.Designer.cs">
+      <DependentUpon>CustomReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INdataset.cs">
+      <DependentUpon>INdataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="INdataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>INdataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inbound\INListInCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbound\INListInCards.Designer.cs">
+      <DependentUpon>INListInCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outdataset.cs">
+      <DependentUpon>Outdataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Outdataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Outdataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OutTruckhistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutTruckhistory.Designer.cs">
+      <DependentUpon>OutTruckhistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryTest.Designer.cs">
+      <DependentUpon>QueryTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportsDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShipAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShipAddress.Designer.cs">
+      <DependentUpon>ShipAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysSettingsForm.Designer.cs">
+      <DependentUpon>SysSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CHCNetSDK.cs" />
+    <Compile Include="Commodity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commodity.Designer.cs">
+      <DependentUpon>Commodity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outbound\OutEditContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\OutEditContract.Designer.cs">
+      <DependentUpon>OutEditContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outbound\OutEditOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\OutEditOrder.Designer.cs">
+      <DependentUpon>OutEditOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLWSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DLWSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Home2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home2.Designer.cs">
+      <DependentUpon>Home2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inbound\INWCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbound\INWCard.designer.cs">
+      <DependentUpon>INWCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outbound\OUTLadingView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\OUTLadingView.Designer.cs">
+      <DependentUpon>OUTLadingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inbound\LastINCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbound\LastINCards.Designer.cs">
+      <DependentUpon>LastINCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LastOutCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LastOutCards.Designer.cs">
+      <DependentUpon>LastOutCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outbound\OutListCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\OutListCustomers.Designer.cs">
+      <DependentUpon>OutListCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trans\ListDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trans\ListDrivers.Designer.cs">
+      <DependentUpon>ListDrivers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inbound\INListSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbound\INListSuppliers.Designer.cs">
+      <DependentUpon>INListSuppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trans\ListTrucks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trans\ListTrucks.Designer.cs">
+      <DependentUpon>ListTrucks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outbound\OUTOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\OUTOrder.Designer.cs">
+      <DependentUpon>OUTOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inbound\INShipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbound\INShipment.designer.cs">
+      <DependentUpon>INShipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inbound\INSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbound\INSupplier.designer.cs">
+      <DependentUpon>INSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outbound\OUTCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\OUTCustomer.Designer.cs">
+      <DependentUpon>OUTCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBConnect.Designer.cs">
+      <DependentUpon>DBConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="DLWSDataSet.cs">
+      <DependentUpon>DLWSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inbound\INRelease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbound\INRelease.Designer.cs">
+      <DependentUpon>INRelease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inbound\InboardCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbound\InboardCard.Designer.cs">
+      <DependentUpon>InboardCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outbound\OUTLoadingCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\OUTLoadingCard.Designer.cs">
+      <DependentUpon>OUTLoadingCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgBox.Designer.cs">
+      <DependentUpon>MsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Myconfig.cs" />
+    <Compile Include="OutWCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutWCard.designer.cs">
+      <DependentUpon>OutWCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreSet.designer.cs">
+      <DependentUpon>PreSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\OutPrint_BLading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\OutPrint_BLading.Designer.cs">
+      <DependentUpon>OutPrint_BLading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outbound\OUTPrint_Loadingcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\OUTPrint_Loadingcard.designer.cs">
+      <DependentUpon>OUTPrint_Loadingcard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inbound\INPrint_RCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbound\INPrint_RCard.Designer.cs">
+      <DependentUpon>INPrint_RCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print_Wcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print_Wcard.Designer.cs">
+      <DependentUpon>Print_Wcard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Outbound\OUTContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\OUTContract.Designer.cs">
+      <DependentUpon>OUTContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outbound\OUTReporting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outbound\OUTReporting.Designer.cs">
+      <DependentUpon>OUTReporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inbound\INListShips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbound\INListShips.Designer.cs">
+      <DependentUpon>INListShips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLConnector.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="Trans\TransList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trans\TransList.Designer.cs">
+      <DependentUpon>TransList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trans\Transport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trans\Transport.Designer.cs">
+      <DependentUpon>Transport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trans\Trucks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trans\Trucks.Designer.cs">
+      <DependentUpon>Trucks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateLB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateLB.Designer.cs">
+      <DependentUpon>UpdateLB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userSettings.Designer.cs">
+      <DependentUpon>userSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bridge\WScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bridge\WScreen.Designer.cs">
+      <DependentUpon>WScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Activate.resx">
+      <DependentUpon>Activate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bridge\BridgeIN.resx">
+      <DependentUpon>BridgeIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bridge\BridgeOut.resx">
+      <DependentUpon>BridgeOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bridge\Bridgereport.resx">
+      <DependentUpon>Bridgereport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cams.resx">
+      <DependentUpon>Cams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbound\InAdvEditing.resx">
+      <DependentUpon>InAdvEditing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbound\INReportingViewer.resx">
+      <DependentUpon>INReportingViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbound\INSHiftViewer.resx">
+      <DependentUpon>INSHiftViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\LadOut.resx">
+      <DependentUpon>LadOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="comListComm.resx">
+      <DependentUpon>comListComm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logs.resx">
+      <DependentUpon>Logs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\Orders.resx">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\OUTContractView.resx">
+      <DependentUpon>OUTContractView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomReport.resx">
+      <DependentUpon>CustomReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbound\INListInCards.resx">
+      <DependentUpon>INListInCards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutTruckhistory.resx">
+      <DependentUpon>OutTruckhistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preview.resx">
+      <DependentUpon>Preview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="QueryTest.resx">
+      <DependentUpon>QueryTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShipAddress.resx">
+      <DependentUpon>ShipAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysSettingsForm.resx">
+      <DependentUpon>SysSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commodity.resx">
+      <DependentUpon>Commodity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\OutEditContract.resx">
+      <DependentUpon>OutEditContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\OutEditOrder.resx">
+      <DependentUpon>OutEditOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home2.resx">
+      <DependentUpon>Home2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbound\INWCard.resx">
+      <DependentUpon>INWCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\OUTLadingView.resx">
+      <DependentUpon>OUTLadingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbound\LastINCards.resx">
+      <DependentUpon>LastINCards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LastOutCards.resx">
+      <DependentUpon>LastOutCards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\OutListCustomers.resx">
+      <DependentUpon>OutListCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trans\ListDrivers.resx">
+      <DependentUpon>ListDrivers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbound\INListSuppliers.resx">
+      <DependentUpon>INListSuppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trans\ListTrucks.resx">
+      <DependentUpon>ListTrucks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\OUTCustomer.resx">
+      <DependentUpon>OUTCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBConnect.resx">
+      <DependentUpon>DBConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\OUTOrder.resx">
+      <DependentUpon>OUTOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbound\INRelease.resx">
+      <DependentUpon>INRelease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbound\InboardCard.resx">
+      <DependentUpon>InboardCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\OUTLoadingCard.resx">
+      <DependentUpon>OUTLoadingCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgBox.resx">
+      <DependentUpon>MsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutWCard.resx">
+      <DependentUpon>OutWCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreSet.resx">
+      <DependentUpon>PreSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WPreview.resx">
+      <DependentUpon>WPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\OutPrint_BLading.resx">
+      <DependentUpon>OutPrint_BLading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\OUTPrint_Loadingcard.resx">
+      <DependentUpon>OUTPrint_Loadingcard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbound\INPrint_RCard.resx">
+      <DependentUpon>INPrint_RCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print_Wcard.resx">
+      <DependentUpon>Print_Wcard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\OUTContract.resx">
+      <DependentUpon>OUTContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbound\INShipment.resx">
+      <DependentUpon>INShipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbound\INSupplier.resx">
+      <DependentUpon>INSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outbound\OUTReporting.resx">
+      <DependentUpon>OUTReporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbound\INListShips.resx">
+      <DependentUpon>INListShips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trans\TransList.resx">
+      <DependentUpon>TransList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trans\Transport.resx">
+      <DependentUpon>Transport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trans\Trucks.resx">
+      <DependentUpon>Trucks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateLB.resx">
+      <DependentUpon>UpdateLB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userSettings.resx">
+      <DependentUpon>userSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bridge\WScreen.resx">
+      <DependentUpon>WScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DLWSDataSet.xsc">
+      <DependentUpon>DLWSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DLWSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>DLWSDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DLWSDataSet.xss">
+      <DependentUpon>DLWSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DWS_TemporaryKey.pfx" />
+    <None Include="INdataset.xsc">
+      <DependentUpon>INdataset.xsd</DependentUpon>
+    </None>
+    <None Include="INdataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>INdataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="INdataset.xss">
+      <DependentUpon>INdataset.xsd</DependentUpon>
+    </None>
+    <None Include="Outdataset.xsc">
+      <DependentUpon>Outdataset.xsd</DependentUpon>
+    </None>
+    <None Include="Outdataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Outdataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Outdataset.xss">
+      <DependentUpon>Outdataset.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReportsDataset.xsc">
+      <DependentUpon>ReportsDataset.xsd</DependentUpon>
+    </None>
+    <None Include="ReportsDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportsDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportsDataset.xss">
+      <DependentUpon>ReportsDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Oilexbg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue-button.png" />
+    <None Include="Resources\WBackground.jpg" />
+    <None Include="Resources\WBack.jpg" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\MenuBG.png" />
+    <None Include="Resources\cam.png" />
+    <None Include="Resources\weight.png" />
+    <None Include="Resources\List.png" />
+    <None Include="Resources\Print.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\save3.png" />
+    <None Include="Resources\add2.png" />
+    <None Include="Resources\refresh.jpg" />
+    <EmbeddedResource Include="Resources\Logistics.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62975-balance-scale-icon.png" />
+    <None Include="Resources\Actions-go-first-view-icon.png" />
+    <None Include="Resources\Actions-go-last-view-icon.png" />
+    <None Include="Resources\Actions-go-next-view-icon.png" />
+    <None Include="Resources\Actions-go-previous-view-icon.png" />
+    <None Include="Resources\Add-icon.png" />
+    <None Include="Resources\arrow-refresh-3-icon.png" />
+    <None Include="Resources\arrow-refresh-3-icon1.png" />
+    <None Include="Resources\button-round-reload-icon.png" />
+    <None Include="Resources\cam1.png" />
+    <None Include="Resources\delete-icon.png" />
+    <None Include="Resources\document-left-icon.png" />
+    <None Include="Resources\document-right-icon.png" />
+    <None Include="Resources\edit1.png" />
+    <None Include="Resources\exit1.png" />
+    <None Include="Resources\Print1.png" />
+    <None Include="Resources\Save-icon %281%29.png" />
+    <None Include="Resources\Save-icon.png" />
+    <None Include="Resources\search-icon %282%29.png" />
+    <None Include="Resources\search-icon %282%291.png" />
+    <None Include="Resources\search-icon.png" />
+    <None Include="Resources\weight1.png" />
+    <None Include="Resources\W-icon.png" />
+    <None Include="Resources\bgreen.png" />
+    <None Include="Resources\Bblue.png" />
+    <None Include="Resources\LogisticsMenu1.png" />
+    <None Include="Resources\pnghut_yellow-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scroll-left-icon.png" />
+    <None Include="Resources\scroll-right-icon.png" />
+    <None Include="Resources\xls-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LBI.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
