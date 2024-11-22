@@ -44,6 +44,7 @@
             System.Windows.Forms.Label qtyLabel1;
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label contractLabel;
+            System.Windows.Forms.Label label4;
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.serialTextBox = new System.Windows.Forms.TextBox();
@@ -51,9 +52,10 @@
             this.BatchqtyTextBox = new System.Windows.Forms.TextBox();
             this.arrivalDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.iNdataset = new LoBridge.INdataset();
             this.contractTextBox = new System.Windows.Forms.TextBox();
             this.shipToReleaseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iNdataset = new LoBridge.INdataset();
             this.sUP_NAMETextBox = new System.Windows.Forms.TextBox();
             this.comm_NAMETextBox = new System.Windows.Forms.TextBox();
             this.ship_RQtyTextBox = new System.Windows.Forms.TextBox();
@@ -98,11 +100,12 @@
             qtyLabel1 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             contractLabel = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.shipToReleaseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iNdataset)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shipToReleaseBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commodityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dLWSDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dLWSDataSet)).BeginInit();
@@ -278,11 +281,22 @@
             contractLabel.AutoSize = true;
             contractLabel.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             contractLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            contractLabel.Location = new System.Drawing.Point(994, 147);
+            contractLabel.Location = new System.Drawing.Point(552, 149);
             contractLabel.Name = "contractLabel";
             contractLabel.Size = new System.Drawing.Size(75, 25);
             contractLabel.TabIndex = 35;
             contractLabel.Text = "رقم العقد:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            label4.Location = new System.Drawing.Point(994, 147);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(65, 25);
+            label4.TabIndex = 35;
+            label4.Text = "المستورد:";
             // 
             // panel1
             // 
@@ -366,7 +380,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.CadetBlue;
+            this.groupBox1.Controls.Add(label4);
             this.groupBox1.Controls.Add(contractLabel);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.contractTextBox);
             this.groupBox1.Controls.Add(this.sUP_NAMETextBox);
             this.groupBox1.Controls.Add(this.comm_NAMETextBox);
@@ -394,12 +410,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "بيانات الشحنة";
             // 
+            // textBox1
+            // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.shipToReleaseBindingSource, "local_supplier", true));
+            this.textBox1.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBox1.Location = new System.Drawing.Point(737, 146);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(251, 35);
+            this.textBox1.TabIndex = 36;
+            // 
+            // iNdataset
+            // 
+            this.iNdataset.DataSetName = "INdataset";
+            this.iNdataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // contractTextBox
             // 
             this.contractTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.shipToReleaseBindingSource, "Contract", true));
             this.contractTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contractTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.contractTextBox.Location = new System.Drawing.Point(737, 146);
+            this.contractTextBox.Location = new System.Drawing.Point(295, 148);
             this.contractTextBox.Name = "contractTextBox";
             this.contractTextBox.ReadOnly = true;
             this.contractTextBox.Size = new System.Drawing.Size(251, 35);
@@ -409,11 +441,6 @@
             // 
             this.shipToReleaseBindingSource.DataMember = "ShipToRelease";
             this.shipToReleaseBindingSource.DataSource = this.iNdataset;
-            // 
-            // iNdataset
-            // 
-            this.iNdataset.DataSetName = "INdataset";
-            this.iNdataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sUP_NAMETextBox
             // 
@@ -564,6 +591,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.INBatchTableAdapter = this.iNBatchTableAdapter;
             this.tableAdapterManager.LadingTableAdapter = null;
+            this.tableAdapterManager.Local_SuppliersTableAdapter = null;
             this.tableAdapterManager.ShipmentTableAdapter = null;
             this.tableAdapterManager.SUPPLIERSTableAdapter = this.sUPPLIERSTableAdapter;
             this.tableAdapterManager.UpdateOrder = LoBridge.INdatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -692,8 +720,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.shipToReleaseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iNdataset)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shipToReleaseBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.commodityBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dLWSDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dLWSDataSet)).EndInit();
@@ -748,5 +776,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton RefreshBtn;
         private System.Windows.Forms.BindingNavigator iNBatchBindingNavigator;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

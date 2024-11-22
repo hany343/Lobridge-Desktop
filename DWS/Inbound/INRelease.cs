@@ -70,8 +70,10 @@ namespace LoBridge
 
         private void INBatch_Load(object sender, EventArgs e)
         {
-            try
+             try
             {
+               
+           
                 // TODO: This line of code loads data into the 'iNdataset.SUPPLIERS' table. You can move, or remove it, as needed.
                 this.sUPPLIERSTableAdapter.Fill(this.iNdataset.SUPPLIERS);
                 // TODO: This line of code loads data into the 'dLWSDataSet1.Commodity' table. You can move, or remove it, as needed.

@@ -12,6 +12,10 @@
 
 namespace LoBridge.INdatasetTableAdapters
 {
+    partial class BatchToLadingTableAdapter
+    {
+    }
+
     partial class ShipmentTableAdapter
     {
     }

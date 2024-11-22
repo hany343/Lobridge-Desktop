@@ -1,4 +1,5 @@
 ﻿
+
 namespace LoBridge
 {
     partial class BridgeIN

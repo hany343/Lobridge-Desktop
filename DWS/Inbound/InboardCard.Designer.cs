@@ -60,6 +60,7 @@
             System.Windows.Forms.Label driver_IDLabel;
             System.Windows.Forms.Label truck_IDLabel1;
             System.Windows.Forms.Label batch_IDLabel1;
+            System.Windows.Forms.Label label4;
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -72,6 +73,7 @@
             this.dLWSDataSet = new LoBridge.DLWSDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_loadports = new System.Windows.Forms.Button();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.drivergroupBox3 = new System.Windows.Forms.GroupBox();
             this.refreshDrivers = new System.Windows.Forms.LinkLabel();
@@ -93,6 +95,7 @@
             this.trailer_numberTextBox = new System.Windows.Forms.TextBox();
             this.LastCardpanel = new System.Windows.Forms.Panel();
             this.loading_StationComboBox = new System.Windows.Forms.ComboBox();
+            this.lading_PortsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.b_LadingTextBox = new System.Windows.Forms.TextBox();
             this.rnameComboBox = new System.Windows.Forms.ComboBox();
             this.representativeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -108,6 +111,7 @@
             this.BatchqtyTextBox1 = new System.Windows.Forms.TextBox();
             this.Batchremain_QtyTextBox = new System.Windows.Forms.TextBox();
             this.shippingTextBox = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.supp_NameTextBox = new System.Windows.Forms.TextBox();
             this.originTextBox = new System.Windows.Forms.TextBox();
             this.comm_NAMETextBox = new System.Windows.Forms.TextBox();
@@ -138,6 +142,8 @@
             this.batchToLadingTableAdapter = new LoBridge.INdatasetTableAdapters.BatchToLadingTableAdapter();
             this.ladingTableAdapter = new LoBridge.INdatasetTableAdapters.LadingTableAdapter();
             this.ExitBtn = new System.Windows.Forms.Button();
+            this.lading_PortsTableAdapter = new LoBridge.DLWSDataSetTableAdapters.Lading_PortsTableAdapter();
+            this.tableAdapterManager = new LoBridge.DLWSDataSetTableAdapters.TableAdapterManager();
             qtyLabel = new System.Windows.Forms.Label();
             batch_IDLabel = new System.Windows.Forms.Label();
             serialLabel = new System.Windows.Forms.Label();
@@ -169,6 +175,7 @@
             driver_IDLabel = new System.Windows.Forms.Label();
             truck_IDLabel1 = new System.Windows.Forms.Label();
             batch_IDLabel1 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ladingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iNdataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dLWSDataSet)).BeginInit();
@@ -178,6 +185,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.driversBindingSource)).BeginInit();
             this.truckGroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.truckBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lading_PortsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.representativeBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.batchToLadingBindingSource)).BeginInit();
@@ -238,7 +246,7 @@
             originLabel.AutoSize = true;
             originLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             originLabel.ForeColor = System.Drawing.Color.Black;
-            originLabel.Location = new System.Drawing.Point(586, 74);
+            originLabel.Location = new System.Drawing.Point(649, 74);
             originLabel.Name = "originLabel";
             originLabel.Size = new System.Drawing.Size(53, 23);
             originLabel.TabIndex = 17;
@@ -259,11 +267,11 @@
             supp_NameLabel.AutoSize = true;
             supp_NameLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             supp_NameLabel.ForeColor = System.Drawing.Color.Black;
-            supp_NameLabel.Location = new System.Drawing.Point(587, 114);
+            supp_NameLabel.Location = new System.Drawing.Point(650, 114);
             supp_NameLabel.Name = "supp_NameLabel";
-            supp_NameLabel.Size = new System.Drawing.Size(86, 23);
+            supp_NameLabel.Size = new System.Drawing.Size(58, 23);
             supp_NameLabel.TabIndex = 23;
-            supp_NameLabel.Text = "اسم المورد:";
+            supp_NameLabel.Text = "المورد:";
             // 
             // shippingLabel
             // 
@@ -303,7 +311,7 @@
             remain_QtyLabel.AutoSize = true;
             remain_QtyLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             remain_QtyLabel.ForeColor = System.Drawing.Color.Black;
-            remain_QtyLabel.Location = new System.Drawing.Point(385, 72);
+            remain_QtyLabel.Location = new System.Drawing.Point(333, 72);
             remain_QtyLabel.Name = "remain_QtyLabel";
             remain_QtyLabel.Size = new System.Drawing.Size(59, 23);
             remain_QtyLabel.TabIndex = 54;
@@ -324,7 +332,7 @@
             qtyLabel1.AutoSize = true;
             qtyLabel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             qtyLabel1.ForeColor = System.Drawing.Color.Black;
-            qtyLabel1.Location = new System.Drawing.Point(385, 34);
+            qtyLabel1.Location = new System.Drawing.Point(333, 34);
             qtyLabel1.Name = "qtyLabel1";
             qtyLabel1.Size = new System.Drawing.Size(53, 23);
             qtyLabel1.TabIndex = 55;
@@ -333,7 +341,7 @@
             // lusernameLabel
             // 
             lusernameLabel.AutoSize = true;
-            lusernameLabel.Location = new System.Drawing.Point(327, 255);
+            lusernameLabel.Location = new System.Drawing.Point(327, 265);
             lusernameLabel.Name = "lusernameLabel";
             lusernameLabel.Size = new System.Drawing.Size(95, 19);
             lusernameLabel.TabIndex = 50;
@@ -388,7 +396,7 @@
             label7.AutoSize = true;
             label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label7.ForeColor = System.Drawing.Color.Black;
-            label7.Location = new System.Drawing.Point(223, 44);
+            label7.Location = new System.Drawing.Point(168, 34);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(33, 23);
             label7.TabIndex = 58;
@@ -399,7 +407,7 @@
             label8.AutoSize = true;
             label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label8.ForeColor = System.Drawing.Color.Black;
-            label8.Location = new System.Drawing.Point(223, 78);
+            label8.Location = new System.Drawing.Point(171, 78);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(33, 23);
             label8.TabIndex = 59;
@@ -489,7 +497,7 @@
             // driver_IDLabel
             // 
             driver_IDLabel.AutoSize = true;
-            driver_IDLabel.Location = new System.Drawing.Point(184, 367);
+            driver_IDLabel.Location = new System.Drawing.Point(184, 377);
             driver_IDLabel.Name = "driver_IDLabel";
             driver_IDLabel.Size = new System.Drawing.Size(80, 19);
             driver_IDLabel.TabIndex = 51;
@@ -498,7 +506,7 @@
             // truck_IDLabel1
             // 
             truck_IDLabel1.AutoSize = true;
-            truck_IDLabel1.Location = new System.Drawing.Point(487, 374);
+            truck_IDLabel1.Location = new System.Drawing.Point(487, 384);
             truck_IDLabel1.Name = "truck_IDLabel1";
             truck_IDLabel1.Size = new System.Drawing.Size(76, 19);
             truck_IDLabel1.TabIndex = 52;
@@ -507,11 +515,22 @@
             // batch_IDLabel1
             // 
             batch_IDLabel1.AutoSize = true;
-            batch_IDLabel1.Location = new System.Drawing.Point(846, 371);
+            batch_IDLabel1.Location = new System.Drawing.Point(846, 381);
             batch_IDLabel1.Name = "batch_IDLabel1";
             batch_IDLabel1.Size = new System.Drawing.Size(78, 19);
             batch_IDLabel1.TabIndex = 53;
             batch_IDLabel1.Text = "Batch ID:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.ForeColor = System.Drawing.Color.Black;
+            label4.Location = new System.Drawing.Point(333, 114);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(74, 23);
+            label4.TabIndex = 23;
+            label4.Text = "المستورد:";
             // 
             // LadingqtyTextBox
             // 
@@ -561,12 +580,14 @@
             this.panel1.Location = new System.Drawing.Point(9, 49);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.panel1.Size = new System.Drawing.Size(1152, 512);
             this.panel1.TabIndex = 61;
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.SteelBlue;
+            this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.btn_loadports);
             this.groupBox2.Controls.Add(this.linkLabel2);
             this.groupBox2.Controls.Add(this.drivergroupBox3);
             this.groupBox2.Controls.Add(this.truckGroupBox3);
@@ -588,25 +609,39 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Enabled = false;
             this.groupBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(0, 159);
+            this.groupBox2.Location = new System.Drawing.Point(0, 169);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 6, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 6, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(1152, 353);
+            this.groupBox2.Size = new System.Drawing.Size(1152, 343);
             this.groupBox2.TabIndex = 50;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "بيانات الحمولة";
+            // 
+            // btn_loadports
+            // 
+            this.btn_loadports.BackgroundImage = global::LoBridge.Properties.Resources.arrow_refresh_3_icon;
+            this.btn_loadports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_loadports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_loadports.FlatAppearance.BorderSize = 0;
+            this.btn_loadports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_loadports.Location = new System.Drawing.Point(792, 245);
+            this.btn_loadports.Name = "btn_loadports";
+            this.btn_loadports.Size = new System.Drawing.Size(28, 28);
+            this.btn_loadports.TabIndex = 74;
+            this.btn_loadports.UseVisualStyleBackColor = true;
+            this.btn_loadports.Click += new System.EventHandler(this.btn_loadports_Click);
             // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.ForeColor = System.Drawing.Color.Black;
-            this.linkLabel2.Location = new System.Drawing.Point(396, 23);
+            this.linkLabel2.Location = new System.Drawing.Point(413, 30);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(51, 24);
+            this.linkLabel2.Size = new System.Drawing.Size(47, 24);
             this.linkLabel2.TabIndex = 73;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "عرض";
+            this.linkLabel2.Text = "تحميل";
             this.linkLabel2.Visible = false;
             this.linkLabel2.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -637,12 +672,12 @@
             // 
             this.refreshDrivers.AutoSize = true;
             this.refreshDrivers.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshDrivers.Location = new System.Drawing.Point(17, 30);
+            this.refreshDrivers.Location = new System.Drawing.Point(18, 30);
             this.refreshDrivers.Name = "refreshDrivers";
-            this.refreshDrivers.Size = new System.Drawing.Size(44, 19);
+            this.refreshDrivers.Size = new System.Drawing.Size(42, 19);
             this.refreshDrivers.TabIndex = 91;
             this.refreshDrivers.TabStop = true;
-            this.refreshDrivers.Text = "تحديث";
+            this.refreshDrivers.Text = "تحميل";
             this.refreshDrivers.Click += new System.EventHandler(this.refreshDrivers_Click);
             // 
             // driver_NameComboBox
@@ -742,12 +777,12 @@
             // 
             this.refreshTrucks.AutoSize = true;
             this.refreshTrucks.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshTrucks.Location = new System.Drawing.Point(69, 21);
+            this.refreshTrucks.Location = new System.Drawing.Point(81, 26);
             this.refreshTrucks.Name = "refreshTrucks";
-            this.refreshTrucks.Size = new System.Drawing.Size(44, 19);
+            this.refreshTrucks.Size = new System.Drawing.Size(42, 19);
             this.refreshTrucks.TabIndex = 90;
             this.refreshTrucks.TabStop = true;
-            this.refreshTrucks.Text = "تحديث";
+            this.refreshTrucks.Text = "تحميل";
             this.refreshTrucks.Click += new System.EventHandler(this.refreshTrucks_Click);
             // 
             // truck_numberComboBox
@@ -841,6 +876,7 @@
             // LastCardpanel
             // 
             this.LastCardpanel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastCardpanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.LastCardpanel.Location = new System.Drawing.Point(6, 69);
             this.LastCardpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LastCardpanel.Name = "LastCardpanel";
@@ -851,23 +887,26 @@
             // 
             this.loading_StationComboBox.AutoCompleteCustomSource.AddRange(new string[] {
             "ابو قير"});
-            this.loading_StationComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.loading_StationComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ladingBindingSource, "Loading_Station", true));
+            this.loading_StationComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.loading_StationComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.loading_StationComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lading_PortsBindingSource, "lading_Port", true));
+            this.loading_StationComboBox.DataSource = this.lading_PortsBindingSource;
+            this.loading_StationComboBox.DisplayMember = "lading_Port";
             this.loading_StationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.loading_StationComboBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loading_StationComboBox.ForeColor = System.Drawing.Color.Black;
             this.loading_StationComboBox.FormattingEnabled = true;
-            this.loading_StationComboBox.Items.AddRange(new object[] {
-            "ابو قير",
-            "الدخيلة",
-            "دمياط",
-            "الاسكندرية",
-            "اخري"});
-            this.loading_StationComboBox.Location = new System.Drawing.Point(801, 243);
+            this.loading_StationComboBox.Location = new System.Drawing.Point(826, 243);
             this.loading_StationComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loading_StationComboBox.Name = "loading_StationComboBox";
-            this.loading_StationComboBox.Size = new System.Drawing.Size(236, 31);
+            this.loading_StationComboBox.Size = new System.Drawing.Size(211, 31);
             this.loading_StationComboBox.TabIndex = 8;
+            this.loading_StationComboBox.ValueMember = "lading_Port";
+            // 
+            // lading_PortsBindingSource
+            // 
+            this.lading_PortsBindingSource.DataMember = "Lading_Ports";
+            this.lading_PortsBindingSource.DataSource = this.dLWSDataSet;
             // 
             // b_LadingTextBox
             // 
@@ -926,7 +965,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.CadetBlue;
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(label8);
             this.groupBox1.Controls.Add(label7);
@@ -939,7 +978,9 @@
             this.groupBox1.Controls.Add(this.Batchremain_QtyTextBox);
             this.groupBox1.Controls.Add(shippingLabel);
             this.groupBox1.Controls.Add(this.shippingTextBox);
+            this.groupBox1.Controls.Add(label4);
             this.groupBox1.Controls.Add(supp_NameLabel);
+            this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.supp_NameTextBox);
             this.groupBox1.Controls.Add(originLabel);
             this.groupBox1.Controls.Add(this.originTextBox);
@@ -949,8 +990,8 @@
             this.groupBox1.Controls.Add(batch_IDLabel);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox1.Location = new System.Drawing.Point(0, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
             this.groupBox1.Size = new System.Drawing.Size(1152, 159);
@@ -964,12 +1005,12 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.ForeColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(872, 32);
+            this.linkLabel1.Location = new System.Drawing.Point(868, 32);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(52, 23);
+            this.linkLabel1.Size = new System.Drawing.Size(49, 23);
             this.linkLabel1.TabIndex = 60;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "تحديث";
+            this.linkLabel1.Text = "تحميل";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // serialTextBox
@@ -1048,7 +1089,7 @@
             series2.Name = "Series2";
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(155, 133);
+            this.chart1.Size = new System.Drawing.Size(42, 133);
             this.chart1.TabIndex = 30;
             this.chart1.Text = "chart1";
             this.chart1.Visible = false;
@@ -1058,7 +1099,7 @@
             this.BatchqtyTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.batchToLadingBindingSource, "Qty", true));
             this.BatchqtyTextBox1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BatchqtyTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.BatchqtyTextBox1.Location = new System.Drawing.Point(259, 27);
+            this.BatchqtyTextBox1.Location = new System.Drawing.Point(207, 27);
             this.BatchqtyTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BatchqtyTextBox1.Name = "BatchqtyTextBox1";
             this.BatchqtyTextBox1.ReadOnly = true;
@@ -1071,7 +1112,7 @@
             this.Batchremain_QtyTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.batchToLadingBindingSource, "Remain_Qty", true));
             this.Batchremain_QtyTextBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Batchremain_QtyTextBox.ForeColor = System.Drawing.Color.Black;
-            this.Batchremain_QtyTextBox.Location = new System.Drawing.Point(259, 69);
+            this.Batchremain_QtyTextBox.Location = new System.Drawing.Point(207, 69);
             this.Batchremain_QtyTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Batchremain_QtyTextBox.Name = "Batchremain_QtyTextBox";
             this.Batchremain_QtyTextBox.ReadOnly = true;
@@ -1091,17 +1132,30 @@
             this.shippingTextBox.Size = new System.Drawing.Size(322, 28);
             this.shippingTextBox.TabIndex = 53;
             // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.White;
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.batchToLadingBindingSource, "local_supplier", true));
+            this.textBox3.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.Black;
+            this.textBox3.Location = new System.Drawing.Point(103, 112);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(228, 28);
+            this.textBox3.TabIndex = 24;
+            // 
             // supp_NameTextBox
             // 
             this.supp_NameTextBox.BackColor = System.Drawing.Color.White;
             this.supp_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.batchToLadingBindingSource, "SUP_NAME", true));
             this.supp_NameTextBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.supp_NameTextBox.ForeColor = System.Drawing.Color.Black;
-            this.supp_NameTextBox.Location = new System.Drawing.Point(259, 112);
+            this.supp_NameTextBox.Location = new System.Drawing.Point(443, 112);
             this.supp_NameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.supp_NameTextBox.Name = "supp_NameTextBox";
             this.supp_NameTextBox.ReadOnly = true;
-            this.supp_NameTextBox.Size = new System.Drawing.Size(326, 28);
+            this.supp_NameTextBox.Size = new System.Drawing.Size(205, 28);
             this.supp_NameTextBox.TabIndex = 24;
             // 
             // originTextBox
@@ -1110,11 +1164,11 @@
             this.originTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.batchToLadingBindingSource, "CofOrigin", true));
             this.originTextBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.originTextBox.ForeColor = System.Drawing.Color.Black;
-            this.originTextBox.Location = new System.Drawing.Point(458, 67);
+            this.originTextBox.Location = new System.Drawing.Point(443, 67);
             this.originTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.originTextBox.Name = "originTextBox";
             this.originTextBox.ReadOnly = true;
-            this.originTextBox.Size = new System.Drawing.Size(127, 28);
+            this.originTextBox.Size = new System.Drawing.Size(205, 28);
             this.originTextBox.TabIndex = 18;
             // 
             // comm_NAMETextBox
@@ -1228,6 +1282,7 @@
             this.editBtn,
             this.toolStripSeparator4});
             this.ladingBindingNavigator.Location = new System.Drawing.Point(9, 6);
+            this.ladingBindingNavigator.Margin = new System.Windows.Forms.Padding(0, 0, 0, 20);
             this.ladingBindingNavigator.MoveFirstItem = null;
             this.ladingBindingNavigator.MoveLastItem = null;
             this.ladingBindingNavigator.MoveNextItem = null;
@@ -1327,6 +1382,29 @@
             this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
+            // lading_PortsTableAdapter
+            // 
+            this.lading_PortsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CameraTableAdapter = null;
+            this.tableAdapterManager.CityTableAdapter = null;
+            this.tableAdapterManager.CommodityTableAdapter = null;
+            this.tableAdapterManager.DriversTableAdapter = this.driversTableAdapter;
+            this.tableAdapterManager.EmailsTableAdapter = null;
+            this.tableAdapterManager.GWCardTableAdapter = null;
+            this.tableAdapterManager.Lading_PortsTableAdapter = this.lading_PortsTableAdapter;
+            this.tableAdapterManager.LogsTableAdapter = null;
+            this.tableAdapterManager.RepresentativeTableAdapter = this.representativeTableAdapter;
+            this.tableAdapterManager.Transport_CoTableAdapter = null;
+            this.tableAdapterManager.TruckTableAdapter = this.truckTableAdapter;
+            this.tableAdapterManager.UpdateOrder = LoBridge.DLWSDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.User_PermTableAdapter = null;
+            this.tableAdapterManager.UsersTableAdapter = null;
+            this.tableAdapterManager.WcardIDTableAdapter = this.wcardIDTableAdapter;
+            // 
             // InboardCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -1364,6 +1442,7 @@
             this.truckGroupBox3.ResumeLayout(false);
             this.truckGroupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.truckBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lading_PortsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.representativeBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1455,6 +1534,11 @@
         private System.Windows.Forms.LinkLabel refreshTrucks;
         private System.Windows.Forms.LinkLabel refreshDrivers;
         private System.Windows.Forms.Panel LastCardpanel;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.BindingSource lading_PortsBindingSource;
+        private DLWSDataSetTableAdapters.Lading_PortsTableAdapter lading_PortsTableAdapter;
+        private DLWSDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Button btn_loadports;
         // private DLWSDataSetTableAdapters.WcardIDTableAdapter wcardIDTableAdapter;
     }
 }

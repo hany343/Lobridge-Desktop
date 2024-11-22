@@ -107,7 +107,7 @@
             this.incardsDataGridView.AutoGenerateColumns = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -351,7 +351,7 @@
             this.countlabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.countlabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countlabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.countlabel.Location = new System.Drawing.Point(1139, 10);
+            this.countlabel.Location = new System.Drawing.Point(1140, 10);
             this.countlabel.Name = "countlabel";
             this.countlabel.Size = new System.Drawing.Size(25, 26);
             this.countlabel.TabIndex = 1;
@@ -361,9 +361,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1170, 10);
+            this.label1.Location = new System.Drawing.Point(1171, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 32);
+            this.label1.Size = new System.Drawing.Size(122, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "العدد الاجمالي:";
             // 
@@ -371,9 +371,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1011, 10);
+            this.label2.Location = new System.Drawing.Point(1013, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 32);
+            this.label2.Size = new System.Drawing.Size(121, 32);
             this.label2.TabIndex = 5;
             this.label2.Text = "             تم وزن: ";
             // 
@@ -383,7 +383,7 @@
             this.countFlabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.countFlabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countFlabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.countFlabel.Location = new System.Drawing.Point(980, 10);
+            this.countFlabel.Location = new System.Drawing.Point(982, 10);
             this.countFlabel.Name = "countFlabel";
             this.countFlabel.Size = new System.Drawing.Size(25, 26);
             this.countFlabel.TabIndex = 6;
@@ -393,9 +393,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(732, 10);
+            this.label3.Location = new System.Drawing.Point(736, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 32);
+            this.label3.Size = new System.Drawing.Size(151, 32);
             this.label3.TabIndex = 2;
             this.label3.Text = "اجمالي وزن المصنع:";
             // 
@@ -403,9 +403,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(890, 10);
+            this.label5.Location = new System.Drawing.Point(893, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 32);
+            this.label5.Size = new System.Drawing.Size(83, 32);
             this.label5.TabIndex = 7;
             this.label5.Text = "طن           ";
             // 
@@ -415,7 +415,7 @@
             this.netsumlabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.netsumlabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.netsumlabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.netsumlabel.Location = new System.Drawing.Point(701, 10);
+            this.netsumlabel.Location = new System.Drawing.Point(705, 10);
             this.netsumlabel.Name = "netsumlabel";
             this.netsumlabel.Size = new System.Drawing.Size(25, 26);
             this.netsumlabel.TabIndex = 3;
@@ -425,9 +425,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(611, 10);
+            this.label6.Location = new System.Drawing.Point(616, 10);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 32);
+            this.label6.Size = new System.Drawing.Size(83, 32);
             this.label6.TabIndex = 8;
             this.label6.Text = "طن           ";
             // 
@@ -564,7 +564,7 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.contextMenuStrip1.ShowImageMargin = false;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(186, 230);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(167, 202);
             this.contextMenuStrip1.Text = "الخيارات";
             // 
             // cancelBtn
@@ -573,14 +573,14 @@
             this.cancelBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.cancelBtn.Enabled = false;
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(185, 30);
+            this.cancelBtn.Size = new System.Drawing.Size(166, 30);
             this.cancelBtn.Text = "الغاء الكارت";
             this.cancelBtn.Click += new System.EventHandler(this.CancelInCard_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(182, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(163, 6);
             // 
             // enableBtn
             // 
@@ -588,14 +588,14 @@
             this.enableBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.enableBtn.Enabled = false;
             this.enableBtn.Name = "enableBtn";
-            this.enableBtn.Size = new System.Drawing.Size(185, 30);
+            this.enableBtn.Size = new System.Drawing.Size(166, 30);
             this.enableBtn.Text = "تفعيل الكارت";
             this.enableBtn.Click += new System.EventHandler(this.enablecardBtn_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(182, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(163, 6);
             // 
             // rw1Btn
             // 
@@ -603,14 +603,14 @@
             this.rw1Btn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.rw1Btn.Enabled = false;
             this.rw1Btn.Name = "rw1Btn";
-            this.rw1Btn.Size = new System.Drawing.Size(185, 30);
+            this.rw1Btn.Size = new System.Drawing.Size(166, 30);
             this.rw1Btn.Text = "اعادة الوزن الاول";
             this.rw1Btn.Click += new System.EventHandler(this.rw1Btn_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(182, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(163, 6);
             // 
             // rw2Btn
             // 
@@ -618,21 +618,21 @@
             this.rw2Btn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.rw2Btn.Enabled = false;
             this.rw2Btn.Name = "rw2Btn";
-            this.rw2Btn.Size = new System.Drawing.Size(185, 30);
+            this.rw2Btn.Size = new System.Drawing.Size(166, 30);
             this.rw2Btn.Text = "اعادة الوزن الثاني";
             this.rw2Btn.Click += new System.EventHandler(this.ReWseconed_Click);
             // 
             // shwcardBtn
             // 
             this.shwcardBtn.Name = "shwcardBtn";
-            this.shwcardBtn.Size = new System.Drawing.Size(185, 30);
+            this.shwcardBtn.Size = new System.Drawing.Size(166, 30);
             this.shwcardBtn.Text = "عرض الكارت";
             this.shwcardBtn.Click += new System.EventHandler(this.shwcardBtn_Click);
             // 
             // showwcBtn
             // 
             this.showwcBtn.Name = "showwcBtn";
-            this.showwcBtn.Size = new System.Drawing.Size(185, 30);
+            this.showwcBtn.Size = new System.Drawing.Size(166, 30);
             this.showwcBtn.Text = "عرض تذكرة الوزن";
             this.showwcBtn.Click += new System.EventHandler(this.showwcBtn_Click);
             // 

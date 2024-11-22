@@ -112,6 +112,7 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.INBatchTableAdapter = this.iNBatchTableAdapter;
             this.tableAdapterManager.LadingTableAdapter = null;
+            this.tableAdapterManager.Local_SuppliersTableAdapter = null;
             this.tableAdapterManager.ShipmentTableAdapter = this.shipmentTableAdapter;
             this.tableAdapterManager.SUPPLIERSTableAdapter = this.sUPPLIERSTableAdapter;
             this.tableAdapterManager.UpdateOrder = LoBridge.INdatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -131,6 +132,7 @@
             this.shipmentBindingNavigator.BindingSource = this.shipmentBindingSource;
             this.shipmentBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.shipmentBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.shipmentBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.shipmentBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -151,14 +153,14 @@
             this.shipmentBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.shipmentBindingNavigator.Name = "shipmentBindingNavigator";
             this.shipmentBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.shipmentBindingNavigator.Size = new System.Drawing.Size(1122, 25);
+            this.shipmentBindingNavigator.Size = new System.Drawing.Size(1309, 27);
             this.shipmentBindingNavigator.TabIndex = 0;
             this.shipmentBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -168,7 +170,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -177,7 +179,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -186,13 +188,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -200,14 +202,14 @@
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(58, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -215,7 +217,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -224,31 +226,33 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // shipmentBindingNavigatorSaveItem
             // 
             this.shipmentBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.shipmentBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("shipmentBindingNavigatorSaveItem.Image")));
             this.shipmentBindingNavigatorSaveItem.Name = "shipmentBindingNavigatorSaveItem";
-            this.shipmentBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.shipmentBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.shipmentBindingNavigatorSaveItem.Text = "Save Data";
             this.shipmentBindingNavigatorSaveItem.Click += new System.EventHandler(this.shipmentBindingNavigatorSaveItem_Click);
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.BackColor = System.Drawing.Color.Red;
+            this.toolStripButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(37, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(46, 24);
             this.toolStripButton1.Text = "اغلاق";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -271,9 +275,11 @@
             this.dataGridViewTextBoxColumn12});
             this.shipmentDataGridView.DataSource = this.shipmentBindingSource;
             this.shipmentDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
-            this.shipmentDataGridView.Location = new System.Drawing.Point(0, 25);
+            this.shipmentDataGridView.Location = new System.Drawing.Point(0, 27);
+            this.shipmentDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.shipmentDataGridView.Name = "shipmentDataGridView";
-            this.shipmentDataGridView.Size = new System.Drawing.Size(1122, 220);
+            this.shipmentDataGridView.RowHeadersWidth = 51;
+            this.shipmentDataGridView.Size = new System.Drawing.Size(1309, 271);
             this.shipmentDataGridView.TabIndex = 1;
             this.shipmentDataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.shipmentDataGridView_RowEnter);
             // 
@@ -281,62 +287,82 @@
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Ship_ID";
             this.dataGridViewTextBoxColumn1.HeaderText = "Ship_ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Contract";
             this.dataGridViewTextBoxColumn2.HeaderText = "Contract";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Comm_ID";
             this.dataGridViewTextBoxColumn3.HeaderText = "Comm_ID";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Supp_ID";
             this.dataGridViewTextBoxColumn4.HeaderText = "Supp_ID";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Shipping";
             this.dataGridViewTextBoxColumn5.HeaderText = "Shipping";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Notes";
             this.dataGridViewTextBoxColumn7.HeaderText = "Notes";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 125;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Date";
             this.dataGridViewTextBoxColumn9.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 125;
             // 
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "Qty";
             this.dataGridViewTextBoxColumn10.HeaderText = "Qty";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 125;
             // 
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "Ship_RQty";
             this.dataGridViewTextBoxColumn11.HeaderText = "Ship_RQty";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 125;
             // 
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.DataPropertyName = "Trans_Co";
             this.dataGridViewTextBoxColumn12.HeaderText = "Trans_Co";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 125;
             // 
             // iNBatchBindingSource
             // 
@@ -360,59 +386,77 @@
             this.dataGridViewTextBoxColumn21});
             this.iNBatchDataGridView.DataSource = this.iNBatchBindingSource;
             this.iNBatchDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iNBatchDataGridView.Location = new System.Drawing.Point(0, 245);
+            this.iNBatchDataGridView.Location = new System.Drawing.Point(0, 298);
+            this.iNBatchDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iNBatchDataGridView.Name = "iNBatchDataGridView";
-            this.iNBatchDataGridView.Size = new System.Drawing.Size(1122, 220);
+            this.iNBatchDataGridView.RowHeadersWidth = 51;
+            this.iNBatchDataGridView.Size = new System.Drawing.Size(1309, 271);
             this.iNBatchDataGridView.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Batch_ID";
             this.dataGridViewTextBoxColumn6.HeaderText = "Batch_ID";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 125;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "Ship_ID";
             this.dataGridViewTextBoxColumn8.HeaderText = "Ship_ID";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 125;
             // 
             // dataGridViewTextBoxColumn13
             // 
             this.dataGridViewTextBoxColumn13.DataPropertyName = "Serial";
             this.dataGridViewTextBoxColumn13.HeaderText = "Serial";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Width = 125;
             // 
             // dataGridViewTextBoxColumn15
             // 
             this.dataGridViewTextBoxColumn15.DataPropertyName = "Notes";
             this.dataGridViewTextBoxColumn15.HeaderText = "Notes";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.Width = 125;
             // 
             // dataGridViewTextBoxColumn17
             // 
             this.dataGridViewTextBoxColumn17.DataPropertyName = "Date";
             this.dataGridViewTextBoxColumn17.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.Width = 125;
             // 
             // dataGridViewTextBoxColumn18
             // 
             this.dataGridViewTextBoxColumn18.DataPropertyName = "Qty";
             this.dataGridViewTextBoxColumn18.HeaderText = "Qty";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.Width = 125;
             // 
             // dataGridViewTextBoxColumn19
             // 
             this.dataGridViewTextBoxColumn19.DataPropertyName = "Remain_Qty";
             this.dataGridViewTextBoxColumn19.HeaderText = "Remain_Qty";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.Width = 125;
             // 
             // dataGridViewTextBoxColumn21
             // 
             this.dataGridViewTextBoxColumn21.DataPropertyName = "Ladding_Station";
             this.dataGridViewTextBoxColumn21.HeaderText = "Ladding_Station";
+            this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.Width = 125;
             // 
             // sUPPLIERSBindingSource
             // 
@@ -438,82 +482,105 @@
             this.dataGridViewTextBoxColumn28});
             this.sUPPLIERSDataGridView.DataSource = this.sUPPLIERSBindingSource;
             this.sUPPLIERSDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
-            this.sUPPLIERSDataGridView.Location = new System.Drawing.Point(0, 465);
+            this.sUPPLIERSDataGridView.Location = new System.Drawing.Point(0, 569);
+            this.sUPPLIERSDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sUPPLIERSDataGridView.Name = "sUPPLIERSDataGridView";
-            this.sUPPLIERSDataGridView.Size = new System.Drawing.Size(1122, 220);
+            this.sUPPLIERSDataGridView.RowHeadersWidth = 51;
+            this.sUPPLIERSDataGridView.Size = new System.Drawing.Size(1309, 271);
             this.sUPPLIERSDataGridView.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.DataPropertyName = "SUP_ID";
             this.dataGridViewTextBoxColumn14.HeaderText = "SUP_ID";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Width = 125;
             // 
             // dataGridViewTextBoxColumn16
             // 
             this.dataGridViewTextBoxColumn16.DataPropertyName = "SUP_NAME";
             this.dataGridViewTextBoxColumn16.HeaderText = "SUP_NAME";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.Width = 125;
             // 
             // dataGridViewTextBoxColumn20
             // 
             this.dataGridViewTextBoxColumn20.DataPropertyName = "PHONE";
             this.dataGridViewTextBoxColumn20.HeaderText = "PHONE";
+            this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Width = 125;
             // 
             // dataGridViewTextBoxColumn22
             // 
             this.dataGridViewTextBoxColumn22.DataPropertyName = "MOBILE";
             this.dataGridViewTextBoxColumn22.HeaderText = "MOBILE";
+            this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.Width = 125;
             // 
             // dataGridViewTextBoxColumn23
             // 
             this.dataGridViewTextBoxColumn23.DataPropertyName = "CITY";
             this.dataGridViewTextBoxColumn23.HeaderText = "CITY";
+            this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.Width = 125;
             // 
             // dataGridViewTextBoxColumn24
             // 
             this.dataGridViewTextBoxColumn24.DataPropertyName = "ADDRESS";
             this.dataGridViewTextBoxColumn24.HeaderText = "ADDRESS";
+            this.dataGridViewTextBoxColumn24.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.Width = 125;
             // 
             // dataGridViewTextBoxColumn25
             // 
             this.dataGridViewTextBoxColumn25.DataPropertyName = "NOTES";
             this.dataGridViewTextBoxColumn25.HeaderText = "NOTES";
+            this.dataGridViewTextBoxColumn25.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.Width = 125;
             // 
             // dataGridViewTextBoxColumn26
             // 
             this.dataGridViewTextBoxColumn26.DataPropertyName = "Satus";
             this.dataGridViewTextBoxColumn26.HeaderText = "Satus";
+            this.dataGridViewTextBoxColumn26.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.Width = 125;
             // 
             // dataGridViewTextBoxColumn27
             // 
             this.dataGridViewTextBoxColumn27.DataPropertyName = "S_username";
             this.dataGridViewTextBoxColumn27.HeaderText = "S_username";
+            this.dataGridViewTextBoxColumn27.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.Width = 125;
             // 
             // dataGridViewTextBoxColumn28
             // 
             this.dataGridViewTextBoxColumn28.DataPropertyName = "create_date";
             this.dataGridViewTextBoxColumn28.HeaderText = "create_date";
+            this.dataGridViewTextBoxColumn28.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.Width = 125;
             // 
-            // Editing
+            // InAdvEditing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 820);
+            this.ClientSize = new System.Drawing.Size(1309, 1009);
             this.Controls.Add(this.sUPPLIERSDataGridView);
             this.Controls.Add(this.iNBatchDataGridView);
             this.Controls.Add(this.shipmentDataGridView);
             this.Controls.Add(this.shipmentBindingNavigator);
-            this.Name = "Editing";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "InAdvEditing";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "Editing";

@@ -48,7 +48,7 @@ namespace LoBridge.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2020-01-01")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2026-01-01")]
         public global::System.DateTime enddate {
             get {
                 return ((global::System.DateTime)(this["enddate"]));
@@ -229,8 +229,7 @@ namespace LoBridge.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=log\\dlws;Initial Catalog=dlws;MultipleActiveResultSets=True;User ID=s" +
-            "a;Password=dareen")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlserver;Initial Catalog=dlws;User ID=sa;Password=dareen")]
         public string wdbConnectionString {
             get {
                 return ((string)(this["wdbConnectionString"]));
@@ -258,6 +257,63 @@ namespace LoBridge.Properties {
             }
             set {
                 this["lastuser"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\DemoDB\\DLWS.mdf\";Integrat" +
+            "ed Security=True;Connect Timeout=30")]
+        public string DemoCString {
+            get {
+                return ((string)(this["DemoCString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=log\\dlws;Initial Catalog=dlws;User ID=sa;Password=dareen")]
+        public string DevString {
+            get {
+                return ((string)(this["DevString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool devmode {
+            get {
+                return ((bool)(this["devmode"]));
+            }
+            set {
+                this["devmode"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(".\\sqlserver")]
+        public string server {
+            get {
+                return ((string)(this["server"]));
+            }
+            set {
+                this["server"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("dlws")]
+        public string databse {
+            get {
+                return ((string)(this["databse"]));
+            }
+            set {
+                this["databse"] = value;
             }
         }
     }

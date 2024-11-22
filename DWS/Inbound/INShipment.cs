@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoBridge.Inbound;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -22,7 +23,7 @@ namespace LoBridge
                 int ident = Convert.ToInt32(this.shipmentTableAdapter.InsertShipment(contractTextBox.Text, int.Parse(comm_NAMEComboBox.SelectedValue.ToString() + ""),
                     int.Parse(sUP_NAMEComboBox.SelectedValue + ""), shippingTextBox.Text
                     , notesTextBox.Text, "مفتوح", decimal.Parse(qtyTextBox.Text), decimal.Parse(qtyTextBox.Text)
-                    , int.Parse(TransCo.SelectedValue + ""), Properties.Settings.Default.logedUN, lading_PortTextBox.Text).ToString());
+                    , int.Parse(TransCo.SelectedValue + ""), Properties.Settings.Default.logedUN, lading_PortTextBox.Text, LocalSUpcomboBox.Text.Trim()));
 
                 ship_IDTextBox.Text = ident + "";
                 if (ident > 0)
@@ -45,14 +46,11 @@ namespace LoBridge
         }
         private void Shipping_Load(object sender, EventArgs e)
         {
-            ////// TODO: This line of code loads data into the 'iNdataset.SUPPLIERS' table. You can move, or remove it, as needed.
-            ////this.sUPPLIERSTableAdapter.Fill(this.iNdataset.SUPPLIERS);
-            ////// TODO: This line of code loads data into the 'iNdataset.Shipment' table. You can move, or remove it, as needed.
-            ////this.shipmentTableAdapter.Fill(this.iNdataset.Shipment);
-            //timer1.Tick += new EventHandler(timer1_Tick);
+           
 
             //timer1.Start();
             this.panel1.Enabled = false;
+            //btnLocalSupList
 
 
         }
@@ -136,36 +134,34 @@ namespace LoBridge
         }
 
 
-        //private void checkBox1_CheckStateChanged(object sender, EventArgs e)
-        //{
-        //    if (checkBox1.Checked == true)
-        //    {
-        //        shippingTextBox.Text = "محلي";
-        //        shippingTextBox.ReadOnly = true;
-        //    }
-        //    else
-        //    {
-        //        shippingTextBox.Text = "";
-        //        shippingTextBox.ReadOnly = false;
-        //    }
-        //}
-
-        //private void checkBox1_Click(object sender, EventArgs e)
-        //{
-        //    if (checkBox1.CheckState == CheckState.Checked)
-        //    {
-        //        checkBox1.CheckState = CheckState.Checked ;
-        //    }
-        //    else
-        //    {
-        //        checkBox1.CheckState = CheckState.Unchecked;
-        //    }
-        //}
-
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        private void LocalSUpcomboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+
+             try
+                {
+                    if (LocalSUpcomboBox.SelectedIndex < 0)
+                    {
+                        // TODO: This line of code loads data into the 'dLWSDataSet.SUPPLIERS' table. You can move, or remove it, as needed.
+                        this.local_SuppliersTableAdapter.Fill(this.iNdataset.Local_Suppliers);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            
+        }
+
+        private void btnLocalSupList_Click(object sender, EventArgs e)
+        {
+            Local_Suppliers local_Suppliers = new Local_Suppliers();
+            local_Suppliers.ShowDialog();
+        }
     }
 }

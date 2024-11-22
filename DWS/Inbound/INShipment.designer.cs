@@ -1,4 +1,6 @@
-﻿namespace LoBridge
+﻿using LoBridge.Inbound;
+
+namespace LoBridge
 {
     partial class INShipment
     {
@@ -41,6 +43,7 @@
             System.Windows.Forms.Label company_NameLabel;
             System.Windows.Forms.Label shusernameLabel;
             System.Windows.Forms.Label lading_PortLabel;
+            System.Windows.Forms.Label label2;
             this.dLWSDataSet = new LoBridge.DLWSDataSet();
             this.contractTextBox = new System.Windows.Forms.TextBox();
             this.shippingTextBox = new System.Windows.Forms.TextBox();
@@ -57,6 +60,9 @@
             this.TransCo = new System.Windows.Forms.ComboBox();
             this.transport_CoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ship_IDTextBox = new System.Windows.Forms.TextBox();
+            this.btnLocalSupList = new System.Windows.Forms.Button();
+            this.LocalSUpcomboBox = new System.Windows.Forms.ComboBox();
+            this.localSuppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qtyTextBox = new System.Windows.Forms.TextBox();
             this.ship_RQtyTextBox = new System.Windows.Forms.TextBox();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -81,6 +87,7 @@
             this.shipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.shipmentTableAdapter = new LoBridge.INdatasetTableAdapters.ShipmentTableAdapter();
             this.sUPPLIERSTableAdapter = new LoBridge.INdatasetTableAdapters.SUPPLIERSTableAdapter();
+            this.local_SuppliersTableAdapter = new LoBridge.INdatasetTableAdapters.Local_SuppliersTableAdapter();
             contractLabel = new System.Windows.Forms.Label();
             commodityLabel = new System.Windows.Forms.Label();
             supp_NameLabel = new System.Windows.Forms.Label();
@@ -93,12 +100,14 @@
             company_NameLabel = new System.Windows.Forms.Label();
             shusernameLabel = new System.Windows.Forms.Label();
             lading_PortLabel = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dLWSDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sUPPLIERSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iNdataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.commodityBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.transport_CoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.localSuppliersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShipmentBindingNavigator)).BeginInit();
             this.ShipmentBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).BeginInit();
@@ -143,7 +152,7 @@
             // shippingLabel
             // 
             shippingLabel.AutoSize = true;
-            shippingLabel.Location = new System.Drawing.Point(683, 231);
+            shippingLabel.Location = new System.Drawing.Point(685, 293);
             shippingLabel.Name = "shippingLabel";
             shippingLabel.Size = new System.Drawing.Size(86, 22);
             shippingLabel.TabIndex = 15;
@@ -152,7 +161,7 @@
             // notesLabel
             // 
             notesLabel.AutoSize = true;
-            notesLabel.Location = new System.Drawing.Point(682, 335);
+            notesLabel.Location = new System.Drawing.Point(684, 397);
             notesLabel.Name = "notesLabel";
             notesLabel.Size = new System.Drawing.Size(78, 22);
             notesLabel.TabIndex = 23;
@@ -190,7 +199,7 @@
             // company_NameLabel
             // 
             company_NameLabel.AutoSize = true;
-            company_NameLabel.Location = new System.Drawing.Point(682, 265);
+            company_NameLabel.Location = new System.Drawing.Point(684, 327);
             company_NameLabel.Name = "company_NameLabel";
             company_NameLabel.Size = new System.Drawing.Size(86, 22);
             company_NameLabel.TabIndex = 39;
@@ -208,11 +217,20 @@
             // lading_PortLabel
             // 
             lading_PortLabel.AutoSize = true;
-            lading_PortLabel.Location = new System.Drawing.Point(681, 299);
+            lading_PortLabel.Location = new System.Drawing.Point(683, 361);
             lading_PortLabel.Name = "lading_PortLabel";
             lading_PortLabel.Size = new System.Drawing.Size(100, 22);
             lading_PortLabel.TabIndex = 39;
             lading_PortLabel.Text = "مكان التحميل:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(685, 231);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(101, 22);
+            label2.TabIndex = 9;
+            label2.Text = "اسم المستورد:";
             // 
             // dLWSDataSet
             // 
@@ -232,7 +250,7 @@
             // shippingTextBox
             // 
             this.shippingTextBox.BackColor = System.Drawing.Color.White;
-            this.shippingTextBox.Location = new System.Drawing.Point(231, 227);
+            this.shippingTextBox.Location = new System.Drawing.Point(233, 289);
             this.shippingTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.shippingTextBox.Name = "shippingTextBox";
             this.shippingTextBox.Size = new System.Drawing.Size(446, 30);
@@ -240,7 +258,7 @@
             // 
             // notesTextBox
             // 
-            this.notesTextBox.Location = new System.Drawing.Point(88, 333);
+            this.notesTextBox.Location = new System.Drawing.Point(90, 395);
             this.notesTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.notesTextBox.Multiline = true;
             this.notesTextBox.Name = "notesTextBox";
@@ -305,10 +323,13 @@
             this.panel1.Controls.Add(this.ship_IDTextBox);
             this.panel1.Controls.Add(contractLabel);
             this.panel1.Controls.Add(commodityLabel);
+            this.panel1.Controls.Add(this.btnLocalSupList);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.notesTextBox);
+            this.panel1.Controls.Add(this.LocalSUpcomboBox);
             this.panel1.Controls.Add(this.sUP_NAMEComboBox);
             this.panel1.Controls.Add(notesLabel);
+            this.panel1.Controls.Add(label2);
             this.panel1.Controls.Add(this.shippingTextBox);
             this.panel1.Controls.Add(supp_NameLabel);
             this.panel1.Controls.Add(shippingLabel);
@@ -319,7 +340,7 @@
             this.panel1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.panel1.Location = new System.Drawing.Point(9, 52);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(802, 409);
+            this.panel1.Size = new System.Drawing.Size(802, 478);
             this.panel1.TabIndex = 35;
             // 
             // comm_NAMEComboBox
@@ -337,7 +358,7 @@
             // 
             // lading_PortTextBox
             // 
-            this.lading_PortTextBox.Location = new System.Drawing.Point(231, 297);
+            this.lading_PortTextBox.Location = new System.Drawing.Point(233, 359);
             this.lading_PortTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lading_PortTextBox.Name = "lading_PortTextBox";
             this.lading_PortTextBox.Size = new System.Drawing.Size(446, 30);
@@ -348,7 +369,7 @@
             this.TransCo.DataSource = this.transport_CoBindingSource;
             this.TransCo.DisplayMember = "Company_Name";
             this.TransCo.FormattingEnabled = true;
-            this.TransCo.Location = new System.Drawing.Point(231, 263);
+            this.TransCo.Location = new System.Drawing.Point(233, 325);
             this.TransCo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TransCo.Name = "TransCo";
             this.TransCo.Size = new System.Drawing.Size(446, 30);
@@ -371,6 +392,35 @@
             this.ship_IDTextBox.Size = new System.Drawing.Size(120, 46);
             this.ship_IDTextBox.TabIndex = 10;
             this.ship_IDTextBox.TabStop = false;
+            // 
+            // btnLocalSupList
+            // 
+            this.btnLocalSupList.Location = new System.Drawing.Point(176, 227);
+            this.btnLocalSupList.Name = "btnLocalSupList";
+            this.btnLocalSupList.Size = new System.Drawing.Size(116, 29);
+            this.btnLocalSupList.TabIndex = 30;
+            this.btnLocalSupList.Text = "تعديل القائمة";
+            this.btnLocalSupList.UseVisualStyleBackColor = true;
+            this.btnLocalSupList.Click += new System.EventHandler(this.btnLocalSupList_Click);
+            // 
+            // LocalSUpcomboBox
+            // 
+            this.LocalSUpcomboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.LocalSUpcomboBox.BackColor = System.Drawing.Color.LightBlue;
+            this.LocalSUpcomboBox.DataSource = this.localSuppliersBindingSource;
+            this.LocalSUpcomboBox.DisplayMember = "Supplier_Name";
+            this.LocalSUpcomboBox.FormattingEnabled = true;
+            this.LocalSUpcomboBox.Location = new System.Drawing.Point(298, 226);
+            this.LocalSUpcomboBox.Name = "LocalSUpcomboBox";
+            this.LocalSUpcomboBox.Size = new System.Drawing.Size(380, 30);
+            this.LocalSUpcomboBox.TabIndex = 15;
+            this.LocalSUpcomboBox.ValueMember = "Supplier_Name";
+            this.LocalSUpcomboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LocalSUpcomboBox_MouseClick);
+            // 
+            // localSuppliersBindingSource
+            // 
+            this.localSuppliersBindingSource.DataMember = "Local_Suppliers";
+            this.localSuppliersBindingSource.DataSource = this.iNdataset;
             // 
             // qtyTextBox
             // 
@@ -588,13 +638,17 @@
             // 
             this.sUPPLIERSTableAdapter.ClearBeforeFill = true;
             // 
+            // local_SuppliersTableAdapter
+            // 
+            this.local_SuppliersTableAdapter.ClearBeforeFill = true;
+            // 
             // INShipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(820, 470);
+            this.ClientSize = new System.Drawing.Size(820, 539);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ShipmentBindingNavigator);
@@ -609,7 +663,7 @@
             this.MaximumSize = new System.Drawing.Size(838, 586);
             this.MinimumSize = new System.Drawing.Size(838, 511);
             this.Name = "INShipment";
-            this.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.Padding = new System.Windows.Forms.Padding(9);
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "شحنة جديدة";
@@ -621,6 +675,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.transport_CoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.localSuppliersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShipmentBindingNavigator)).EndInit();
             this.ShipmentBindingNavigator.ResumeLayout(false);
             this.ShipmentBindingNavigator.PerformLayout();
@@ -672,5 +727,9 @@
         private System.Windows.Forms.BindingSource sUPPLIERSBindingSource;
         private INdatasetTableAdapters.SUPPLIERSTableAdapter sUPPLIERSTableAdapter;
         private System.Windows.Forms.ComboBox comm_NAMEComboBox;
+        private System.Windows.Forms.Button btnLocalSupList;
+        private System.Windows.Forms.ComboBox LocalSUpcomboBox;
+        private System.Windows.Forms.BindingSource localSuppliersBindingSource;
+        private INdatasetTableAdapters.Local_SuppliersTableAdapter local_SuppliersTableAdapter;
     }
 }

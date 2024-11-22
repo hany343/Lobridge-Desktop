@@ -44,6 +44,10 @@ namespace LoBridge {
         
         private INRptDataTable tableINRpt;
         
+        private Local_SuppliersDataTable tableLocal_Suppliers;
+        
+        private CommodityDataTable tableCommodity;
+        
         private global::System.Data.DataRelation relationFK_Shipment_SUPPLIERS3;
         
         private global::System.Data.DataRelation relationFK_Lading_INBatch;
@@ -51,6 +55,8 @@ namespace LoBridge {
         private global::System.Data.DataRelation relationFK_INBatch_Shipment;
         
         private global::System.Data.DataRelation relationFK_WcardID_Lading;
+        
+        private global::System.Data.DataRelation relationFK_Shipment_Commodity;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -109,6 +115,12 @@ namespace LoBridge {
                 }
                 if ((ds.Tables["INRpt"] != null)) {
                     base.Tables.Add(new INRptDataTable(ds.Tables["INRpt"]));
+                }
+                if ((ds.Tables["Local_Suppliers"] != null)) {
+                    base.Tables.Add(new Local_SuppliersDataTable(ds.Tables["Local_Suppliers"]));
+                }
+                if ((ds.Tables["Commodity"] != null)) {
+                    base.Tables.Add(new CommodityDataTable(ds.Tables["Commodity"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -230,6 +242,26 @@ namespace LoBridge {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public Local_SuppliersDataTable Local_Suppliers {
+            get {
+                return this.tableLocal_Suppliers;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CommodityDataTable Commodity {
+            get {
+                return this.tableCommodity;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -325,6 +357,12 @@ namespace LoBridge {
                 if ((ds.Tables["INRpt"] != null)) {
                     base.Tables.Add(new INRptDataTable(ds.Tables["INRpt"]));
                 }
+                if ((ds.Tables["Local_Suppliers"] != null)) {
+                    base.Tables.Add(new Local_SuppliersDataTable(ds.Tables["Local_Suppliers"]));
+                }
+                if ((ds.Tables["Commodity"] != null)) {
+                    base.Tables.Add(new CommodityDataTable(ds.Tables["Commodity"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -418,10 +456,23 @@ namespace LoBridge {
                     this.tableINRpt.InitVars();
                 }
             }
+            this.tableLocal_Suppliers = ((Local_SuppliersDataTable)(base.Tables["Local_Suppliers"]));
+            if ((initTable == true)) {
+                if ((this.tableLocal_Suppliers != null)) {
+                    this.tableLocal_Suppliers.InitVars();
+                }
+            }
+            this.tableCommodity = ((CommodityDataTable)(base.Tables["Commodity"]));
+            if ((initTable == true)) {
+                if ((this.tableCommodity != null)) {
+                    this.tableCommodity.InitVars();
+                }
+            }
             this.relationFK_Shipment_SUPPLIERS3 = this.Relations["FK_Shipment_SUPPLIERS3"];
             this.relationFK_Lading_INBatch = this.Relations["FK_Lading_INBatch"];
             this.relationFK_INBatch_Shipment = this.Relations["FK_INBatch_Shipment"];
             this.relationFK_WcardID_Lading = this.Relations["FK_WcardID_Lading"];
+            this.relationFK_Shipment_Commodity = this.Relations["FK_Shipment_Commodity"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -452,6 +503,10 @@ namespace LoBridge {
             base.Tables.Add(this.tableWCard1);
             this.tableINRpt = new INRptDataTable();
             base.Tables.Add(this.tableINRpt);
+            this.tableLocal_Suppliers = new Local_SuppliersDataTable();
+            base.Tables.Add(this.tableLocal_Suppliers);
+            this.tableCommodity = new CommodityDataTable();
+            base.Tables.Add(this.tableCommodity);
             this.relationFK_Shipment_SUPPLIERS3 = new global::System.Data.DataRelation("FK_Shipment_SUPPLIERS3", new global::System.Data.DataColumn[] {
                         this.tableSUPPLIERS.SUP_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableShipment.Supp_IDColumn}, false);
@@ -468,6 +523,10 @@ namespace LoBridge {
                         this.tableLading.ladingIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableWcardID.LAD_IDColumn}, false);
             this.Relations.Add(this.relationFK_WcardID_Lading);
+            this.relationFK_Shipment_Commodity = new global::System.Data.DataRelation("FK_Shipment_Commodity", new global::System.Data.DataColumn[] {
+                        this.tableCommodity.Comm_IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableShipment.Comm_IDColumn}, false);
+            this.Relations.Add(this.relationFK_Shipment_Commodity);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -527,6 +586,18 @@ namespace LoBridge {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeINRpt() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeLocal_Suppliers() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeCommodity() {
             return false;
         }
         
@@ -614,6 +685,12 @@ namespace LoBridge {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void INRptRowChangeEventHandler(object sender, INRptRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void Local_SuppliersRowChangeEventHandler(object sender, Local_SuppliersRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void CommodityRowChangeEventHandler(object sender, CommodityRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1715,6 +1792,8 @@ namespace LoBridge {
             
             private global::System.Data.DataColumn columnLading_Port;
             
+            private global::System.Data.DataColumn columnlocal_supplier;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ShipmentDataTable() {
@@ -1862,6 +1941,14 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn local_supplierColumn {
+                get {
+                    return this.columnlocal_supplier;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1897,12 +1984,12 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ShipmentRow AddShipmentRow(string Contract, int Comm_ID, SUPPLIERSRow parentSUPPLIERSRowByFK_Shipment_SUPPLIERS3, string Shipping, System.DateTime ArrialDate, string Notes, string Status, System.DateTime Date, decimal Qty, decimal Ship_RQty, int Trans_Co, string Shusername, string Lading_Port) {
+            public ShipmentRow AddShipmentRow(string Contract, CommodityRow parentCommodityRowByFK_Shipment_Commodity, SUPPLIERSRow parentSUPPLIERSRowByFK_Shipment_SUPPLIERS3, string Shipping, System.DateTime ArrialDate, string Notes, string Status, System.DateTime Date, decimal Qty, decimal Ship_RQty, int Trans_Co, string Shusername, string Lading_Port, string local_supplier) {
                 ShipmentRow rowShipmentRow = ((ShipmentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Contract,
-                        Comm_ID,
+                        null,
                         null,
                         Shipping,
                         ArrialDate,
@@ -1913,7 +2000,11 @@ namespace LoBridge {
                         Ship_RQty,
                         Trans_Co,
                         Shusername,
-                        Lading_Port};
+                        Lading_Port,
+                        local_supplier};
+                if ((parentCommodityRowByFK_Shipment_Commodity != null)) {
+                    columnValuesArray[2] = parentCommodityRowByFK_Shipment_Commodity[0];
+                }
                 if ((parentSUPPLIERSRowByFK_Shipment_SUPPLIERS3 != null)) {
                     columnValuesArray[3] = parentSUPPLIERSRowByFK_Shipment_SUPPLIERS3[0];
                 }
@@ -1960,6 +2051,7 @@ namespace LoBridge {
                 this.columnTrans_Co = base.Columns["Trans_Co"];
                 this.columnShusername = base.Columns["Shusername"];
                 this.columnLading_Port = base.Columns["Lading_Port"];
+                this.columnlocal_supplier = base.Columns["local_supplier"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1993,6 +2085,8 @@ namespace LoBridge {
                 base.Columns.Add(this.columnShusername);
                 this.columnLading_Port = new global::System.Data.DataColumn("Lading_Port", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLading_Port);
+                this.columnlocal_supplier = new global::System.Data.DataColumn("local_supplier", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlocal_supplier);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnShip_ID}, true));
                 this.columnShip_ID.AutoIncrement = true;
@@ -2014,6 +2108,7 @@ namespace LoBridge {
                 this.columnShusername.DefaultValue = ((string)("shname"));
                 this.columnShusername.MaxLength = 50;
                 this.columnLading_Port.MaxLength = 50;
+                this.columnlocal_supplier.MaxLength = 150;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2169,6 +2264,8 @@ namespace LoBridge {
             
             private global::System.Data.DataColumn columnLadding_Station;
             
+            private global::System.Data.DataColumn columnAllowedQ;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public INBatchDataTable() {
@@ -2292,6 +2389,14 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AllowedQColumn {
+                get {
+                    return this.columnAllowedQ;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2327,7 +2432,7 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public INBatchRow AddINBatchRow(ShipmentRow parentShipmentRowByFK_INBatch_Shipment, string Serial, System.DateTime ArrivalDate, string Notes, string Status, System.DateTime Date, decimal Qty, decimal Remain_Qty, string Iusername, string Ladding_Station) {
+            public INBatchRow AddINBatchRow(ShipmentRow parentShipmentRowByFK_INBatch_Shipment, string Serial, System.DateTime ArrivalDate, string Notes, string Status, System.DateTime Date, decimal Qty, decimal Remain_Qty, string Iusername, string Ladding_Station, decimal AllowedQ) {
                 INBatchRow rowINBatchRow = ((INBatchRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2340,7 +2445,8 @@ namespace LoBridge {
                         Qty,
                         Remain_Qty,
                         Iusername,
-                        Ladding_Station};
+                        Ladding_Station,
+                        AllowedQ};
                 if ((parentShipmentRowByFK_INBatch_Shipment != null)) {
                     columnValuesArray[1] = parentShipmentRowByFK_INBatch_Shipment[0];
                 }
@@ -2384,6 +2490,7 @@ namespace LoBridge {
                 this.columnRemain_Qty = base.Columns["Remain_Qty"];
                 this.columnIusername = base.Columns["Iusername"];
                 this.columnLadding_Station = base.Columns["Ladding_Station"];
+                this.columnAllowedQ = base.Columns["AllowedQ"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2411,6 +2518,8 @@ namespace LoBridge {
                 base.Columns.Add(this.columnIusername);
                 this.columnLadding_Station = new global::System.Data.DataColumn("Ladding_Station", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLadding_Station);
+                this.columnAllowedQ = new global::System.Data.DataColumn("AllowedQ", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAllowedQ);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnBatch_ID}, true));
                 this.columnBatch_ID.AutoIncrement = true;
@@ -2430,6 +2539,7 @@ namespace LoBridge {
                 this.columnIusername.DefaultValue = ((string)("uuu"));
                 this.columnIusername.MaxLength = 50;
                 this.columnLadding_Station.MaxLength = 50;
+                this.columnAllowedQ.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2583,6 +2693,8 @@ namespace LoBridge {
             
             private global::System.Data.DataColumn columnSUP_NAME;
             
+            private global::System.Data.DataColumn columnlocal_supplier;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ShipToReleaseDataTable() {
@@ -2698,6 +2810,14 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn local_supplierColumn {
+                get {
+                    return this.columnlocal_supplier;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2733,7 +2853,7 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ShipToReleaseRow AddShipToReleaseRow(string Contract, decimal Qty, string Shipping, string Notes, string Status, decimal Ship_RQty, string Comm_NAME, string CofOrigin, string SUP_NAME) {
+            public ShipToReleaseRow AddShipToReleaseRow(string Contract, decimal Qty, string Shipping, string Notes, string Status, decimal Ship_RQty, string Comm_NAME, string CofOrigin, string SUP_NAME, string local_supplier) {
                 ShipToReleaseRow rowShipToReleaseRow = ((ShipToReleaseRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2745,7 +2865,8 @@ namespace LoBridge {
                         Ship_RQty,
                         Comm_NAME,
                         CofOrigin,
-                        SUP_NAME};
+                        SUP_NAME,
+                        local_supplier};
                 rowShipToReleaseRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowShipToReleaseRow);
                 return rowShipToReleaseRow;
@@ -2785,6 +2906,7 @@ namespace LoBridge {
                 this.columnComm_NAME = base.Columns["Comm_NAME"];
                 this.columnCofOrigin = base.Columns["CofOrigin"];
                 this.columnSUP_NAME = base.Columns["SUP_NAME"];
+                this.columnlocal_supplier = base.Columns["local_supplier"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2810,6 +2932,8 @@ namespace LoBridge {
                 base.Columns.Add(this.columnCofOrigin);
                 this.columnSUP_NAME = new global::System.Data.DataColumn("SUP_NAME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSUP_NAME);
+                this.columnlocal_supplier = new global::System.Data.DataColumn("local_supplier", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlocal_supplier);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnShip_ID}, true));
                 this.columnShip_ID.AutoIncrement = true;
@@ -2831,6 +2955,7 @@ namespace LoBridge {
                 this.columnCofOrigin.MaxLength = 50;
                 this.columnSUP_NAME.AllowDBNull = false;
                 this.columnSUP_NAME.MaxLength = 50;
+                this.columnlocal_supplier.MaxLength = 150;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3291,6 +3416,8 @@ namespace LoBridge {
             
             private global::System.Data.DataColumn columnStatus;
             
+            private global::System.Data.DataColumn columnlocal_supplier;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public BatchToLadingDataTable() {
@@ -3406,6 +3533,14 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn local_supplierColumn {
+                get {
+                    return this.columnlocal_supplier;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3441,7 +3576,7 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public BatchToLadingRow AddBatchToLadingRow(string Serial, decimal Qty, decimal Remain_Qty, string Notes, string Comm_NAME, string CofOrigin, string Shipping, string SUP_NAME, string Status) {
+            public BatchToLadingRow AddBatchToLadingRow(string Serial, decimal Qty, decimal Remain_Qty, string Notes, string Comm_NAME, string CofOrigin, string Shipping, string SUP_NAME, string Status, string local_supplier) {
                 BatchToLadingRow rowBatchToLadingRow = ((BatchToLadingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3453,7 +3588,8 @@ namespace LoBridge {
                         CofOrigin,
                         Shipping,
                         SUP_NAME,
-                        Status};
+                        Status,
+                        local_supplier};
                 rowBatchToLadingRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBatchToLadingRow);
                 return rowBatchToLadingRow;
@@ -3493,6 +3629,7 @@ namespace LoBridge {
                 this.columnShipping = base.Columns["Shipping"];
                 this.columnSUP_NAME = base.Columns["SUP_NAME"];
                 this.columnStatus = base.Columns["Status"];
+                this.columnlocal_supplier = base.Columns["local_supplier"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3518,6 +3655,8 @@ namespace LoBridge {
                 base.Columns.Add(this.columnSUP_NAME);
                 this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStatus);
+                this.columnlocal_supplier = new global::System.Data.DataColumn("local_supplier", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlocal_supplier);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnBatch_ID}, true));
                 this.columnBatch_ID.AutoIncrement = true;
@@ -3540,6 +3679,7 @@ namespace LoBridge {
                 this.columnSUP_NAME.AllowDBNull = false;
                 this.columnSUP_NAME.MaxLength = 50;
                 this.columnStatus.MaxLength = 50;
+                this.columnlocal_supplier.MaxLength = 150;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3738,6 +3878,8 @@ namespace LoBridge {
             private global::System.Data.DataColumn columnBLading;
             
             private global::System.Data.DataColumn columnLusername;
+            
+            private global::System.Data.DataColumn columnlocal_supplier;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -4038,6 +4180,14 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn local_supplierColumn {
+                get {
+                    return this.columnlocal_supplier;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4105,7 +4255,8 @@ namespace LoBridge {
                         decimal Net_Weight1, 
                         decimal Shrink1, 
                         string BLading, 
-                        string Lusername) {
+                        string Lusername, 
+                        string local_supplier) {
                 Rcard1Row rowRcard1Row = ((Rcard1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -4140,7 +4291,8 @@ namespace LoBridge {
                         Net_Weight1,
                         Shrink1,
                         BLading,
-                        Lusername};
+                        Lusername,
+                        local_supplier};
                 rowRcard1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRcard1Row);
                 return rowRcard1Row;
@@ -4203,6 +4355,7 @@ namespace LoBridge {
                 this.columnShrink1 = base.Columns["Shrink1"];
                 this.columnBLading = base.Columns["BLading"];
                 this.columnLusername = base.Columns["Lusername"];
+                this.columnlocal_supplier = base.Columns["local_supplier"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4274,6 +4427,8 @@ namespace LoBridge {
                 base.Columns.Add(this.columnBLading);
                 this.columnLusername = new global::System.Data.DataColumn("Lusername", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLusername);
+                this.columnlocal_supplier = new global::System.Data.DataColumn("local_supplier", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlocal_supplier);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnladingID}, true));
                 this.columnladingID.AutoIncrement = true;
@@ -4325,6 +4480,7 @@ namespace LoBridge {
                 this.columnBLading.MaxLength = 10;
                 this.columnLusername.AllowDBNull = false;
                 this.columnLusername.MaxLength = 50;
+                this.columnlocal_supplier.MaxLength = 150;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5506,6 +5662,558 @@ namespace LoBridge {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Local_SuppliersDataTable : global::System.Data.TypedTableBase<Local_SuppliersRow> {
+            
+            private global::System.Data.DataColumn columnSupplier_Name;
+            
+            private global::System.Data.DataColumn columnNotes;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Local_SuppliersDataTable() {
+                this.TableName = "Local_Suppliers";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Local_SuppliersDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected Local_SuppliersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Supplier_NameColumn {
+                get {
+                    return this.columnSupplier_Name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NotesColumn {
+                get {
+                    return this.columnNotes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Local_SuppliersRow this[int index] {
+                get {
+                    return ((Local_SuppliersRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Local_SuppliersRowChangeEventHandler Local_SuppliersRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Local_SuppliersRowChangeEventHandler Local_SuppliersRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Local_SuppliersRowChangeEventHandler Local_SuppliersRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event Local_SuppliersRowChangeEventHandler Local_SuppliersRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddLocal_SuppliersRow(Local_SuppliersRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Local_SuppliersRow AddLocal_SuppliersRow(string Supplier_Name, string Notes) {
+                Local_SuppliersRow rowLocal_SuppliersRow = ((Local_SuppliersRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Supplier_Name,
+                        Notes};
+                rowLocal_SuppliersRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowLocal_SuppliersRow);
+                return rowLocal_SuppliersRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Local_SuppliersRow FindBySupplier_Name(string Supplier_Name) {
+                return ((Local_SuppliersRow)(this.Rows.Find(new object[] {
+                            Supplier_Name})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Local_SuppliersDataTable cln = ((Local_SuppliersDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Local_SuppliersDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnSupplier_Name = base.Columns["Supplier_Name"];
+                this.columnNotes = base.Columns["Notes"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnSupplier_Name = new global::System.Data.DataColumn("Supplier_Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSupplier_Name);
+                this.columnNotes = new global::System.Data.DataColumn("Notes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNotes);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnSupplier_Name}, true));
+                this.columnSupplier_Name.AllowDBNull = false;
+                this.columnSupplier_Name.Unique = true;
+                this.columnSupplier_Name.MaxLength = 150;
+                this.columnNotes.MaxLength = 250;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Local_SuppliersRow NewLocal_SuppliersRow() {
+                return ((Local_SuppliersRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Local_SuppliersRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Local_SuppliersRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Local_SuppliersRowChanged != null)) {
+                    this.Local_SuppliersRowChanged(this, new Local_SuppliersRowChangeEvent(((Local_SuppliersRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Local_SuppliersRowChanging != null)) {
+                    this.Local_SuppliersRowChanging(this, new Local_SuppliersRowChangeEvent(((Local_SuppliersRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Local_SuppliersRowDeleted != null)) {
+                    this.Local_SuppliersRowDeleted(this, new Local_SuppliersRowChangeEvent(((Local_SuppliersRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Local_SuppliersRowDeleting != null)) {
+                    this.Local_SuppliersRowDeleting(this, new Local_SuppliersRowChangeEvent(((Local_SuppliersRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveLocal_SuppliersRow(Local_SuppliersRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                INdataset ds = new INdataset();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Local_SuppliersDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CommodityDataTable : global::System.Data.TypedTableBase<CommodityRow> {
+            
+            private global::System.Data.DataColumn columnComm_ID;
+            
+            private global::System.Data.DataColumn columnComm_NAME;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CommodityDataTable() {
+                this.TableName = "Commodity";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal CommodityDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected CommodityDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Comm_IDColumn {
+                get {
+                    return this.columnComm_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Comm_NAMEColumn {
+                get {
+                    return this.columnComm_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CommodityRow this[int index] {
+                get {
+                    return ((CommodityRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CommodityRowChangeEventHandler CommodityRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CommodityRowChangeEventHandler CommodityRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CommodityRowChangeEventHandler CommodityRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CommodityRowChangeEventHandler CommodityRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddCommodityRow(CommodityRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CommodityRow AddCommodityRow(string Comm_NAME) {
+                CommodityRow rowCommodityRow = ((CommodityRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Comm_NAME};
+                rowCommodityRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCommodityRow);
+                return rowCommodityRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CommodityRow FindByComm_ID(int Comm_ID) {
+                return ((CommodityRow)(this.Rows.Find(new object[] {
+                            Comm_ID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CommodityDataTable cln = ((CommodityDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CommodityDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnComm_ID = base.Columns["Comm_ID"];
+                this.columnComm_NAME = base.Columns["Comm_NAME"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnComm_ID = new global::System.Data.DataColumn("Comm_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComm_ID);
+                this.columnComm_NAME = new global::System.Data.DataColumn("Comm_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComm_NAME);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnComm_ID}, true));
+                this.columnComm_ID.AutoIncrement = true;
+                this.columnComm_ID.AutoIncrementSeed = -1;
+                this.columnComm_ID.AutoIncrementStep = -1;
+                this.columnComm_ID.AllowDBNull = false;
+                this.columnComm_ID.ReadOnly = true;
+                this.columnComm_ID.Unique = true;
+                this.columnComm_NAME.AllowDBNull = false;
+                this.columnComm_NAME.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CommodityRow NewCommodityRow() {
+                return ((CommodityRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CommodityRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CommodityRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CommodityRowChanged != null)) {
+                    this.CommodityRowChanged(this, new CommodityRowChangeEvent(((CommodityRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CommodityRowChanging != null)) {
+                    this.CommodityRowChanging(this, new CommodityRowChangeEvent(((CommodityRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CommodityRowDeleted != null)) {
+                    this.CommodityRowDeleted(this, new CommodityRowChangeEvent(((CommodityRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CommodityRowDeleting != null)) {
+                    this.CommodityRowDeleting(this, new CommodityRowChangeEvent(((CommodityRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveCommodityRow(CommodityRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                INdataset ds = new INdataset();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CommodityDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class SUPPLIERSRow : global::System.Data.DataRow {
@@ -6599,12 +7307,39 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string local_supplier {
+                get {
+                    try {
+                        return ((string)(this[this.tableShipment.local_supplierColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'local_supplier\' in table \'Shipment\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableShipment.local_supplierColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public SUPPLIERSRow SUPPLIERS1Row {
                 get {
                     return ((SUPPLIERSRow)(this.GetParentRow(this.Table.ParentRelations["FK_Shipment_SUPPLIERS3"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Shipment_SUPPLIERS3"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CommodityRow CommodityRow {
+                get {
+                    return ((CommodityRow)(this.GetParentRow(this.Table.ParentRelations["FK_Shipment_Commodity"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Shipment_Commodity"]);
                 }
             }
             
@@ -6702,6 +7437,18 @@ namespace LoBridge {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetLading_PortNull() {
                 this[this.tableShipment.Lading_PortColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Islocal_supplierNull() {
+                return this.IsNull(this.tableShipment.local_supplierColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setlocal_supplierNull() {
+                this[this.tableShipment.local_supplierColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6878,6 +7625,22 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal AllowedQ {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableINBatch.AllowedQColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AllowedQ\' in table \'INBatch\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableINBatch.AllowedQColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ShipmentRow ShipmentRow {
                 get {
                     return ((ShipmentRow)(this.GetParentRow(this.Table.ParentRelations["FK_INBatch_Shipment"])));
@@ -6945,6 +7708,18 @@ namespace LoBridge {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetLadding_StationNull() {
                 this[this.tableINBatch.Ladding_StationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAllowedQNull() {
+                return this.IsNull(this.tableINBatch.AllowedQColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAllowedQNull() {
+                this[this.tableINBatch.AllowedQColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7100,6 +7875,22 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string local_supplier {
+                get {
+                    try {
+                        return ((string)(this[this.tableShipToRelease.local_supplierColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'local_supplier\' in table \'ShipToRelease\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableShipToRelease.local_supplierColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsContractNull() {
                 return this.IsNull(this.tableShipToRelease.ContractColumn);
             }
@@ -7132,6 +7923,18 @@ namespace LoBridge {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetStatusNull() {
                 this[this.tableShipToRelease.StatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Islocal_supplierNull() {
+                return this.IsNull(this.tableShipToRelease.local_supplierColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setlocal_supplierNull() {
+                this[this.tableShipToRelease.local_supplierColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7392,6 +8195,22 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string local_supplier {
+                get {
+                    try {
+                        return ((string)(this[this.tableBatchToLading.local_supplierColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'local_supplier\' in table \'BatchToLading\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableBatchToLading.local_supplierColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsNotesNull() {
                 return this.IsNull(this.tableBatchToLading.NotesColumn);
             }
@@ -7412,6 +8231,18 @@ namespace LoBridge {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetStatusNull() {
                 this[this.tableBatchToLading.StatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Islocal_supplierNull() {
+                return this.IsNull(this.tableBatchToLading.local_supplierColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setlocal_supplierNull() {
+                this[this.tableBatchToLading.local_supplierColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7879,6 +8710,22 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string local_supplier {
+                get {
+                    try {
+                        return ((string)(this[this.tableRcard1.local_supplierColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'local_supplier\' in table \'Rcard1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRcard1.local_supplierColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsLoading_StationNull() {
                 return this.IsNull(this.tableRcard1.Loading_StationColumn);
             }
@@ -8079,6 +8926,18 @@ namespace LoBridge {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetBLadingNull() {
                 this[this.tableRcard1.BLadingColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Islocal_supplierNull() {
+                return this.IsNull(this.tableRcard1.local_supplierColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setlocal_supplierNull() {
+                this[this.tableRcard1.local_supplierColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -8719,6 +9578,108 @@ namespace LoBridge {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Local_SuppliersRow : global::System.Data.DataRow {
+            
+            private Local_SuppliersDataTable tableLocal_Suppliers;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal Local_SuppliersRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableLocal_Suppliers = ((Local_SuppliersDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Supplier_Name {
+                get {
+                    return ((string)(this[this.tableLocal_Suppliers.Supplier_NameColumn]));
+                }
+                set {
+                    this[this.tableLocal_Suppliers.Supplier_NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Notes {
+                get {
+                    try {
+                        return ((string)(this[this.tableLocal_Suppliers.NotesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Notes\' in table \'Local_Suppliers\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLocal_Suppliers.NotesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsNotesNull() {
+                return this.IsNull(this.tableLocal_Suppliers.NotesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetNotesNull() {
+                this[this.tableLocal_Suppliers.NotesColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CommodityRow : global::System.Data.DataRow {
+            
+            private CommodityDataTable tableCommodity;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal CommodityRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCommodity = ((CommodityDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Comm_ID {
+                get {
+                    return ((int)(this[this.tableCommodity.Comm_IDColumn]));
+                }
+                set {
+                    this[this.tableCommodity.Comm_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Comm_NAME {
+                get {
+                    return ((string)(this[this.tableCommodity.Comm_NAMEColumn]));
+                }
+                set {
+                    this[this.tableCommodity.Comm_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public ShipmentRow[] GetShipmentRows() {
+                if ((this.Table.ChildRelations["FK_Shipment_Commodity"] == null)) {
+                    return new ShipmentRow[0];
+                }
+                else {
+                    return ((ShipmentRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Shipment_Commodity"])));
+                }
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -9044,6 +10005,74 @@ namespace LoBridge {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public INRptRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class Local_SuppliersRowChangeEvent : global::System.EventArgs {
+            
+            private Local_SuppliersRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Local_SuppliersRowChangeEvent(Local_SuppliersRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Local_SuppliersRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class CommodityRowChangeEvent : global::System.EventArgs {
+            
+            private CommodityRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CommodityRowChangeEvent(CommodityRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CommodityRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -12144,10 +13173,11 @@ SELECT ladingID, BatchID, Lading_Notes, Loading_Station, Bags_Count, Date, Drive
             tableMapping.ColumnMappings.Add("Trans_Co", "Trans_Co");
             tableMapping.ColumnMappings.Add("Shusername", "Shusername");
             tableMapping.ColumnMappings.Add("Lading_Port", "Lading_Port");
+            tableMapping.ColumnMappings.Add("local_supplier", "local_supplier");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Shipment] WHERE (([Ship_ID] = @Original_Ship_ID) AND ((@IsNull_Contract = 1 AND [Contract] IS NULL) OR ([Contract] = @Original_Contract)) AND ([Comm_ID] = @Original_Comm_ID) AND ([Supp_ID] = @Original_Supp_ID) AND ([Shipping] = @Original_Shipping) AND ((@IsNull_ArrialDate = 1 AND [ArrialDate] IS NULL) OR ([ArrialDate] = @Original_ArrialDate)) AND ((@IsNull_Notes = 1 AND [Notes] IS NULL) OR ([Notes] = @Original_Notes)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ([Date] = @Original_Date) AND ([Qty] = @Original_Qty) AND ([Ship_RQty] = @Original_Ship_RQty) AND ([Trans_Co] = @Original_Trans_Co) AND ((@IsNull_Shusername = 1 AND [Shusername] IS NULL) OR ([Shusername] = @Original_Shusername)) AND ((@IsNull_Lading_Port = 1 AND [Lading_Port] IS NULL) OR ([Lading_Port] = @Original_Lading_Port)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Shipment] WHERE (([Ship_ID] = @Original_Ship_ID) AND ((@IsNull_Contract = 1 AND [Contract] IS NULL) OR ([Contract] = @Original_Contract)) AND ([Comm_ID] = @Original_Comm_ID) AND ([Supp_ID] = @Original_Supp_ID) AND ([Shipping] = @Original_Shipping) AND ((@IsNull_ArrialDate = 1 AND [ArrialDate] IS NULL) OR ([ArrialDate] = @Original_ArrialDate)) AND ((@IsNull_Notes = 1 AND [Notes] IS NULL) OR ([Notes] = @Original_Notes)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ([Date] = @Original_Date) AND ([Qty] = @Original_Qty) AND ([Ship_RQty] = @Original_Ship_RQty) AND ([Trans_Co] = @Original_Trans_Co) AND ((@IsNull_Shusername = 1 AND [Shusername] IS NULL) OR ([Shusername] = @Original_Shusername)) AND ((@IsNull_Lading_Port = 1 AND [Lading_Port] IS NULL) OR ([Lading_Port] = @Original_Lading_Port)) AND ((@IsNull_local_supplier = 1 AND [local_supplier] IS NULL) OR ([local_supplier] = @Original_local_supplier)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ship_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Contract", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Contract", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -12156,7 +13186,7 @@ SELECT ladingID, BatchID, Lading_Notes, Loading_Station, Bags_Count, Date, Drive
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Supp_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Supp_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Shipping", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Shipping", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ArrialDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ArrialDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ArrialDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ArrialDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ArrialDate", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ArrialDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Notes", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Notes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -12169,16 +13199,17 @@ SELECT ladingID, BatchID, Lading_Notes, Loading_Station, Bags_Count, Date, Drive
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Shusername", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Shusername", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Lading_Port", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lading_Port", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Lading_Port", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lading_Port", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_local_supplier", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "local_supplier", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_local_supplier", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "local_supplier", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Shipment] ([Contract], [Comm_ID], [Supp_ID], [Shipping], [ArrialDate], [Notes], [Status], [Date], [Qty], [Ship_RQty], [Trans_Co], [Shusername], [Lading_Port]) VALUES (@Contract, @Comm_ID, @Supp_ID, @Shipping, @ArrialDate, @Notes, @Status, @Date, @Qty, @Ship_RQty, @Trans_Co, @Shusername, @Lading_Port);
-SELECT Ship_ID, Contract, Comm_ID, Supp_ID, Shipping, ArrialDate, Notes, Status, Date, Qty, Ship_RQty, Trans_Co, Shusername, Lading_Port FROM Shipment WHERE (Ship_ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Shipment] ([Contract], [Comm_ID], [Supp_ID], [Shipping], [Notes], [Status], [Date], [Qty], [Ship_RQty], [Trans_Co], [Shusername], [Lading_Port], [local_supplier]) VALUES (@Contract, @Comm_ID, @Supp_ID, @Shipping, @Notes, @Status, @Date, @Qty, @Ship_RQty, @Trans_Co, @Shusername, @Lading_Port, @local_supplier);
+SELECT Ship_ID, Contract, Comm_ID, Supp_ID, Shipping, ArrialDate, Notes, Status, Date, Qty, Ship_RQty, Trans_Co, Shusername, Lading_Port, local_supplier FROM Shipment WHERE (Ship_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contract", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Contract", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comm_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comm_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Supp_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Supp_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Shipping", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Shipping", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ArrialDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ArrialDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Notes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12187,52 +13218,48 @@ SELECT Ship_ID, Contract, Comm_ID, Supp_ID, Shipping, ArrialDate, Notes, Status,
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Trans_Co", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Trans_Co", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Shusername", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Shusername", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lading_Port", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lading_Port", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@local_supplier", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "local_supplier", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE    Shipment
-SET           Contract = @Contract, Comm_ID = @Comm_ID, Supp_ID = @Supp_ID, Shipping = @Shipping, Notes = @Notes, Status = @Status, Date = @Date, Qty = @Qty, Ship_RQty = @Ship_RQty, Trans_Co = @Trans_Co, Shusername = @Shusername, Lading_Port = @Lading_Port
-WHERE     (Ship_ID = @Original_Ship_ID) AND (@IsNull_Contract = 1 AND Contract IS NULL OR
-                  Contract = @Original_Contract) AND (Comm_ID = @Original_Comm_ID) AND (Supp_ID = @Original_Supp_ID) AND (Shipping = @Original_Shipping) AND (@IsNull_ArrialDate = 1 AND ArrialDate IS NULL OR
-                  ArrialDate = @Original_ArrialDate) AND (@IsNull_Notes = 1 AND Notes IS NULL OR
-                  Notes = @Original_Notes) AND (@IsNull_Status = 1 AND Status IS NULL OR
-                  Status = @Original_Status) AND (Date = @Original_Date) AND (Qty = @Original_Qty) AND (Ship_RQty = @Original_Ship_RQty) AND (Trans_Co = @Original_Trans_Co) AND (@IsNull_Shusername = 1 AND Shusername IS NULL OR
-                  Shusername = @Original_Shusername) AND (@IsNull_Lading_Port = 1 AND Lading_Port IS NULL OR
-                  Lading_Port = @Original_Lading_Port); 
-SELECT Ship_ID, Contract, Comm_ID, Supp_ID, Shipping, ArrialDate, Notes, Status, Date, Qty, Ship_RQty, Trans_Co, Shusername, Lading_Port FROM Shipment WHERE (Ship_ID = @Ship_ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Shipment] SET [Contract] = @Contract, [Comm_ID] = @Comm_ID, [Supp_ID] = @Supp_ID, [Shipping] = @Shipping, [Notes] = @Notes, [Status] = @Status, [Date] = @Date, [Qty] = @Qty, [Ship_RQty] = @Ship_RQty, [Trans_Co] = @Trans_Co, [Shusername] = @Shusername, [Lading_Port] = @Lading_Port, [local_supplier] = @local_supplier WHERE (([Ship_ID] = @Original_Ship_ID) AND ((@IsNull_Contract = 1 AND [Contract] IS NULL) OR ([Contract] = @Original_Contract)) AND ([Comm_ID] = @Original_Comm_ID) AND ([Supp_ID] = @Original_Supp_ID) AND ([Shipping] = @Original_Shipping) AND ((@IsNull_ArrialDate = 1 AND [ArrialDate] IS NULL) OR ([ArrialDate] = @Original_ArrialDate)) AND ((@IsNull_Notes = 1 AND [Notes] IS NULL) OR ([Notes] = @Original_Notes)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ([Date] = @Original_Date) AND ([Qty] = @Original_Qty) AND ([Ship_RQty] = @Original_Ship_RQty) AND ([Trans_Co] = @Original_Trans_Co) AND ((@IsNull_Shusername = 1 AND [Shusername] IS NULL) OR ([Shusername] = @Original_Shusername)) AND ((@IsNull_Lading_Port = 1 AND [Lading_Port] IS NULL) OR ([Lading_Port] = @Original_Lading_Port)) AND ((@IsNull_local_supplier = 1 AND [local_supplier] IS NULL) OR ([local_supplier] = @Original_local_supplier)));
+SELECT Ship_ID, Contract, Comm_ID, Supp_ID, Shipping, ArrialDate, Notes, Status, Date, Qty, Ship_RQty, Trans_Co, Shusername, Lading_Port, local_supplier FROM Shipment WHERE (Ship_ID = @Ship_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contract", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Contract", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comm_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Comm_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Supp_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Supp_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Shipping", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Shipping", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Notes", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qty", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 3, "Qty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ship_RQty", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 3, "Ship_RQty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Trans_Co", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Trans_Co", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Shusername", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Shusername", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lading_Port", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Lading_Port", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ship_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Contract", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Contract", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comm_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comm_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Supp_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Supp_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Shipping", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Shipping", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Notes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qty", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 3, "Qty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ship_RQty", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 3, "Ship_RQty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Trans_Co", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Trans_Co", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Shusername", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Shusername", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lading_Port", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lading_Port", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@local_supplier", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "local_supplier", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ship_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Contract", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Contract", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Contract", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Contract", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Comm_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Comm_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Supp_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Supp_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Shipping", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Shipping", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Contract", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Contract", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Comm_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comm_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Supp_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Supp_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Shipping", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Shipping", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ArrialDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ArrialDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ArrialDate", global::System.Data.SqlDbType.DateTime2, 8, global::System.Data.ParameterDirection.Input, 0, 0, "ArrialDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ArrialDate", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ArrialDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Notes", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Notes", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Notes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qty", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 3, "Qty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ship_RQty", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 3, "Ship_RQty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Trans_Co", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Trans_Co", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qty", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 3, "Qty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ship_RQty", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 3, "Ship_RQty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Trans_Co", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Trans_Co", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Shusername", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Shusername", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Shusername", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Shusername", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Shusername", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Shusername", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Lading_Port", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lading_Port", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Lading_Port", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Lading_Port", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ship_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Lading_Port", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lading_Port", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_local_supplier", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "local_supplier", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_local_supplier", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "local_supplier", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ship_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12245,11 +13272,12 @@ SELECT Ship_ID, Contract, Comm_ID, Supp_ID, Shipping, ArrialDate, Notes, Status,
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[7];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[8];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Ship_ID, Contract, Comm_ID, Supp_ID, Shipping, ArrialDate, Notes, Status, " +
-                "Date, Qty, Ship_RQty, Trans_Co, Shusername, Lading_Port FROM Shipment";
+                "Date, Qty, Ship_RQty, Trans_Co, Shusername, Lading_Port, local_supplier FROM Shi" +
+                "pment";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -12262,8 +13290,8 @@ ORDER BY Shipment.Date DESC";
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT ArrialDate, Comm_ID, Contract, Date, Lading_Port, Notes, Qty, Ship_ID, Shi" +
-                "p_RQty, Shipping, Shusername, Status, Supp_ID, Trans_Co FROM Shipment WHERE (Shi" +
-                "p_RQty > @rq) AND (Status = @sts)";
+                "p_RQty, Shipping, Shusername, Status, Supp_ID, Trans_Co, local_supplier FROM Shi" +
+                "pment WHERE (Ship_RQty > @rq) AND (Status = @sts)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rq", global::System.Data.SqlDbType.Float, 8, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_RQty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sts", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -12278,8 +13306,8 @@ WHERE        (Shipment.Shipping LIKE @sname)";
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sname", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Shipping", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT        Ship_ID, Contract, Qty, Shipping, Notes, Status, Ship_RQty, Comm_ID" +
-                ", Supp_ID, Trans_Co\r\nFROM            Shipment\r\nWHERE        (Ship_RQty > 0)";
+            this._commandCollection[4].CommandText = "SELECT Ship_ID, Contract, Qty, Shipping, Notes, Status, Ship_RQty, Comm_ID, Supp_" +
+                "ID, Trans_Co, local_supplier FROM Shipment WHERE (Ship_RQty > 0)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[5].Connection = this.Connection;
@@ -12288,8 +13316,8 @@ WHERE        (Shipment.Shipping LIKE @sname)";
             this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[6].Connection = this.Connection;
             this._commandCollection[6].CommandText = @"INSERT INTO Shipment
-                         (Contract, Comm_ID, Supp_ID, Shipping,  Notes, Status, Date, Qty, Ship_RQty, Trans_Co, Shusername, Lading_Port)
-VALUES   (@Contract,@Comm_ID,@Supp_ID,@Shipping,@Notes,@Status,CURRENT_TIMESTAMP,@Qty,@Ship_RQty,@Trans_Co,@Shusername,@Lading_Port);   
+                  (Contract, Comm_ID, Supp_ID, Shipping, Notes, Status, Date, Qty, Ship_RQty, Trans_Co, Shusername, Lading_Port, local_supplier)
+VALUES (@Contract,@Comm_ID,@Supp_ID,@Shipping,@Notes,@Status, CURRENT_TIMESTAMP,@Qty,@Ship_RQty,@Trans_Co,@Shusername,@Lading_Port,@local_supplier);    
 SELECT  SCOPE_IDENTITY()
  FROM Shipment WHERE (Ship_ID = SCOPE_IDENTITY())";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
@@ -12304,6 +13332,13 @@ SELECT  SCOPE_IDENTITY()
             this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Trans_Co", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Trans_Co", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Shusername", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Shusername", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lading_Port", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Lading_Port", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@local_supplier", global::System.Data.SqlDbType.NVarChar, 150, global::System.Data.ParameterDirection.Input, 0, 0, "local_supplier", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[7].Connection = this.Connection;
+            this._commandCollection[7].CommandText = "SELECT Commodity.Comm_ID, Commodity.Comm_NAME\r\nFROM     Commodity INNER JOIN\r\n   " +
+                "               Shipment ON Commodity.Comm_ID = Shipment.Comm_ID\r\nGROUP BY Commod" +
+                "ity.Comm_ID, Commodity.Comm_NAME";
+            this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12465,6 +13500,19 @@ SELECT  SCOPE_IDENTITY()
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int ListInCom(INdataset.ShipmentDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[7];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(INdataset.ShipmentDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
@@ -12495,7 +13543,7 @@ SELECT  SCOPE_IDENTITY()
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Ship_ID, string Original_Contract, int Original_Comm_ID, int Original_Supp_ID, string Original_Shipping, global::System.Nullable<global::System.DateTime> Original_ArrialDate, string Original_Notes, string Original_Status, System.DateTime Original_Date, decimal Original_Qty, decimal Original_Ship_RQty, int Original_Trans_Co, string Original_Shusername, string Original_Lading_Port) {
+        public virtual int Delete(int Original_Ship_ID, string Original_Contract, int Original_Comm_ID, int Original_Supp_ID, string Original_Shipping, global::System.Nullable<global::System.DateTime> Original_ArrialDate, string Original_Notes, string Original_Status, System.DateTime Original_Date, decimal Original_Qty, decimal Original_Ship_RQty, int Original_Trans_Co, string Original_Shusername, string Original_Lading_Port, string Original_local_supplier) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Ship_ID));
             if ((Original_Contract == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -12557,6 +13605,14 @@ SELECT  SCOPE_IDENTITY()
                 this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((string)(Original_Lading_Port));
             }
+            if ((Original_local_supplier == null)) {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((string)(Original_local_supplier));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -12577,7 +13633,7 @@ SELECT  SCOPE_IDENTITY()
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Contract, int Comm_ID, int Supp_ID, string Shipping, global::System.Nullable<global::System.DateTime> ArrialDate, string Notes, string Status, System.DateTime Date, decimal Qty, decimal Ship_RQty, int Trans_Co, string Shusername, string Lading_Port) {
+        public virtual int Insert(string Contract, int Comm_ID, int Supp_ID, string Shipping, string Notes, string Status, System.DateTime Date, decimal Qty, decimal Ship_RQty, int Trans_Co, string Shusername, string Lading_Port, string local_supplier) {
             if ((Contract == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -12592,39 +13648,39 @@ SELECT  SCOPE_IDENTITY()
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Shipping));
             }
-            if ((ArrialDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(ArrialDate.Value));
-            }
-            else {
+            if ((Notes == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Notes == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Notes));
+            }
+            if ((Status == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Notes));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Status));
             }
-            if ((Status == null)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(Date));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((decimal)(Qty));
+            this.Adapter.InsertCommand.Parameters[8].Value = ((decimal)(Ship_RQty));
+            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(Trans_Co));
+            if ((Shusername == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Status));
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(Shusername));
             }
-            this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(Date));
-            this.Adapter.InsertCommand.Parameters[8].Value = ((decimal)(Qty));
-            this.Adapter.InsertCommand.Parameters[9].Value = ((decimal)(Ship_RQty));
-            this.Adapter.InsertCommand.Parameters[10].Value = ((int)(Trans_Co));
-            if ((Shusername == null)) {
+            if ((Lading_Port == null)) {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Shusername));
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Lading_Port));
             }
-            if ((Lading_Port == null)) {
+            if ((local_supplier == null)) {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(Lading_Port));
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(local_supplier));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -12659,12 +13715,13 @@ SELECT  SCOPE_IDENTITY()
                     int Trans_Co, 
                     string Shusername, 
                     string Lading_Port, 
+                    string local_supplier, 
                     int Original_Ship_ID, 
                     string Original_Contract, 
                     int Original_Comm_ID, 
                     int Original_Supp_ID, 
                     string Original_Shipping, 
-                    string Original_ArrialDate, 
+                    global::System.Nullable<global::System.DateTime> Original_ArrialDate, 
                     string Original_Notes, 
                     string Original_Status, 
                     System.DateTime Original_Date, 
@@ -12673,6 +13730,7 @@ SELECT  SCOPE_IDENTITY()
                     int Original_Trans_Co, 
                     string Original_Shusername, 
                     string Original_Lading_Port, 
+                    string Original_local_supplier, 
                     int Ship_ID) {
             if ((Contract == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -12716,68 +13774,82 @@ SELECT  SCOPE_IDENTITY()
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Lading_Port));
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_Ship_ID));
-            if ((Original_Contract == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            if ((local_supplier == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Contract));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(local_supplier));
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_Comm_ID));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_Supp_ID));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Ship_ID));
+            if ((Original_Contract == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Contract));
+            }
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_Comm_ID));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_Supp_ID));
             if ((Original_Shipping == null)) {
                 throw new global::System.ArgumentNullException("Original_Shipping");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Shipping));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Shipping));
             }
-            if ((Original_ArrialDate == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            if ((Original_ArrialDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((System.DateTime)(Original_ArrialDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_ArrialDate));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             if ((Original_Notes == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Notes));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Notes));
             }
             if ((Original_Status == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_Status));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Status));
             }
-            this.Adapter.UpdateCommand.Parameters[24].Value = ((System.DateTime)(Original_Date));
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((decimal)(Original_Qty));
-            this.Adapter.UpdateCommand.Parameters[26].Value = ((decimal)(Original_Ship_RQty));
-            this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_Trans_Co));
+            this.Adapter.UpdateCommand.Parameters[25].Value = ((System.DateTime)(Original_Date));
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((decimal)(Original_Qty));
+            this.Adapter.UpdateCommand.Parameters[27].Value = ((decimal)(Original_Ship_RQty));
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_Trans_Co));
             if ((Original_Shusername == null)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_Shusername));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_Shusername));
             }
             if ((Original_Lading_Port == null)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_Lading_Port));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_Lading_Port));
             }
-            this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(Ship_ID));
+            if ((Original_local_supplier == null)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_local_supplier));
+            }
+            this.Adapter.UpdateCommand.Parameters[35].Value = ((int)(Ship_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -12792,6 +13864,42 @@ SELECT  SCOPE_IDENTITY()
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Contract, 
+                    int Comm_ID, 
+                    int Supp_ID, 
+                    string Shipping, 
+                    string Notes, 
+                    string Status, 
+                    System.DateTime Date, 
+                    decimal Qty, 
+                    decimal Ship_RQty, 
+                    int Trans_Co, 
+                    string Shusername, 
+                    string Lading_Port, 
+                    string local_supplier, 
+                    int Original_Ship_ID, 
+                    string Original_Contract, 
+                    int Original_Comm_ID, 
+                    int Original_Supp_ID, 
+                    string Original_Shipping, 
+                    global::System.Nullable<global::System.DateTime> Original_ArrialDate, 
+                    string Original_Notes, 
+                    string Original_Status, 
+                    System.DateTime Original_Date, 
+                    decimal Original_Qty, 
+                    decimal Original_Ship_RQty, 
+                    int Original_Trans_Co, 
+                    string Original_Shusername, 
+                    string Original_Lading_Port, 
+                    string Original_local_supplier) {
+            return this.Update(Contract, Comm_ID, Supp_ID, Shipping, Notes, Status, Date, Qty, Ship_RQty, Trans_Co, Shusername, Lading_Port, local_supplier, Original_Ship_ID, Original_Contract, Original_Comm_ID, Original_Supp_ID, Original_Shipping, Original_ArrialDate, Original_Notes, Original_Status, Original_Date, Original_Qty, Original_Ship_RQty, Original_Trans_Co, Original_Shusername, Original_Lading_Port, Original_local_supplier, Original_Ship_ID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12826,7 +13934,7 @@ SELECT  SCOPE_IDENTITY()
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertShipment(string Contract, int Comm_ID, int Supp_ID, string Shipping, string Notes, string Status, decimal Qty, decimal Ship_RQty, int Trans_Co, string Shusername, string Lading_Port) {
+        public virtual int InsertShipment(string Contract, int Comm_ID, int Supp_ID, string Shipping, string Notes, string Status, decimal Qty, decimal Ship_RQty, int Trans_Co, string Shusername, string Lading_Port, string local_supplier) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[6];
             if ((Contract == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -12868,6 +13976,12 @@ SELECT  SCOPE_IDENTITY()
             }
             else {
                 command.Parameters[10].Value = ((string)(Lading_Port));
+            }
+            if ((local_supplier == null)) {
+                command.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[11].Value = ((string)(local_supplier));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -13019,10 +14133,11 @@ SELECT  SCOPE_IDENTITY()
             tableMapping.ColumnMappings.Add("Remain_Qty", "Remain_Qty");
             tableMapping.ColumnMappings.Add("Iusername", "Iusername");
             tableMapping.ColumnMappings.Add("Ladding_Station", "Ladding_Station");
+            tableMapping.ColumnMappings.Add("AllowedQ", "AllowedQ");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [INBatch] WHERE (([Batch_ID] = @Original_Batch_ID) AND ([Ship_ID] = @Original_Ship_ID) AND ([Serial] = @Original_Serial) AND ((@IsNull_ArrivalDate = 1 AND [ArrivalDate] IS NULL) OR ([ArrivalDate] = @Original_ArrivalDate)) AND ((@IsNull_Notes = 1 AND [Notes] IS NULL) OR ([Notes] = @Original_Notes)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ([Date] = @Original_Date) AND ([Qty] = @Original_Qty) AND ([Remain_Qty] = @Original_Remain_Qty) AND ([Iusername] = @Original_Iusername) AND ((@IsNull_Ladding_Station = 1 AND [Ladding_Station] IS NULL) OR ([Ladding_Station] = @Original_Ladding_Station)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [INBatch] WHERE (([Batch_ID] = @Original_Batch_ID) AND ([Ship_ID] = @Original_Ship_ID) AND ([Serial] = @Original_Serial) AND ((@IsNull_ArrivalDate = 1 AND [ArrivalDate] IS NULL) OR ([ArrivalDate] = @Original_ArrivalDate)) AND ((@IsNull_Notes = 1 AND [Notes] IS NULL) OR ([Notes] = @Original_Notes)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ([Qty] = @Original_Qty) AND ([Remain_Qty] = @Original_Remain_Qty) AND ([Iusername] = @Original_Iusername) AND ((@IsNull_Ladding_Station = 1 AND [Ladding_Station] IS NULL) OR ([Ladding_Station] = @Original_Ladding_Station)) AND ((@IsNull_AllowedQ = 1 AND [AllowedQ] IS NULL) OR ([AllowedQ] = @Original_AllowedQ)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Batch_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Batch_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ship_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -13033,16 +14148,19 @@ SELECT  SCOPE_IDENTITY()
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Notes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qty", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 3, "Qty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Remain_Qty", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 3, "Remain_Qty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Iusername", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Iusername", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ladding_Station", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ladding_Station", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ladding_Station", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ladding_Station", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AllowedQ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AllowedQ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AllowedQ", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 24, 3, "AllowedQ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [INBatch] ([Ship_ID], [Serial], [ArrivalDate], [Notes], [Status], [Date], [Qty], [Remain_Qty], [Iusername], [Ladding_Station]) VALUES (@Ship_ID, @Serial, @ArrivalDate, @Notes, @Status, @Date, @Qty, @Remain_Qty, @Iusername, @Ladding_Station);
-SELECT Batch_ID, Ship_ID, Serial, ArrivalDate, Notes, Status, Date, Qty, Remain_Qty, Iusername, Ladding_Station FROM INBatch WHERE (Batch_ID = SCOPE_IDENTITY())";
+SELECT Batch_ID, Ship_ID, Serial, ArrivalDate, Notes, Status, Date, Qty, Remain_Qty, Iusername, Ladding_Station, AllowedQ FROM INBatch WHERE (Batch_ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ship_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Serial", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Serial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13056,8 +14174,8 @@ SELECT Batch_ID, Ship_ID, Serial, ArrivalDate, Notes, Status, Date, Qty, Remain_
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ladding_Station", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ladding_Station", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [INBatch] SET [Ship_ID] = @Ship_ID, [Serial] = @Serial, [ArrivalDate] = @ArrivalDate, [Notes] = @Notes, [Status] = @Status, [Date] = @Date, [Qty] = @Qty, [Remain_Qty] = @Remain_Qty, [Iusername] = @Iusername, [Ladding_Station] = @Ladding_Station WHERE (([Batch_ID] = @Original_Batch_ID) AND ([Ship_ID] = @Original_Ship_ID) AND ([Serial] = @Original_Serial) AND ((@IsNull_ArrivalDate = 1 AND [ArrivalDate] IS NULL) OR ([ArrivalDate] = @Original_ArrivalDate)) AND ((@IsNull_Notes = 1 AND [Notes] IS NULL) OR ([Notes] = @Original_Notes)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ([Date] = @Original_Date) AND ([Qty] = @Original_Qty) AND ([Remain_Qty] = @Original_Remain_Qty) AND ([Iusername] = @Original_Iusername) AND ((@IsNull_Ladding_Station = 1 AND [Ladding_Station] IS NULL) OR ([Ladding_Station] = @Original_Ladding_Station)));
-SELECT Batch_ID, Ship_ID, Serial, ArrivalDate, Notes, Status, Date, Qty, Remain_Qty, Iusername, Ladding_Station FROM INBatch WHERE (Batch_ID = @Batch_ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [INBatch] SET [Ship_ID] = @Ship_ID, [Serial] = @Serial, [ArrivalDate] = @ArrivalDate, [Notes] = @Notes, [Status] = @Status, [Date] = @Date, [Qty] = @Qty, [Remain_Qty] = @Remain_Qty, [Iusername] = @Iusername, [Ladding_Station] = @Ladding_Station WHERE (([Batch_ID] = @Original_Batch_ID) AND ([Ship_ID] = @Original_Ship_ID) AND ([Serial] = @Original_Serial) AND ((@IsNull_ArrivalDate = 1 AND [ArrivalDate] IS NULL) OR ([ArrivalDate] = @Original_ArrivalDate)) AND ((@IsNull_Notes = 1 AND [Notes] IS NULL) OR ([Notes] = @Original_Notes)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ([Qty] = @Original_Qty) AND ([Remain_Qty] = @Original_Remain_Qty) AND ([Iusername] = @Original_Iusername) AND ((@IsNull_Ladding_Station = 1 AND [Ladding_Station] IS NULL) OR ([Ladding_Station] = @Original_Ladding_Station)) AND ((@IsNull_AllowedQ = 1 AND [AllowedQ] IS NULL) OR ([AllowedQ] = @Original_AllowedQ)));
+SELECT Batch_ID, Ship_ID, Serial, ArrivalDate, Notes, Status, Date, Qty, Remain_Qty, Iusername, Ladding_Station, AllowedQ FROM INBatch WHERE (Batch_ID = @Batch_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ship_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Serial", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Serial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13078,12 +14196,15 @@ SELECT Batch_ID, Ship_ID, Serial, ArrivalDate, Notes, Status, Date, Qty, Remain_
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Notes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Status", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Qty", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 3, "Qty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Remain_Qty", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 3, "Remain_Qty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Iusername", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Iusername", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ladding_Station", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ladding_Station", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ladding_Station", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ladding_Station", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AllowedQ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AllowedQ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AllowedQ", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 24, 3, "AllowedQ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Batch_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Batch_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -13101,25 +14222,24 @@ SELECT Batch_ID, Ship_ID, Serial, ArrivalDate, Notes, Status, Date, Qty, Remain_
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Batch_ID, Ship_ID, Serial, ArrivalDate, Notes, Status, Date, Qty, Remain_Q" +
-                "ty, Iusername, Ladding_Station FROM INBatch";
+                "ty, Iusername, Ladding_Station, AllowedQ FROM INBatch";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT ArrivalDate, Batch_ID, Date, Iusername, Ladding_Station, Notes, Qty, Remai" +
-                "n_Qty, Serial, Ship_ID, Status FROM INBatch WHERE (Batch_ID = @bid)";
+                "n_Qty, Serial, Ship_ID, Status, AllowedQ FROM INBatch WHERE (Batch_ID = @bid)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Batch_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT ArrivalDate, Batch_ID, Date, Iusername, Ladding_Station, Notes, Qty, Remai" +
-                "n_Qty, Serial, Ship_ID, Status FROM INBatch WHERE (Remain_Qty > 0) AND (Status =" +
-                " N\'مفتوح\')";
+                "n_Qty, Serial, Ship_ID, Status, AllowedQ FROM INBatch WHERE (Remain_Qty > 0) AND" +
+                " (Status = N\'مفتوح\')";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        Batch_ID, Ship_ID, Serial, ArrivalDate, Notes, Status, Date, Qty, R" +
-                "emain_Qty, Iusername, Ladding_Station\r\nFROM            INBatch\r\nWHERE        (Sh" +
-                "ip_ID = @sid)";
+            this._commandCollection[3].CommandText = "SELECT Batch_ID, Ship_ID, Serial, ArrivalDate, Notes, Status, Date, Qty, Remain_Q" +
+                "ty, Iusername, Ladding_Station, AllowedQ FROM INBatch WHERE (Ship_ID = @sid)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
@@ -13297,7 +14417,7 @@ FROM INBatch WHERE (Batch_ID = SCOPE_IDENTITY())";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Batch_ID, int Original_Ship_ID, string Original_Serial, global::System.Nullable<global::System.DateTime> Original_ArrivalDate, string Original_Notes, string Original_Status, System.DateTime Original_Date, decimal Original_Qty, decimal Original_Remain_Qty, string Original_Iusername, string Original_Ladding_Station) {
+        public virtual int Delete(int Original_Batch_ID, int Original_Ship_ID, string Original_Serial, global::System.Nullable<global::System.DateTime> Original_ArrivalDate, string Original_Notes, string Original_Status, global::System.Nullable<global::System.DateTime> Original_Date, decimal Original_Qty, decimal Original_Remain_Qty, string Original_Iusername, string Original_Ladding_Station, global::System.Nullable<decimal> Original_AllowedQ) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Batch_ID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Ship_ID));
             if ((Original_Serial == null)) {
@@ -13330,22 +14450,37 @@ FROM INBatch WHERE (Batch_ID = SCOPE_IDENTITY())";
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Status));
             }
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((System.DateTime)(Original_Date));
-            this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(Original_Qty));
-            this.Adapter.DeleteCommand.Parameters[11].Value = ((decimal)(Original_Remain_Qty));
+            if ((Original_Date.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_Date.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[11].Value = ((decimal)(Original_Qty));
+            this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original_Remain_Qty));
             if ((Original_Iusername == null)) {
                 throw new global::System.ArgumentNullException("Original_Iusername");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Iusername));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_Iusername));
             }
             if ((Original_Ladding_Station == null)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_Ladding_Station));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_Ladding_Station));
+            }
+            if ((Original_AllowedQ.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((decimal)(Original_AllowedQ.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -13367,7 +14502,7 @@ FROM INBatch WHERE (Batch_ID = SCOPE_IDENTITY())";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Ship_ID, string Serial, global::System.Nullable<global::System.DateTime> ArrivalDate, string Notes, string Status, System.DateTime Date, decimal Qty, decimal Remain_Qty, string Iusername, string Ladding_Station) {
+        public virtual int Insert(int Ship_ID, string Serial, global::System.Nullable<global::System.DateTime> ArrivalDate, string Notes, string Status, global::System.Nullable<global::System.DateTime> Date, decimal Qty, decimal Remain_Qty, string Iusername, string Ladding_Station) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Ship_ID));
             if ((Serial == null)) {
                 throw new global::System.ArgumentNullException("Serial");
@@ -13393,7 +14528,12 @@ FROM INBatch WHERE (Batch_ID = SCOPE_IDENTITY())";
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Status));
             }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(Date));
+            if ((Date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(Date.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(Qty));
             this.Adapter.InsertCommand.Parameters[7].Value = ((decimal)(Remain_Qty));
             if ((Iusername == null)) {
@@ -13434,7 +14574,7 @@ FROM INBatch WHERE (Batch_ID = SCOPE_IDENTITY())";
                     global::System.Nullable<global::System.DateTime> ArrivalDate, 
                     string Notes, 
                     string Status, 
-                    System.DateTime Date, 
+                    global::System.Nullable<global::System.DateTime> Date, 
                     decimal Qty, 
                     decimal Remain_Qty, 
                     string Iusername, 
@@ -13445,11 +14585,12 @@ FROM INBatch WHERE (Batch_ID = SCOPE_IDENTITY())";
                     global::System.Nullable<global::System.DateTime> Original_ArrivalDate, 
                     string Original_Notes, 
                     string Original_Status, 
-                    System.DateTime Original_Date, 
+                    global::System.Nullable<global::System.DateTime> Original_Date, 
                     decimal Original_Qty, 
                     decimal Original_Remain_Qty, 
                     string Original_Iusername, 
                     string Original_Ladding_Station, 
+                    global::System.Nullable<decimal> Original_AllowedQ, 
                     int Batch_ID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Ship_ID));
             if ((Serial == null)) {
@@ -13476,7 +14617,12 @@ FROM INBatch WHERE (Batch_ID = SCOPE_IDENTITY())";
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Status));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Date));
+            if ((Date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
             this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Qty));
             this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(Remain_Qty));
             if ((Iusername == null)) {
@@ -13523,24 +14669,39 @@ FROM INBatch WHERE (Batch_ID = SCOPE_IDENTITY())";
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Status));
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_Date));
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((decimal)(Original_Qty));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((decimal)(Original_Remain_Qty));
+            if ((Original_Date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((System.DateTime)(Original_Date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((decimal)(Original_Qty));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((decimal)(Original_Remain_Qty));
             if ((Original_Iusername == null)) {
                 throw new global::System.ArgumentNullException("Original_Iusername");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Iusername));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_Iusername));
             }
             if ((Original_Ladding_Station == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_Ladding_Station));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_Ladding_Station));
             }
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Batch_ID));
+            if ((Original_AllowedQ.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((decimal)(Original_AllowedQ.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Batch_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -13567,7 +14728,7 @@ FROM INBatch WHERE (Batch_ID = SCOPE_IDENTITY())";
                     global::System.Nullable<global::System.DateTime> ArrivalDate, 
                     string Notes, 
                     string Status, 
-                    System.DateTime Date, 
+                    global::System.Nullable<global::System.DateTime> Date, 
                     decimal Qty, 
                     decimal Remain_Qty, 
                     string Iusername, 
@@ -13578,12 +14739,13 @@ FROM INBatch WHERE (Batch_ID = SCOPE_IDENTITY())";
                     global::System.Nullable<global::System.DateTime> Original_ArrivalDate, 
                     string Original_Notes, 
                     string Original_Status, 
-                    System.DateTime Original_Date, 
+                    global::System.Nullable<global::System.DateTime> Original_Date, 
                     decimal Original_Qty, 
                     decimal Original_Remain_Qty, 
                     string Original_Iusername, 
-                    string Original_Ladding_Station) {
-            return this.Update(Ship_ID, Serial, ArrivalDate, Notes, Status, Date, Qty, Remain_Qty, Iusername, Ladding_Station, Original_Batch_ID, Original_Ship_ID, Original_Serial, Original_ArrivalDate, Original_Notes, Original_Status, Original_Date, Original_Qty, Original_Remain_Qty, Original_Iusername, Original_Ladding_Station, Original_Batch_ID);
+                    string Original_Ladding_Station, 
+                    global::System.Nullable<decimal> Original_AllowedQ) {
+            return this.Update(Ship_ID, Serial, ArrivalDate, Notes, Status, Date, Qty, Remain_Qty, Iusername, Ladding_Station, Original_Batch_ID, Original_Ship_ID, Original_Serial, Original_ArrivalDate, Original_Notes, Original_Status, Original_Date, Original_Qty, Original_Remain_Qty, Original_Iusername, Original_Ladding_Station, Original_AllowedQ, Original_Batch_ID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13879,6 +15041,7 @@ FROM INBatch WHERE (Batch_ID = SCOPE_IDENTITY())";
             tableMapping.ColumnMappings.Add("Comm_NAME", "Comm_NAME");
             tableMapping.ColumnMappings.Add("CofOrigin", "CofOrigin");
             tableMapping.ColumnMappings.Add("SUP_NAME", "SUP_NAME");
+            tableMapping.ColumnMappings.Add("local_supplier", "local_supplier");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -13895,11 +15058,11 @@ FROM INBatch WHERE (Batch_ID = SCOPE_IDENTITY())";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Shipment.Ship_ID, Shipment.Contract, Shipment.Qty, Shipment.Shipping, Shipment.Notes, Shipment.Status, Shipment.Ship_RQty, Commodity.Comm_NAME, Commodity.CofOrigin, SUPPLIERS.SUP_NAME
-FROM            Shipment INNER JOIN
-                         Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
-                         SUPPLIERS ON Shipment.Supp_ID = SUPPLIERS.SUP_ID
-WHERE        (Shipment.Ship_RQty > 0) AND (Shipment.Status = @status)";
+            this._commandCollection[0].CommandText = @"SELECT Shipment.Ship_ID, Shipment.Contract, Shipment.Qty, Shipment.Shipping, Shipment.Notes, Shipment.Status, Shipment.Ship_RQty, Commodity.Comm_NAME, Commodity.CofOrigin, SUPPLIERS.SUP_NAME, Shipment.local_supplier
+FROM     Shipment INNER JOIN
+                  Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
+                  SUPPLIERS ON Shipment.Supp_ID = SUPPLIERS.SUP_ID
+WHERE  (Shipment.Ship_RQty > 0) AND (Shipment.Status = @status)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -14628,6 +15791,7 @@ SELECT WCardID, Gen_ID, LADOUT_ID, LAD_ID FROM WcardID WHERE (WCardID = @WCardID
             tableMapping.ColumnMappings.Add("Shipping", "Shipping");
             tableMapping.ColumnMappings.Add("SUP_NAME", "SUP_NAME");
             tableMapping.ColumnMappings.Add("Status", "Status");
+            tableMapping.ColumnMappings.Add("local_supplier", "local_supplier");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -14644,12 +15808,12 @@ SELECT WCardID, Gen_ID, LADOUT_ID, LAD_ID FROM WcardID WHERE (WCardID = @WCardID
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        INBatch.Batch_ID, INBatch.Serial, INBatch.Qty, INBatch.Remain_Qty, INBatch.Notes, Commodity.Comm_NAME, Commodity.CofOrigin, Shipment.Shipping, SUPPLIERS.SUP_NAME, INBatch.Status
-FROM            INBatch INNER JOIN
-                         Shipment ON INBatch.Ship_ID = Shipment.Ship_ID INNER JOIN
-                         Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
-                         SUPPLIERS ON Shipment.Supp_ID = SUPPLIERS.SUP_ID
-WHERE        (INBatch.Remain_Qty > 0) AND (INBatch.Status = @status)";
+            this._commandCollection[0].CommandText = @"SELECT INBatch.Batch_ID, INBatch.Serial, INBatch.Qty, INBatch.Remain_Qty, INBatch.Notes, Commodity.Comm_NAME, Commodity.CofOrigin, Shipment.Shipping, SUPPLIERS.SUP_NAME, INBatch.Status, Shipment.local_supplier
+FROM     INBatch INNER JOIN
+                  Shipment ON INBatch.Ship_ID = Shipment.Ship_ID INNER JOIN
+                  Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
+                  SUPPLIERS ON Shipment.Supp_ID = SUPPLIERS.SUP_ID
+WHERE  (INBatch.Remain_Qty > 0) AND (INBatch.Status = @status)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
@@ -14879,6 +16043,7 @@ WHERE        (INBatch.Remain_Qty > 0) AND (INBatch.Batch_ID = @bid)";
             tableMapping.ColumnMappings.Add("Shrink", "Shrink1");
             tableMapping.ColumnMappings.Add("BLading", "BLading");
             tableMapping.ColumnMappings.Add("Lusername", "Lusername");
+            tableMapping.ColumnMappings.Add("local_supplier", "local_supplier");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -14895,33 +16060,33 @@ WHERE        (INBatch.Remain_Qty > 0) AND (INBatch.Batch_ID = @bid)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Lading.ladingID, Lading.Qty, Lading.Date, Lading.Loading_Station, Lading.Net_Weight, Lading.Shrink, Lading.Fill_Type, Lading.Bags_Count, Lading.Stack_Bar, Commodity.Comm_NAME, Commodity.CofOrigin, 
-                         Commodity.Comm_TYPE, Transport_Co.Company_Name, Shipment.Contract, Shipment.Shipping, Shipment.Qty AS Shqty, Drivers.Driver_Name, Drivers.N_Card, Drivers.Liscense_num, INBatch.Serial, SUPPLIERS.SUP_NAME, 
-                         INBatch.Qty AS Bqty, Truck.Truck_number, Truck.Truck_License, Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_License, Truck.Trailer_traffic, Truck.Owner, Lading.BLading, Lading.Lusername
-FROM            Lading INNER JOIN
-                         Drivers ON Lading.Driver_ID = Drivers.Driver_ID INNER JOIN
-                         INBatch ON Lading.BatchID = INBatch.Batch_ID INNER JOIN
-                         Shipment ON INBatch.Ship_ID = Shipment.Ship_ID INNER JOIN
-                         Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
-                         SUPPLIERS ON Shipment.Supp_ID = SUPPLIERS.SUP_ID INNER JOIN
-                         Transport_Co ON Shipment.Trans_Co = Transport_Co.Company_ID INNER JOIN
-                         Truck ON Lading.Truck_ID = Truck.Truck_ID
-WHERE        (Lading.ladingID = @Lid)";
+            this._commandCollection[0].CommandText = @"SELECT Lading.ladingID, Lading.Qty, Lading.Date, Lading.Loading_Station, Lading.Net_Weight, Lading.Shrink, Lading.Fill_Type, Lading.Bags_Count, Lading.Stack_Bar, Commodity.Comm_NAME, Commodity.CofOrigin, Commodity.Comm_TYPE, 
+                  Transport_Co.Company_Name, Shipment.Contract, Shipment.Shipping, Shipment.Qty AS Shqty, Drivers.Driver_Name, Drivers.N_Card, Drivers.Liscense_num, INBatch.Serial, SUPPLIERS.SUP_NAME, INBatch.Qty AS Bqty, 
+                  Truck.Truck_number, Truck.Truck_License, Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_License, Truck.Trailer_traffic, Truck.Owner, Lading.BLading, Lading.Lusername, Shipment.local_supplier
+FROM     Lading INNER JOIN
+                  Drivers ON Lading.Driver_ID = Drivers.Driver_ID INNER JOIN
+                  INBatch ON Lading.BatchID = INBatch.Batch_ID INNER JOIN
+                  Shipment ON INBatch.Ship_ID = Shipment.Ship_ID INNER JOIN
+                  Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
+                  SUPPLIERS ON Shipment.Supp_ID = SUPPLIERS.SUP_ID INNER JOIN
+                  Transport_Co ON Shipment.Trans_Co = Transport_Co.Company_ID INNER JOIN
+                  Truck ON Lading.Truck_ID = Truck.Truck_ID
+WHERE  (Lading.ladingID = @Lid)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ladingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        Lading.ladingID, Lading.Qty, Lading.Date, Lading.Loading_Station, Lading.Net_Weight, Lading.Shrink, Lading.Fill_Type, Lading.Bags_Count, Lading.Stack_Bar, Commodity.Comm_NAME, Commodity.CofOrigin, 
-                         Commodity.Comm_TYPE, Transport_Co.Company_Name, Shipment.Contract, Shipment.Shipping, Shipment.Qty AS Shqty, Drivers.Driver_Name, Drivers.N_Card, Drivers.Liscense_num, INBatch.Serial, SUPPLIERS.SUP_NAME, 
-                         INBatch.Qty AS Bqty, Truck.Truck_number, Truck.Truck_License, Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_License, Truck.Trailer_traffic, Truck.Owner, Lading.BLading, Lading.Lusername
-FROM            Lading INNER JOIN
-                         Drivers ON Lading.Driver_ID = Drivers.Driver_ID INNER JOIN
-                         INBatch ON Lading.BatchID = INBatch.Batch_ID INNER JOIN
-                         Shipment ON INBatch.Ship_ID = Shipment.Ship_ID INNER JOIN
-                         Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
-                         SUPPLIERS ON Shipment.Supp_ID = SUPPLIERS.SUP_ID INNER JOIN
-                         Transport_Co ON Shipment.Trans_Co = Transport_Co.Company_ID INNER JOIN
-                         Truck ON Lading.Truck_ID = Truck.Truck_ID";
+            this._commandCollection[1].CommandText = @"SELECT Lading.ladingID, Lading.Qty, Lading.Date, Lading.Loading_Station, Lading.Net_Weight, Lading.Shrink, Lading.Fill_Type, Lading.Bags_Count, Lading.Stack_Bar, Commodity.Comm_NAME, Commodity.CofOrigin, Commodity.Comm_TYPE, 
+                  Transport_Co.Company_Name, Shipment.Contract, Shipment.Shipping, Shipment.Qty AS Shqty, Drivers.Driver_Name, Drivers.N_Card, Drivers.Liscense_num, INBatch.Serial, SUPPLIERS.SUP_NAME, INBatch.Qty AS Bqty, 
+                  Truck.Truck_number, Truck.Truck_License, Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_License, Truck.Trailer_traffic, Truck.Owner, Lading.BLading, Lading.Lusername, Shipment.local_supplier
+FROM     Lading INNER JOIN
+                  Drivers ON Lading.Driver_ID = Drivers.Driver_ID INNER JOIN
+                  INBatch ON Lading.BatchID = INBatch.Batch_ID INNER JOIN
+                  Shipment ON INBatch.Ship_ID = Shipment.Ship_ID INNER JOIN
+                  Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
+                  SUPPLIERS ON Shipment.Supp_ID = SUPPLIERS.SUP_ID INNER JOIN
+                  Transport_Co ON Shipment.Trans_Co = Transport_Co.Company_ID INNER JOIN
+                  Truck ON Lading.Truck_ID = Truck.Truck_ID";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -15129,7 +16294,7 @@ FROM            Lading INNER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[9];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[10];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        Lading.F_weight, Lading.F_Wdate, Lading.S_weigherName, Lading.S_weight, Lading.S_Wdate, Lading.Net_Weight, Truck.Truck_number, Truck.Trailer_number, Lading.ladingID, Drivers.Driver_Name, Commodity.Comm_NAME, 
@@ -15267,6 +16432,23 @@ WHERE        (Lading.S_Wdate BETWEEN @sdate AND @edate) AND (Lading.Status = N'�
             this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sdate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "S_Wdate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@edate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "S_Wdate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[9].Connection = this.Connection;
+            this._commandCollection[9].CommandText = @"SELECT Lading.F_weight, Lading.F_Wdate, Lading.S_weigherName, Lading.S_weight, Lading.S_Wdate, Lading.Net_Weight, Truck.Truck_number, Truck.Trailer_number, Lading.ladingID, Drivers.Driver_Name, Commodity.Comm_NAME, 
+                  Commodity.CofOrigin, WcardID.WCardID, Lading.BLading, Lading.Status, INBatch.Serial, Lading.Qty, Lading.Shrink, Shipment.Shipping, Transport_Co.Company_Name
+FROM     Lading INNER JOIN
+                  Truck ON Lading.Truck_ID = Truck.Truck_ID INNER JOIN
+                  INBatch ON Lading.BatchID = INBatch.Batch_ID INNER JOIN
+                  Shipment ON INBatch.Ship_ID = Shipment.Ship_ID INNER JOIN
+                  Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
+                  Drivers ON Lading.Driver_ID = Drivers.Driver_ID INNER JOIN
+                  WcardID ON Lading.ladingID = WcardID.LAD_ID INNER JOIN
+                  Transport_Co ON Shipment.Trans_Co = Transport_Co.Company_ID
+WHERE  (Lading.S_Wdate BETWEEN @sdate AND @edate) AND (Lading.Status = N'تم') AND (Shipment.Comm_ID = @comid)";
+            this._commandCollection[9].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sdate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "S_Wdate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@edate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "S_Wdate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[9].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@comid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Comm_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15574,6 +16756,56 @@ WHERE        (Lading.S_Wdate BETWEEN @sdate AND @edate) AND (Lading.Status = N'�
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillShiftByComandDate(INdataset.WCard1DataTable dataTable, global::System.Nullable<global::System.DateTime> sdate, global::System.Nullable<global::System.DateTime> edate, int comid) {
+            this.Adapter.SelectCommand = this.CommandCollection[9];
+            if ((sdate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(sdate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((edate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(edate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(comid));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual INdataset.WCard1DataTable GetDataBy7(global::System.Nullable<global::System.DateTime> sdate, global::System.Nullable<global::System.DateTime> edate, int comid) {
+            this.Adapter.SelectCommand = this.CommandCollection[9];
+            if ((sdate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((System.DateTime)(sdate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((edate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(edate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(comid));
+            INdataset.WCard1DataTable dataTable = new INdataset.WCard1DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
     }
     
     /// <summary>
@@ -15776,6 +17008,641 @@ WHERE        (Shipment.Shipping LIKE @shp)";
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Local_SuppliersTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public Local_SuppliersTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Local_Suppliers";
+            tableMapping.ColumnMappings.Add("Supplier_Name", "Supplier_Name");
+            tableMapping.ColumnMappings.Add("Notes", "Notes");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Local_Suppliers] WHERE (([Supplier_Name] = @Original_Supplier_" +
+                "Name) AND ((@IsNull_Notes = 1 AND [Notes] IS NULL) OR ([Notes] = @Original_Notes" +
+                ")))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Supplier_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Supplier_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Notes", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Notes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Local_Suppliers] ([Supplier_Name], [Notes]) VALUES (@Supplier_" +
+                "Name, @Notes);\r\nSELECT Supplier_Name, Notes FROM Local_Suppliers WHERE (Supplier" +
+                "_Name = @Supplier_Name)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Supplier_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Supplier_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Notes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Local_Suppliers] SET [Supplier_Name] = @Supplier_Name, [Notes] = @Notes WHERE (([Supplier_Name] = @Original_Supplier_Name) AND ((@IsNull_Notes = 1 AND [Notes] IS NULL) OR ([Notes] = @Original_Notes)));
+SELECT Supplier_Name, Notes FROM Local_Suppliers WHERE (Supplier_Name = @Supplier_Name)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Supplier_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Supplier_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Notes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Supplier_Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Supplier_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Notes", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Notes", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Notes", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::LoBridge.Properties.Settings.Default.wdbConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT Supplier_Name, Notes FROM dbo.Local_Suppliers";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(INdataset.Local_SuppliersDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual INdataset.Local_SuppliersDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            INdataset.Local_SuppliersDataTable dataTable = new INdataset.Local_SuppliersDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(INdataset.Local_SuppliersDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(INdataset dataSet) {
+            return this.Adapter.Update(dataSet, "Local_Suppliers");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(string Original_Supplier_Name, string Original_Notes) {
+            if ((Original_Supplier_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_Supplier_Name");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Supplier_Name));
+            }
+            if ((Original_Notes == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Notes));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string Supplier_Name, string Notes) {
+            if ((Supplier_Name == null)) {
+                throw new global::System.ArgumentNullException("Supplier_Name");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Supplier_Name));
+            }
+            if ((Notes == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Notes));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Supplier_Name, string Notes, string Original_Supplier_Name, string Original_Notes) {
+            if ((Supplier_Name == null)) {
+                throw new global::System.ArgumentNullException("Supplier_Name");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Supplier_Name));
+            }
+            if ((Notes == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Notes));
+            }
+            if ((Original_Supplier_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_Supplier_Name");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Supplier_Name));
+            }
+            if ((Original_Notes == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Notes));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Notes, string Original_Supplier_Name, string Original_Notes) {
+            return this.Update(Original_Supplier_Name, Notes, Original_Supplier_Name, Original_Notes);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class CommodityTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public CommodityTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Commodity";
+            tableMapping.ColumnMappings.Add("Comm_ID", "Comm_ID");
+            tableMapping.ColumnMappings.Add("Comm_NAME", "Comm_NAME");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Commodity] WHERE (([Comm_ID] = @Original_Comm_ID) AND ([Comm_NAME] =" +
+                " @Original_Comm_NAME))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Comm_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comm_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Comm_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comm_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Commodity] SET [Comm_NAME] = @Comm_NAME WHERE (([Comm_ID] = @Original_Comm_ID) AND ([Comm_NAME] = @Original_Comm_NAME));
+SELECT Commodity.Comm_ID, Commodity.Comm_NAME FROM Commodity INNER JOIN Shipment ON Commodity.Comm_ID = Shipment.Comm_ID WHERE (Commodity.Comm_ID = @Comm_ID) AND (Shipment.Ship_ID = @Ship_ID) GROUP BY Commodity.Comm_ID, Commodity.Comm_NAME";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comm_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comm_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Comm_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comm_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Comm_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comm_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comm_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Comm_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ship_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::LoBridge.Properties.Settings.Default.wdbConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT Commodity.Comm_ID, Commodity.Comm_NAME\r\nFROM     Commodity INNER JOIN\r\n   " +
+                "               Shipment ON Commodity.Comm_ID = Shipment.Comm_ID\r\nGROUP BY Commod" +
+                "ity.Comm_ID, Commodity.Comm_NAME";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int InComm(INdataset.CommodityDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual INdataset.CommodityDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            INdataset.CommodityDataTable dataTable = new INdataset.CommodityDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(INdataset.CommodityDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(INdataset dataSet) {
+            return this.Adapter.Update(dataSet, "Commodity");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_Comm_ID, string Original_Comm_NAME) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Comm_ID));
+            if ((Original_Comm_NAME == null)) {
+                throw new global::System.ArgumentNullException("Original_Comm_NAME");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Comm_NAME));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Comm_NAME, int Original_Comm_ID, string Original_Comm_NAME, int Comm_ID, int Ship_ID) {
+            if ((Comm_NAME == null)) {
+                throw new global::System.ArgumentNullException("Comm_NAME");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Comm_NAME));
+            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_Comm_ID));
+            if ((Original_Comm_NAME == null)) {
+                throw new global::System.ArgumentNullException("Original_Comm_NAME");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Comm_NAME));
+            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Comm_ID));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Ship_ID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Comm_NAME, int Original_Comm_ID, string Original_Comm_NAME, int Ship_ID) {
+            return this.Update(Comm_NAME, Original_Comm_ID, Original_Comm_NAME, Original_Comm_ID, Ship_ID);
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -15796,6 +17663,10 @@ WHERE        (Shipment.Shipping LIKE @shp)";
         private INBatchTableAdapter _iNBatchTableAdapter;
         
         private WcardIDTableAdapter _wcardIDTableAdapter;
+        
+        private Local_SuppliersTableAdapter _local_SuppliersTableAdapter;
+        
+        private CommodityTableAdapter _commodityTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -15884,6 +17755,34 @@ WHERE        (Shipment.Shipping LIKE @shp)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public Local_SuppliersTableAdapter Local_SuppliersTableAdapter {
+            get {
+                return this._local_SuppliersTableAdapter;
+            }
+            set {
+                this._local_SuppliersTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public CommodityTableAdapter CommodityTableAdapter {
+            get {
+                return this._commodityTableAdapter;
+            }
+            set {
+                this._commodityTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -15921,6 +17820,14 @@ WHERE        (Shipment.Shipping LIKE @shp)";
                             && (this._wcardIDTableAdapter.Connection != null))) {
                     return this._wcardIDTableAdapter.Connection;
                 }
+                if (((this._local_SuppliersTableAdapter != null) 
+                            && (this._local_SuppliersTableAdapter.Connection != null))) {
+                    return this._local_SuppliersTableAdapter.Connection;
+                }
+                if (((this._commodityTableAdapter != null) 
+                            && (this._commodityTableAdapter.Connection != null))) {
+                    return this._commodityTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -15949,6 +17856,12 @@ WHERE        (Shipment.Shipping LIKE @shp)";
                 if ((this._wcardIDTableAdapter != null)) {
                     count = (count + 1);
                 }
+                if ((this._local_SuppliersTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._commodityTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -15966,6 +17879,15 @@ WHERE        (Shipment.Shipping LIKE @shp)";
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._sUPPLIERSTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._commodityTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Commodity.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._commodityTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -16005,6 +17927,15 @@ WHERE        (Shipment.Shipping LIKE @shp)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._local_SuppliersTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Local_Suppliers.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._local_SuppliersTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -16020,6 +17951,14 @@ WHERE        (Shipment.Shipping LIKE @shp)";
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._sUPPLIERSTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._commodityTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Commodity.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._commodityTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -16055,6 +17994,14 @@ WHERE        (Shipment.Shipping LIKE @shp)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._local_SuppliersTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Local_Suppliers.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._local_SuppliersTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -16065,6 +18012,14 @@ WHERE        (Shipment.Shipping LIKE @shp)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(INdataset dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._local_SuppliersTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Local_Suppliers.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._local_SuppliersTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._wcardIDTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.WcardID.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -16094,6 +18049,14 @@ WHERE        (Shipment.Shipping LIKE @shp)";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._shipmentTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._commodityTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Commodity.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._commodityTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -16166,6 +18129,16 @@ WHERE        (Shipment.Shipping LIKE @shp)";
             }
             if (((this._wcardIDTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._wcardIDTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._local_SuppliersTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._local_SuppliersTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._commodityTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._commodityTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -16246,6 +18219,24 @@ WHERE        (Shipment.Shipping LIKE @shp)";
                         adaptersWithAcceptChangesDuringUpdate.Add(this._wcardIDTableAdapter.Adapter);
                     }
                 }
+                if ((this._local_SuppliersTableAdapter != null)) {
+                    revertConnections.Add(this._local_SuppliersTableAdapter, this._local_SuppliersTableAdapter.Connection);
+                    this._local_SuppliersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._local_SuppliersTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._local_SuppliersTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._local_SuppliersTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._local_SuppliersTableAdapter.Adapter);
+                    }
+                }
+                if ((this._commodityTableAdapter != null)) {
+                    revertConnections.Add(this._commodityTableAdapter, this._commodityTableAdapter.Connection);
+                    this._commodityTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._commodityTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._commodityTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._commodityTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._commodityTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -16323,6 +18314,14 @@ WHERE        (Shipment.Shipping LIKE @shp)";
                 if ((this._wcardIDTableAdapter != null)) {
                     this._wcardIDTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._wcardIDTableAdapter]));
                     this._wcardIDTableAdapter.Transaction = null;
+                }
+                if ((this._local_SuppliersTableAdapter != null)) {
+                    this._local_SuppliersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._local_SuppliersTableAdapter]));
+                    this._local_SuppliersTableAdapter.Transaction = null;
+                }
+                if ((this._commodityTableAdapter != null)) {
+                    this._commodityTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._commodityTableAdapter]));
+                    this._commodityTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

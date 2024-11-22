@@ -125,7 +125,7 @@ namespace LoBridge
 
 
                         bindingNavigatorAddNewItem.Enabled = true;
-                        lading_OutBindingNavigatorSaveItem.Enabled = false;
+                        saveItemBtn.Enabled = false;
                         panel1.Enabled = false;
                         panel1.Enabled = false;
                         groupBox2.Enabled = false;
@@ -161,7 +161,7 @@ namespace LoBridge
 
             panel1.Enabled = true;
             bindingNavigatorAddNewItem.Enabled = false;
-            lading_OutBindingNavigatorSaveItem.Enabled = true;
+            saveItemBtn.Enabled = true;
             printBtn.Enabled = false;
             bindingNavigatorDeleteItem.Enabled = true;
             ladingIDTextBox.Text = "0";
@@ -227,13 +227,13 @@ namespace LoBridge
                         {
                             //orderremain_QtyTextBox.Text = (OrderQ - sumLadQ) + "";
                             MessageBox.Show("خطأ في الكمية او كمية غير متوفرة");
-                            lading_OutBindingNavigatorSaveItem.Enabled = false;
+                            saveItemBtn.Enabled = false;
                             lad_qty_requiredTextBox.ForeColor = System.Drawing.Color.Red;
                             return false;
                         }
                         else
                         {
-                            lading_OutBindingNavigatorSaveItem.Enabled = true;
+                            saveItemBtn.Enabled = true;
                             lad_qty_requiredTextBox.ForeColor = System.Drawing.Color.Black;
                             // return true;
                         }
@@ -301,49 +301,48 @@ namespace LoBridge
             ladingIDTextBox.ReadOnly = false;
             reWeightBtn.Checked = false;
 
+            //try
+            //{
 
-            try
-            {
+            //    // TODO: This line of code loads data into the 'dLWSDataSet.Transport_Co' table. You can move, or remove it, as needed.
+            //    this.transport_CoTableAdapter.Fill(this.dLWSDataSet.Transport_Co);
 
-                // TODO: This line of code loads data into the 'dLWSDataSet.Transport_Co' table. You can move, or remove it, as needed.
-                this.transport_CoTableAdapter.Fill(this.dLWSDataSet.Transport_Co);
+            //    // TODO: This line of code loads data into the 'dLWSDataSet.Truck' table. You can move, or remove it, as needed.
+            //    this.truckTableAdapter.Fill(this.dLWSDataSet.Truck);
+            //    truck_numberComboBox.SelectedIndex = truck_numberComboBox.Items.Count - 1;
 
-                // TODO: This line of code loads data into the 'dLWSDataSet.Truck' table. You can move, or remove it, as needed.
-                this.truckTableAdapter.Fill(this.dLWSDataSet.Truck);
-                truck_numberComboBox.SelectedIndex = truck_numberComboBox.Items.Count - 1;
+            //    // TODO: This line of code loads data into the 'dLWSDataSet.Drivers' table. You can move, or remove it, as needed.
+            //    this.driversTableAdapter.Fill(this.dLWSDataSet.Drivers);
+            //    if (driver_NameComboBox.Items.Count > 0)
+            //    {
+            //        driver_NameComboBox.SelectedIndex = driver_NameComboBox.Items.Count - 1;
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
 
-                // TODO: This line of code loads data into the 'dLWSDataSet.Drivers' table. You can move, or remove it, as needed.
-                this.driversTableAdapter.Fill(this.dLWSDataSet.Drivers);
-                if (driver_NameComboBox.Items.Count > 0)
-                {
-                    driver_NameComboBox.SelectedIndex = driver_NameComboBox.Items.Count - 1;
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
-
+            //}
 
 
-            //  int Oid = 0;
-            if (order_Number1ComboBox.SelectedIndex < 0)
-            {
-                try
-                {
-                    // TODO: This line of code loads data into the 'dLWSDataSet.OrderForLad' table. You can move, or remove it, as needed.
-                    this.orderForLadTableAdapter.FillForLad(this.outdataset.OrderForLad);
-                    //if()
-                    // order_Number1ComboBox.SelectedIndex = order_Number1ComboBox.Items.Count - 1;
 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message + "error01");
-                }
-            }
+            ////  int Oid = 0;
+            //if (order_Number1ComboBox.SelectedIndex < 0)
+            //{
+            //    try
+            //    {
+            //        // TODO: This line of code loads data into the 'dLWSDataSet.OrderForLad' table. You can move, or remove it, as needed.
+            //        this.orderForLadTableAdapter.FillForLad(this.outdataset.OrderForLad);
+            //        //if()
+            //        // order_Number1ComboBox.SelectedIndex = order_Number1ComboBox.Items.Count - 1;
 
-            Cursor.Current = Cursors.Default;
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message + "error01");
+            //    }
+            //}
+
+            //Cursor.Current = Cursors.Default;
         }
 
         private void orderqtyTextBox_TextChanged(object sender, EventArgs e)
@@ -368,7 +367,7 @@ namespace LoBridge
         {
             bindingNavigatorAddNewItem.Enabled = true;
             bindingNavigatorDeleteItem.Enabled = false;
-            lading_OutBindingNavigatorSaveItem.Enabled = false;
+            saveItemBtn.Enabled = false;
             //orderForLadTableAdapter.ClearBeforeFill=true;
             if (groupBox2.Enabled == true)
             {
@@ -413,9 +412,16 @@ namespace LoBridge
         private void loadbtn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             int lid = int.Parse(ladingIDTextBox.Text);
-            if (this.lading_OutTableAdapter.GetStatus(lid) == "تم" && Properties.Settings.Default.Urole > 3)
-            {
-                int cardID = int.Parse(ladingIDTextBox.Text);
+            outdataset.Lading_Out.Clear();
+            dLWSDataSet.Truck.Clear();
+            dLWSDataSet.Drivers.Clear();
+            outdataset.OrderForLad.Clear();
+            saveItemBtn.Enabled = false;
+
+            var cardStatus = this.lading_OutTableAdapter.GetStatus(lid);
+                if (cardStatus != "اول" && cardStatus != "ثان")
+                {
+                    int cardID = int.Parse(ladingIDTextBox.Text);
 
                 editing = false;
                 MessageBox.Show("لا يمكن التعديل بعد الوزن");
@@ -428,12 +434,12 @@ namespace LoBridge
                 {
                     if (ladingIDTextBox.Text.Length < 1)
                     {
-                        lading_OutBindingNavigatorSaveItem.Enabled = false;
+                        saveItemBtn.Enabled = false;
                     }
                     else
                     {
                         lading_OutTableAdapter.FillForEdit(outdataset.Lading_Out, lid);
-                        lading_OutBindingNavigatorSaveItem.Enabled = true;
+                        saveItemBtn.Enabled = true;
                         truckTableAdapter.FillByTid(dLWSDataSet.Truck, Convert.ToInt32(truck_IDTextBox1.Text));
                         driversTableAdapter.FillByDid(dLWSDataSet.Drivers, Convert.ToInt32(driver_IDTextBox1.Text));
                         orderForLadTableAdapter.FillBy(outdataset.OrderForLad, Convert.ToInt32(order_IDTextBox.Text));

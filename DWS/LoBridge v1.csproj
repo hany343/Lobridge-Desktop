@@ -46,6 +46,8 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
     <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -76,7 +78,8 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>DWS_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>LoBridge.Program</StartupObject>
@@ -200,24 +203,36 @@
     <Compile Include="Bridge\Bridgereport.Designer.cs">
       <DependentUpon>Bridgereport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cams.cs">
+    <Compile Include="Common\Cams.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cams.Designer.cs">
+    <Compile Include="Common\Cams.Designer.cs">
       <DependentUpon>Cams.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataQuery.cs" />
-    <Compile Include="Home.cs">
+    <Compile Include="Common\Lading_Ports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="Common\Lading_Ports.Designer.cs">
+      <DependentUpon>Lading_Ports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\UsersPerm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\UsersPerm.Designer.cs">
+      <DependentUpon>UsersPerm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataQuery.cs" />
     <Compile Include="Inbound\InAdvEditing.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inbound\InAdvEditing.Designer.cs">
       <DependentUpon>InAdvEditing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inbound\INladAdvEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbound\INladAdvEdit.Designer.cs">
+      <DependentUpon>INladAdvEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Inbound\INReportingViewer.cs">
       <SubType>Form</SubType>
@@ -231,16 +246,22 @@
     <Compile Include="Inbound\INSHiftViewer.Designer.cs">
       <DependentUpon>INSHiftViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inbound\Local_Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inbound\Local_Suppliers.Designer.cs">
+      <DependentUpon>Local_Suppliers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Outbound\LadOut.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Outbound\LadOut.Designer.cs">
       <DependentUpon>LadOut.cs</DependentUpon>
     </Compile>
-    <Compile Include="comListComm.cs">
+    <Compile Include="Common\comListComm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="comListComm.Designer.cs">
+    <Compile Include="Common\comListComm.Designer.cs">
       <DependentUpon>comListComm.cs</DependentUpon>
     </Compile>
     <Compile Include="Logs.cs">
@@ -289,13 +310,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Outdataset.xsd</DependentUpon>
     </Compile>
-    <Compile Include="OutTruckhistory.cs">
+    <Compile Include="Outbound\OutTruckhistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OutTruckhistory.Designer.cs">
+    <Compile Include="Outbound\OutTruckhistory.Designer.cs">
       <DependentUpon>OutTruckhistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Preview.cs">
+    <Compile Include="Cam\Preview.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -314,24 +335,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReportsDataset.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ShipAddress.cs">
+    <Compile Include="Outbound\ShipAddress.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShipAddress.Designer.cs">
+    <Compile Include="Outbound\ShipAddress.Designer.cs">
       <DependentUpon>ShipAddress.cs</DependentUpon>
     </Compile>
-    <Compile Include="SysSettingsForm.cs">
+    <Compile Include="Common\SysSettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SysSettingsForm.Designer.cs">
+    <Compile Include="Common\SysSettingsForm.Designer.cs">
       <DependentUpon>SysSettingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="CHCNetSDK.cs" />
-    <Compile Include="Commodity.cs">
+    <Compile Include="Cam\CHCNetSDK.cs" />
+    <Compile Include="Common\Commodity.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Commodity.Designer.cs">
+    <Compile Include="Common\Commodity.Designer.cs">
       <DependentUpon>Commodity.cs</DependentUpon>
     </Compile>
     <Compile Include="Outbound\OutEditContract.cs">
@@ -351,11 +372,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DLWSDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Home2.cs">
+    <Compile Include="Common\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home2.Designer.cs">
-      <DependentUpon>Home2.cs</DependentUpon>
+    <Compile Include="Common\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Inbound\INWCard.cs">
       <SubType>Form</SubType>
@@ -375,10 +396,10 @@
     <Compile Include="Inbound\LastINCards.Designer.cs">
       <DependentUpon>LastINCards.cs</DependentUpon>
     </Compile>
-    <Compile Include="LastOutCards.cs">
+    <Compile Include="Outbound\LastOutCards.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LastOutCards.Designer.cs">
+    <Compile Include="Outbound\LastOutCards.Designer.cs">
       <DependentUpon>LastOutCards.cs</DependentUpon>
     </Compile>
     <Compile Include="Outbound\OutListCustomers.cs">
@@ -386,6 +407,108 @@
     </Compile>
     <Compile Include="Outbound\OutListCustomers.Designer.cs">
       <DependentUpon>OutListCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BLading1-gov-pack.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BLading1-gov-pack.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BLading1-gov-packnw.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BLading1-gov-packnw.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BLading1-gov.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BLading1-gov.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BLading1-pack.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BLading1-pack.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BLading1-packnw.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BLading1-packnw.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BLading1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BLading1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Contracts.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contracts.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DailyOut.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyOut.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\INShiftrpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>INShiftrpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\INShipsDetails.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>INShipsDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LCard.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LCard.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LCardpack.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LCardpack.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\OutWCard1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OutWCard1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\OutWCard1A5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OutWCard1A5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RCardds.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RCardds.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\WCard1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WCard1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\WCard1A5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WCard1A5.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Trans\ListDrivers.cs">
       <SubType>Form</SubType>
@@ -405,10 +528,10 @@
     <Compile Include="Trans\ListTrucks.Designer.cs">
       <DependentUpon>ListTrucks.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Common\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Common\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Outbound\OUTOrder.cs">
@@ -435,10 +558,10 @@
     <Compile Include="Outbound\OUTCustomer.Designer.cs">
       <DependentUpon>OUTCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBConnect.cs">
+    <Compile Include="Data\DBConnect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DBConnect.Designer.cs">
+    <Compile Include="Data\DBConnect.Designer.cs">
       <DependentUpon>DBConnect.cs</DependentUpon>
     </Compile>
     <Compile Include="DGVPrinter.cs" />
@@ -470,19 +593,19 @@
       <DependentUpon>MsgBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Myconfig.cs" />
-    <Compile Include="OutWCard.cs">
+    <Compile Include="Outbound\OutWCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OutWCard.designer.cs">
+    <Compile Include="Outbound\OutWCard.designer.cs">
       <DependentUpon>OutWCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="PreSet.cs">
+    <Compile Include="Cam\PreSet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PreSet.designer.cs">
+    <Compile Include="Cam\PreSet.designer.cs">
       <DependentUpon>PreSet.cs</DependentUpon>
     </Compile>
-    <Compile Include="WPreview.cs">
+    <Compile Include="Cam\WPreview.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Outbound\OutPrint_BLading.cs">
@@ -528,8 +651,8 @@
     <Compile Include="Inbound\INListShips.Designer.cs">
       <DependentUpon>INListShips.cs</DependentUpon>
     </Compile>
-    <Compile Include="SQLConnector.cs" />
-    <Compile Include="SqlHelper.cs" />
+    <Compile Include="Data\SQLConnector.cs" />
+    <Compile Include="Data\SqlHelper.cs" />
     <Compile Include="Trans\TransList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -554,16 +677,16 @@
     <Compile Include="UpdateLB.Designer.cs">
       <DependentUpon>UpdateLB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Users.cs">
+    <Compile Include="Common\Users.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Users.Designer.cs">
+    <Compile Include="Common\Users.Designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
     </Compile>
-    <Compile Include="userSettings.cs">
+    <Compile Include="Common\userSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="userSettings.Designer.cs">
+    <Compile Include="Common\userSettings.Designer.cs">
       <DependentUpon>userSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Bridge\WScreen.cs">
@@ -584,14 +707,20 @@
     <EmbeddedResource Include="Bridge\Bridgereport.resx">
       <DependentUpon>Bridgereport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cams.resx">
+    <EmbeddedResource Include="Common\Cams.resx">
       <DependentUpon>Cams.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="Common\Lading_Ports.resx">
+      <DependentUpon>Lading_Ports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\UsersPerm.resx">
+      <DependentUpon>UsersPerm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inbound\InAdvEditing.resx">
       <DependentUpon>InAdvEditing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inbound\INladAdvEdit.resx">
+      <DependentUpon>INladAdvEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inbound\INReportingViewer.resx">
       <DependentUpon>INReportingViewer.cs</DependentUpon>
@@ -599,10 +728,13 @@
     <EmbeddedResource Include="Inbound\INSHiftViewer.resx">
       <DependentUpon>INSHiftViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inbound\Local_Suppliers.resx">
+      <DependentUpon>Local_Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Outbound\LadOut.resx">
       <DependentUpon>LadOut.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="comListComm.resx">
+    <EmbeddedResource Include="Common\comListComm.resx">
       <DependentUpon>comListComm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Logs.resx">
@@ -620,23 +752,23 @@
     <EmbeddedResource Include="Inbound\INListInCards.resx">
       <DependentUpon>INListInCards.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OutTruckhistory.resx">
+    <EmbeddedResource Include="Outbound\OutTruckhistory.resx">
       <DependentUpon>OutTruckhistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Preview.resx">
+    <EmbeddedResource Include="Cam\Preview.resx">
       <DependentUpon>Preview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="QueryTest.resx">
       <DependentUpon>QueryTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ShipAddress.resx">
+    <EmbeddedResource Include="Outbound\ShipAddress.resx">
       <DependentUpon>ShipAddress.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SysSettingsForm.resx">
+    <EmbeddedResource Include="Common\SysSettingsForm.resx">
       <DependentUpon>SysSettingsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Commodity.resx">
+    <EmbeddedResource Include="Common\Commodity.resx">
       <DependentUpon>Commodity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Outbound\OutEditContract.resx">
@@ -645,8 +777,8 @@
     <EmbeddedResource Include="Outbound\OutEditOrder.resx">
       <DependentUpon>OutEditOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home2.resx">
-      <DependentUpon>Home2.cs</DependentUpon>
+    <EmbeddedResource Include="Common\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inbound\INWCard.resx">
       <DependentUpon>INWCard.cs</DependentUpon>
@@ -657,11 +789,79 @@
     <EmbeddedResource Include="Inbound\LastINCards.resx">
       <DependentUpon>LastINCards.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LastOutCards.resx">
+    <EmbeddedResource Include="Outbound\LastOutCards.resx">
       <DependentUpon>LastOutCards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Outbound\OutListCustomers.resx">
       <DependentUpon>OutListCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BLading1-gov-pack.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BLading1-gov-pack.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BLading1-gov-packnw.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BLading1-gov-packnw.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BLading1-gov.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BLading1-gov.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BLading1-pack.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BLading1-pack.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BLading1-packnw.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BLading1-packnw.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BLading1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BLading1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Contracts.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Contracts.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DailyOut.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailyOut.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\INShiftrpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>INShiftrpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\INShipsDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>INShipsDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LCard.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LCard.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LCardpack.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LCardpack.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OutWCard1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OutWCard1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OutWCard1A5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OutWCard1A5.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RCardds.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RCardds.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\WCard1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WCard1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\WCard1A5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WCard1A5.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Trans\ListDrivers.resx">
       <DependentUpon>ListDrivers.cs</DependentUpon>
@@ -675,10 +875,10 @@
     <EmbeddedResource Include="Outbound\OUTCustomer.resx">
       <DependentUpon>OUTCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DBConnect.resx">
+    <EmbeddedResource Include="Data\DBConnect.resx">
       <DependentUpon>DBConnect.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Common\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Outbound\OUTOrder.resx">
@@ -696,13 +896,13 @@
     <EmbeddedResource Include="MsgBox.resx">
       <DependentUpon>MsgBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OutWCard.resx">
+    <EmbeddedResource Include="Outbound\OutWCard.resx">
       <DependentUpon>OutWCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PreSet.resx">
+    <EmbeddedResource Include="Cam\PreSet.resx">
       <DependentUpon>PreSet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WPreview.resx">
+    <EmbeddedResource Include="Cam\WPreview.resx">
       <DependentUpon>WPreview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Outbound\OutPrint_BLading.resx">
@@ -749,10 +949,10 @@
     <EmbeddedResource Include="UpdateLB.resx">
       <DependentUpon>UpdateLB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Users.resx">
+    <EmbeddedResource Include="Common\Users.resx">
       <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="userSettings.resx">
+    <EmbeddedResource Include="Common\userSettings.resx">
       <DependentUpon>userSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bridge\WScreen.resx">
@@ -769,7 +969,6 @@
     <None Include="DLWSDataSet.xss">
       <DependentUpon>DLWSDataSet.xsd</DependentUpon>
     </None>
-    <None Include="DWS_TemporaryKey.pfx" />
     <None Include="INdataset.xsc">
       <DependentUpon>INdataset.xsd</DependentUpon>
     </None>
@@ -901,11 +1100,10 @@
     <None Include="Resources\scroll-right-icon.png" />
     <None Include="Resources\xls-icon.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reports\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="LBI.ico" />
+    <None Include="Resources\Designer.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

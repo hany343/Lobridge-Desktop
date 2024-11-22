@@ -29,9 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.shipmentDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ship_RQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Lading_Port = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.shipmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iNdataset = new LoBridge.INdataset();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
@@ -40,7 +49,6 @@
             this.searchTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.iNBatchDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,15 +69,6 @@
             this.shipmentTableAdapter = new LoBridge.INdatasetTableAdapters.ShipmentTableAdapter();
             this.iNBatchTableAdapter = new LoBridge.INdatasetTableAdapters.INBatchTableAdapter();
             this.tableAdapterManager = new LoBridge.INdatasetTableAdapters.TableAdapterManager();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ship_RQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lading_Port = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Notes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.shipmentDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iNdataset)).BeginInit();
@@ -85,16 +84,16 @@
             this.shipmentDataGridView.AllowUserToAddRows = false;
             this.shipmentDataGridView.AllowUserToDeleteRows = false;
             this.shipmentDataGridView.AutoGenerateColumns = false;
-            this.shipmentDataGridView.BackgroundColor = System.Drawing.Color.CadetBlue;
+            this.shipmentDataGridView.BackgroundColor = System.Drawing.Color.SlateGray;
             this.shipmentDataGridView.CausesValidation = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.shipmentDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.shipmentDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.shipmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.shipmentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -116,6 +115,87 @@
             this.shipmentDataGridView.Size = new System.Drawing.Size(1078, 271);
             this.shipmentDataGridView.TabIndex = 1;
             this.shipmentDataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.shipmentDataGridView_RowEnter);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Ship_ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "كود";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Shipping";
+            this.dataGridViewTextBoxColumn8.HeaderText = "اسم الشحنة";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Contract";
+            this.dataGridViewTextBoxColumn2.HeaderText = "رقم العقد";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 60;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Comm_NAME";
+            this.Column1.HeaderText = "الصنف";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 150;
+            // 
+            // Qty
+            // 
+            this.Qty.DataPropertyName = "Qty";
+            this.Qty.HeaderText = "الكمية/طن";
+            this.Qty.MinimumWidth = 6;
+            this.Qty.Name = "Qty";
+            this.Qty.ReadOnly = true;
+            this.Qty.Width = 125;
+            // 
+            // Ship_RQty
+            // 
+            this.Ship_RQty.DataPropertyName = "Ship_RQty";
+            this.Ship_RQty.HeaderText = "المتبقي/طن";
+            this.Ship_RQty.MinimumWidth = 6;
+            this.Ship_RQty.Name = "Ship_RQty";
+            this.Ship_RQty.ReadOnly = true;
+            this.Ship_RQty.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Date";
+            this.dataGridViewTextBoxColumn13.HeaderText = "تاريخ التسجيل";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 150;
+            // 
+            // Lading_Port
+            // 
+            this.Lading_Port.DataPropertyName = "Lading_Port";
+            this.Lading_Port.HeaderText = "ميناء التحميل";
+            this.Lading_Port.MinimumWidth = 6;
+            this.Lading_Port.Name = "Lading_Port";
+            this.Lading_Port.ReadOnly = true;
+            this.Lading_Port.Width = 125;
+            // 
+            // Notes
+            // 
+            this.Notes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Notes.DataPropertyName = "Notes";
+            this.Notes.HeaderText = "ملاحظات";
+            this.Notes.MinimumWidth = 6;
+            this.Notes.Name = "Notes";
+            this.Notes.ReadOnly = true;
             // 
             // shipmentBindingSource
             // 
@@ -139,8 +219,7 @@
             this.bindingNavigatorSeparator2,
             this.searchTextBox1,
             this.toolStripButton1,
-            this.toolStripSeparator,
-            this.toolStripButton2});
+            this.toolStripSeparator});
             this.bindingNavigator1.Location = new System.Drawing.Point(8, 8);
             this.bindingNavigator1.MoveFirstItem = null;
             this.bindingNavigator1.MoveLastItem = null;
@@ -156,9 +235,9 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.toolStripLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(169, 52);
+            this.toolStripLabel1.Size = new System.Drawing.Size(126, 52);
             this.toolStripLabel1.Text = "بحث باسم الشحنة:";
             // 
             // bindingNavigatorSeparator2
@@ -168,7 +247,7 @@
             // 
             // searchTextBox1
             // 
-            this.searchTextBox1.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTextBox1.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchTextBox1.Name = "searchTextBox1";
             this.searchTextBox1.Size = new System.Drawing.Size(100, 55);
             this.searchTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchTextBox1_KeyDown);
@@ -189,16 +268,6 @@
             this.toolStripSeparator.Name = "toolStripSeparator";
             this.toolStripSeparator.Size = new System.Drawing.Size(6, 55);
             // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Font = new System.Drawing.Font("Sakkal Majalla", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.Image = global::LoBridge.Properties.Resources.delete_icon;
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(97, 52);
-            this.toolStripButton2.Text = "أغلاق";
-            // 
             // ExitBtn
             // 
             this.ExitBtn.BackgroundImage = global::LoBridge.Properties.Resources.exit;
@@ -217,16 +286,16 @@
             // 
             this.iNBatchDataGridView.AllowUserToAddRows = false;
             this.iNBatchDataGridView.AutoGenerateColumns = false;
-            this.iNBatchDataGridView.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.iNBatchDataGridView.BackgroundColor = System.Drawing.Color.LightSlateGray;
             this.iNBatchDataGridView.CausesValidation = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.iNBatchDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.iNBatchDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.iNBatchDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.iNBatchDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
@@ -397,91 +466,11 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.INBatchTableAdapter = this.iNBatchTableAdapter;
             this.tableAdapterManager.LadingTableAdapter = null;
+            this.tableAdapterManager.Local_SuppliersTableAdapter = null;
             this.tableAdapterManager.ShipmentTableAdapter = this.shipmentTableAdapter;
             this.tableAdapterManager.SUPPLIERSTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = LoBridge.INdatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.WcardIDTableAdapter = null;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Ship_ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "كود";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Shipping";
-            this.dataGridViewTextBoxColumn8.HeaderText = "اسم الشحنة";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Contract";
-            this.dataGridViewTextBoxColumn2.HeaderText = "رقم العقد";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 60;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Comm_NAME";
-            this.Column1.HeaderText = "الصنف";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 150;
-            // 
-            // Qty
-            // 
-            this.Qty.DataPropertyName = "Qty";
-            this.Qty.HeaderText = "الكمية/طن";
-            this.Qty.MinimumWidth = 6;
-            this.Qty.Name = "Qty";
-            this.Qty.ReadOnly = true;
-            this.Qty.Width = 125;
-            // 
-            // Ship_RQty
-            // 
-            this.Ship_RQty.DataPropertyName = "Ship_RQty";
-            this.Ship_RQty.HeaderText = "المتبقي/طن";
-            this.Ship_RQty.MinimumWidth = 6;
-            this.Ship_RQty.Name = "Ship_RQty";
-            this.Ship_RQty.ReadOnly = true;
-            this.Ship_RQty.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Date";
-            this.dataGridViewTextBoxColumn13.HeaderText = "تاريخ التسجيل";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 150;
-            // 
-            // Lading_Port
-            // 
-            this.Lading_Port.DataPropertyName = "Lading_Port";
-            this.Lading_Port.HeaderText = "ميناء التحميل";
-            this.Lading_Port.MinimumWidth = 6;
-            this.Lading_Port.Name = "Lading_Port";
-            this.Lading_Port.ReadOnly = true;
-            this.Lading_Port.Width = 125;
-            // 
-            // Notes
-            // 
-            this.Notes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Notes.DataPropertyName = "Notes";
-            this.Notes.HeaderText = "ملاحظات";
-            this.Notes.MinimumWidth = 6;
-            this.Notes.Name = "Notes";
-            this.Notes.ReadOnly = true;
             // 
             // INListShips
             // 
@@ -534,7 +523,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripTextBox searchTextBox1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;

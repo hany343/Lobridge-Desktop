@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("LoBridge System")]
-[assembly: AssemblyDescription("Logistics and Weight Management System")]
+[assembly: AssemblyTitle("LoBridge")]
+[assembly: AssemblyDescription("Logistics Management System")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Hany Ragab")]
 [assembly: AssemblyProduct("LoBridge System")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
+[assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("LoBridge")]
 [assembly: AssemblyCulture("")]
 
@@ -33,6 +33,6 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("5.1.0")]
-[assembly: AssemblyFileVersion("5.1.0")]
+[assembly: AssemblyVersion("6.0.0")]
+[assembly: AssemblyFileVersion("6.0.0")]
 [assembly: NeutralResourcesLanguage("en-US")]

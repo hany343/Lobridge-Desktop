@@ -28,6 +28,7 @@ namespace LoBridge
                 // the connectionStrings section.
                 Configuration config = ConfigurationManager.OpenExeConfiguration(Application.StartupPath + @"\LoBridge.exe");
 
+
                 ConnectionStringsSection section = config.GetSection("connectionStrings") as ConnectionStringsSection;
 
                 if (section.SectionInformation.IsProtected)

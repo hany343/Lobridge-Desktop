@@ -373,16 +373,6 @@ namespace LoBridge.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pnghut_yellow_menu {
-            get {
-                object obj = ResourceManager.GetObject("pnghut_yellow-menu", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Print {
             get {
                 object obj = ResourceManager.GetObject("Print", resourceCulture);
@@ -496,16 +486,6 @@ namespace LoBridge.Properties {
         internal static System.Drawing.Bitmap W_icon {
             get {
                 object obj = ResourceManager.GetObject("W-icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WBack {
-            get {
-                object obj = ResourceManager.GetObject("WBack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -25,7 +25,7 @@ namespace LoBridge
 
         private void InboardCard_Load(object sender, EventArgs e)
         {
-
+            
             if (perm.Rows[0]["__ladingin_editBtn"].ToString() == "1")
             {
                 editBtn.Enabled = true;
@@ -79,7 +79,7 @@ namespace LoBridge
                     {
                         if (editing)
                         {
-                            lading_NotesTextBox.Text = "تم التعديل بواسطة " + Properties.Settings.Default.logedUN + "  بتاريخ:" + DateTime.Now;
+                            lading_NotesTextBox.Text += "تم التعديل بواسطة " + Properties.Settings.Default.logedUN + "  بتاريخ:" + DateTime.Now;
                             lusernameTextBox.Text = Properties.Settings.Default.logedUN;
 
                             this.ladingTableAdapter.UpdateLading(int.Parse(batch_IDComboBox.Text), lading_NotesTextBox.Text, loading_StationComboBox.Text, 0,
@@ -422,26 +422,29 @@ namespace LoBridge
         {
             try
             {
+                iNdataset.Lading.Clear();
+                dLWSDataSet.Truck.Clear();
+                dLWSDataSet.Drivers.Clear();
+                iNdataset.BatchToLading.Clear();
+
+             
+                ladingBindingNavigatorSaveItem.Enabled = false;
+               
                 if (ladingIDTextBox.Text.Length > 0)
                 {
+                    
                     int cardID = int.Parse(ladingIDTextBox.Text);
-                    if (Properties.Settings.Default.Urole < 1)
+                    var cardStatus = this.ladingTableAdapter.GetStatus(cardID);
+                    if ((cardStatus  != "اول" && cardStatus != "ثان"))
                     {
-                        ladingTableAdapter.FillByLadingid(iNdataset.Lading, cardID);
+                       
+                        editing = false;
+                        MessageBox.Show("لا يمكن التعديل بعد الوزن");
+
                     }
                     else
                     {
-                        ladingTableAdapter.Fillforedit(iNdataset.Lading, cardID);
-
-                    }
-
-                    if (iNdataset.Lading.Rows.Count < 1)
-                    {
-                        MessageBox.Show("لا يمكن التعديل او غير موجود !");
-                        ladingBindingNavigatorSaveItem.Enabled = false;
-                    }
-                    else
-                    {
+                       
                         ladingBindingNavigatorSaveItem.Enabled = true;
 
                         editing = true;
@@ -454,7 +457,9 @@ namespace LoBridge
                             else
                             {
                                 //int cardID = int.Parse(ladingIDTextBox.Text);
-                                ladingTableAdapter.FillByLadingid(iNdataset.Lading, cardID);
+                                ladingTableAdapter.Fillforedit(iNdataset.Lading, cardID);
+
+                                //ladingTableAdapter.FillByLadingid(iNdataset.Lading, cardID);
                                 ladingBindingNavigatorSaveItem.Enabled = true;
                                 truckTableAdapter.FillByTid(dLWSDataSet.Truck, Convert.ToInt32(truck_IDTextBox1.Text));
                                 driversTableAdapter.FillByDid(dLWSDataSet.Drivers, Convert.ToInt32(driver_IDTextBox1.Text));
@@ -744,6 +749,14 @@ namespace LoBridge
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void btn_loadports_Click(object sender, EventArgs e)
+        {
+            //this.dLWSDataSet.Lading_Ports.Clear();
+            // TODO: This line of code loads data into the 'dLWSDataSet.Lading_Ports' table. You can move, or remove it, as needed.
+            this.lading_PortsTableAdapter.Fill(this.dLWSDataSet.Lading_Ports);
+
         }
     }
 }

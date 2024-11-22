@@ -14,6 +14,12 @@ namespace LoBridge
 
         private void INSHiftViewer_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'iNdataset.Shipment' table. You can move, or remove it, as needed.
+            //this.shipmentTableAdapter.Fill(this.iNdataset.Shipment);
+            // TODO: This line of code loads data into the 'iNdataset.Commodity' table. You can move, or remove it, as needed.
+           
+
+
             DateTime sdate = Convert.ToDateTime(dateTimePicker1.Value.ToShortDateString() + " 08:00:00");
             DateTime edate = Convert.ToDateTime(dateTimePicker1.Value.AddDays(1).ToShortDateString() + " 08:00:00");
             try
@@ -113,8 +119,22 @@ namespace LoBridge
                 {
                     edate = Convert.ToDateTime(dateTimePicker2.Value.ToShortDateString() + " 08:00:00");
                 }
-
-                this.wCard1TableAdapter.FillShift(iNdataset.WCard1, sdate, edate);
+                if(checkBox2.CheckState == CheckState.Checked)
+                {
+                    if(comm_NAMEComboBox.SelectedIndex >=0) {
+                        this.wCard1TableAdapter.FillShiftByComandDate(iNdataset.WCard1, sdate, edate, int.Parse(comm_NAMEComboBox.SelectedValue.ToString()));
+                    }
+                    else
+                    {
+                        MessageBox.Show("لم يتم اختيار الصنف");
+                    }
+                    
+                }
+                else
+                {
+                    this.wCard1TableAdapter.FillShift(iNdataset.WCard1, sdate, edate);
+                }
+              
 
                 reportDocument1.Load(Application.StartupPath + @"\reports\INShiftrpt.rpt");
                 reportDocument1.SetDataSource(this.iNdataset);
@@ -135,6 +155,33 @@ namespace LoBridge
             // reportDocument1.SetDataSource(Null);
 
             reportDocument1.Close();
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox2.CheckState== CheckState.Checked)
+            {
+                comm_NAMEComboBox.Enabled = true;
+
+                try
+                {
+                    this.commodityTableAdapter.InComm(this.iNdataset.Commodity);
+                    // TODO: This line of code loads data into the 'dLWSDataSet.Commodity' table. You can move, or remove it, as needed.
+
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+
+                }
+            }
+            else
+            {
+                this.iNdataset.Commodity.Clear();
+                comm_NAMEComboBox.Enabled = false;
+            }
         }
     }
 }

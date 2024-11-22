@@ -20,7 +20,9 @@
 }
 namespace LoBridge.DLWSDataSetTableAdapters
 {
-
+    partial class CommodityTableAdapter
+    {
+    }
 
     public partial class ShipmentTableAdapter
     {
