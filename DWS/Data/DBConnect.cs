@@ -23,7 +23,6 @@ namespace LoBridge
        
                 connectionString = string.Format("Data Source={0};Initial Catalog={1};Connect Timeout=10;MultipleActiveResultSets=True;Persist Security Info=True;User ID=sa;Password=dareen", cboServer.Text, txtDatabase.Text);
                 
-            
             try
             {
                 SqlHelper helper = new SqlHelper(connectionString);

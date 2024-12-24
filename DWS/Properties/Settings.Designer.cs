@@ -229,7 +229,7 @@ namespace LoBridge.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\sqlserver;Initial Catalog=dlws;User ID=sa;Password=dareen")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=log\\dlws;Initial Catalog=dlws;User ID=sa;Password=dareen")]
         public string wdbConnectionString {
             get {
                 return ((string)(this["wdbConnectionString"]));
@@ -295,7 +295,7 @@ namespace LoBridge.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(".\\sqlserver")]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.7\\dlws")]
         public string server {
             get {
                 return ((string)(this["server"]));

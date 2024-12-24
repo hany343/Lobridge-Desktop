@@ -419,7 +419,7 @@ namespace LoBridge
             saveItemBtn.Enabled = false;
 
             var cardStatus = this.lading_OutTableAdapter.GetStatus(lid);
-                if (cardStatus != "اول" && cardStatus != "ثان")
+                if (cardStatus != "اول" && cardStatus != "ثان" && perm.Rows[0]["outeditafter"].ToString()!="1")
                 {
                     int cardID = int.Parse(ladingIDTextBox.Text);
 
