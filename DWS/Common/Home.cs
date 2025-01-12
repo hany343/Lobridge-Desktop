@@ -909,7 +909,16 @@ namespace LoBridge
             }
             newTruckbutton9.BackColor = Color.Gray;
         }
-
+        private void btnTruckTypes_Click(object sender, EventArgs e)
+        {
+            //Transport trans = new Transport();
+            DisplayTransForm(new TruckTypes());
+            foreach (Control c in transMenupanel3.Controls)
+            {
+                c.BackColor = Color.White;
+            }
+            newTruckbutton9.BackColor = Color.Gray;
+        }
         //------------------ Display Commodity Forms -------------------//
         private void DisplayuserForm(Form form)
         {
@@ -1218,6 +1227,8 @@ namespace LoBridge
             Lading_Ports lading_Ports = new Lading_Ports();
             lading_Ports.ShowDialog();
         }
+
+        
 
         private void OutGoingViewPanel_Paint(object sender, PaintEventArgs e)
         {

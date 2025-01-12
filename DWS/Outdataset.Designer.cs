@@ -1157,6 +1157,8 @@ namespace LoBridge {
             
             private global::System.Data.DataColumn columnShip_City;
             
+            private global::System.Data.DataColumn columnTruck_Type;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Lading_OutDataTable() {
@@ -1440,6 +1442,14 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Truck_TypeColumn {
+                get {
+                    return this.columnTruck_Type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1505,7 +1515,8 @@ namespace LoBridge {
                         string ShipAddress, 
                         System.DateTime LeaveDate, 
                         string outUser, 
-                        string Ship_City) {
+                        string Ship_City, 
+                        string Truck_Type) {
                 Lading_OutRow rowLading_OutRow = ((Lading_OutRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1538,7 +1549,8 @@ namespace LoBridge {
                         ShipAddress,
                         LeaveDate,
                         outUser,
-                        Ship_City};
+                        Ship_City,
+                        Truck_Type};
                 if ((parentOrderRowByFK_Lading_Out_Order != null)) {
                     columnValuesArray[1] = parentOrderRowByFK_Lading_Out_Order[0];
                 }
@@ -1602,6 +1614,7 @@ namespace LoBridge {
                 this.columnLeaveDate = base.Columns["LeaveDate"];
                 this.columnoutUser = base.Columns["outUser"];
                 this.columnShip_City = base.Columns["Ship_City"];
+                this.columnTruck_Type = base.Columns["Truck_Type"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1669,6 +1682,8 @@ namespace LoBridge {
                 base.Columns.Add(this.columnoutUser);
                 this.columnShip_City = new global::System.Data.DataColumn("Ship_City", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnShip_City);
+                this.columnTruck_Type = new global::System.Data.DataColumn("Truck_Type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTruck_Type);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnladingID}, true));
                 this.columnladingID.AutoIncrement = true;
@@ -1707,6 +1722,7 @@ namespace LoBridge {
                 this.columnShipAddress.MaxLength = 250;
                 this.columnoutUser.MaxLength = 50;
                 this.columnShip_City.MaxLength = 50;
+                this.columnTruck_Type.MaxLength = 150;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3843,6 +3859,8 @@ namespace LoBridge {
             
             private global::System.Data.DataColumn columnShip_City;
             
+            private global::System.Data.DataColumn columnTruck_Type;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Lcacrd1DataTable() {
@@ -4158,6 +4176,14 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Truck_TypeColumn {
+                get {
+                    return this.columnTruck_Type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4226,7 +4252,8 @@ namespace LoBridge {
                         System.DateTime LeaveDate, 
                         string Status, 
                         string Lading_Notes, 
-                        string Ship_City) {
+                        string Ship_City, 
+                        string Truck_Type) {
                 Lcacrd1Row rowLcacrd1Row = ((Lcacrd1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -4263,7 +4290,8 @@ namespace LoBridge {
                         LeaveDate,
                         Status,
                         Lading_Notes,
-                        Ship_City};
+                        Ship_City,
+                        Truck_Type};
                 rowLcacrd1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLcacrd1Row);
                 return rowLcacrd1Row;
@@ -4328,6 +4356,7 @@ namespace LoBridge {
                 this.columnStatus = base.Columns["Status"];
                 this.columnLading_Notes = base.Columns["Lading_Notes"];
                 this.columnShip_City = base.Columns["Ship_City"];
+                this.columnTruck_Type = base.Columns["Truck_Type"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4403,6 +4432,8 @@ namespace LoBridge {
                 base.Columns.Add(this.columnLading_Notes);
                 this.columnShip_City = new global::System.Data.DataColumn("Ship_City", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnShip_City);
+                this.columnTruck_Type = new global::System.Data.DataColumn("Truck_Type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTruck_Type);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnladingID}, true));
                 this.columnladingID.AutoIncrement = true;
@@ -4458,6 +4489,7 @@ namespace LoBridge {
                 this.columnStatus.MaxLength = 50;
                 this.columnLading_Notes.MaxLength = 50;
                 this.columnShip_City.MaxLength = 50;
+                this.columnTruck_Type.MaxLength = 150;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6240,6 +6272,22 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Truck_Type {
+                get {
+                    try {
+                        return ((string)(this[this.tableLading_Out.Truck_TypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Truck_Type\' in table \'Lading_Out\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLading_Out.Truck_TypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OrderRow OrderRow {
                 get {
                     return ((OrderRow)(this.GetParentRow(this.Table.ParentRelations["FK_Lading_Out_Order"])));
@@ -6499,6 +6547,18 @@ namespace LoBridge {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetShip_CityNull() {
                 this[this.tableLading_Out.Ship_CityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTruck_TypeNull() {
+                return this.IsNull(this.tableLading_Out.Truck_TypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTruck_TypeNull() {
+                this[this.tableLading_Out.Truck_TypeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8036,6 +8096,22 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Truck_Type {
+                get {
+                    try {
+                        return ((string)(this[this.tableLcacrd1.Truck_TypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Truck_Type\' in table \'Lcacrd1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLcacrd1.Truck_TypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsLoading_StationNull() {
                 return this.IsNull(this.tableLcacrd1.Loading_StationColumn);
             }
@@ -8260,6 +8336,18 @@ namespace LoBridge {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetShip_CityNull() {
                 this[this.tableLcacrd1.Ship_CityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTruck_TypeNull() {
+                return this.IsNull(this.tableLcacrd1.Truck_TypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTruck_TypeNull() {
+                this[this.tableLcacrd1.Truck_TypeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -10031,6 +10119,7 @@ SELECT Contract_ID, Contract_Number, Comm_ID, Cust_ID, Cust_Name, Qty, Remain_QT
             tableMapping.ColumnMappings.Add("LeaveDate", "LeaveDate");
             tableMapping.ColumnMappings.Add("outUser", "outUser");
             tableMapping.ColumnMappings.Add("Ship_City", "Ship_City");
+            tableMapping.ColumnMappings.Add("Truck_Type", "Truck_Type");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -10064,7 +10153,8 @@ SELECT Contract_ID, Contract_Number, Comm_ID, Cust_ID, Cust_Name, Qty, Remain_QT
                 "Null_LeaveDate = 1 AND [LeaveDate] IS NULL) OR ([LeaveDate] = @Original_LeaveDat" +
                 "e)) AND ((@IsNull_outUser = 1 AND [outUser] IS NULL) OR ([outUser] = @Original_o" +
                 "utUser)) AND ((@IsNull_Ship_City = 1 AND [Ship_City] IS NULL) OR ([Ship_City] = " +
-                "@Original_Ship_City)))";
+                "@Original_Ship_City)) AND ((@IsNull_Truck_Type = 1 AND [Truck_Type] IS NULL) OR " +
+                "([Truck_Type] = @Original_Truck_Type)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ladingID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ladingID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Bags_Count", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bags_Count", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -10118,10 +10208,12 @@ SELECT Contract_ID, Contract_Number, Comm_ID, Cust_ID, Cust_Name, Qty, Remain_QT
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_outUser", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "outUser", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ship_City", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_City", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ship_City", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_City", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Truck_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Truck_Type", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Truck_Type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Truck_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Lading_Out] ([Bags_Count], [Date], [F_Wdate], [F_wbridge], [F_weigherName], [F_weight], [Fill_Type], [LOusername], [Lading_Notes], [Loading_Station], [Order_ID], [Qty], [Representative], [S_Wdate], [S_wbridge], [S_weigherName], [S_weight], [Stack_Bar], [Status], [Trans_type], [Weight_Notes], [Driver_ID], [TransC_ID], [Truck_ID], [ShipAddress], [LeaveDate], [outUser], [Ship_City]) VALUES (@Bags_Count, @Date, @F_Wdate, @F_wbridge, @F_weigherName, @F_weight, @Fill_Type, @LOusername, @Lading_Notes, @Loading_Station, @Order_ID, @Qty, @Representative, @S_Wdate, @S_wbridge, @S_weigherName, @S_weight, @Stack_Bar, @Status, @Trans_type, @Weight_Notes, @Driver_ID, @TransC_ID, @Truck_ID, @ShipAddress, @LeaveDate, @outUser, @Ship_City);
-SELECT ladingID, Bags_Count, Date, F_Wdate, F_wbridge, F_weigherName, F_weight, Fill_Type, LOusername, Lading_Notes, Loading_Station, Net_Weight, Order_ID, Qty, Representative, S_Wdate, S_wbridge, S_weigherName, S_weight, Shrink, Stack_Bar, Status, Trans_type, Weight_Notes, Driver_ID, TransC_ID, Truck_ID, ShipAddress, LeaveDate, outUser, Ship_City FROM Lading_Out WHERE (ladingID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Lading_Out] ([Bags_Count], [Date], [F_Wdate], [F_wbridge], [F_weigherName], [F_weight], [Fill_Type], [LOusername], [Lading_Notes], [Loading_Station], [Order_ID], [Qty], [Representative], [S_Wdate], [S_wbridge], [S_weigherName], [S_weight], [Stack_Bar], [Status], [Trans_type], [Weight_Notes], [Driver_ID], [TransC_ID], [Truck_ID], [ShipAddress], [LeaveDate], [outUser], [Ship_City], [Truck_Type]) VALUES (@Bags_Count, @Date, @F_Wdate, @F_wbridge, @F_weigherName, @F_weight, @Fill_Type, @LOusername, @Lading_Notes, @Loading_Station, @Order_ID, @Qty, @Representative, @S_Wdate, @S_wbridge, @S_weigherName, @S_weight, @Stack_Bar, @Status, @Trans_type, @Weight_Notes, @Driver_ID, @TransC_ID, @Truck_ID, @ShipAddress, @LeaveDate, @outUser, @Ship_City, @Truck_Type);
+SELECT ladingID, Bags_Count, Date, F_Wdate, F_wbridge, F_weigherName, F_weight, Fill_Type, LOusername, Lading_Notes, Loading_Station, Net_Weight, Order_ID, Qty, Representative, S_Wdate, S_wbridge, S_weigherName, S_weight, Shrink, Stack_Bar, Status, Trans_type, Weight_Notes, Driver_ID, TransC_ID, Truck_ID, ShipAddress, LeaveDate, outUser, Ship_City, Truck_Type FROM Lading_Out WHERE (ladingID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bags_Count", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bags_Count", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10151,6 +10243,7 @@ SELECT ladingID, Bags_Count, Date, F_Wdate, F_wbridge, F_weigherName, F_weight, 
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LeaveDate", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LeaveDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@outUser", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "outUser", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ship_City", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_City", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Truck_Type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Truck_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [Lading_Out] SET [Bags_Count] = @Bags_Count, [Date] = @Date, [F_Wdate] = @" +
@@ -10162,42 +10255,44 @@ SELECT ladingID, Bags_Count, Date, F_Wdate, F_wbridge, F_weigherName, F_weight, 
                 "ack_Bar] = @Stack_Bar, [Status] = @Status, [Trans_type] = @Trans_type, [Weight_N" +
                 "otes] = @Weight_Notes, [Driver_ID] = @Driver_ID, [TransC_ID] = @TransC_ID, [Truc" +
                 "k_ID] = @Truck_ID, [ShipAddress] = @ShipAddress, [LeaveDate] = @LeaveDate, [outU" +
-                "ser] = @outUser, [Ship_City] = @Ship_City WHERE (([ladingID] = @Original_ladingI" +
-                "D) AND ((@IsNull_Bags_Count = 1 AND [Bags_Count] IS NULL) OR ([Bags_Count] = @Or" +
-                "iginal_Bags_Count)) AND ([Date] = @Original_Date) AND ((@IsNull_F_Wdate = 1 AND " +
-                "[F_Wdate] IS NULL) OR ([F_Wdate] = @Original_F_Wdate)) AND ((@IsNull_F_wbridge =" +
-                " 1 AND [F_wbridge] IS NULL) OR ([F_wbridge] = @Original_F_wbridge)) AND ((@IsNul" +
-                "l_F_weigherName = 1 AND [F_weigherName] IS NULL) OR ([F_weigherName] = @Original" +
-                "_F_weigherName)) AND ([F_weight] = @Original_F_weight) AND ((@IsNull_Fill_Type =" +
-                " 1 AND [Fill_Type] IS NULL) OR ([Fill_Type] = @Original_Fill_Type)) AND ([LOuser" +
-                "name] = @Original_LOusername) AND ((@IsNull_Lading_Notes = 1 AND [Lading_Notes] " +
-                "IS NULL) OR ([Lading_Notes] = @Original_Lading_Notes)) AND ((@IsNull_Loading_Sta" +
-                "tion = 1 AND [Loading_Station] IS NULL) OR ([Loading_Station] = @Original_Loadin" +
-                "g_Station)) AND ((@IsNull_Net_Weight = 1 AND [Net_Weight] IS NULL) OR ([Net_Weig" +
-                "ht] = @Original_Net_Weight)) AND ([Order_ID] = @Original_Order_ID) AND ([Qty] = " +
-                "@Original_Qty) AND ((@IsNull_Representative = 1 AND [Representative] IS NULL) OR" +
-                " ([Representative] = @Original_Representative)) AND ((@IsNull_S_Wdate = 1 AND [S" +
-                "_Wdate] IS NULL) OR ([S_Wdate] = @Original_S_Wdate)) AND ((@IsNull_S_wbridge = 1" +
-                " AND [S_wbridge] IS NULL) OR ([S_wbridge] = @Original_S_wbridge)) AND ((@IsNull_" +
-                "S_weigherName = 1 AND [S_weigherName] IS NULL) OR ([S_weigherName] = @Original_S" +
-                "_weigherName)) AND ([S_weight] = @Original_S_weight) AND ((@IsNull_Shrink = 1 AN" +
-                "D [Shrink] IS NULL) OR ([Shrink] = @Original_Shrink)) AND ((@IsNull_Stack_Bar = " +
-                "1 AND [Stack_Bar] IS NULL) OR ([Stack_Bar] = @Original_Stack_Bar)) AND ((@IsNull" +
-                "_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)) AND ((@IsNul" +
-                "l_Trans_type = 1 AND [Trans_type] IS NULL) OR ([Trans_type] = @Original_Trans_ty" +
-                "pe)) AND ((@IsNull_Weight_Notes = 1 AND [Weight_Notes] IS NULL) OR ([Weight_Note" +
-                "s] = @Original_Weight_Notes)) AND ([Driver_ID] = @Original_Driver_ID) AND ([Tran" +
-                "sC_ID] = @Original_TransC_ID) AND ([Truck_ID] = @Original_Truck_ID) AND ((@IsNul" +
-                "l_ShipAddress = 1 AND [ShipAddress] IS NULL) OR ([ShipAddress] = @Original_ShipA" +
-                "ddress)) AND ((@IsNull_LeaveDate = 1 AND [LeaveDate] IS NULL) OR ([LeaveDate] = " +
-                "@Original_LeaveDate)) AND ((@IsNull_outUser = 1 AND [outUser] IS NULL) OR ([outU" +
-                "ser] = @Original_outUser)) AND ((@IsNull_Ship_City = 1 AND [Ship_City] IS NULL) " +
-                "OR ([Ship_City] = @Original_Ship_City)));\r\nSELECT ladingID, Bags_Count, Date, F_" +
-                "Wdate, F_wbridge, F_weigherName, F_weight, Fill_Type, LOusername, Lading_Notes, " +
-                "Loading_Station, Net_Weight, Order_ID, Qty, Representative, S_Wdate, S_wbridge, " +
-                "S_weigherName, S_weight, Shrink, Stack_Bar, Status, Trans_type, Weight_Notes, Dr" +
-                "iver_ID, TransC_ID, Truck_ID, ShipAddress, LeaveDate, outUser, Ship_City FROM La" +
-                "ding_Out WHERE (ladingID = @ladingID)";
+                "ser] = @outUser, [Ship_City] = @Ship_City, [Truck_Type] = @Truck_Type WHERE (([l" +
+                "adingID] = @Original_ladingID) AND ((@IsNull_Bags_Count = 1 AND [Bags_Count] IS " +
+                "NULL) OR ([Bags_Count] = @Original_Bags_Count)) AND ([Date] = @Original_Date) AN" +
+                "D ((@IsNull_F_Wdate = 1 AND [F_Wdate] IS NULL) OR ([F_Wdate] = @Original_F_Wdate" +
+                ")) AND ((@IsNull_F_wbridge = 1 AND [F_wbridge] IS NULL) OR ([F_wbridge] = @Origi" +
+                "nal_F_wbridge)) AND ((@IsNull_F_weigherName = 1 AND [F_weigherName] IS NULL) OR " +
+                "([F_weigherName] = @Original_F_weigherName)) AND ([F_weight] = @Original_F_weigh" +
+                "t) AND ((@IsNull_Fill_Type = 1 AND [Fill_Type] IS NULL) OR ([Fill_Type] = @Origi" +
+                "nal_Fill_Type)) AND ([LOusername] = @Original_LOusername) AND ((@IsNull_Lading_N" +
+                "otes = 1 AND [Lading_Notes] IS NULL) OR ([Lading_Notes] = @Original_Lading_Notes" +
+                ")) AND ((@IsNull_Loading_Station = 1 AND [Loading_Station] IS NULL) OR ([Loading" +
+                "_Station] = @Original_Loading_Station)) AND ((@IsNull_Net_Weight = 1 AND [Net_We" +
+                "ight] IS NULL) OR ([Net_Weight] = @Original_Net_Weight)) AND ([Order_ID] = @Orig" +
+                "inal_Order_ID) AND ([Qty] = @Original_Qty) AND ((@IsNull_Representative = 1 AND " +
+                "[Representative] IS NULL) OR ([Representative] = @Original_Representative)) AND " +
+                "((@IsNull_S_Wdate = 1 AND [S_Wdate] IS NULL) OR ([S_Wdate] = @Original_S_Wdate))" +
+                " AND ((@IsNull_S_wbridge = 1 AND [S_wbridge] IS NULL) OR ([S_wbridge] = @Origina" +
+                "l_S_wbridge)) AND ((@IsNull_S_weigherName = 1 AND [S_weigherName] IS NULL) OR ([" +
+                "S_weigherName] = @Original_S_weigherName)) AND ([S_weight] = @Original_S_weight)" +
+                " AND ((@IsNull_Shrink = 1 AND [Shrink] IS NULL) OR ([Shrink] = @Original_Shrink)" +
+                ") AND ((@IsNull_Stack_Bar = 1 AND [Stack_Bar] IS NULL) OR ([Stack_Bar] = @Origin" +
+                "al_Stack_Bar)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Or" +
+                "iginal_Status)) AND ((@IsNull_Trans_type = 1 AND [Trans_type] IS NULL) OR ([Tran" +
+                "s_type] = @Original_Trans_type)) AND ((@IsNull_Weight_Notes = 1 AND [Weight_Note" +
+                "s] IS NULL) OR ([Weight_Notes] = @Original_Weight_Notes)) AND ([Driver_ID] = @Or" +
+                "iginal_Driver_ID) AND ([TransC_ID] = @Original_TransC_ID) AND ([Truck_ID] = @Ori" +
+                "ginal_Truck_ID) AND ((@IsNull_ShipAddress = 1 AND [ShipAddress] IS NULL) OR ([Sh" +
+                "ipAddress] = @Original_ShipAddress)) AND ((@IsNull_LeaveDate = 1 AND [LeaveDate]" +
+                " IS NULL) OR ([LeaveDate] = @Original_LeaveDate)) AND ((@IsNull_outUser = 1 AND " +
+                "[outUser] IS NULL) OR ([outUser] = @Original_outUser)) AND ((@IsNull_Ship_City =" +
+                " 1 AND [Ship_City] IS NULL) OR ([Ship_City] = @Original_Ship_City)) AND ((@IsNul" +
+                "l_Truck_Type = 1 AND [Truck_Type] IS NULL) OR ([Truck_Type] = @Original_Truck_Ty" +
+                "pe)));\r\nSELECT ladingID, Bags_Count, Date, F_Wdate, F_wbridge, F_weigherName, F_" +
+                "weight, Fill_Type, LOusername, Lading_Notes, Loading_Station, Net_Weight, Order_" +
+                "ID, Qty, Representative, S_Wdate, S_wbridge, S_weigherName, S_weight, Shrink, St" +
+                "ack_Bar, Status, Trans_type, Weight_Notes, Driver_ID, TransC_ID, Truck_ID, ShipA" +
+                "ddress, LeaveDate, outUser, Ship_City, Truck_Type FROM Lading_Out WHERE (ladingI" +
+                "D = @ladingID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bags_Count", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bags_Count", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10227,6 +10322,7 @@ SELECT ladingID, Bags_Count, Date, F_Wdate, F_wbridge, F_weigherName, F_weight, 
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LeaveDate", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LeaveDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@outUser", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "outUser", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ship_City", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_City", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Truck_Type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Truck_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ladingID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ladingID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Bags_Count", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bags_Count", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Bags_Count", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bags_Count", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -10279,6 +10375,8 @@ SELECT ladingID, Bags_Count, Date, F_Wdate, F_wbridge, F_weigherName, F_weight, 
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_outUser", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "outUser", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ship_City", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_City", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ship_City", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ship_City", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Truck_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Truck_Type", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Truck_Type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Truck_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ladingID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ladingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -10295,7 +10393,7 @@ SELECT ladingID, Bags_Count, Date, F_Wdate, F_wbridge, F_weigherName, F_weight, 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[22];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ladingID, Bags_Count, Date, F_Wdate, F_wbridge, F_weigherName, F_weight, Fill_Type, LOusername, Lading_Notes, Loading_Station, Net_Weight, Order_ID, Qty, Representative, S_Wdate, S_wbridge, S_weigherName, S_weight, Shrink, Stack_Bar, Status, Trans_type, Weight_Notes, Driver_ID, TransC_ID, Truck_ID, ShipAddress, LeaveDate, outUser, Ship_City FROM Lading_Out";
+            this._commandCollection[0].CommandText = @"SELECT ladingID, Bags_Count, Date, F_Wdate, F_wbridge, F_weigherName, F_weight, Fill_Type, LOusername, Lading_Notes, Loading_Station, Net_Weight, Order_ID, Qty, Representative, S_Wdate, S_wbridge, S_weigherName, S_weight, Shrink, Stack_Bar, Status, Trans_type, Weight_Notes, Driver_ID, TransC_ID, Truck_ID, ShipAddress, LeaveDate, outUser, Ship_City, Truck_Type FROM Lading_Out";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -10317,7 +10415,7 @@ WHERE        (Lading_Out.Status = N'اول') OR
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"SELECT ladingID, Bags_Count, Date, F_Wdate, F_wbridge, F_weigherName, F_weight, Fill_Type, LOusername, Lading_Notes, Loading_Station, Net_Weight, Order_ID, Qty, Representative, S_Wdate, S_wbridge, S_weigherName, S_weight, Shrink, Stack_Bar, Status, Trans_type, Weight_Notes, Driver_ID, TransC_ID, Truck_ID, ShipAddress, LeaveDate, outUser, Ship_City FROM Lading_Out WHERE (Order_ID = @oid)";
+            this._commandCollection[3].CommandText = @"SELECT ladingID, Bags_Count, Date, F_Wdate, F_wbridge, F_weigherName, F_weight, Fill_Type, LOusername, Lading_Notes, Loading_Station, Net_Weight, Order_ID, Qty, Representative, S_Wdate, S_wbridge, S_weigherName, S_weight, Shrink, Stack_Bar, Status, Trans_type, Weight_Notes, Driver_ID, TransC_ID, Truck_ID, ShipAddress, LeaveDate, outUser, Ship_City, Truck_Type FROM Lading_Out WHERE (Order_ID = @oid)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@oid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Order_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
@@ -10356,12 +10454,12 @@ WHERE        (Lading_Out.Status = N'اول') OR
             this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[6].Connection = this.Connection;
-            this._commandCollection[6].CommandText = @"SELECT Bags_Count, Date, Driver_ID, F_Wdate, F_wbridge, F_weigherName, F_weight, Fill_Type, LOusername, Lading_Notes, Loading_Station, Net_Weight, Order_ID, Qty, Representative, S_Wdate, S_wbridge, S_weigherName, S_weight, Shrink, Stack_Bar, Status, TransC_ID, Trans_type, Truck_ID, Weight_Notes, ladingID, ShipAddress, LeaveDate, outUser, Ship_City FROM Lading_Out WHERE (ladingID = @lid)";
+            this._commandCollection[6].CommandText = @"SELECT Bags_Count, Date, Driver_ID, F_Wdate, F_wbridge, F_weigherName, F_weight, Fill_Type, LOusername, Lading_Notes, Loading_Station, Net_Weight, Order_ID, Qty, Representative, S_Wdate, S_wbridge, S_weigherName, S_weight, Shrink, Stack_Bar, Status, TransC_ID, Trans_type, Truck_ID, Weight_Notes, ladingID, ShipAddress, LeaveDate, outUser, Ship_City, Truck_Type FROM Lading_Out WHERE (ladingID = @lid)";
             this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ladingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[7].Connection = this.Connection;
-            this._commandCollection[7].CommandText = @"SELECT Lading_Out.Net_Weight, Lading_Out.LeaveDate, Lading_Out.outUser, Lading_Out.Ship_City FROM Contract INNER JOIN [Order] ON Contract.Contract_ID = [Order].Contract_ID INNER JOIN Customers ON [Order].Cust_ID = Customers.Cust_ID INNER JOIN Lading_Out ON [Order].Order_ID = Lading_Out.Order_ID WHERE (Contract.Contract_Number = @Cnum) AND (Customers.scode = @custScode) AND (Lading_Out.LeaveDate BETWEEN @sdate AND @edate)";
+            this._commandCollection[7].CommandText = @"SELECT Lading_Out.Net_Weight, Lading_Out.LeaveDate, Lading_Out.outUser, Lading_Out.Ship_City, Lading_Out.Truck_Type FROM Contract INNER JOIN [Order] ON Contract.Contract_ID = [Order].Contract_ID INNER JOIN Customers ON [Order].Cust_ID = Customers.Cust_ID INNER JOIN Lading_Out ON [Order].Order_ID = Lading_Out.Order_ID WHERE (Contract.Contract_Number = @Cnum) AND (Customers.scode = @custScode) AND (Lading_Out.LeaveDate BETWEEN @sdate AND @edate)";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cnum", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Contract_Number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@custScode", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "scode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -10395,8 +10493,8 @@ HAVING        (Lading_Out.Status = N'تم') AND (Contract.Contract_ID = @cid)";
             this._commandCollection[10].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@oid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[11] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[11].Connection = this.Connection;
-            this._commandCollection[11].CommandText = "SELECT Status, LeaveDate, outUser, Ship_City FROM Lading_Out WHERE (ladingID = @l" +
-                "id)";
+            this._commandCollection[11].CommandText = "SELECT Status, LeaveDate, outUser, Ship_City, Truck_Type FROM Lading_Out WHERE (l" +
+                "adingID = @lid)";
             this._commandCollection[11].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[11].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ladingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[12] = new global::System.Data.SqlClient.SqlCommand();
@@ -10825,7 +10923,8 @@ SELECT ladingID, BatchID, Lading_Notes, Loading_Station, Bags_Count, Date, Drive
                     string Original_ShipAddress, 
                     global::System.Nullable<global::System.DateTime> Original_LeaveDate, 
                     string Original_outUser, 
-                    string Original_Ship_City) {
+                    string Original_Ship_City, 
+                    string Original_Truck_Type) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ladingID));
             if ((Original_Bags_Count.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -11009,6 +11108,14 @@ SELECT ladingID, BatchID, Lading_Notes, Loading_Station, Bags_Count, Date, Drive
                 this.Adapter.DeleteCommand.Parameters[50].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[51].Value = ((string)(Original_Ship_City));
             }
+            if ((Original_Truck_Type == null)) {
+                this.Adapter.DeleteCommand.Parameters[52].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[53].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[52].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[53].Value = ((string)(Original_Truck_Type));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11057,7 +11164,8 @@ SELECT ladingID, BatchID, Lading_Notes, Loading_Station, Bags_Count, Date, Drive
                     string ShipAddress, 
                     global::System.Nullable<global::System.DateTime> LeaveDate, 
                     string outUser, 
-                    string Ship_City) {
+                    string Ship_City, 
+                    string Truck_Type) {
             if ((Bags_Count.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Bags_Count.Value));
             }
@@ -11186,6 +11294,12 @@ SELECT ladingID, BatchID, Lading_Notes, Loading_Station, Bags_Count, Date, Drive
             else {
                 this.Adapter.InsertCommand.Parameters[27].Value = ((string)(Ship_City));
             }
+            if ((Truck_Type == null)) {
+                this.Adapter.InsertCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[28].Value = ((string)(Truck_Type));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11235,6 +11349,7 @@ SELECT ladingID, BatchID, Lading_Notes, Loading_Station, Bags_Count, Date, Drive
                     global::System.Nullable<global::System.DateTime> LeaveDate, 
                     string outUser, 
                     string Ship_City, 
+                    string Truck_Type, 
                     int Original_ladingID, 
                     global::System.Nullable<int> Original_Bags_Count, 
                     System.DateTime Original_Date, 
@@ -11266,6 +11381,7 @@ SELECT ladingID, BatchID, Lading_Notes, Loading_Station, Bags_Count, Date, Drive
                     global::System.Nullable<global::System.DateTime> Original_LeaveDate, 
                     string Original_outUser, 
                     string Original_Ship_City, 
+                    string Original_Truck_Type, 
                     int ladingID) {
             if ((Bags_Count.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Bags_Count.Value));
@@ -11395,190 +11511,204 @@ SELECT ladingID, BatchID, Lading_Notes, Loading_Station, Bags_Count, Date, Drive
             else {
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Ship_City));
             }
-            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_ladingID));
+            if ((Truck_Type == null)) {
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Truck_Type));
+            }
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(Original_ladingID));
             if ((Original_Bags_Count.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_Bags_Count.Value));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_Bags_Count.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[31].Value = ((System.DateTime)(Original_Date));
+            this.Adapter.UpdateCommand.Parameters[32].Value = ((System.DateTime)(Original_Date));
             if ((Original_F_Wdate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((System.DateTime)(Original_F_Wdate.Value));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((System.DateTime)(Original_F_Wdate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             if ((Original_F_wbridge == null)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_F_wbridge));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_F_wbridge));
             }
             if ((Original_F_weigherName == null)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_F_weigherName));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_F_weigherName));
             }
-            this.Adapter.UpdateCommand.Parameters[38].Value = ((decimal)(Original_F_weight));
+            this.Adapter.UpdateCommand.Parameters[39].Value = ((decimal)(Original_F_weight));
             if ((Original_Fill_Type == null)) {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_Fill_Type));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_Fill_Type));
             }
             if ((Original_LOusername == null)) {
                 throw new global::System.ArgumentNullException("Original_LOusername");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_LOusername));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_LOusername));
             }
             if ((Original_Lading_Notes == null)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_Lading_Notes));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_Lading_Notes));
             }
             if ((Original_Loading_Station == null)) {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_Loading_Station));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_Loading_Station));
             }
             if ((Original_Net_Weight.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((decimal)(Original_Net_Weight.Value));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((decimal)(Original_Net_Weight.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[48].Value = ((int)(Original_Order_ID));
-            this.Adapter.UpdateCommand.Parameters[49].Value = ((decimal)(Original_Qty));
+            this.Adapter.UpdateCommand.Parameters[49].Value = ((int)(Original_Order_ID));
+            this.Adapter.UpdateCommand.Parameters[50].Value = ((decimal)(Original_Qty));
             if ((Original_Representative == null)) {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((string)(Original_Representative));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_Representative));
             }
             if ((Original_S_Wdate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((System.DateTime)(Original_S_Wdate.Value));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((System.DateTime)(Original_S_Wdate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
             }
             if ((Original_S_wbridge == null)) {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((string)(Original_S_wbridge));
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_S_wbridge));
             }
             if ((Original_S_weigherName == null)) {
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[57].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((string)(Original_S_weigherName));
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((string)(Original_S_weigherName));
             }
-            this.Adapter.UpdateCommand.Parameters[58].Value = ((decimal)(Original_S_weight));
+            this.Adapter.UpdateCommand.Parameters[59].Value = ((decimal)(Original_S_weight));
             if ((Original_Shrink.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((decimal)(Original_Shrink.Value));
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((decimal)(Original_Shrink.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[61].Value = global::System.DBNull.Value;
             }
             if ((Original_Stack_Bar == null)) {
-                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[62].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[63].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[62].Value = ((string)(Original_Stack_Bar));
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((string)(Original_Stack_Bar));
             }
             if ((Original_Status == null)) {
-                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[64].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[65].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[64].Value = ((string)(Original_Status));
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[65].Value = ((string)(Original_Status));
             }
             if ((Original_Trans_type == null)) {
-                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[66].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[67].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[66].Value = ((string)(Original_Trans_type));
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[67].Value = ((string)(Original_Trans_type));
             }
             if ((Original_Weight_Notes == null)) {
-                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[68].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[68].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[69].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[68].Value = ((string)(Original_Weight_Notes));
+                this.Adapter.UpdateCommand.Parameters[68].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[69].Value = ((string)(Original_Weight_Notes));
             }
-            this.Adapter.UpdateCommand.Parameters[69].Value = ((int)(Original_Driver_ID));
-            this.Adapter.UpdateCommand.Parameters[70].Value = ((int)(Original_TransC_ID));
-            this.Adapter.UpdateCommand.Parameters[71].Value = ((int)(Original_Truck_ID));
+            this.Adapter.UpdateCommand.Parameters[70].Value = ((int)(Original_Driver_ID));
+            this.Adapter.UpdateCommand.Parameters[71].Value = ((int)(Original_TransC_ID));
+            this.Adapter.UpdateCommand.Parameters[72].Value = ((int)(Original_Truck_ID));
             if ((Original_ShipAddress == null)) {
-                this.Adapter.UpdateCommand.Parameters[72].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[73].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[74].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[72].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[73].Value = ((string)(Original_ShipAddress));
+                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[74].Value = ((string)(Original_ShipAddress));
             }
             if ((Original_LeaveDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[74].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[75].Value = ((System.DateTime)(Original_LeaveDate.Value));
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[76].Value = ((System.DateTime)(Original_LeaveDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[74].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[75].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[76].Value = global::System.DBNull.Value;
             }
             if ((Original_outUser == null)) {
-                this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[77].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[78].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[77].Value = ((string)(Original_outUser));
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[78].Value = ((string)(Original_outUser));
             }
             if ((Original_Ship_City == null)) {
-                this.Adapter.UpdateCommand.Parameters[78].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[79].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[80].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[78].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[79].Value = ((string)(Original_Ship_City));
+                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[80].Value = ((string)(Original_Ship_City));
             }
-            this.Adapter.UpdateCommand.Parameters[80].Value = ((int)(ladingID));
+            if ((Original_Truck_Type == null)) {
+                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[82].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[82].Value = ((string)(Original_Truck_Type));
+            }
+            this.Adapter.UpdateCommand.Parameters[83].Value = ((int)(ladingID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11628,6 +11758,7 @@ SELECT ladingID, BatchID, Lading_Notes, Loading_Station, Bags_Count, Date, Drive
                     global::System.Nullable<global::System.DateTime> LeaveDate, 
                     string outUser, 
                     string Ship_City, 
+                    string Truck_Type, 
                     int Original_ladingID, 
                     global::System.Nullable<int> Original_Bags_Count, 
                     System.DateTime Original_Date, 
@@ -11658,8 +11789,9 @@ SELECT ladingID, BatchID, Lading_Notes, Loading_Station, Bags_Count, Date, Drive
                     string Original_ShipAddress, 
                     global::System.Nullable<global::System.DateTime> Original_LeaveDate, 
                     string Original_outUser, 
-                    string Original_Ship_City) {
-            return this.Update(Bags_Count, Date, F_Wdate, F_wbridge, F_weigherName, F_weight, Fill_Type, LOusername, Lading_Notes, Loading_Station, Order_ID, Qty, Representative, S_Wdate, S_wbridge, S_weigherName, S_weight, Stack_Bar, Status, Trans_type, Weight_Notes, Driver_ID, TransC_ID, Truck_ID, ShipAddress, LeaveDate, outUser, Ship_City, Original_ladingID, Original_Bags_Count, Original_Date, Original_F_Wdate, Original_F_wbridge, Original_F_weigherName, Original_F_weight, Original_Fill_Type, Original_LOusername, Original_Lading_Notes, Original_Loading_Station, Original_Net_Weight, Original_Order_ID, Original_Qty, Original_Representative, Original_S_Wdate, Original_S_wbridge, Original_S_weigherName, Original_S_weight, Original_Shrink, Original_Stack_Bar, Original_Status, Original_Trans_type, Original_Weight_Notes, Original_Driver_ID, Original_TransC_ID, Original_Truck_ID, Original_ShipAddress, Original_LeaveDate, Original_outUser, Original_Ship_City, Original_ladingID);
+                    string Original_Ship_City, 
+                    string Original_Truck_Type) {
+            return this.Update(Bags_Count, Date, F_Wdate, F_wbridge, F_weigherName, F_weight, Fill_Type, LOusername, Lading_Notes, Loading_Station, Order_ID, Qty, Representative, S_Wdate, S_wbridge, S_weigherName, S_weight, Stack_Bar, Status, Trans_type, Weight_Notes, Driver_ID, TransC_ID, Truck_ID, ShipAddress, LeaveDate, outUser, Ship_City, Truck_Type, Original_ladingID, Original_Bags_Count, Original_Date, Original_F_Wdate, Original_F_wbridge, Original_F_weigherName, Original_F_weight, Original_Fill_Type, Original_LOusername, Original_Lading_Notes, Original_Loading_Station, Original_Net_Weight, Original_Order_ID, Original_Qty, Original_Representative, Original_S_Wdate, Original_S_wbridge, Original_S_weigherName, Original_S_weight, Original_Shrink, Original_Stack_Bar, Original_Status, Original_Trans_type, Original_Weight_Notes, Original_Driver_ID, Original_TransC_ID, Original_Truck_ID, Original_ShipAddress, Original_LeaveDate, Original_outUser, Original_Ship_City, Original_Truck_Type, Original_ladingID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15482,6 +15614,7 @@ SELECT WCardID, Gen_ID, LADOUT_ID, LAD_ID FROM WcardID WHERE (WCardID = @WCardID
             tableMapping.ColumnMappings.Add("Status", "Status");
             tableMapping.ColumnMappings.Add("Lading_Notes", "Lading_Notes");
             tableMapping.ColumnMappings.Add("Ship_City", "Ship_City");
+            tableMapping.ColumnMappings.Add("Truck_Type", "Truck_Type");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -15498,27 +15631,26 @@ SELECT WCardID, Gen_ID, LADOUT_ID, LAD_ID FROM WcardID WHERE (WCardID = @WCardID
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[16];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        Lading_Out.ladingID, Lading_Out.Qty, Lading_Out.Date, Lading_Out.LO" +
-                "username, Lading_Out.Loading_Station, Lading_Out.F_weight, Lading_Out.S_weight, " +
-                "Lading_Out.Net_Weight, Commodity.Comm_NAME, \r\n                         Lading_Ou" +
-                "t.Trans_type, Lading_Out.Representative, Lading_Out.Fill_Type, [Order].Order_Num" +
-                "ber, Contract.Contract_Number, Lading_Out.Bags_Count, Lading_Out.Stack_Bar, Wcar" +
-                "dID.WCardID, Lading_Out.F_Wdate, \r\n                         Lading_Out.S_Wdate, " +
-                "Contract.Contract_Type, Customers.Cust_NAME, Transport_Co.Company_Name, Truck.Tr" +
-                "uck_number, Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_traffic, Tr" +
-                "uck.Owner, Drivers.Driver_Name, \r\n                         Drivers.Liscense_num," +
-                " Lading_Out.ShipAddress, Drivers.N_Card, Lading_Out.LeaveDate, Lading_Out.Status" +
-                ", Lading_Out.Lading_Notes, Lading_Out.Ship_City\r\nFROM            Lading_Out INNE" +
-                "R JOIN\r\n                         [Order] ON Lading_Out.Order_ID = [Order].Order_" +
-                "ID INNER JOIN\r\n                         Contract ON [Order].Contract_ID = Contra" +
-                "ct.Contract_ID INNER JOIN\r\n                         Commodity ON Contract.Comm_I" +
-                "D = Commodity.Comm_ID INNER JOIN\r\n                         WcardID ON Lading_Out" +
-                ".ladingID = WcardID.LADOUT_ID INNER JOIN\r\n                         Customers ON " +
-                "[Order].Cust_ID = Customers.Cust_ID INNER JOIN\r\n                         Transpo" +
-                "rt_Co ON Lading_Out.TransC_ID = Transport_Co.Company_ID INNER JOIN\r\n            " +
-                "             Truck ON Lading_Out.Truck_ID = Truck.Truck_ID INNER JOIN\r\n         " +
-                "                Drivers ON Lading_Out.Driver_ID = Drivers.Driver_ID\r\nWHERE      " +
-                "  (Lading_Out.ladingID = @lcard) AND (Lading_Out.Status = N\'تم\')";
+            this._commandCollection[0].CommandText = "SELECT Lading_Out.ladingID, Lading_Out.Qty, Lading_Out.Date, Lading_Out.LOusernam" +
+                "e, Lading_Out.Loading_Station, Lading_Out.F_weight, Lading_Out.S_weight, Lading_" +
+                "Out.Net_Weight, Commodity.Comm_NAME, Lading_Out.Trans_type, \r\n                  " +
+                "Lading_Out.Representative, Lading_Out.Fill_Type, [Order].Order_Number, Contract." +
+                "Contract_Number, Lading_Out.Bags_Count, Lading_Out.Stack_Bar, WcardID.WCardID, L" +
+                "ading_Out.F_Wdate, Lading_Out.S_Wdate, \r\n                  Contract.Contract_Typ" +
+                "e, Customers.Cust_NAME, Transport_Co.Company_Name, Truck.Truck_number, Truck.Tru" +
+                "ck_traffic, Truck.Trailer_number, Truck.Trailer_traffic, Truck.Owner, Drivers.Dr" +
+                "iver_Name, Drivers.Liscense_num, \r\n                  Lading_Out.ShipAddress, Dri" +
+                "vers.N_Card, Lading_Out.LeaveDate, Lading_Out.Status, Lading_Out.Lading_Notes, L" +
+                "ading_Out.Ship_City, Lading_Out.Truck_Type\r\nFROM     Lading_Out INNER JOIN\r\n    " +
+                "              [Order] ON Lading_Out.Order_ID = [Order].Order_ID INNER JOIN\r\n    " +
+                "              Contract ON [Order].Contract_ID = Contract.Contract_ID INNER JOIN\r" +
+                "\n                  Commodity ON Contract.Comm_ID = Commodity.Comm_ID INNER JOIN\r" +
+                "\n                  WcardID ON Lading_Out.ladingID = WcardID.LADOUT_ID INNER JOIN" +
+                "\r\n                  Customers ON [Order].Cust_ID = Customers.Cust_ID INNER JOIN\r" +
+                "\n                  Transport_Co ON Lading_Out.TransC_ID = Transport_Co.Company_I" +
+                "D INNER JOIN\r\n                  Truck ON Lading_Out.Truck_ID = Truck.Truck_ID IN" +
+                "NER JOIN\r\n                  Drivers ON Lading_Out.Driver_ID = Drivers.Driver_ID\r" +
+                "\nWHERE  (Lading_Out.ladingID = @lcard) AND (Lading_Out.Status = N\'تم\')";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lcard", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ladingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();

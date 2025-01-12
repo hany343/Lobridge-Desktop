@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Drawing.Diagrams;
+
+using System;
 using System.Data;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -89,7 +91,7 @@ namespace LoBridge
 
        + " Lading_Out.Trans_type, Lading_Out.Representative, Lading_Out.Fill_Type, [Order].Order_Number, Contract.Contract_Number, Lading_Out.Bags_Count, Lading_Out.Stack_Bar, WcardID.WCardID, Lading_Out.F_Wdate, "
          + "               Lading_Out.S_Wdate, Contract.Contract_Type, Customers.Cust_NAME, Transport_Co.Company_Name, Truck.Truck_number, Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_traffic, Truck.Owner, Drivers.Driver_Name, "
-           + "             Drivers.Liscense_num, Lading_Out.ShipAddress, Drivers.N_Card, Lading_Out.LeaveDate, Lading_Out.Status, Lading_Out.Lading_Notes, Lading_Out.Ship_City"
+           + "             Drivers.Liscense_num, Lading_Out.ShipAddress, Drivers.N_Card, Lading_Out.LeaveDate, Lading_Out.Status, Lading_Out.Lading_Notes, Lading_Out.Ship_City, Lading_Out.Truck_Type"
        + " FROM Lading_Out INNER JOIN"
          + "               [Order] ON Lading_Out.Order_ID = [Order].Order_ID INNER JOIN"
          + "               Contract ON[Order].Contract_ID = Contract.Contract_ID INNER JOIN"
@@ -113,7 +115,17 @@ namespace LoBridge
                 }
                 ladingIDLabel1.Text = "*" + ladingIDLabel1.Text + "*";
                 //  this.lcacrd1TableAdapter.FillForLadout(this.outdataset.Lcacrd1, ladnum);// ((int)(System.Convert.ChangeType(lcardToolStripTextBox.Text, typeof(int)))));
-
+               
+                DataTable ttypes = dq.GetDataTable("Select * from Truck_Types");
+                if (ttypes.Rows.Count > 0)
+                {
+                    foreach (DataRow row in ttypes.Rows)
+                    {
+                        truck_TypeComboBox.Items.Add(row[0].ToString()); // Access column 0 value
+                       
+                    }
+                   
+                }
             }
             catch (System.Exception ex)
             {
@@ -324,7 +336,7 @@ namespace LoBridge
         {
             try
             {
-                string upquery = "Update lading_out set F_weight=" + f_weightLabel1.Text + ", F_Wdate=CURRENT_TIMESTAMP, Status=N'ثان'" +
+                string upquery = "Update lading_out set Truck_Type="+truck_TypeComboBox.Text.Trim().ToString()+", F_weight=" + f_weightLabel1.Text + ", F_Wdate=CURRENT_TIMESTAMP, Status=N'ثان'" +
                     ", F_weigherName=N'" + Properties.Settings.Default.logedUN + "',F_wbridge=N'" + Properties.Settings.Default.WBridge + "'," +
                     " Weight_Notes=N'" + weight_NotesTextBox.Text + "' where ladingid=" + ladnum;
                 dq.RunNonQuery(upquery);
@@ -351,7 +363,7 @@ namespace LoBridge
             {
                 try
                 {
-                    string upquery = "Update lading_out set S_weight=" + s_weightLabel1.Text + ", S_Wdate=CURRENT_TIMESTAMP, Status=N'تم'" +
+                    string upquery = "Update lading_out set Truck_Type="+truck_TypeComboBox.Text.Trim().ToString()+", S_weight=" + s_weightLabel1.Text + ", S_Wdate=CURRENT_TIMESTAMP, Status=N'تم'" +
                         ",Loading_Station=N'" + loading_stationComboBox.Text + "',S_wbridge=N'" + Properties.Settings.Default.WBridge + "'," +
                         " S_weigherName=N'" + Properties.Settings.Default.logedUN + "', Weight_Notes =N'" + weight_NotesTextBox.Text + "', Bags_Count=" + bagstextBox1.Text + " , Stack_Bar=N'" + stacktextBox2.Text + "'  where ladingid=" + ladnum;
                     dq.RunNonQuery(upquery);

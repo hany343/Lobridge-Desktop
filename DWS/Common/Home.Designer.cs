@@ -84,6 +84,7 @@ namespace LoBridge
             this.newCommbutton5 = new System.Windows.Forms.Button();
             this.transViewpanel1 = new NSpanel.NPanel();
             this.transMenupanel3 = new System.Windows.Forms.Panel();
+            this.btnTruckTypes = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.newDriverbutton8 = new System.Windows.Forms.Button();
@@ -207,7 +208,7 @@ namespace LoBridge
             this.btn_ladingprts.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.btn_ladingprts.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.btn_ladingprts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ladingprts.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ladingprts.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.btn_ladingprts.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_ladingprts.Image = ((System.Drawing.Image)(resources.GetObject("btn_ladingprts.Image")));
             this.btn_ladingprts.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -235,7 +236,7 @@ namespace LoBridge
             this.btnladeditadv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.btnladeditadv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.btnladeditadv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnladeditadv.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnladeditadv.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnladeditadv.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnladeditadv.Image = ((System.Drawing.Image)(resources.GetObject("btnladeditadv.Image")));
             this.btnladeditadv.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -265,7 +266,7 @@ namespace LoBridge
             this.btnLocalSuppliers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.btnLocalSuppliers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.btnLocalSuppliers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocalSuppliers.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLocalSuppliers.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnLocalSuppliers.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnLocalSuppliers.Image = ((System.Drawing.Image)(resources.GetObject("btnLocalSuppliers.Image")));
             this.btnLocalSuppliers.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -294,7 +295,7 @@ namespace LoBridge
             this.inm_AdvancedEditbutton9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.inm_AdvancedEditbutton9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.inm_AdvancedEditbutton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inm_AdvancedEditbutton9.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inm_AdvancedEditbutton9.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.inm_AdvancedEditbutton9.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.inm_AdvancedEditbutton9.Image = ((System.Drawing.Image)(resources.GetObject("inm_AdvancedEditbutton9.Image")));
             this.inm_AdvancedEditbutton9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -322,7 +323,7 @@ namespace LoBridge
             this.inm_INshiftRptBtn8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.inm_INshiftRptBtn8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.inm_INshiftRptBtn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inm_INshiftRptBtn8.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inm_INshiftRptBtn8.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.inm_INshiftRptBtn8.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.inm_INshiftRptBtn8.Image = ((System.Drawing.Image)(resources.GetObject("inm_INshiftRptBtn8.Image")));
             this.inm_INshiftRptBtn8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -350,7 +351,7 @@ namespace LoBridge
             this.inm_summaryreportBtn7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.inm_summaryreportBtn7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.inm_summaryreportBtn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inm_summaryreportBtn7.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inm_summaryreportBtn7.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.inm_summaryreportBtn7.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.inm_summaryreportBtn7.Image = ((System.Drawing.Image)(resources.GetObject("inm_summaryreportBtn7.Image")));
             this.inm_summaryreportBtn7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -378,7 +379,7 @@ namespace LoBridge
             this.inm_listshipsbutton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.inm_listshipsbutton6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.inm_listshipsbutton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inm_listshipsbutton6.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inm_listshipsbutton6.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.inm_listshipsbutton6.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.inm_listshipsbutton6.Image = ((System.Drawing.Image)(resources.GetObject("inm_listshipsbutton6.Image")));
             this.inm_listshipsbutton6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -406,7 +407,7 @@ namespace LoBridge
             this.inm_listInCardsbutton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.inm_listInCardsbutton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.inm_listInCardsbutton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inm_listInCardsbutton5.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inm_listInCardsbutton5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.inm_listInCardsbutton5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.inm_listInCardsbutton5.Image = ((System.Drawing.Image)(resources.GetObject("inm_listInCardsbutton5.Image")));
             this.inm_listInCardsbutton5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -434,7 +435,7 @@ namespace LoBridge
             this.inm_incardbutton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.inm_incardbutton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.inm_incardbutton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inm_incardbutton4.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inm_incardbutton4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.inm_incardbutton4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.inm_incardbutton4.Image = ((System.Drawing.Image)(resources.GetObject("inm_incardbutton4.Image")));
             this.inm_incardbutton4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -462,7 +463,7 @@ namespace LoBridge
             this.inm_releasebutton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.inm_releasebutton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.inm_releasebutton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inm_releasebutton3.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inm_releasebutton3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.inm_releasebutton3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.inm_releasebutton3.Image = ((System.Drawing.Image)(resources.GetObject("inm_releasebutton3.Image")));
             this.inm_releasebutton3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -472,7 +473,7 @@ namespace LoBridge
             this.inm_releasebutton3.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
             this.inm_releasebutton3.Size = new System.Drawing.Size(200, 50);
             this.inm_releasebutton3.TabIndex = 2;
-            this.inm_releasebutton3.Text = "الافراج الجمركي/دفعة";
+            this.inm_releasebutton3.Text = "الافراج الجمركي";
             this.inm_releasebutton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.inm_releasebutton3.UseVisualStyleBackColor = false;
             this.inm_releasebutton3.Click += new System.EventHandler(this.releasebutton3_Click);
@@ -490,7 +491,7 @@ namespace LoBridge
             this.inm_shipmentbutton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DodgerBlue;
             this.inm_shipmentbutton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.inm_shipmentbutton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inm_shipmentbutton2.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inm_shipmentbutton2.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.inm_shipmentbutton2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.inm_shipmentbutton2.Image = ((System.Drawing.Image)(resources.GetObject("inm_shipmentbutton2.Image")));
             this.inm_shipmentbutton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -518,7 +519,7 @@ namespace LoBridge
             this.inm_suplierbutton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
             this.inm_suplierbutton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.inm_suplierbutton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inm_suplierbutton1.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inm_suplierbutton1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.inm_suplierbutton1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.inm_suplierbutton1.Image = ((System.Drawing.Image)(resources.GetObject("inm_suplierbutton1.Image")));
             this.inm_suplierbutton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -623,7 +624,7 @@ namespace LoBridge
             this.om_ReportingoutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.om_ReportingoutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
             this.om_ReportingoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.om_ReportingoutBtn.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.om_ReportingoutBtn.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.om_ReportingoutBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.om_ReportingoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("om_ReportingoutBtn.Image")));
             this.om_ReportingoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -654,7 +655,7 @@ namespace LoBridge
             this.om_listContractbutton13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.om_listContractbutton13.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
             this.om_listContractbutton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.om_listContractbutton13.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.om_listContractbutton13.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.om_listContractbutton13.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.om_listContractbutton13.Image = ((System.Drawing.Image)(resources.GetObject("om_listContractbutton13.Image")));
             this.om_listContractbutton13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -685,7 +686,7 @@ namespace LoBridge
             this.om_listLoadingCbutton13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.om_listLoadingCbutton13.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
             this.om_listLoadingCbutton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.om_listLoadingCbutton13.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.om_listLoadingCbutton13.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.om_listLoadingCbutton13.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.om_listLoadingCbutton13.Image = ((System.Drawing.Image)(resources.GetObject("om_listLoadingCbutton13.Image")));
             this.om_listLoadingCbutton13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -716,7 +717,7 @@ namespace LoBridge
             this.om_BillLadingMenubutton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.om_BillLadingMenubutton4.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
             this.om_BillLadingMenubutton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.om_BillLadingMenubutton4.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.om_BillLadingMenubutton4.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.om_BillLadingMenubutton4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.om_BillLadingMenubutton4.Image = ((System.Drawing.Image)(resources.GetObject("om_BillLadingMenubutton4.Image")));
             this.om_BillLadingMenubutton4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -747,7 +748,7 @@ namespace LoBridge
             this.om_LoadingMenubutton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.om_LoadingMenubutton5.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
             this.om_LoadingMenubutton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.om_LoadingMenubutton5.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.om_LoadingMenubutton5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.om_LoadingMenubutton5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.om_LoadingMenubutton5.Image = ((System.Drawing.Image)(resources.GetObject("om_LoadingMenubutton5.Image")));
             this.om_LoadingMenubutton5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -778,7 +779,7 @@ namespace LoBridge
             this.om_OrderMenubutton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.om_OrderMenubutton6.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
             this.om_OrderMenubutton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.om_OrderMenubutton6.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.om_OrderMenubutton6.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.om_OrderMenubutton6.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.om_OrderMenubutton6.Image = ((System.Drawing.Image)(resources.GetObject("om_OrderMenubutton6.Image")));
             this.om_OrderMenubutton6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -809,7 +810,7 @@ namespace LoBridge
             this.om_ContractsMenubutton7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.om_ContractsMenubutton7.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
             this.om_ContractsMenubutton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.om_ContractsMenubutton7.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.om_ContractsMenubutton7.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.om_ContractsMenubutton7.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.om_ContractsMenubutton7.Image = ((System.Drawing.Image)(resources.GetObject("om_ContractsMenubutton7.Image")));
             this.om_ContractsMenubutton7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -840,7 +841,7 @@ namespace LoBridge
             this.om_CustomersMenubutton8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.om_CustomersMenubutton8.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
             this.om_CustomersMenubutton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.om_CustomersMenubutton8.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.om_CustomersMenubutton8.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
             this.om_CustomersMenubutton8.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.om_CustomersMenubutton8.Image = ((System.Drawing.Image)(resources.GetObject("om_CustomersMenubutton8.Image")));
             this.om_CustomersMenubutton8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1365,6 +1366,7 @@ namespace LoBridge
             this.transMenupanel3.BackColor = System.Drawing.Color.CadetBlue;
             this.transMenupanel3.BackgroundImage = global::LoBridge.Properties.Resources.LogisticsMenu1;
             this.transMenupanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.transMenupanel3.Controls.Add(this.btnTruckTypes);
             this.transMenupanel3.Controls.Add(this.button5);
             this.transMenupanel3.Controls.Add(this.button7);
             this.transMenupanel3.Controls.Add(this.newDriverbutton8);
@@ -1377,6 +1379,28 @@ namespace LoBridge
             this.transMenupanel3.Name = "transMenupanel3";
             this.transMenupanel3.Size = new System.Drawing.Size(226, 942);
             this.transMenupanel3.TabIndex = 15;
+            // 
+            // btnTruckTypes
+            // 
+            this.btnTruckTypes.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTruckTypes.BackgroundImage = global::LoBridge.Properties.Resources.Blue_button;
+            this.btnTruckTypes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTruckTypes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTruckTypes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTruckTypes.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
+            this.btnTruckTypes.FlatAppearance.BorderSize = 2;
+            this.btnTruckTypes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnTruckTypes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnTruckTypes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTruckTypes.ForeColor = System.Drawing.Color.White;
+            this.btnTruckTypes.Location = new System.Drawing.Point(0, 196);
+            this.btnTruckTypes.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.btnTruckTypes.Name = "btnTruckTypes";
+            this.btnTruckTypes.Size = new System.Drawing.Size(226, 49);
+            this.btnTruckTypes.TabIndex = 6;
+            this.btnTruckTypes.Text = "انواع الشاحنات";
+            this.btnTruckTypes.UseVisualStyleBackColor = false;
+            this.btnTruckTypes.Click += new System.EventHandler(this.btnTruckTypes_Click);
             // 
             // button5
             // 
@@ -2128,7 +2152,7 @@ namespace LoBridge
             this.Padding = new System.Windows.Forms.Padding(6);
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "إدارة اللوجستيات و الموازين - Lobridge V6.0.0";
+            this.Text = "إدارة اللوجستيات و الموازين - Lobridge V6.0.1";
             this.TransparencyKey = System.Drawing.Color.LavenderBlush;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
@@ -2257,5 +2281,6 @@ namespace LoBridge
         private System.Windows.Forms.Button btnladeditadv;
         private System.Windows.Forms.Button btn_perm;
         private System.Windows.Forms.Button btn_ladingprts;
+        private System.Windows.Forms.Button btnTruckTypes;
     }
 }

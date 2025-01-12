@@ -43,7 +43,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>3</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
     <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
     <DocumentationFile>
@@ -214,6 +214,12 @@
     </Compile>
     <Compile Include="Common\Lading_Ports.Designer.cs">
       <DependentUpon>Lading_Ports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\TruckTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\TruckTypes.Designer.cs">
+      <DependentUpon>TruckTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\UsersPerm.cs">
       <SubType>Form</SubType>
@@ -766,6 +772,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Common\Lading_Ports.resx">
       <DependentUpon>Lading_Ports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\TruckTypes.resx">
+      <DependentUpon>TruckTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\UsersPerm.resx">
       <DependentUpon>UsersPerm.cs</DependentUpon>

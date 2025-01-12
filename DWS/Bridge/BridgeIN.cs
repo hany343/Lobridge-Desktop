@@ -85,7 +85,7 @@ namespace LoBridge
 
             try
             {
-                DataTable dt = dq.GetDataTable("SELECT  Lading.ladingID, Lading.BatchID, Lading.Lading_Notes, Lading.Loading_Station, Lading.Bags_Count, Lading.Date, Lading.Driver_ID, Lading.F_Wdate, Lading.F_wbridge, Lading.F_weigherName, Lading.F_weight, "
+                DataTable dt = dq.GetDataTable("SELECT Lading.Truck_Type, Lading.ladingID, Lading.BatchID, Lading.Lading_Notes, Lading.Loading_Station, Lading.Bags_Count, Lading.Date, Lading.Driver_ID, Lading.F_Wdate, Lading.F_wbridge, Lading.F_weigherName, Lading.F_weight, "
                      + "    Lading.Fill_Type, Lading.Net_Weight, Lading.S_Wdate, Lading.S_wbridge, Lading.S_weigherName, Lading.S_weight, Lading.Shrink, Lading.Stack_Bar, Lading.Truck_ID, Lading.Representative, Lading.Weight_Notes,"
                        + "  Lading.Qty, Lading.Lusername, Lading.Status, Lading.BLading, Commodity.Comm_NAME, Shipment.Shipping, SUPPLIERS.SUP_NAME, Drivers.Driver_Name, WcardID.WCardID, INBatch.Serial, Truck.Truck_number,"
                          + " Truck.Trailer_number,Transport_Co.Company_Name FROM            Shipment INNER JOIN"
@@ -102,6 +102,18 @@ namespace LoBridge
                 ladingIDLabel1.Text = "*" + ladingIDLabel1.Text + "*";
                 //  this.lcacrd1TableAdapter.FillForLadout(this.outdataset.Lcacrd1, ladnum);// ((int)(System.Convert.ChangeType(lcardToolStripTextBox.Text, typeof(int)))));
 
+
+
+                DataTable ttypes = dq.GetDataTable("Select * from Truck_Types");
+                if (ttypes.Rows.Count > 0)
+                {
+                    foreach (DataRow row in ttypes.Rows)
+                    {
+                        truck_TypeComboBox.Items.Add(row[0].ToString()); // Access column 0 value
+
+                    }
+
+                }
             }
             catch (System.Exception ex)
             {
@@ -290,7 +302,7 @@ namespace LoBridge
         {
             try
             {
-                string upquery = "Update lading set F_weight=" + f_weightLabel1.Text + ", F_Wdate=CURRENT_TIMESTAMP, Status=N'ثان'" +
+                string upquery = "Update lading set Truck_Type="+truck_TypeComboBox.Text.Trim().ToString()+", F_weight=" + f_weightLabel1.Text + ", F_Wdate=CURRENT_TIMESTAMP, Status=N'ثان'" +
                     ", F_weigherName=N'" + Properties.Settings.Default.logedUN + "',F_wbridge=N'" + Properties.Settings.Default.WBridge + "', " +
                     " Weight_Notes=N'" + weight_NotesTextBox.Text + "' where ladingid=" + ladnum;
                 dq.RunNonQuery(upquery);
@@ -316,7 +328,7 @@ namespace LoBridge
             {
                 try
                 {
-                    string upquery = "Update lading set S_weight=" + s_weightLabel1.Text + ", S_Wdate=CURRENT_TIMESTAMP, Status=N'تم'" +
+                    string upquery = "Update lading set Truck_Type="+truck_TypeComboBox.Text.Trim().ToString()+", S_weight=" + s_weightLabel1.Text + ", S_Wdate=CURRENT_TIMESTAMP, Status=N'تم'" +
                         ", S_weigherName=N'" + Properties.Settings.Default.logedUN + "',S_wbridge=N'" + Properties.Settings.Default.WBridge + "' ," +
                         " Weight_Notes=N'" + weight_NotesTextBox.Text + "' where ladingid=" + ladnum;
                     dq.RunNonQuery(upquery);
