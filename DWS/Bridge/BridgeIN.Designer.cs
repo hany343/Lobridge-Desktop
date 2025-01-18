@@ -58,6 +58,8 @@ namespace LoBridge
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2Menu = new System.Windows.Forms.Panel();
             this.truck_numberLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.wCard1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iNdataset = new LoBridge.INdataset();
             this.ladingIDLabel1 = new System.Windows.Forms.Label();
             this.qtyLabel1 = new System.Windows.Forms.Label();
             this.statusLabel1 = new System.Windows.Forms.Label();
@@ -67,6 +69,7 @@ namespace LoBridge
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6Cam = new System.Windows.Forms.Panel();
             this.panel5CardInfo = new System.Windows.Forms.Panel();
+            this.truck_TypeComboBox = new System.Windows.Forms.ComboBox();
             this.shrinktxtbx = new System.Windows.Forms.TextBox();
             this.button2saveSW = new System.Windows.Forms.Button();
             this.button1saveFW = new System.Windows.Forms.Button();
@@ -82,11 +85,8 @@ namespace LoBridge
             this.net_WeightLabel1 = new System.Windows.Forms.Label();
             this.cust_NAMELabel1 = new System.Windows.Forms.Label();
             this.comm_NAMELabel1 = new System.Windows.Forms.Label();
-            this.wCard1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iNdataset = new LoBridge.INdataset();
             this.wCard1TableAdapter = new LoBridge.INdatasetTableAdapters.WCard1TableAdapter();
             this.tableAdapterManager = new LoBridge.INdatasetTableAdapters.TableAdapterManager();
-            this.truck_TypeComboBox = new System.Windows.Forms.ComboBox();
             qtyLabel = new System.Windows.Forms.Label();
             f_weightLabel = new System.Windows.Forms.Label();
             s_weightLabel = new System.Windows.Forms.Label();
@@ -112,10 +112,10 @@ namespace LoBridge
             truck_TypeLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2Menu.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5CardInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wCard1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iNdataset)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel5CardInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // qtyLabel
@@ -418,6 +418,16 @@ namespace LoBridge
             label7.Text = "العجز/الزيادة:";
             label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // truck_TypeLabel
+            // 
+            truck_TypeLabel.AutoSize = true;
+            truck_TypeLabel.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold);
+            truck_TypeLabel.Location = new System.Drawing.Point(555, 146);
+            truck_TypeLabel.Name = "truck_TypeLabel";
+            truck_TypeLabel.Size = new System.Drawing.Size(89, 25);
+            truck_TypeLabel.TabIndex = 95;
+            truck_TypeLabel.Text = "نوع الشاحنة:";
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2Menu);
@@ -462,6 +472,16 @@ namespace LoBridge
             this.truck_numberLinkLabel.TabIndex = 1;
             this.truck_numberLinkLabel.TabStop = true;
             this.truck_numberLinkLabel.Text = "linkLabel1";
+            // 
+            // wCard1BindingSource
+            // 
+            this.wCard1BindingSource.DataMember = "WCard1";
+            this.wCard1BindingSource.DataSource = this.iNdataset;
+            // 
+            // iNdataset
+            // 
+            this.iNdataset.DataSetName = "INdataset";
+            this.iNdataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ladingIDLabel1
             // 
@@ -618,6 +638,16 @@ namespace LoBridge
             this.panel5CardInfo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panel5CardInfo.Size = new System.Drawing.Size(665, 853);
             this.panel5CardInfo.TabIndex = 0;
+            // 
+            // truck_TypeComboBox
+            // 
+            this.truck_TypeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.wCard1BindingSource, "Truck_Type", true));
+            this.truck_TypeComboBox.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold);
+            this.truck_TypeComboBox.FormattingEnabled = true;
+            this.truck_TypeComboBox.Location = new System.Drawing.Point(335, 139);
+            this.truck_TypeComboBox.Name = "truck_TypeComboBox";
+            this.truck_TypeComboBox.Size = new System.Drawing.Size(212, 33);
+            this.truck_TypeComboBox.TabIndex = 96;
             // 
             // shrinktxtbx
             // 
@@ -832,16 +862,6 @@ namespace LoBridge
             this.comm_NAMELabel1.TabIndex = 19;
             this.comm_NAMELabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // wCard1BindingSource
-            // 
-            this.wCard1BindingSource.DataMember = "WCard1";
-            this.wCard1BindingSource.DataSource = this.iNdataset;
-            // 
-            // iNdataset
-            // 
-            this.iNdataset.DataSetName = "INdataset";
-            this.iNdataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // wCard1TableAdapter
             // 
             this.wCard1TableAdapter.ClearBeforeFill = true;
@@ -858,26 +878,6 @@ namespace LoBridge
             this.tableAdapterManager.SUPPLIERSTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = LoBridge.INdatasetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.WcardIDTableAdapter = null;
-            // 
-            // truck_TypeLabel
-            // 
-            truck_TypeLabel.AutoSize = true;
-            truck_TypeLabel.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold);
-            truck_TypeLabel.Location = new System.Drawing.Point(555, 146);
-            truck_TypeLabel.Name = "truck_TypeLabel";
-            truck_TypeLabel.Size = new System.Drawing.Size(89, 25);
-            truck_TypeLabel.TabIndex = 95;
-            truck_TypeLabel.Text = "نوع الشاحنة:";
-            // 
-            // truck_TypeComboBox
-            // 
-            this.truck_TypeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.wCard1BindingSource, "Truck_Type", true));
-            this.truck_TypeComboBox.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold);
-            this.truck_TypeComboBox.FormattingEnabled = true;
-            this.truck_TypeComboBox.Location = new System.Drawing.Point(335, 139);
-            this.truck_TypeComboBox.Name = "truck_TypeComboBox";
-            this.truck_TypeComboBox.Size = new System.Drawing.Size(212, 33);
-            this.truck_TypeComboBox.TabIndex = 96;
             // 
             // BridgeIN
             // 
@@ -905,12 +905,12 @@ namespace LoBridge
             this.panel1.PerformLayout();
             this.panel2Menu.ResumeLayout(false);
             this.panel2Menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wCard1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNdataset)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5CardInfo.ResumeLayout(false);
             this.panel5CardInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.wCard1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iNdataset)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -336,7 +336,7 @@ namespace LoBridge
         {
             try
             {
-                string upquery = "Update lading_out set Truck_Type="+truck_TypeComboBox.Text.Trim().ToString()+", F_weight=" + f_weightLabel1.Text + ", F_Wdate=CURRENT_TIMESTAMP, Status=N'ثان'" +
+                string upquery = "Update lading_out set Truck_Type=N'"+truck_TypeComboBox.Text.Trim().ToString()+"', F_weight=" + f_weightLabel1.Text + ", F_Wdate=CURRENT_TIMESTAMP, Status=N'ثان'" +
                     ", F_weigherName=N'" + Properties.Settings.Default.logedUN + "',F_wbridge=N'" + Properties.Settings.Default.WBridge + "'," +
                     " Weight_Notes=N'" + weight_NotesTextBox.Text + "' where ladingid=" + ladnum;
                 dq.RunNonQuery(upquery);
@@ -363,7 +363,7 @@ namespace LoBridge
             {
                 try
                 {
-                    string upquery = "Update lading_out set Truck_Type="+truck_TypeComboBox.Text.Trim().ToString()+", S_weight=" + s_weightLabel1.Text + ", S_Wdate=CURRENT_TIMESTAMP, Status=N'تم'" +
+                    string upquery = "Update lading_out set Truck_Type=N'"+truck_TypeComboBox.Text.Trim().ToString()+"', S_weight=" + s_weightLabel1.Text + ", S_Wdate=CURRENT_TIMESTAMP, Status=N'تم'" +
                         ",Loading_Station=N'" + loading_stationComboBox.Text + "',S_wbridge=N'" + Properties.Settings.Default.WBridge + "'," +
                         " S_weigherName=N'" + Properties.Settings.Default.logedUN + "', Weight_Notes =N'" + weight_NotesTextBox.Text + "', Bags_Count=" + bagstextBox1.Text + " , Stack_Bar=N'" + stacktextBox2.Text + "'  where ladingid=" + ladnum;
                     dq.RunNonQuery(upquery);
