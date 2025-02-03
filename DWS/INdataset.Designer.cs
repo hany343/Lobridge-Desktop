@@ -4674,12 +4674,6 @@ namespace LoBridge {
             
             private global::System.Data.DataColumn columnLading_Notes;
             
-            private global::System.Data.DataColumn columnF_weight1;
-            
-            private global::System.Data.DataColumn columnS_weight1;
-            
-            private global::System.Data.DataColumn columnNet_Weight1;
-            
             private global::System.Data.DataColumn columnTruck_Type;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4893,30 +4887,6 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn F_weight1Column {
-                get {
-                    return this.columnF_weight1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn S_weight1Column {
-                get {
-                    return this.columnS_weight1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Net_Weight1Column {
-                get {
-                    return this.columnNet_Weight1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn Truck_TypeColumn {
                 get {
                     return this.columnTruck_Type;
@@ -4981,9 +4951,6 @@ namespace LoBridge {
                         string Shipping, 
                         string Company_Name, 
                         string Lading_Notes, 
-                        decimal F_weight1, 
-                        decimal S_weight1, 
-                        decimal Net_Weight1, 
                         string Truck_Type) {
                 WCard1Row rowWCard1Row = ((WCard1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -5009,9 +4976,6 @@ namespace LoBridge {
                         Shipping,
                         Company_Name,
                         Lading_Notes,
-                        F_weight1,
-                        S_weight1,
-                        Net_Weight1,
                         Truck_Type};
                 rowWCard1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowWCard1Row);
@@ -5064,9 +5028,6 @@ namespace LoBridge {
                 this.columnShipping = base.Columns["Shipping"];
                 this.columnCompany_Name = base.Columns["Company_Name"];
                 this.columnLading_Notes = base.Columns["Lading_Notes"];
-                this.columnF_weight1 = base.Columns["F_weight1"];
-                this.columnS_weight1 = base.Columns["S_weight1"];
-                this.columnNet_Weight1 = base.Columns["Net_Weight1"];
                 this.columnTruck_Type = base.Columns["Truck_Type"];
             }
             
@@ -5117,12 +5078,6 @@ namespace LoBridge {
                 base.Columns.Add(this.columnCompany_Name);
                 this.columnLading_Notes = new global::System.Data.DataColumn("Lading_Notes", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLading_Notes);
-                this.columnF_weight1 = new global::System.Data.DataColumn("F_weight1", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnF_weight1);
-                this.columnS_weight1 = new global::System.Data.DataColumn("S_weight1", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnS_weight1);
-                this.columnNet_Weight1 = new global::System.Data.DataColumn("Net_Weight1", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNet_Weight1);
                 this.columnTruck_Type = new global::System.Data.DataColumn("Truck_Type", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTruck_Type);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -5164,12 +5119,6 @@ namespace LoBridge {
                 this.columnCompany_Name.AllowDBNull = false;
                 this.columnCompany_Name.MaxLength = 50;
                 this.columnLading_Notes.MaxLength = 250;
-                this.columnF_weight1.AllowDBNull = false;
-                this.columnF_weight1.Caption = "F_weight";
-                this.columnS_weight1.AllowDBNull = false;
-                this.columnS_weight1.Caption = "S_weight";
-                this.columnNet_Weight1.ReadOnly = true;
-                this.columnNet_Weight1.Caption = "Net_Weight";
                 this.columnTruck_Type.MaxLength = 150;
             }
             
@@ -9355,44 +9304,6 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal F_weight1 {
-                get {
-                    return ((decimal)(this[this.tableWCard1.F_weight1Column]));
-                }
-                set {
-                    this[this.tableWCard1.F_weight1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal S_weight1 {
-                get {
-                    return ((decimal)(this[this.tableWCard1.S_weight1Column]));
-                }
-                set {
-                    this[this.tableWCard1.S_weight1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal Net_Weight1 {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableWCard1.Net_Weight1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Net_Weight1\' in table \'WCard1\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableWCard1.Net_Weight1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Truck_Type {
                 get {
                     try {
@@ -9513,18 +9424,6 @@ namespace LoBridge {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetLading_NotesNull() {
                 this[this.tableWCard1.Lading_NotesColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsNet_Weight1Null() {
-                return this.IsNull(this.tableWCard1.Net_Weight1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetNet_Weight1Null() {
-                this[this.tableWCard1.Net_Weight1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16510,9 +16409,6 @@ FROM     Lading INNER JOIN
             tableMapping.ColumnMappings.Add("Shipping", "Shipping");
             tableMapping.ColumnMappings.Add("Company_Name", "Company_Name");
             tableMapping.ColumnMappings.Add("Lading_Notes", "Lading_Notes");
-            tableMapping.ColumnMappings.Add("F_weight", "F_weight1");
-            tableMapping.ColumnMappings.Add("S_weight", "S_weight1");
-            tableMapping.ColumnMappings.Add("Net_Weight", "Net_Weight1");
             tableMapping.ColumnMappings.Add("Truck_Type", "Truck_Type");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -16545,16 +16441,16 @@ WHERE  (Lading.ladingID = @lid)";
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ladingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT        Lading.F_weight, Lading.F_Wdate, Lading.S_weigherName, Lading.S_weight, Lading.S_Wdate, Lading.Net_Weight, Truck.Truck_number, Truck.Trailer_number, Lading.ladingID, Drivers.Driver_Name, Commodity.Comm_NAME, 
-                         Commodity.CofOrigin, WcardID.WCardID, Lading.BLading
-FROM            Lading INNER JOIN
-                         Truck ON Lading.Truck_ID = Truck.Truck_ID INNER JOIN
-                         INBatch ON Lading.BatchID = INBatch.Batch_ID INNER JOIN
-                         Shipment ON INBatch.Ship_ID = Shipment.Ship_ID INNER JOIN
-                         Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
-                         Drivers ON Lading.Driver_ID = Drivers.Driver_ID INNER JOIN
-                         WcardID ON Lading.ladingID = WcardID.LAD_ID INNER JOIN
-                         WcardID AS WcardID_1 ON Lading.ladingID = WcardID_1.LAD_ID";
+            this._commandCollection[1].CommandText = @"SELECT Lading.F_weight, Lading.F_Wdate, Lading.S_weigherName, Lading.S_weight, Lading.S_Wdate, Lading.Net_Weight, Truck.Truck_number, Truck.Trailer_number, Lading.ladingID, Drivers.Driver_Name, Commodity.Comm_NAME, 
+                  Commodity.CofOrigin, WcardID.WCardID, Lading.BLading, Lading.Truck_Type
+FROM     Lading INNER JOIN
+                  Truck ON Lading.Truck_ID = Truck.Truck_ID INNER JOIN
+                  INBatch ON Lading.BatchID = INBatch.Batch_ID INNER JOIN
+                  Shipment ON INBatch.Ship_ID = Shipment.Ship_ID INNER JOIN
+                  Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
+                  Drivers ON Lading.Driver_ID = Drivers.Driver_ID INNER JOIN
+                  WcardID ON Lading.ladingID = WcardID.LAD_ID INNER JOIN
+                  WcardID AS WcardID_1 ON Lading.ladingID = WcardID_1.LAD_ID";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;

@@ -193,6 +193,16 @@ namespace LoBridge.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnred {
+            get {
+                object obj = ResourceManager.GetObject("btnred", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button_round_reload_icon {
             get {
                 object obj = ResourceManager.GetObject("button-round-reload-icon", resourceCulture);
@@ -236,6 +246,26 @@ namespace LoBridge.Properties {
         internal static System.Drawing.Bitmap Capture {
             get {
                 object obj = ResourceManager.GetObject("Capture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Custom_Icon_Design_Flatastic_6_Rectangle_tool_72 {
+            get {
+                object obj = ResourceManager.GetObject("Custom-Icon-Design-Flatastic-6-Rectangle-tool.72", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Custom_Icon_Design_Pretty_Office_9_Rounded_rectangle_72 {
+            get {
+                object obj = ResourceManager.GetObject("Custom-Icon-Design-Pretty-Office-9-Rounded-rectangle.72", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

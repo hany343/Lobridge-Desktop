@@ -5061,6 +5061,8 @@ namespace LoBridge {
             
             private global::System.Data.DataColumn columnWeight_Notes;
             
+            private global::System.Data.DataColumn columnTruck_Type;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public OutWcard1DataTable() {
@@ -5232,6 +5234,14 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Truck_TypeColumn {
+                get {
+                    return this.columnTruck_Type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5267,7 +5277,23 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OutWcard1Row AddOutWcard1Row(decimal F_weight, System.DateTime F_Wdate, string S_weigherName, decimal S_weight, System.DateTime S_Wdate, decimal Net_Weight, string Stack_Bar, string Fill_Type, int Bags_Count, string Driver_Name, string Truck_number, string Trailer_number, string Comm_NAME, string Cust_NAME, string Weight_Notes) {
+            public OutWcard1Row AddOutWcard1Row(
+                        decimal F_weight, 
+                        System.DateTime F_Wdate, 
+                        string S_weigherName, 
+                        decimal S_weight, 
+                        System.DateTime S_Wdate, 
+                        decimal Net_Weight, 
+                        string Stack_Bar, 
+                        string Fill_Type, 
+                        int Bags_Count, 
+                        string Driver_Name, 
+                        string Truck_number, 
+                        string Trailer_number, 
+                        string Comm_NAME, 
+                        string Cust_NAME, 
+                        string Weight_Notes, 
+                        string Truck_Type) {
                 OutWcard1Row rowOutWcard1Row = ((OutWcard1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         F_weight,
@@ -5286,7 +5312,8 @@ namespace LoBridge {
                         Comm_NAME,
                         Cust_NAME,
                         null,
-                        Weight_Notes};
+                        Weight_Notes,
+                        Truck_Type};
                 rowOutWcard1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOutWcard1Row);
                 return rowOutWcard1Row;
@@ -5326,6 +5353,7 @@ namespace LoBridge {
                 this.columnCust_NAME = base.Columns["Cust_NAME"];
                 this.columnladingID = base.Columns["ladingID"];
                 this.columnWeight_Notes = base.Columns["Weight_Notes"];
+                this.columnTruck_Type = base.Columns["Truck_Type"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5365,6 +5393,8 @@ namespace LoBridge {
                 base.Columns.Add(this.columnladingID);
                 this.columnWeight_Notes = new global::System.Data.DataColumn("Weight_Notes", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWeight_Notes);
+                this.columnTruck_Type = new global::System.Data.DataColumn("Truck_Type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTruck_Type);
                 this.columnF_weight.AllowDBNull = false;
                 this.columnS_weigherName.MaxLength = 100;
                 this.columnS_weight.AllowDBNull = false;
@@ -5391,6 +5421,7 @@ namespace LoBridge {
                 this.columnladingID.AllowDBNull = false;
                 this.columnladingID.ReadOnly = true;
                 this.columnWeight_Notes.MaxLength = 250;
+                this.columnTruck_Type.MaxLength = 150;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8724,6 +8755,22 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Truck_Type {
+                get {
+                    try {
+                        return ((string)(this[this.tableOutWcard1.Truck_TypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Truck_Type\' in table \'OutWcard1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableOutWcard1.Truck_TypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsF_WdateNull() {
                 return this.IsNull(this.tableOutWcard1.F_WdateColumn);
             }
@@ -8828,6 +8875,18 @@ namespace LoBridge {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetWeight_NotesNull() {
                 this[this.tableOutWcard1.Weight_NotesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTruck_TypeNull() {
+                return this.IsNull(this.tableOutWcard1.Truck_TypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTruck_TypeNull() {
+                this[this.tableOutWcard1.Truck_TypeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -16941,6 +17000,7 @@ ORDER BY Lading_Out.ladingID DESC";
             tableMapping.ColumnMappings.Add("Cust_NAME", "Cust_NAME");
             tableMapping.ColumnMappings.Add("ladingID", "ladingID");
             tableMapping.ColumnMappings.Add("Weight_Notes", "Weight_Notes");
+            tableMapping.ColumnMappings.Add("Truck_Type", "Truck_Type");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -16957,17 +17017,17 @@ ORDER BY Lading_Out.ladingID DESC";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Lading_Out.F_weight, Lading_Out.F_Wdate, Lading_Out.S_weigherName, Lading_Out.S_weight, Lading_Out.S_Wdate, Lading_Out.Net_Weight, Lading_Out.Stack_Bar, Lading_Out.Fill_Type, Lading_Out.Bags_Count, 
-                         Drivers.Driver_Name, Truck.Truck_number, Truck.Trailer_number, WcardID.WCardID, Commodity.Comm_NAME, Customers.Cust_NAME, Lading_Out.ladingID, Lading_Out.Weight_Notes
-FROM            Lading_Out INNER JOIN
-                         [Order] ON Lading_Out.Order_ID = [Order].Order_ID INNER JOIN
-                         Drivers ON Lading_Out.Driver_ID = Drivers.Driver_ID INNER JOIN
-                         Contract ON [Order].Contract_ID = Contract.Contract_ID INNER JOIN
-                         Truck ON Lading_Out.Truck_ID = Truck.Truck_ID INNER JOIN
-                         WcardID ON Lading_Out.ladingID = WcardID.LADOUT_ID INNER JOIN
-                         Commodity ON Contract.Comm_ID = Commodity.Comm_ID INNER JOIN
-                         Customers ON [Order].Cust_ID = Customers.Cust_ID
-WHERE        (Lading_Out.ladingID = @lc)";
+            this._commandCollection[0].CommandText = @"SELECT Lading_Out.F_weight, Lading_Out.F_Wdate, Lading_Out.S_weigherName, Lading_Out.S_weight, Lading_Out.S_Wdate, Lading_Out.Net_Weight, Lading_Out.Stack_Bar, Lading_Out.Fill_Type, Lading_Out.Bags_Count, Drivers.Driver_Name, 
+                  Truck.Truck_number, Truck.Trailer_number, WcardID.WCardID, Commodity.Comm_NAME, Customers.Cust_NAME, Lading_Out.ladingID, Lading_Out.Weight_Notes, Lading_Out.Truck_Type
+FROM     Lading_Out INNER JOIN
+                  [Order] ON Lading_Out.Order_ID = [Order].Order_ID INNER JOIN
+                  Drivers ON Lading_Out.Driver_ID = Drivers.Driver_ID INNER JOIN
+                  Contract ON [Order].Contract_ID = Contract.Contract_ID INNER JOIN
+                  Truck ON Lading_Out.Truck_ID = Truck.Truck_ID INNER JOIN
+                  WcardID ON Lading_Out.ladingID = WcardID.LADOUT_ID INNER JOIN
+                  Commodity ON Contract.Comm_ID = Commodity.Comm_ID INNER JOIN
+                  Customers ON [Order].Cust_ID = Customers.Cust_ID
+WHERE  (Lading_Out.ladingID = @lc)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lc", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ladingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

@@ -1395,25 +1395,22 @@ WHERE  (Lading.ladingID = @lid)</CommandText>
               <Mapping SourceColumn="Shipping" DataSetColumn="Shipping" />
               <Mapping SourceColumn="Company_Name" DataSetColumn="Company_Name" />
               <Mapping SourceColumn="Lading_Notes" DataSetColumn="Lading_Notes" />
-              <Mapping SourceColumn="F_weight" DataSetColumn="F_weight1" />
-              <Mapping SourceColumn="S_weight" DataSetColumn="S_weight1" />
-              <Mapping SourceColumn="Net_Weight" DataSetColumn="Net_Weight1" />
               <Mapping SourceColumn="Truck_Type" DataSetColumn="Truck_Type" />
             </Mappings>
             <Sources>
               <DbSource ConnectionRef="wdbConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillAll" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillAll" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillAll">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT        Lading.F_weight, Lading.F_Wdate, Lading.S_weigherName, Lading.S_weight, Lading.S_Wdate, Lading.Net_Weight, Truck.Truck_number, Truck.Trailer_number, Lading.ladingID, Drivers.Driver_Name, Commodity.Comm_NAME, 
-                         Commodity.CofOrigin, WcardID.WCardID, Lading.BLading
-FROM            Lading INNER JOIN
-                         Truck ON Lading.Truck_ID = Truck.Truck_ID INNER JOIN
-                         INBatch ON Lading.BatchID = INBatch.Batch_ID INNER JOIN
-                         Shipment ON INBatch.Ship_ID = Shipment.Ship_ID INNER JOIN
-                         Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
-                         Drivers ON Lading.Driver_ID = Drivers.Driver_ID INNER JOIN
-                         WcardID ON Lading.ladingID = WcardID.LAD_ID INNER JOIN
-                         WcardID AS WcardID_1 ON Lading.ladingID = WcardID_1.LAD_ID</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Lading.F_weight, Lading.F_Wdate, Lading.S_weigherName, Lading.S_weight, Lading.S_Wdate, Lading.Net_Weight, Truck.Truck_number, Truck.Trailer_number, Lading.ladingID, Drivers.Driver_Name, Commodity.Comm_NAME, 
+                  Commodity.CofOrigin, WcardID.WCardID, Lading.BLading, Lading.Truck_Type
+FROM     Lading INNER JOIN
+                  Truck ON Lading.Truck_ID = Truck.Truck_ID INNER JOIN
+                  INBatch ON Lading.BatchID = INBatch.Batch_ID INNER JOIN
+                  Shipment ON INBatch.Ship_ID = Shipment.Ship_ID INNER JOIN
+                  Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
+                  Drivers ON Lading.Driver_ID = Drivers.Driver_ID INNER JOIN
+                  WcardID ON Lading.ladingID = WcardID.LAD_ID INNER JOIN
+                  WcardID AS WcardID_1 ON Lading.ladingID = WcardID_1.LAD_ID</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -1893,7 +1890,7 @@ SELECT Commodity.Comm_ID, Commodity.Comm_NAME FROM Commodity INNER JOIN Shipment
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Truck_Type" msprop:Generator_UserColumnName="Truck_Type" msprop:Generator_ColumnPropNameInTable="Truck_TypeColumn" msprop:Generator_ColumnPropNameInRow="Truck_Type" msprop:Generator_ColumnVarNameInTable="columnTruck_Type" minOccurs="0">
+              <xs:element name="Truck_Type" msprop:Generator_ColumnPropNameInTable="Truck_TypeColumn" msprop:Generator_ColumnPropNameInRow="Truck_Type" msprop:Generator_UserColumnName="Truck_Type" msprop:Generator_ColumnVarNameInTable="columnTruck_Type" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
@@ -2435,10 +2432,7 @@ SELECT Commodity.Comm_ID, Commodity.Comm_NAME FROM Commodity INNER JOIN Shipment
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="F_weight1" msdata:Caption="F_weight" msprop:Generator_ColumnPropNameInRow="F_weight1" msprop:Generator_ColumnPropNameInTable="F_weight1Column" msprop:Generator_ColumnVarNameInTable="columnF_weight1" msprop:Generator_UserColumnName="F_weight1" type="xs:decimal" />
-              <xs:element name="S_weight1" msdata:Caption="S_weight" msprop:Generator_ColumnPropNameInRow="S_weight1" msprop:Generator_ColumnPropNameInTable="S_weight1Column" msprop:Generator_ColumnVarNameInTable="columnS_weight1" msprop:Generator_UserColumnName="S_weight1" type="xs:decimal" />
-              <xs:element name="Net_Weight1" msdata:ReadOnly="true" msdata:Caption="Net_Weight" msprop:Generator_ColumnPropNameInRow="Net_Weight1" msprop:Generator_ColumnPropNameInTable="Net_Weight1Column" msprop:Generator_ColumnVarNameInTable="columnNet_Weight1" msprop:Generator_UserColumnName="Net_Weight1" type="xs:decimal" minOccurs="0" />
-              <xs:element name="Truck_Type" msprop:Generator_ColumnPropNameInRow="Truck_Type" msprop:Generator_ColumnPropNameInTable="Truck_TypeColumn" msprop:Generator_ColumnVarNameInTable="columnTruck_Type" msprop:Generator_UserColumnName="Truck_Type" minOccurs="0">
+              <xs:element name="Truck_Type" msprop:Generator_ColumnPropNameInTable="Truck_TypeColumn" msprop:Generator_ColumnPropNameInRow="Truck_Type" msprop:Generator_UserColumnName="Truck_Type" msprop:Generator_ColumnVarNameInTable="columnTruck_Type" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />

@@ -140,12 +140,12 @@ namespace LoBridge
             // 
             qtyLabel.AutoSize = true;
             qtyLabel.BackColor = System.Drawing.Color.White;
-            qtyLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            qtyLabel.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             qtyLabel.Location = new System.Drawing.Point(683, 51);
             qtyLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             qtyLabel.Name = "qtyLabel";
             qtyLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            qtyLabel.Size = new System.Drawing.Size(113, 23);
+            qtyLabel.Size = new System.Drawing.Size(141, 26);
             qtyLabel.TabIndex = 2;
             qtyLabel.Text = "الكمية المطلوبة:";
             qtyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,12 +154,12 @@ namespace LoBridge
             // 
             loading_StationLabel.AutoSize = true;
             loading_StationLabel.BackColor = System.Drawing.Color.Transparent;
-            loading_StationLabel.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            loading_StationLabel.Location = new System.Drawing.Point(549, 156);
+            loading_StationLabel.Font = new System.Drawing.Font("Sakkal Majalla", 15.8F, System.Drawing.FontStyle.Bold);
+            loading_StationLabel.Location = new System.Drawing.Point(551, 177);
             loading_StationLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             loading_StationLabel.Name = "loading_StationLabel";
             loading_StationLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            loading_StationLabel.Size = new System.Drawing.Size(105, 25);
+            loading_StationLabel.Size = new System.Drawing.Size(141, 35);
             loading_StationLabel.TabIndex = 8;
             loading_StationLabel.Text = "محطة التحميل:";
             loading_StationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -168,12 +168,12 @@ namespace LoBridge
             // 
             f_weightLabel.AutoSize = true;
             f_weightLabel.BackColor = System.Drawing.Color.Transparent;
-            f_weightLabel.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            f_weightLabel.Font = new System.Drawing.Font("Sakkal Majalla", 15.8F, System.Drawing.FontStyle.Bold);
             f_weightLabel.Location = new System.Drawing.Point(549, 26);
             f_weightLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             f_weightLabel.Name = "f_weightLabel";
             f_weightLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            f_weightLabel.Size = new System.Drawing.Size(65, 25);
+            f_weightLabel.Size = new System.Drawing.Size(82, 35);
             f_weightLabel.TabIndex = 10;
             f_weightLabel.Text = "وزن اول:";
             f_weightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -182,12 +182,12 @@ namespace LoBridge
             // 
             s_weightLabel.AutoSize = true;
             s_weightLabel.BackColor = System.Drawing.Color.Transparent;
-            s_weightLabel.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            s_weightLabel.Font = new System.Drawing.Font("Sakkal Majalla", 15.8F, System.Drawing.FontStyle.Bold);
             s_weightLabel.Location = new System.Drawing.Point(549, 69);
             s_weightLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             s_weightLabel.Name = "s_weightLabel";
             s_weightLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            s_weightLabel.Size = new System.Drawing.Size(62, 25);
+            s_weightLabel.Size = new System.Drawing.Size(82, 35);
             s_weightLabel.TabIndex = 12;
             s_weightLabel.Text = "وزن ثان:";
             s_weightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -196,12 +196,12 @@ namespace LoBridge
             // 
             net_WeightLabel.AutoSize = true;
             net_WeightLabel.BackColor = System.Drawing.Color.Transparent;
-            net_WeightLabel.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            net_WeightLabel.Font = new System.Drawing.Font("Sakkal Majalla", 15.8F, System.Drawing.FontStyle.Bold);
             net_WeightLabel.Location = new System.Drawing.Point(549, 113);
             net_WeightLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             net_WeightLabel.Name = "net_WeightLabel";
             net_WeightLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            net_WeightLabel.Size = new System.Drawing.Size(84, 25);
+            net_WeightLabel.Size = new System.Drawing.Size(110, 35);
             net_WeightLabel.TabIndex = 14;
             net_WeightLabel.Text = "صافي الوزن:";
             net_WeightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -210,12 +210,12 @@ namespace LoBridge
             // 
             cust_NAMELabel.AutoSize = true;
             cust_NAMELabel.BackColor = System.Drawing.Color.Transparent;
-            cust_NAMELabel.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cust_NAMELabel.Location = new System.Drawing.Point(550, 341);
+            cust_NAMELabel.Font = new System.Drawing.Font("Sakkal Majalla", 15.8F, System.Drawing.FontStyle.Bold);
+            cust_NAMELabel.Location = new System.Drawing.Point(549, 404);
             cust_NAMELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             cust_NAMELabel.Name = "cust_NAMELabel";
             cust_NAMELabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            cust_NAMELabel.Size = new System.Drawing.Size(49, 24);
+            cust_NAMELabel.Size = new System.Drawing.Size(75, 35);
             cust_NAMELabel.TabIndex = 16;
             cust_NAMELabel.Text = "العميل:";
             cust_NAMELabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -224,12 +224,12 @@ namespace LoBridge
             // 
             comm_NAMELabel.AutoSize = true;
             comm_NAMELabel.BackColor = System.Drawing.Color.Transparent;
-            comm_NAMELabel.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            comm_NAMELabel.Location = new System.Drawing.Point(550, 385);
+            comm_NAMELabel.Font = new System.Drawing.Font("Sakkal Majalla", 15.8F, System.Drawing.FontStyle.Bold);
+            comm_NAMELabel.Location = new System.Drawing.Point(549, 446);
             comm_NAMELabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             comm_NAMELabel.Name = "comm_NAMELabel";
             comm_NAMELabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            comm_NAMELabel.Size = new System.Drawing.Size(53, 24);
+            comm_NAMELabel.Size = new System.Drawing.Size(81, 35);
             comm_NAMELabel.TabIndex = 18;
             comm_NAMELabel.Text = "الصنف:";
             comm_NAMELabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -238,12 +238,12 @@ namespace LoBridge
             // 
             truck_numberLabel.AutoSize = true;
             truck_numberLabel.BackColor = System.Drawing.Color.White;
-            truck_numberLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            truck_numberLabel.Location = new System.Drawing.Point(682, 90);
+            truck_numberLabel.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
+            truck_numberLabel.Location = new System.Drawing.Point(688, 91);
             truck_numberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             truck_numberLabel.Name = "truck_numberLabel";
             truck_numberLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            truck_numberLabel.Size = new System.Drawing.Size(91, 23);
+            truck_numberLabel.Size = new System.Drawing.Size(109, 26);
             truck_numberLabel.TabIndex = 20;
             truck_numberLabel.Text = "رقم السيارة:";
             truck_numberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -252,12 +252,12 @@ namespace LoBridge
             // 
             trailer_numberLabel.AutoSize = true;
             trailer_numberLabel.BackColor = System.Drawing.Color.Transparent;
-            trailer_numberLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            trailer_numberLabel.Location = new System.Drawing.Point(451, 90);
+            trailer_numberLabel.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
+            trailer_numberLabel.Location = new System.Drawing.Point(442, 90);
             trailer_numberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             trailer_numberLabel.Name = "trailer_numberLabel";
             trailer_numberLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            trailer_numberLabel.Size = new System.Drawing.Size(102, 23);
+            trailer_numberLabel.Size = new System.Drawing.Size(123, 26);
             trailer_numberLabel.TabIndex = 24;
             trailer_numberLabel.Text = "رقم المقطورة:";
             trailer_numberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -266,12 +266,12 @@ namespace LoBridge
             // 
             trans_typeLabel.AutoSize = true;
             trans_typeLabel.BackColor = System.Drawing.Color.Transparent;
-            trans_typeLabel.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            trans_typeLabel.Location = new System.Drawing.Point(550, 561);
+            trans_typeLabel.Font = new System.Drawing.Font("Sakkal Majalla", 15.8F, System.Drawing.FontStyle.Bold);
+            trans_typeLabel.Location = new System.Drawing.Point(549, 623);
             trans_typeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             trans_typeLabel.Name = "trans_typeLabel";
             trans_typeLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            trans_typeLabel.Size = new System.Drawing.Size(71, 24);
+            trans_typeLabel.Size = new System.Drawing.Size(107, 35);
             trans_typeLabel.TabIndex = 28;
             trans_typeLabel.Text = "نوع الشحن:";
             trans_typeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -280,12 +280,12 @@ namespace LoBridge
             // 
             fill_TypeLabel.AutoSize = true;
             fill_TypeLabel.BackColor = System.Drawing.Color.Transparent;
-            fill_TypeLabel.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fill_TypeLabel.Location = new System.Drawing.Point(547, 514);
+            fill_TypeLabel.Font = new System.Drawing.Font("Sakkal Majalla", 15.8F, System.Drawing.FontStyle.Bold);
+            fill_TypeLabel.Location = new System.Drawing.Point(549, 578);
             fill_TypeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             fill_TypeLabel.Name = "fill_TypeLabel";
             fill_TypeLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            fill_TypeLabel.Size = new System.Drawing.Size(71, 24);
+            fill_TypeLabel.Size = new System.Drawing.Size(105, 35);
             fill_TypeLabel.TabIndex = 32;
             fill_TypeLabel.Text = "نوع التعبئة:";
             fill_TypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -294,12 +294,12 @@ namespace LoBridge
             // 
             order_NumberLabel.AutoSize = true;
             order_NumberLabel.BackColor = System.Drawing.Color.Transparent;
-            order_NumberLabel.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            order_NumberLabel.Location = new System.Drawing.Point(547, 431);
+            order_NumberLabel.Font = new System.Drawing.Font("Sakkal Majalla", 15.8F, System.Drawing.FontStyle.Bold);
+            order_NumberLabel.Location = new System.Drawing.Point(549, 488);
             order_NumberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             order_NumberLabel.Name = "order_NumberLabel";
             order_NumberLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            order_NumberLabel.Size = new System.Drawing.Size(67, 24);
+            order_NumberLabel.Size = new System.Drawing.Size(101, 35);
             order_NumberLabel.TabIndex = 36;
             order_NumberLabel.Text = "امر التوريد:";
             order_NumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -308,12 +308,12 @@ namespace LoBridge
             // 
             contract_NumberLabel.AutoSize = true;
             contract_NumberLabel.BackColor = System.Drawing.Color.Transparent;
-            contract_NumberLabel.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            contract_NumberLabel.Location = new System.Drawing.Point(547, 471);
+            contract_NumberLabel.Font = new System.Drawing.Font("Sakkal Majalla", 15.8F, System.Drawing.FontStyle.Bold);
+            contract_NumberLabel.Location = new System.Drawing.Point(549, 533);
             contract_NumberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             contract_NumberLabel.Name = "contract_NumberLabel";
             contract_NumberLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            contract_NumberLabel.Size = new System.Drawing.Size(43, 24);
+            contract_NumberLabel.Size = new System.Drawing.Size(66, 35);
             contract_NumberLabel.TabIndex = 38;
             contract_NumberLabel.Text = "العقد:";
             contract_NumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -322,12 +322,12 @@ namespace LoBridge
             // 
             driver_NameLabel.AutoSize = true;
             driver_NameLabel.BackColor = System.Drawing.Color.Transparent;
-            driver_NameLabel.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            driver_NameLabel.Location = new System.Drawing.Point(278, 431);
+            driver_NameLabel.Font = new System.Drawing.Font("Sakkal Majalla", 12.2F, System.Drawing.FontStyle.Bold);
+            driver_NameLabel.Location = new System.Drawing.Point(287, 538);
             driver_NameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             driver_NameLabel.Name = "driver_NameLabel";
             driver_NameLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            driver_NameLabel.Size = new System.Drawing.Size(48, 24);
+            driver_NameLabel.Size = new System.Drawing.Size(60, 26);
             driver_NameLabel.TabIndex = 40;
             driver_NameLabel.Text = "السائق:";
             driver_NameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -336,12 +336,12 @@ namespace LoBridge
             // 
             stack_BarLabel.AutoSize = true;
             stack_BarLabel.BackColor = System.Drawing.Color.Transparent;
-            stack_BarLabel.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            stack_BarLabel.Location = new System.Drawing.Point(549, 229);
+            stack_BarLabel.Font = new System.Drawing.Font("Sakkal Majalla", 15.8F, System.Drawing.FontStyle.Bold);
+            stack_BarLabel.Location = new System.Drawing.Point(549, 270);
             stack_BarLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             stack_BarLabel.Name = "stack_BarLabel";
             stack_BarLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            stack_BarLabel.Size = new System.Drawing.Size(114, 25);
+            stack_BarLabel.Size = new System.Drawing.Size(150, 35);
             stack_BarLabel.TabIndex = 46;
             stack_BarLabel.Text = "شريط الترصيص:";
             stack_BarLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -350,12 +350,12 @@ namespace LoBridge
             // 
             company_NameLabel.AutoSize = true;
             company_NameLabel.BackColor = System.Drawing.Color.Transparent;
-            company_NameLabel.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            company_NameLabel.Location = new System.Drawing.Point(278, 514);
+            company_NameLabel.Font = new System.Drawing.Font("Sakkal Majalla", 12.2F, System.Drawing.FontStyle.Bold);
+            company_NameLabel.Location = new System.Drawing.Point(287, 629);
             company_NameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             company_NameLabel.Name = "company_NameLabel";
             company_NameLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            company_NameLabel.Size = new System.Drawing.Size(82, 24);
+            company_NameLabel.Size = new System.Drawing.Size(99, 26);
             company_NameLabel.TabIndex = 48;
             company_NameLabel.Text = "شركة الشحن:";
             company_NameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -363,12 +363,12 @@ namespace LoBridge
             // wCardIDLabel
             // 
             wCardIDLabel.AutoSize = true;
-            wCardIDLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            wCardIDLabel.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             wCardIDLabel.Location = new System.Drawing.Point(683, 13);
             wCardIDLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             wCardIDLabel.Name = "wCardIDLabel";
             wCardIDLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            wCardIDLabel.Size = new System.Drawing.Size(86, 23);
+            wCardIDLabel.Size = new System.Drawing.Size(102, 26);
             wCardIDLabel.TabIndex = 54;
             wCardIDLabel.Text = "تذكرة وزن:";
             // 
@@ -376,12 +376,12 @@ namespace LoBridge
             // 
             n_CardLabel.AutoSize = true;
             n_CardLabel.BackColor = System.Drawing.Color.Transparent;
-            n_CardLabel.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            n_CardLabel.Location = new System.Drawing.Point(278, 471);
+            n_CardLabel.Font = new System.Drawing.Font("Sakkal Majalla", 12.2F, System.Drawing.FontStyle.Bold);
+            n_CardLabel.Location = new System.Drawing.Point(287, 584);
             n_CardLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             n_CardLabel.Name = "n_CardLabel";
             n_CardLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            n_CardLabel.Size = new System.Drawing.Size(59, 24);
+            n_CardLabel.Size = new System.Drawing.Size(74, 26);
             n_CardLabel.TabIndex = 60;
             n_CardLabel.Text = "رقم قومي:";
             n_CardLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -389,12 +389,12 @@ namespace LoBridge
             // statusLabel
             // 
             statusLabel.AutoSize = true;
-            statusLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            statusLabel.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             statusLabel.Location = new System.Drawing.Point(430, 13);
             statusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             statusLabel.Name = "statusLabel";
             statusLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            statusLabel.Size = new System.Drawing.Size(85, 23);
+            statusLabel.Size = new System.Drawing.Size(102, 26);
             statusLabel.TabIndex = 64;
             statusLabel.Text = "نوع الوزن:";
             // 
@@ -402,12 +402,12 @@ namespace LoBridge
             // 
             lading_NotesLabel.AutoSize = true;
             lading_NotesLabel.BackColor = System.Drawing.Color.Transparent;
-            lading_NotesLabel.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            lading_NotesLabel.Location = new System.Drawing.Point(546, 595);
+            lading_NotesLabel.Font = new System.Drawing.Font("Sakkal Majalla", 15.8F, System.Drawing.FontStyle.Bold);
+            lading_NotesLabel.Location = new System.Drawing.Point(549, 670);
             lading_NotesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lading_NotesLabel.Name = "lading_NotesLabel";
             lading_NotesLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            lading_NotesLabel.Size = new System.Drawing.Size(55, 24);
+            lading_NotesLabel.Size = new System.Drawing.Size(85, 35);
             lading_NotesLabel.TabIndex = 66;
             lading_NotesLabel.Text = "ملحوظة:";
             lading_NotesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -485,10 +485,10 @@ namespace LoBridge
             // weight_NotesLabel
             // 
             weight_NotesLabel.AutoSize = true;
-            weight_NotesLabel.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            weight_NotesLabel.Location = new System.Drawing.Point(547, 266);
+            weight_NotesLabel.Font = new System.Drawing.Font("Sakkal Majalla", 15.8F, System.Drawing.FontStyle.Bold);
+            weight_NotesLabel.Location = new System.Drawing.Point(549, 315);
             weight_NotesLabel.Name = "weight_NotesLabel";
-            weight_NotesLabel.Size = new System.Drawing.Size(69, 25);
+            weight_NotesLabel.Size = new System.Drawing.Size(93, 35);
             weight_NotesLabel.TabIndex = 91;
             weight_NotesLabel.Text = "ملاحظات:";
             // 
@@ -496,12 +496,12 @@ namespace LoBridge
             // 
             label6.AutoSize = true;
             label6.BackColor = System.Drawing.Color.Transparent;
-            label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label6.Location = new System.Drawing.Point(572, 54);
+            label6.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
+            label6.Location = new System.Drawing.Point(536, 51);
             label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            label6.Size = new System.Drawing.Size(31, 23);
+            label6.Size = new System.Drawing.Size(38, 26);
             label6.TabIndex = 66;
             label6.Text = "طن";
             label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -509,10 +509,10 @@ namespace LoBridge
             // truck_TypeLabel
             // 
             truck_TypeLabel.AutoSize = true;
-            truck_TypeLabel.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold);
-            truck_TypeLabel.Location = new System.Drawing.Point(549, 197);
+            truck_TypeLabel.Font = new System.Drawing.Font("Sakkal Majalla", 15.8F, System.Drawing.FontStyle.Bold);
+            truck_TypeLabel.Location = new System.Drawing.Point(551, 222);
             truck_TypeLabel.Name = "truck_TypeLabel";
-            truck_TypeLabel.Size = new System.Drawing.Size(81, 25);
+            truck_TypeLabel.Size = new System.Drawing.Size(108, 35);
             truck_TypeLabel.TabIndex = 95;
             truck_TypeLabel.Text = "نوع السيارة:";
             // 
@@ -543,20 +543,20 @@ namespace LoBridge
             this.panel2Menu.Controls.Add(this.trailer_numberLabel1);
             this.panel2Menu.Controls.Add(trailer_numberLabel);
             this.panel2Menu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2Menu.Location = new System.Drawing.Point(693, 0);
+            this.panel2Menu.Location = new System.Drawing.Point(665, 0);
             this.panel2Menu.Margin = new System.Windows.Forms.Padding(4);
             this.panel2Menu.Name = "panel2Menu";
             this.panel2Menu.Padding = new System.Windows.Forms.Padding(0, 0, 21, 0);
-            this.panel2Menu.Size = new System.Drawing.Size(821, 131);
+            this.panel2Menu.Size = new System.Drawing.Size(849, 131);
             this.panel2Menu.TabIndex = 0;
             // 
             // truck_numberLinkLabel
             // 
             this.truck_numberLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Truck_number", true));
-            this.truck_numberLinkLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.truck_numberLinkLabel.Location = new System.Drawing.Point(576, 88);
+            this.truck_numberLinkLabel.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
+            this.truck_numberLinkLabel.Location = new System.Drawing.Point(572, 90);
             this.truck_numberLinkLabel.Name = "truck_numberLinkLabel";
-            this.truck_numberLinkLabel.Size = new System.Drawing.Size(99, 23);
+            this.truck_numberLinkLabel.Size = new System.Drawing.Size(103, 23);
             this.truck_numberLinkLabel.TabIndex = 1;
             this.truck_numberLinkLabel.TabStop = true;
             this.truck_numberLinkLabel.Text = "linkLabel1";
@@ -590,7 +590,7 @@ namespace LoBridge
             // 
             this.qtyLabel1.BackColor = System.Drawing.Color.White;
             this.qtyLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Qty", true));
-            this.qtyLabel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qtyLabel1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.qtyLabel1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.qtyLabel1.Location = new System.Drawing.Point(572, 51);
             this.qtyLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -605,7 +605,7 @@ namespace LoBridge
             // 
             this.statusLabel1.BackColor = System.Drawing.Color.White;
             this.statusLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Status", true));
-            this.statusLabel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusLabel1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.statusLabel1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.statusLabel1.Location = new System.Drawing.Point(338, 14);
             this.statusLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -621,7 +621,7 @@ namespace LoBridge
             // 
             this.wCardIDLabel1.BackColor = System.Drawing.Color.White;
             this.wCardIDLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "WCardID", true));
-            this.wCardIDLabel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wCardIDLabel1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.wCardIDLabel1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.wCardIDLabel1.Location = new System.Drawing.Point(573, 13);
             this.wCardIDLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -637,9 +637,9 @@ namespace LoBridge
             // 
             this.trailer_numberLabel1.BackColor = System.Drawing.Color.White;
             this.trailer_numberLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Trailer_number", true));
-            this.trailer_numberLabel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trailer_numberLabel1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold);
             this.trailer_numberLabel1.ForeColor = System.Drawing.Color.Black;
-            this.trailer_numberLabel1.Location = new System.Drawing.Point(352, 88);
+            this.trailer_numberLabel1.Location = new System.Drawing.Point(338, 91);
             this.trailer_numberLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.trailer_numberLabel1.Name = "trailer_numberLabel1";
             this.trailer_numberLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -679,7 +679,7 @@ namespace LoBridge
             this.panel6Cam.Location = new System.Drawing.Point(0, 0);
             this.panel6Cam.Margin = new System.Windows.Forms.Padding(4);
             this.panel6Cam.Name = "panel6Cam";
-            this.panel6Cam.Size = new System.Drawing.Size(837, 832);
+            this.panel6Cam.Size = new System.Drawing.Size(801, 832);
             this.panel6Cam.TabIndex = 1;
             this.panel6Cam.SizeChanged += new System.EventHandler(this.panel6Cam_SizeChanged);
             // 
@@ -738,21 +738,22 @@ namespace LoBridge
             this.panel5CardInfo.Controls.Add(this.comm_NAMELabel1);
             this.panel5CardInfo.Controls.Add(comm_NAMELabel);
             this.panel5CardInfo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5CardInfo.Location = new System.Drawing.Point(837, 0);
+            this.panel5CardInfo.Location = new System.Drawing.Point(801, 0);
             this.panel5CardInfo.Margin = new System.Windows.Forms.Padding(4);
             this.panel5CardInfo.Name = "panel5CardInfo";
             this.panel5CardInfo.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.panel5CardInfo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panel5CardInfo.Size = new System.Drawing.Size(677, 832);
+            this.panel5CardInfo.Size = new System.Drawing.Size(713, 832);
             this.panel5CardInfo.TabIndex = 0;
             // 
             // truck_TypeComboBox
             // 
             this.truck_TypeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Truck_Type", true));
+            this.truck_TypeComboBox.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
             this.truck_TypeComboBox.FormattingEnabled = true;
-            this.truck_TypeComboBox.Location = new System.Drawing.Point(342, 191);
+            this.truck_TypeComboBox.Location = new System.Drawing.Point(342, 218);
             this.truck_TypeComboBox.Name = "truck_TypeComboBox";
-            this.truck_TypeComboBox.Size = new System.Drawing.Size(199, 32);
+            this.truck_TypeComboBox.Size = new System.Drawing.Size(199, 39);
             this.truck_TypeComboBox.TabIndex = 96;
             // 
             // label7
@@ -835,19 +836,19 @@ namespace LoBridge
             // 
             this.stacktextBox2.BackColor = System.Drawing.Color.LightBlue;
             this.stacktextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Stack_Bar", true));
-            this.stacktextBox2.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stacktextBox2.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
             this.stacktextBox2.ForeColor = System.Drawing.Color.Black;
-            this.stacktextBox2.Location = new System.Drawing.Point(38, 229);
+            this.stacktextBox2.Location = new System.Drawing.Point(39, 263);
             this.stacktextBox2.Name = "stacktextBox2";
-            this.stacktextBox2.Size = new System.Drawing.Size(502, 35);
+            this.stacktextBox2.Size = new System.Drawing.Size(502, 40);
             this.stacktextBox2.TabIndex = 90;
             // 
             // weight_NotesTextBox
             // 
             this.weight_NotesTextBox.BackColor = System.Drawing.Color.LightBlue;
-            this.weight_NotesTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weight_NotesTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
             this.weight_NotesTextBox.ForeColor = System.Drawing.Color.Black;
-            this.weight_NotesTextBox.Location = new System.Drawing.Point(37, 266);
+            this.weight_NotesTextBox.Location = new System.Drawing.Point(37, 315);
             this.weight_NotesTextBox.Multiline = true;
             this.weight_NotesTextBox.Name = "weight_NotesTextBox";
             this.weight_NotesTextBox.Size = new System.Drawing.Size(504, 55);
@@ -857,7 +858,7 @@ namespace LoBridge
             // 
             this.loading_stationComboBox.BackColor = System.Drawing.Color.LightBlue;
             this.loading_stationComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Loading_Station", true));
-            this.loading_stationComboBox.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loading_stationComboBox.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
             this.loading_stationComboBox.ForeColor = System.Drawing.Color.Black;
             this.loading_stationComboBox.FormattingEnabled = true;
             this.loading_stationComboBox.Items.AddRange(new object[] {
@@ -868,16 +869,16 @@ namespace LoBridge
             "محطة5",
             "مخزن القشرة",
             "ساحة التحميل"});
-            this.loading_stationComboBox.Location = new System.Drawing.Point(440, 152);
+            this.loading_stationComboBox.Location = new System.Drawing.Point(439, 173);
             this.loading_stationComboBox.Name = "loading_stationComboBox";
-            this.loading_stationComboBox.Size = new System.Drawing.Size(102, 33);
+            this.loading_stationComboBox.Size = new System.Drawing.Size(102, 39);
             this.loading_stationComboBox.TabIndex = 86;
             // 
             // f_WdateLabel1
             // 
             this.f_WdateLabel1.BackColor = System.Drawing.Color.White;
             this.f_WdateLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "F_Wdate", true));
-            this.f_WdateLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.f_WdateLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
             this.f_WdateLabel1.ForeColor = System.Drawing.Color.Black;
             this.f_WdateLabel1.Location = new System.Drawing.Point(38, 18);
             this.f_WdateLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -892,9 +893,9 @@ namespace LoBridge
             // 
             this.company_NameLabel1.BackColor = System.Drawing.Color.White;
             this.company_NameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Company_Name", true));
-            this.company_NameLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.company_NameLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 12.2F, System.Drawing.FontStyle.Bold);
             this.company_NameLabel1.ForeColor = System.Drawing.Color.Black;
-            this.company_NameLabel1.Location = new System.Drawing.Point(41, 526);
+            this.company_NameLabel1.Location = new System.Drawing.Point(48, 623);
             this.company_NameLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.company_NameLabel1.Name = "company_NameLabel1";
             this.company_NameLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -907,7 +908,7 @@ namespace LoBridge
             // 
             this.s_WdateLabel1.BackColor = System.Drawing.Color.White;
             this.s_WdateLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "S_Wdate", true));
-            this.s_WdateLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.s_WdateLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
             this.s_WdateLabel1.ForeColor = System.Drawing.Color.Black;
             this.s_WdateLabel1.Location = new System.Drawing.Point(38, 61);
             this.s_WdateLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -922,9 +923,9 @@ namespace LoBridge
             // 
             this.driver_NameLabel1.BackColor = System.Drawing.Color.White;
             this.driver_NameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Driver_Name", true));
-            this.driver_NameLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.driver_NameLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 12.2F, System.Drawing.FontStyle.Bold);
             this.driver_NameLabel1.ForeColor = System.Drawing.Color.Black;
-            this.driver_NameLabel1.Location = new System.Drawing.Point(43, 443);
+            this.driver_NameLabel1.Location = new System.Drawing.Point(48, 533);
             this.driver_NameLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.driver_NameLabel1.Name = "driver_NameLabel1";
             this.driver_NameLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -937,8 +938,8 @@ namespace LoBridge
             // 
             this.lading_NotesLabel1.BackColor = System.Drawing.Color.White;
             this.lading_NotesLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Lading_Notes", true));
-            this.lading_NotesLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lading_NotesLabel1.Location = new System.Drawing.Point(37, 595);
+            this.lading_NotesLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
+            this.lading_NotesLabel1.Location = new System.Drawing.Point(36, 670);
             this.lading_NotesLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lading_NotesLabel1.Name = "lading_NotesLabel1";
             this.lading_NotesLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -951,9 +952,9 @@ namespace LoBridge
             // 
             this.fill_TypeLabel1.BackColor = System.Drawing.Color.White;
             this.fill_TypeLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Fill_Type", true));
-            this.fill_TypeLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fill_TypeLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
             this.fill_TypeLabel1.ForeColor = System.Drawing.Color.Black;
-            this.fill_TypeLabel1.Location = new System.Drawing.Point(441, 506);
+            this.fill_TypeLabel1.Location = new System.Drawing.Point(441, 578);
             this.fill_TypeLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fill_TypeLabel1.Name = "fill_TypeLabel1";
             this.fill_TypeLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -966,9 +967,9 @@ namespace LoBridge
             // 
             this.order_NumberLabel1.BackColor = System.Drawing.Color.White;
             this.order_NumberLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Order_Number", true));
-            this.order_NumberLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.order_NumberLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
             this.order_NumberLabel1.ForeColor = System.Drawing.Color.Black;
-            this.order_NumberLabel1.Location = new System.Drawing.Point(441, 423);
+            this.order_NumberLabel1.Location = new System.Drawing.Point(441, 488);
             this.order_NumberLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.order_NumberLabel1.Name = "order_NumberLabel1";
             this.order_NumberLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -981,9 +982,9 @@ namespace LoBridge
             // 
             this.n_CardLabel1.BackColor = System.Drawing.Color.White;
             this.n_CardLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "N_Card", true));
-            this.n_CardLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n_CardLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 12.2F, System.Drawing.FontStyle.Bold);
             this.n_CardLabel1.ForeColor = System.Drawing.Color.Black;
-            this.n_CardLabel1.Location = new System.Drawing.Point(41, 483);
+            this.n_CardLabel1.Location = new System.Drawing.Point(48, 578);
             this.n_CardLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.n_CardLabel1.Name = "n_CardLabel1";
             this.n_CardLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -996,9 +997,9 @@ namespace LoBridge
             // 
             this.contract_NumberLabel1.BackColor = System.Drawing.Color.White;
             this.contract_NumberLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Contract_Number", true));
-            this.contract_NumberLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contract_NumberLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
             this.contract_NumberLabel1.ForeColor = System.Drawing.Color.Black;
-            this.contract_NumberLabel1.Location = new System.Drawing.Point(441, 463);
+            this.contract_NumberLabel1.Location = new System.Drawing.Point(441, 533);
             this.contract_NumberLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.contract_NumberLabel1.Name = "contract_NumberLabel1";
             this.contract_NumberLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1011,9 +1012,9 @@ namespace LoBridge
             // 
             this.trans_typeLabel1.BackColor = System.Drawing.Color.White;
             this.trans_typeLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Trans_type", true));
-            this.trans_typeLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trans_typeLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
             this.trans_typeLabel1.ForeColor = System.Drawing.Color.Black;
-            this.trans_typeLabel1.Location = new System.Drawing.Point(443, 551);
+            this.trans_typeLabel1.Location = new System.Drawing.Point(441, 624);
             this.trans_typeLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.trans_typeLabel1.Name = "trans_typeLabel1";
             this.trans_typeLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1027,9 +1028,9 @@ namespace LoBridge
             this.f_weightLabel1.BackColor = System.Drawing.Color.White;
             this.f_weightLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.f_weightLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "F_weight", true));
-            this.f_weightLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.f_weightLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
             this.f_weightLabel1.ForeColor = System.Drawing.Color.Black;
-            this.f_weightLabel1.Location = new System.Drawing.Point(440, 18);
+            this.f_weightLabel1.Location = new System.Drawing.Point(441, 18);
             this.f_weightLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.f_weightLabel1.Name = "f_weightLabel1";
             this.f_weightLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1044,9 +1045,9 @@ namespace LoBridge
             this.s_weightLabel1.BackColor = System.Drawing.Color.White;
             this.s_weightLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.s_weightLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "S_weight", true));
-            this.s_weightLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.s_weightLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
             this.s_weightLabel1.ForeColor = System.Drawing.Color.Black;
-            this.s_weightLabel1.Location = new System.Drawing.Point(440, 61);
+            this.s_weightLabel1.Location = new System.Drawing.Point(441, 61);
             this.s_weightLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.s_weightLabel1.Name = "s_weightLabel1";
             this.s_weightLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1060,9 +1061,9 @@ namespace LoBridge
             // 
             this.net_WeightLabel1.BackColor = System.Drawing.Color.White;
             this.net_WeightLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Net_Weight", true));
-            this.net_WeightLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.net_WeightLabel1.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
             this.net_WeightLabel1.ForeColor = System.Drawing.Color.Black;
-            this.net_WeightLabel1.Location = new System.Drawing.Point(440, 105);
+            this.net_WeightLabel1.Location = new System.Drawing.Point(441, 105);
             this.net_WeightLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.net_WeightLabel1.Name = "net_WeightLabel1";
             this.net_WeightLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1075,9 +1076,9 @@ namespace LoBridge
             // 
             this.cust_NAMELabel1.BackColor = System.Drawing.Color.White;
             this.cust_NAMELabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Cust_NAME", true));
-            this.cust_NAMELabel1.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cust_NAMELabel1.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
             this.cust_NAMELabel1.ForeColor = System.Drawing.Color.Black;
-            this.cust_NAMELabel1.Location = new System.Drawing.Point(43, 333);
+            this.cust_NAMELabel1.Location = new System.Drawing.Point(41, 404);
             this.cust_NAMELabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cust_NAMELabel1.Name = "cust_NAMELabel1";
             this.cust_NAMELabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -1090,9 +1091,9 @@ namespace LoBridge
             // 
             this.comm_NAMELabel1.BackColor = System.Drawing.Color.White;
             this.comm_NAMELabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lcacrd1BindingSource, "Comm_NAME", true));
-            this.comm_NAMELabel1.Font = new System.Drawing.Font("Sakkal Majalla", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comm_NAMELabel1.Font = new System.Drawing.Font("Sakkal Majalla", 13.8F, System.Drawing.FontStyle.Bold);
             this.comm_NAMELabel1.ForeColor = System.Drawing.Color.Black;
-            this.comm_NAMELabel1.Location = new System.Drawing.Point(43, 377);
+            this.comm_NAMELabel1.Location = new System.Drawing.Point(41, 446);
             this.comm_NAMELabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.comm_NAMELabel1.Name = "comm_NAMELabel1";
             this.comm_NAMELabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

@@ -43,16 +43,16 @@
             this.A5paperBtn = new System.Windows.Forms.ToolStripButton();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.inDataSet = new LoBridge.INdataset();
-            this.outdataset = new LoBridge.Outdataset();
             this.wCard1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wCard1TableAdapter = new LoBridge.INdatasetTableAdapters.WCard1TableAdapter();
+            this.outdataset = new LoBridge.Outdataset();
             this.outWcard1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.outWcard1TableAdapter = new LoBridge.OutdatasetTableAdapters.OutWcard1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.lcacrd1BindingNavigator)).BeginInit();
             this.lcacrd1BindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.outdataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wCard1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.outdataset)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.outWcard1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,11 +187,6 @@
             this.inDataSet.DataSetName = "DLWSDataSet";
             this.inDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // outdataset
-            // 
-            this.outdataset.DataSetName = "Outdataset";
-            this.outdataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // wCard1BindingSource
             // 
             this.wCard1BindingSource.DataMember = "WCard1";
@@ -200,6 +195,11 @@
             // wCard1TableAdapter
             // 
             this.wCard1TableAdapter.ClearBeforeFill = true;
+            // 
+            // outdataset
+            // 
+            this.outdataset.DataSetName = "Outdataset";
+            this.outdataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // outWcard1BindingSource
             // 
@@ -233,8 +233,8 @@
             this.lcacrd1BindingNavigator.ResumeLayout(false);
             this.lcacrd1BindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.outdataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wCard1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.outdataset)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.outWcard1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
