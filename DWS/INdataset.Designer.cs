@@ -3895,7 +3895,9 @@ namespace LoBridge {
             
             private global::System.Data.DataColumn columnLusername;
             
-            private global::System.Data.DataColumn columnlocal_supplier;
+            private global::System.Data.DataColumn columnLocal_Supplier;
+            
+            private global::System.Data.DataColumn columnLading_Notes;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -4196,9 +4198,17 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn local_supplierColumn {
+            public global::System.Data.DataColumn Local_SupplierColumn {
                 get {
-                    return this.columnlocal_supplier;
+                    return this.columnLocal_Supplier;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Lading_NotesColumn {
+                get {
+                    return this.columnLading_Notes;
                 }
             }
             
@@ -4272,7 +4282,8 @@ namespace LoBridge {
                         decimal Shrink1, 
                         string BLading, 
                         string Lusername, 
-                        string local_supplier) {
+                        string Local_Supplier, 
+                        string Lading_Notes) {
                 Rcard1Row rowRcard1Row = ((Rcard1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -4308,7 +4319,8 @@ namespace LoBridge {
                         Shrink1,
                         BLading,
                         Lusername,
-                        local_supplier};
+                        Local_Supplier,
+                        Lading_Notes};
                 rowRcard1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRcard1Row);
                 return rowRcard1Row;
@@ -4371,7 +4383,8 @@ namespace LoBridge {
                 this.columnShrink1 = base.Columns["Shrink1"];
                 this.columnBLading = base.Columns["BLading"];
                 this.columnLusername = base.Columns["Lusername"];
-                this.columnlocal_supplier = base.Columns["local_supplier"];
+                this.columnLocal_Supplier = base.Columns["Local_Supplier"];
+                this.columnLading_Notes = base.Columns["Lading_Notes"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4443,8 +4456,10 @@ namespace LoBridge {
                 base.Columns.Add(this.columnBLading);
                 this.columnLusername = new global::System.Data.DataColumn("Lusername", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLusername);
-                this.columnlocal_supplier = new global::System.Data.DataColumn("local_supplier", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlocal_supplier);
+                this.columnLocal_Supplier = new global::System.Data.DataColumn("Local_Supplier", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLocal_Supplier);
+                this.columnLading_Notes = new global::System.Data.DataColumn("Lading_Notes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLading_Notes);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnladingID}, true));
                 this.columnladingID.AutoIncrement = true;
@@ -4496,7 +4511,8 @@ namespace LoBridge {
                 this.columnBLading.MaxLength = 10;
                 this.columnLusername.AllowDBNull = false;
                 this.columnLusername.MaxLength = 50;
-                this.columnlocal_supplier.MaxLength = 150;
+                this.columnLocal_Supplier.MaxLength = 150;
+                this.columnLading_Notes.MaxLength = 250;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8770,17 +8786,33 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string local_supplier {
+            public string Local_Supplier {
                 get {
                     try {
-                        return ((string)(this[this.tableRcard1.local_supplierColumn]));
+                        return ((string)(this[this.tableRcard1.Local_SupplierColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'local_supplier\' in table \'Rcard1\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Local_Supplier\' in table \'Rcard1\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRcard1.local_supplierColumn] = value;
+                    this[this.tableRcard1.Local_SupplierColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Lading_Notes {
+                get {
+                    try {
+                        return ((string)(this[this.tableRcard1.Lading_NotesColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Lading_Notes\' in table \'Rcard1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRcard1.Lading_NotesColumn] = value;
                 }
             }
             
@@ -8990,14 +9022,26 @@ namespace LoBridge {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Islocal_supplierNull() {
-                return this.IsNull(this.tableRcard1.local_supplierColumn);
+            public bool IsLocal_SupplierNull() {
+                return this.IsNull(this.tableRcard1.Local_SupplierColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setlocal_supplierNull() {
-                this[this.tableRcard1.local_supplierColumn] = global::System.Convert.DBNull;
+            public void SetLocal_SupplierNull() {
+                this[this.tableRcard1.Local_SupplierColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsLading_NotesNull() {
+                return this.IsNull(this.tableRcard1.Lading_NotesColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetLading_NotesNull() {
+                this[this.tableRcard1.Lading_NotesColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -16171,7 +16215,8 @@ WHERE        (INBatch.Remain_Qty > 0) AND (INBatch.Batch_ID = @bid)";
             tableMapping.ColumnMappings.Add("Shrink", "Shrink1");
             tableMapping.ColumnMappings.Add("BLading", "BLading");
             tableMapping.ColumnMappings.Add("Lusername", "Lusername");
-            tableMapping.ColumnMappings.Add("local_supplier", "local_supplier");
+            tableMapping.ColumnMappings.Add("Local_Supplier", "Local_Supplier");
+            tableMapping.ColumnMappings.Add("Lading_Notes", "Lading_Notes");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -16188,18 +16233,19 @@ WHERE        (INBatch.Remain_Qty > 0) AND (INBatch.Batch_ID = @bid)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT Lading.ladingID, Lading.Qty, Lading.Date, Lading.Loading_Station, Lading.Net_Weight, Lading.Shrink, Lading.Fill_Type, Lading.Bags_Count, Lading.Stack_Bar, Commodity.Comm_NAME, Commodity.CofOrigin, Commodity.Comm_TYPE, 
-                  Transport_Co.Company_Name, Shipment.Contract, Shipment.Shipping, Shipment.Qty AS Shqty, Drivers.Driver_Name, Drivers.N_Card, Drivers.Liscense_num, INBatch.Serial, SUPPLIERS.SUP_NAME, INBatch.Qty AS Bqty, 
-                  Truck.Truck_number, Truck.Truck_License, Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_License, Truck.Trailer_traffic, Truck.Owner, Lading.BLading, Lading.Lusername, Shipment.local_supplier
-FROM     Lading INNER JOIN
-                  Drivers ON Lading.Driver_ID = Drivers.Driver_ID INNER JOIN
-                  INBatch ON Lading.BatchID = INBatch.Batch_ID INNER JOIN
-                  Shipment ON INBatch.Ship_ID = Shipment.Ship_ID INNER JOIN
-                  Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
-                  SUPPLIERS ON Shipment.Supp_ID = SUPPLIERS.SUP_ID INNER JOIN
-                  Transport_Co ON Shipment.Trans_Co = Transport_Co.Company_ID INNER JOIN
-                  Truck ON Lading.Truck_ID = Truck.Truck_ID
-WHERE  (Lading.ladingID = @Lid)";
+            this._commandCollection[0].CommandText = @"SELECT        Lading.ladingID, Lading.Qty, Lading.Date, Lading.Loading_Station, Lading.Net_Weight, Lading.Shrink, Lading.Fill_Type, Lading.Bags_Count, Lading.Stack_Bar, Commodity.Comm_NAME, Commodity.CofOrigin, 
+                         Commodity.Comm_TYPE, Transport_Co.Company_Name, Shipment.Contract, Shipment.Shipping, Shipment.Qty AS Shqty, Drivers.Driver_Name, Drivers.N_Card, Drivers.Liscense_num, INBatch.Serial, 
+                         SUPPLIERS.SUP_NAME, INBatch.Qty AS Bqty, Truck.Truck_number, Truck.Truck_License, Truck.Truck_traffic, Truck.Trailer_number, Truck.Trailer_License, Truck.Trailer_traffic, Truck.Owner, Lading.BLading, 
+                         Lading.Lusername, Shipment.Local_Supplier, Lading.Lading_Notes
+FROM            Lading INNER JOIN
+                         Drivers ON Lading.Driver_ID = Drivers.Driver_ID INNER JOIN
+                         INBatch ON Lading.BatchID = INBatch.Batch_ID INNER JOIN
+                         Shipment ON INBatch.Ship_ID = Shipment.Ship_ID INNER JOIN
+                         Commodity ON Shipment.Comm_ID = Commodity.Comm_ID INNER JOIN
+                         SUPPLIERS ON Shipment.Supp_ID = SUPPLIERS.SUP_ID INNER JOIN
+                         Transport_Co ON Shipment.Trans_Co = Transport_Co.Company_ID INNER JOIN
+                         Truck ON Lading.Truck_ID = Truck.Truck_ID
+WHERE        (Lading.ladingID = @Lid)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ladingID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();

@@ -160,11 +160,11 @@ namespace LoBridge
             this.InComingViewPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.InComingViewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InComingViewPanel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InComingViewPanel.Location = new System.Drawing.Point(0, 6);
-            this.InComingViewPanel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.InComingViewPanel.Location = new System.Drawing.Point(0, 5);
+            this.InComingViewPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.InComingViewPanel.Name = "InComingViewPanel";
             this.InComingViewPanel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.InComingViewPanel.Size = new System.Drawing.Size(1555, 942);
+            this.InComingViewPanel.Size = new System.Drawing.Size(1242, 746);
             this.InComingViewPanel.TabIndex = 1;
             // 
             // IncomingMenuPanel1
@@ -187,12 +187,12 @@ namespace LoBridge
             this.IncomingMenuPanel1.Controls.Add(this.panel4);
             this.IncomingMenuPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.IncomingMenuPanel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncomingMenuPanel1.Location = new System.Drawing.Point(1555, 6);
+            this.IncomingMenuPanel1.Location = new System.Drawing.Point(1242, 5);
             this.IncomingMenuPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.IncomingMenuPanel1.MaximumSize = new System.Drawing.Size(226, 1200);
+            this.IncomingMenuPanel1.MaximumSize = new System.Drawing.Size(181, 960);
             this.IncomingMenuPanel1.Name = "IncomingMenuPanel1";
-            this.IncomingMenuPanel1.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.IncomingMenuPanel1.Size = new System.Drawing.Size(200, 942);
+            this.IncomingMenuPanel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.IncomingMenuPanel1.Size = new System.Drawing.Size(160, 746);
             this.IncomingMenuPanel1.TabIndex = 5;
             // 
             // btn_ladingprts
@@ -210,11 +210,11 @@ namespace LoBridge
             this.btn_ladingprts.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btn_ladingprts.Image = ((System.Drawing.Image)(resources.GetObject("btn_ladingprts.Image")));
             this.btn_ladingprts.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_ladingprts.Location = new System.Drawing.Point(0, 600);
+            this.btn_ladingprts.Location = new System.Drawing.Point(0, 480);
             this.btn_ladingprts.Margin = new System.Windows.Forms.Padding(0);
             this.btn_ladingprts.Name = "btn_ladingprts";
-            this.btn_ladingprts.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.btn_ladingprts.Size = new System.Drawing.Size(200, 50);
+            this.btn_ladingprts.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btn_ladingprts.Size = new System.Drawing.Size(160, 40);
             this.btn_ladingprts.TabIndex = 18;
             this.btn_ladingprts.Text = "اماكن التحميل";
             this.btn_ladingprts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -236,11 +236,11 @@ namespace LoBridge
             this.btnladeditadv.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btnladeditadv.Image = ((System.Drawing.Image)(resources.GetObject("btnladeditadv.Image")));
             this.btnladeditadv.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnladeditadv.Location = new System.Drawing.Point(0, 550);
+            this.btnladeditadv.Location = new System.Drawing.Point(0, 440);
             this.btnladeditadv.Margin = new System.Windows.Forms.Padding(0);
             this.btnladeditadv.Name = "btnladeditadv";
-            this.btnladeditadv.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.btnladeditadv.Size = new System.Drawing.Size(200, 50);
+            this.btnladeditadv.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnladeditadv.Size = new System.Drawing.Size(160, 40);
             this.btnladeditadv.TabIndex = 17;
             this.btnladeditadv.Text = "تعديل متقدم للكارت";
             this.btnladeditadv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -264,11 +264,11 @@ namespace LoBridge
             this.btnLocalSuppliers.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btnLocalSuppliers.Image = ((System.Drawing.Image)(resources.GetObject("btnLocalSuppliers.Image")));
             this.btnLocalSuppliers.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLocalSuppliers.Location = new System.Drawing.Point(0, 500);
+            this.btnLocalSuppliers.Location = new System.Drawing.Point(0, 400);
             this.btnLocalSuppliers.Margin = new System.Windows.Forms.Padding(0);
             this.btnLocalSuppliers.Name = "btnLocalSuppliers";
-            this.btnLocalSuppliers.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.btnLocalSuppliers.Size = new System.Drawing.Size(200, 50);
+            this.btnLocalSuppliers.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnLocalSuppliers.Size = new System.Drawing.Size(160, 40);
             this.btnLocalSuppliers.TabIndex = 16;
             this.btnLocalSuppliers.Text = "قائمة المستوردين";
             this.btnLocalSuppliers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -291,11 +291,11 @@ namespace LoBridge
             this.inm_AdvancedEditbutton9.ForeColor = System.Drawing.SystemColors.Desktop;
             this.inm_AdvancedEditbutton9.Image = ((System.Drawing.Image)(resources.GetObject("inm_AdvancedEditbutton9.Image")));
             this.inm_AdvancedEditbutton9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.inm_AdvancedEditbutton9.Location = new System.Drawing.Point(0, 450);
+            this.inm_AdvancedEditbutton9.Location = new System.Drawing.Point(0, 360);
             this.inm_AdvancedEditbutton9.Margin = new System.Windows.Forms.Padding(0);
             this.inm_AdvancedEditbutton9.Name = "inm_AdvancedEditbutton9";
-            this.inm_AdvancedEditbutton9.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.inm_AdvancedEditbutton9.Size = new System.Drawing.Size(200, 50);
+            this.inm_AdvancedEditbutton9.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.inm_AdvancedEditbutton9.Size = new System.Drawing.Size(160, 40);
             this.inm_AdvancedEditbutton9.TabIndex = 9;
             this.inm_AdvancedEditbutton9.Text = "تعديل متقدم";
             this.inm_AdvancedEditbutton9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -317,11 +317,11 @@ namespace LoBridge
             this.inm_INshiftRptBtn8.ForeColor = System.Drawing.SystemColors.Desktop;
             this.inm_INshiftRptBtn8.Image = ((System.Drawing.Image)(resources.GetObject("inm_INshiftRptBtn8.Image")));
             this.inm_INshiftRptBtn8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.inm_INshiftRptBtn8.Location = new System.Drawing.Point(0, 400);
+            this.inm_INshiftRptBtn8.Location = new System.Drawing.Point(0, 320);
             this.inm_INshiftRptBtn8.Margin = new System.Windows.Forms.Padding(0);
             this.inm_INshiftRptBtn8.Name = "inm_INshiftRptBtn8";
-            this.inm_INshiftRptBtn8.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.inm_INshiftRptBtn8.Size = new System.Drawing.Size(200, 50);
+            this.inm_INshiftRptBtn8.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.inm_INshiftRptBtn8.Size = new System.Drawing.Size(160, 40);
             this.inm_INshiftRptBtn8.TabIndex = 8;
             this.inm_INshiftRptBtn8.Text = "تقرير الوارد الاجمالي";
             this.inm_INshiftRptBtn8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -343,11 +343,11 @@ namespace LoBridge
             this.inm_summaryreportBtn7.ForeColor = System.Drawing.SystemColors.Desktop;
             this.inm_summaryreportBtn7.Image = ((System.Drawing.Image)(resources.GetObject("inm_summaryreportBtn7.Image")));
             this.inm_summaryreportBtn7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.inm_summaryreportBtn7.Location = new System.Drawing.Point(0, 350);
+            this.inm_summaryreportBtn7.Location = new System.Drawing.Point(0, 280);
             this.inm_summaryreportBtn7.Margin = new System.Windows.Forms.Padding(0);
             this.inm_summaryreportBtn7.Name = "inm_summaryreportBtn7";
-            this.inm_summaryreportBtn7.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.inm_summaryreportBtn7.Size = new System.Drawing.Size(200, 50);
+            this.inm_summaryreportBtn7.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.inm_summaryreportBtn7.Size = new System.Drawing.Size(160, 40);
             this.inm_summaryreportBtn7.TabIndex = 7;
             this.inm_summaryreportBtn7.Text = "تقرير الوارد اليومي";
             this.inm_summaryreportBtn7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -369,11 +369,11 @@ namespace LoBridge
             this.inm_listshipsbutton6.ForeColor = System.Drawing.SystemColors.Desktop;
             this.inm_listshipsbutton6.Image = ((System.Drawing.Image)(resources.GetObject("inm_listshipsbutton6.Image")));
             this.inm_listshipsbutton6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.inm_listshipsbutton6.Location = new System.Drawing.Point(0, 300);
+            this.inm_listshipsbutton6.Location = new System.Drawing.Point(0, 240);
             this.inm_listshipsbutton6.Margin = new System.Windows.Forms.Padding(0);
             this.inm_listshipsbutton6.Name = "inm_listshipsbutton6";
-            this.inm_listshipsbutton6.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.inm_listshipsbutton6.Size = new System.Drawing.Size(200, 50);
+            this.inm_listshipsbutton6.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.inm_listshipsbutton6.Size = new System.Drawing.Size(160, 40);
             this.inm_listshipsbutton6.TabIndex = 6;
             this.inm_listshipsbutton6.Text = "عرض الشحنات";
             this.inm_listshipsbutton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -395,11 +395,11 @@ namespace LoBridge
             this.inm_listInCardsbutton5.ForeColor = System.Drawing.SystemColors.Desktop;
             this.inm_listInCardsbutton5.Image = ((System.Drawing.Image)(resources.GetObject("inm_listInCardsbutton5.Image")));
             this.inm_listInCardsbutton5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.inm_listInCardsbutton5.Location = new System.Drawing.Point(0, 250);
+            this.inm_listInCardsbutton5.Location = new System.Drawing.Point(0, 200);
             this.inm_listInCardsbutton5.Margin = new System.Windows.Forms.Padding(0);
             this.inm_listInCardsbutton5.Name = "inm_listInCardsbutton5";
-            this.inm_listInCardsbutton5.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.inm_listInCardsbutton5.Size = new System.Drawing.Size(200, 50);
+            this.inm_listInCardsbutton5.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.inm_listInCardsbutton5.Size = new System.Drawing.Size(160, 40);
             this.inm_listInCardsbutton5.TabIndex = 5;
             this.inm_listInCardsbutton5.Text = "عرض كروت الاستلام";
             this.inm_listInCardsbutton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -421,11 +421,11 @@ namespace LoBridge
             this.inm_incardbutton4.ForeColor = System.Drawing.SystemColors.Desktop;
             this.inm_incardbutton4.Image = ((System.Drawing.Image)(resources.GetObject("inm_incardbutton4.Image")));
             this.inm_incardbutton4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.inm_incardbutton4.Location = new System.Drawing.Point(0, 200);
+            this.inm_incardbutton4.Location = new System.Drawing.Point(0, 160);
             this.inm_incardbutton4.Margin = new System.Windows.Forms.Padding(0);
             this.inm_incardbutton4.Name = "inm_incardbutton4";
-            this.inm_incardbutton4.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.inm_incardbutton4.Size = new System.Drawing.Size(200, 50);
+            this.inm_incardbutton4.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.inm_incardbutton4.Size = new System.Drawing.Size(160, 40);
             this.inm_incardbutton4.TabIndex = 3;
             this.inm_incardbutton4.Text = "انشاء كارت استلام";
             this.inm_incardbutton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -447,11 +447,11 @@ namespace LoBridge
             this.inm_releasebutton3.ForeColor = System.Drawing.SystemColors.Desktop;
             this.inm_releasebutton3.Image = ((System.Drawing.Image)(resources.GetObject("inm_releasebutton3.Image")));
             this.inm_releasebutton3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.inm_releasebutton3.Location = new System.Drawing.Point(0, 150);
+            this.inm_releasebutton3.Location = new System.Drawing.Point(0, 120);
             this.inm_releasebutton3.Margin = new System.Windows.Forms.Padding(0);
             this.inm_releasebutton3.Name = "inm_releasebutton3";
-            this.inm_releasebutton3.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.inm_releasebutton3.Size = new System.Drawing.Size(200, 50);
+            this.inm_releasebutton3.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.inm_releasebutton3.Size = new System.Drawing.Size(160, 40);
             this.inm_releasebutton3.TabIndex = 2;
             this.inm_releasebutton3.Text = "الافراج الجمركي";
             this.inm_releasebutton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -473,11 +473,11 @@ namespace LoBridge
             this.inm_shipmentbutton2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.inm_shipmentbutton2.Image = ((System.Drawing.Image)(resources.GetObject("inm_shipmentbutton2.Image")));
             this.inm_shipmentbutton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.inm_shipmentbutton2.Location = new System.Drawing.Point(0, 100);
+            this.inm_shipmentbutton2.Location = new System.Drawing.Point(0, 80);
             this.inm_shipmentbutton2.Margin = new System.Windows.Forms.Padding(0);
             this.inm_shipmentbutton2.Name = "inm_shipmentbutton2";
-            this.inm_shipmentbutton2.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.inm_shipmentbutton2.Size = new System.Drawing.Size(200, 50);
+            this.inm_shipmentbutton2.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.inm_shipmentbutton2.Size = new System.Drawing.Size(160, 40);
             this.inm_shipmentbutton2.TabIndex = 1;
             this.inm_shipmentbutton2.Text = "شحنة جديدة";
             this.inm_shipmentbutton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -499,11 +499,11 @@ namespace LoBridge
             this.inm_suplierbutton1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.inm_suplierbutton1.Image = ((System.Drawing.Image)(resources.GetObject("inm_suplierbutton1.Image")));
             this.inm_suplierbutton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.inm_suplierbutton1.Location = new System.Drawing.Point(0, 50);
+            this.inm_suplierbutton1.Location = new System.Drawing.Point(0, 40);
             this.inm_suplierbutton1.Margin = new System.Windows.Forms.Padding(0);
             this.inm_suplierbutton1.Name = "inm_suplierbutton1";
-            this.inm_suplierbutton1.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.inm_suplierbutton1.Size = new System.Drawing.Size(200, 50);
+            this.inm_suplierbutton1.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.inm_suplierbutton1.Size = new System.Drawing.Size(160, 40);
             this.inm_suplierbutton1.TabIndex = 0;
             this.inm_suplierbutton1.Text = "الموردين";
             this.inm_suplierbutton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -516,10 +516,9 @@ namespace LoBridge
             this.panel4.Controls.Add(this.button6);
             this.panel4.Controls.Add(this.button8);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 6);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(0, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 44);
+            this.panel4.Size = new System.Drawing.Size(160, 35);
             this.panel4.TabIndex = 15;
             // 
             // button6
@@ -531,11 +530,11 @@ namespace LoBridge
             this.button6.Dock = System.Windows.Forms.DockStyle.Right;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(156, 0);
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(125, 0);
             this.button6.Margin = new System.Windows.Forms.Padding(0);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(44, 44);
+            this.button6.Size = new System.Drawing.Size(35, 35);
             this.button6.TabIndex = 1;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Visible = false;
@@ -550,11 +549,11 @@ namespace LoBridge
             this.button8.Dock = System.Windows.Forms.DockStyle.Left;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(0, 0);
             this.button8.Margin = new System.Windows.Forms.Padding(0);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(44, 44);
+            this.button8.Size = new System.Drawing.Size(35, 35);
             this.button8.TabIndex = 0;
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click_1);
@@ -575,12 +574,12 @@ namespace LoBridge
             this.OutMenupanel2.Controls.Add(this.panel3);
             this.OutMenupanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.OutMenupanel2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.OutMenupanel2.Location = new System.Drawing.Point(1555, 6);
+            this.OutMenupanel2.Location = new System.Drawing.Point(1242, 5);
             this.OutMenupanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.OutMenupanel2.MaximumSize = new System.Drawing.Size(226, 1200);
+            this.OutMenupanel2.MaximumSize = new System.Drawing.Size(181, 960);
             this.OutMenupanel2.Name = "OutMenupanel2";
-            this.OutMenupanel2.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.OutMenupanel2.Size = new System.Drawing.Size(200, 942);
+            this.OutMenupanel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.OutMenupanel2.Size = new System.Drawing.Size(160, 746);
             this.OutMenupanel2.TabIndex = 7;
             this.OutMenupanel2.MouseEnter += new System.EventHandler(this.OutMenupanel2_MouseEnter);
             this.OutMenupanel2.MouseLeave += new System.EventHandler(this.OutMenupanel2_MouseLeave);
@@ -602,10 +601,10 @@ namespace LoBridge
             this.om_ReportingoutBtn.ForeColor = System.Drawing.SystemColors.WindowText;
             this.om_ReportingoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("om_ReportingoutBtn.Image")));
             this.om_ReportingoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.om_ReportingoutBtn.Location = new System.Drawing.Point(0, 400);
-            this.om_ReportingoutBtn.Margin = new System.Windows.Forms.Padding(10);
+            this.om_ReportingoutBtn.Location = new System.Drawing.Point(0, 320);
+            this.om_ReportingoutBtn.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.om_ReportingoutBtn.Name = "om_ReportingoutBtn";
-            this.om_ReportingoutBtn.Size = new System.Drawing.Size(200, 50);
+            this.om_ReportingoutBtn.Size = new System.Drawing.Size(160, 40);
             this.om_ReportingoutBtn.TabIndex = 13;
             this.om_ReportingoutBtn.Text = "تقرير الصادر اليومي";
             this.om_ReportingoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -630,10 +629,10 @@ namespace LoBridge
             this.om_listContractbutton13.ForeColor = System.Drawing.SystemColors.WindowText;
             this.om_listContractbutton13.Image = ((System.Drawing.Image)(resources.GetObject("om_listContractbutton13.Image")));
             this.om_listContractbutton13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.om_listContractbutton13.Location = new System.Drawing.Point(0, 350);
-            this.om_listContractbutton13.Margin = new System.Windows.Forms.Padding(10);
+            this.om_listContractbutton13.Location = new System.Drawing.Point(0, 280);
+            this.om_listContractbutton13.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.om_listContractbutton13.Name = "om_listContractbutton13";
-            this.om_listContractbutton13.Size = new System.Drawing.Size(200, 50);
+            this.om_listContractbutton13.Size = new System.Drawing.Size(160, 40);
             this.om_listContractbutton13.TabIndex = 12;
             this.om_listContractbutton13.Text = "استعراض العقود";
             this.om_listContractbutton13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -658,10 +657,10 @@ namespace LoBridge
             this.om_listLoadingCbutton13.ForeColor = System.Drawing.SystemColors.WindowText;
             this.om_listLoadingCbutton13.Image = ((System.Drawing.Image)(resources.GetObject("om_listLoadingCbutton13.Image")));
             this.om_listLoadingCbutton13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.om_listLoadingCbutton13.Location = new System.Drawing.Point(0, 300);
-            this.om_listLoadingCbutton13.Margin = new System.Windows.Forms.Padding(10);
+            this.om_listLoadingCbutton13.Location = new System.Drawing.Point(0, 240);
+            this.om_listLoadingCbutton13.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.om_listLoadingCbutton13.Name = "om_listLoadingCbutton13";
-            this.om_listLoadingCbutton13.Size = new System.Drawing.Size(200, 50);
+            this.om_listLoadingCbutton13.Size = new System.Drawing.Size(160, 40);
             this.om_listLoadingCbutton13.TabIndex = 11;
             this.om_listLoadingCbutton13.Text = "عرض كروت التحميل";
             this.om_listLoadingCbutton13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -686,10 +685,10 @@ namespace LoBridge
             this.om_BillLadingMenubutton4.ForeColor = System.Drawing.SystemColors.WindowText;
             this.om_BillLadingMenubutton4.Image = ((System.Drawing.Image)(resources.GetObject("om_BillLadingMenubutton4.Image")));
             this.om_BillLadingMenubutton4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.om_BillLadingMenubutton4.Location = new System.Drawing.Point(0, 250);
-            this.om_BillLadingMenubutton4.Margin = new System.Windows.Forms.Padding(10);
+            this.om_BillLadingMenubutton4.Location = new System.Drawing.Point(0, 200);
+            this.om_BillLadingMenubutton4.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.om_BillLadingMenubutton4.Name = "om_BillLadingMenubutton4";
-            this.om_BillLadingMenubutton4.Size = new System.Drawing.Size(200, 50);
+            this.om_BillLadingMenubutton4.Size = new System.Drawing.Size(160, 40);
             this.om_BillLadingMenubutton4.TabIndex = 6;
             this.om_BillLadingMenubutton4.Text = "طباعة بوليصة شحن";
             this.om_BillLadingMenubutton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -714,10 +713,10 @@ namespace LoBridge
             this.om_LoadingMenubutton5.ForeColor = System.Drawing.SystemColors.WindowText;
             this.om_LoadingMenubutton5.Image = ((System.Drawing.Image)(resources.GetObject("om_LoadingMenubutton5.Image")));
             this.om_LoadingMenubutton5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.om_LoadingMenubutton5.Location = new System.Drawing.Point(0, 200);
-            this.om_LoadingMenubutton5.Margin = new System.Windows.Forms.Padding(10);
+            this.om_LoadingMenubutton5.Location = new System.Drawing.Point(0, 160);
+            this.om_LoadingMenubutton5.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.om_LoadingMenubutton5.Name = "om_LoadingMenubutton5";
-            this.om_LoadingMenubutton5.Size = new System.Drawing.Size(200, 50);
+            this.om_LoadingMenubutton5.Size = new System.Drawing.Size(160, 40);
             this.om_LoadingMenubutton5.TabIndex = 3;
             this.om_LoadingMenubutton5.Text = "تسجيل كارت تحميل";
             this.om_LoadingMenubutton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -742,10 +741,10 @@ namespace LoBridge
             this.om_OrderMenubutton6.ForeColor = System.Drawing.SystemColors.WindowText;
             this.om_OrderMenubutton6.Image = ((System.Drawing.Image)(resources.GetObject("om_OrderMenubutton6.Image")));
             this.om_OrderMenubutton6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.om_OrderMenubutton6.Location = new System.Drawing.Point(0, 150);
-            this.om_OrderMenubutton6.Margin = new System.Windows.Forms.Padding(10);
+            this.om_OrderMenubutton6.Location = new System.Drawing.Point(0, 120);
+            this.om_OrderMenubutton6.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.om_OrderMenubutton6.Name = "om_OrderMenubutton6";
-            this.om_OrderMenubutton6.Size = new System.Drawing.Size(200, 50);
+            this.om_OrderMenubutton6.Size = new System.Drawing.Size(160, 40);
             this.om_OrderMenubutton6.TabIndex = 2;
             this.om_OrderMenubutton6.Text = "تسجيل امر توريد";
             this.om_OrderMenubutton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -770,10 +769,10 @@ namespace LoBridge
             this.om_ContractsMenubutton7.ForeColor = System.Drawing.SystemColors.WindowText;
             this.om_ContractsMenubutton7.Image = ((System.Drawing.Image)(resources.GetObject("om_ContractsMenubutton7.Image")));
             this.om_ContractsMenubutton7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.om_ContractsMenubutton7.Location = new System.Drawing.Point(0, 100);
-            this.om_ContractsMenubutton7.Margin = new System.Windows.Forms.Padding(10);
+            this.om_ContractsMenubutton7.Location = new System.Drawing.Point(0, 80);
+            this.om_ContractsMenubutton7.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.om_ContractsMenubutton7.Name = "om_ContractsMenubutton7";
-            this.om_ContractsMenubutton7.Size = new System.Drawing.Size(200, 50);
+            this.om_ContractsMenubutton7.Size = new System.Drawing.Size(160, 40);
             this.om_ContractsMenubutton7.TabIndex = 1;
             this.om_ContractsMenubutton7.Text = "تسجيل عقد";
             this.om_ContractsMenubutton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -798,11 +797,11 @@ namespace LoBridge
             this.om_CustomersMenubutton8.ForeColor = System.Drawing.SystemColors.WindowText;
             this.om_CustomersMenubutton8.Image = ((System.Drawing.Image)(resources.GetObject("om_CustomersMenubutton8.Image")));
             this.om_CustomersMenubutton8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.om_CustomersMenubutton8.Location = new System.Drawing.Point(0, 50);
-            this.om_CustomersMenubutton8.Margin = new System.Windows.Forms.Padding(10);
+            this.om_CustomersMenubutton8.Location = new System.Drawing.Point(0, 40);
+            this.om_CustomersMenubutton8.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.om_CustomersMenubutton8.Name = "om_CustomersMenubutton8";
-            this.om_CustomersMenubutton8.Padding = new System.Windows.Forms.Padding(5);
-            this.om_CustomersMenubutton8.Size = new System.Drawing.Size(200, 50);
+            this.om_CustomersMenubutton8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.om_CustomersMenubutton8.Size = new System.Drawing.Size(160, 40);
             this.om_CustomersMenubutton8.TabIndex = 0;
             this.om_CustomersMenubutton8.Text = "العملاء";
             this.om_CustomersMenubutton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -815,10 +814,9 @@ namespace LoBridge
             this.panel3.Controls.Add(this.menumax);
             this.panel3.Controls.Add(this.menumin);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 6);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(0, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 44);
+            this.panel3.Size = new System.Drawing.Size(160, 35);
             this.panel3.TabIndex = 14;
             // 
             // menumax
@@ -830,11 +828,11 @@ namespace LoBridge
             this.menumax.Dock = System.Windows.Forms.DockStyle.Right;
             this.menumax.FlatAppearance.BorderSize = 0;
             this.menumax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menumax.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menumax.Location = new System.Drawing.Point(156, 0);
+            this.menumax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menumax.Location = new System.Drawing.Point(125, 0);
             this.menumax.Margin = new System.Windows.Forms.Padding(0);
             this.menumax.Name = "menumax";
-            this.menumax.Size = new System.Drawing.Size(44, 44);
+            this.menumax.Size = new System.Drawing.Size(35, 35);
             this.menumax.TabIndex = 1;
             this.menumax.UseVisualStyleBackColor = false;
             this.menumax.Visible = false;
@@ -849,11 +847,11 @@ namespace LoBridge
             this.menumin.Dock = System.Windows.Forms.DockStyle.Left;
             this.menumin.FlatAppearance.BorderSize = 0;
             this.menumin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menumin.Font = new System.Drawing.Font("Bauhaus 93", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menumin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menumin.Location = new System.Drawing.Point(0, 0);
             this.menumin.Margin = new System.Windows.Forms.Padding(0);
             this.menumin.Name = "menumin";
-            this.menumin.Size = new System.Drawing.Size(44, 44);
+            this.menumin.Size = new System.Drawing.Size(35, 35);
             this.menumin.TabIndex = 0;
             this.menumin.UseVisualStyleBackColor = false;
             this.menumin.Click += new System.EventHandler(this.menumin_Click);
@@ -867,11 +865,11 @@ namespace LoBridge
             this.reportViewpanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.reportViewpanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewpanel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportViewpanel1.Location = new System.Drawing.Point(0, 6);
+            this.reportViewpanel1.Location = new System.Drawing.Point(0, 5);
             this.reportViewpanel1.Margin = new System.Windows.Forms.Padding(0);
             this.reportViewpanel1.Name = "reportViewpanel1";
             this.reportViewpanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.reportViewpanel1.Size = new System.Drawing.Size(1529, 942);
+            this.reportViewpanel1.Size = new System.Drawing.Size(1221, 746);
             this.reportViewpanel1.TabIndex = 8;
             // 
             // reportMenupanel2
@@ -886,12 +884,12 @@ namespace LoBridge
             this.reportMenupanel2.Controls.Add(this.Wsemmarybutton13);
             this.reportMenupanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.reportMenupanel2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportMenupanel2.Location = new System.Drawing.Point(1529, 6);
+            this.reportMenupanel2.Location = new System.Drawing.Point(1221, 5);
             this.reportMenupanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.reportMenupanel2.MaximumSize = new System.Drawing.Size(226, 1200);
+            this.reportMenupanel2.MaximumSize = new System.Drawing.Size(181, 960);
             this.reportMenupanel2.Name = "reportMenupanel2";
-            this.reportMenupanel2.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.reportMenupanel2.Size = new System.Drawing.Size(226, 942);
+            this.reportMenupanel2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.reportMenupanel2.Size = new System.Drawing.Size(181, 746);
             this.reportMenupanel2.TabIndex = 9;
             // 
             // button10sumIn
@@ -909,11 +907,11 @@ namespace LoBridge
             this.button10sumIn.ForeColor = System.Drawing.Color.White;
             this.button10sumIn.Image = ((System.Drawing.Image)(resources.GetObject("button10sumIn.Image")));
             this.button10sumIn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10sumIn.Location = new System.Drawing.Point(0, 214);
+            this.button10sumIn.Location = new System.Drawing.Point(0, 171);
             this.button10sumIn.Margin = new System.Windows.Forms.Padding(0);
             this.button10sumIn.Name = "button10sumIn";
-            this.button10sumIn.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.button10sumIn.Size = new System.Drawing.Size(226, 54);
+            this.button10sumIn.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.button10sumIn.Size = new System.Drawing.Size(181, 43);
             this.button10sumIn.TabIndex = 16;
             this.button10sumIn.Text = "تقرير الوارد الاجمالي";
             this.button10sumIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -935,11 +933,11 @@ namespace LoBridge
             this.button11dailyIn.ForeColor = System.Drawing.Color.White;
             this.button11dailyIn.Image = ((System.Drawing.Image)(resources.GetObject("button11dailyIn.Image")));
             this.button11dailyIn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button11dailyIn.Location = new System.Drawing.Point(0, 160);
+            this.button11dailyIn.Location = new System.Drawing.Point(0, 128);
             this.button11dailyIn.Margin = new System.Windows.Forms.Padding(0);
             this.button11dailyIn.Name = "button11dailyIn";
-            this.button11dailyIn.Padding = new System.Windows.Forms.Padding(0, 0, 6, 0);
-            this.button11dailyIn.Size = new System.Drawing.Size(226, 54);
+            this.button11dailyIn.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.button11dailyIn.Size = new System.Drawing.Size(181, 43);
             this.button11dailyIn.TabIndex = 15;
             this.button11dailyIn.Text = "تقرير الوارد اليومي";
             this.button11dailyIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -964,11 +962,11 @@ namespace LoBridge
             this.buttondailyout.ForeColor = System.Drawing.Color.White;
             this.buttondailyout.Image = ((System.Drawing.Image)(resources.GetObject("buttondailyout.Image")));
             this.buttondailyout.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttondailyout.Location = new System.Drawing.Point(0, 106);
+            this.buttondailyout.Location = new System.Drawing.Point(0, 85);
             this.buttondailyout.Margin = new System.Windows.Forms.Padding(0);
             this.buttondailyout.Name = "buttondailyout";
-            this.buttondailyout.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.buttondailyout.Size = new System.Drawing.Size(226, 54);
+            this.buttondailyout.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.buttondailyout.Size = new System.Drawing.Size(181, 43);
             this.buttondailyout.TabIndex = 14;
             this.buttondailyout.Text = "تقرير الصادر اليومي";
             this.buttondailyout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -990,11 +988,11 @@ namespace LoBridge
             this.reportingbutton12.ForeColor = System.Drawing.Color.White;
             this.reportingbutton12.Image = ((System.Drawing.Image)(resources.GetObject("reportingbutton12.Image")));
             this.reportingbutton12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.reportingbutton12.Location = new System.Drawing.Point(0, 56);
+            this.reportingbutton12.Location = new System.Drawing.Point(0, 45);
             this.reportingbutton12.Margin = new System.Windows.Forms.Padding(0);
             this.reportingbutton12.Name = "reportingbutton12";
-            this.reportingbutton12.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.reportingbutton12.Size = new System.Drawing.Size(226, 50);
+            this.reportingbutton12.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.reportingbutton12.Size = new System.Drawing.Size(181, 40);
             this.reportingbutton12.TabIndex = 6;
             this.reportingbutton12.Text = "تقارير العقود";
             this.reportingbutton12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1017,11 +1015,11 @@ namespace LoBridge
             this.Wsemmarybutton13.ForeColor = System.Drawing.Color.White;
             this.Wsemmarybutton13.Image = ((System.Drawing.Image)(resources.GetObject("Wsemmarybutton13.Image")));
             this.Wsemmarybutton13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Wsemmarybutton13.Location = new System.Drawing.Point(0, 6);
+            this.Wsemmarybutton13.Location = new System.Drawing.Point(0, 5);
             this.Wsemmarybutton13.Margin = new System.Windows.Forms.Padding(0);
             this.Wsemmarybutton13.Name = "Wsemmarybutton13";
-            this.Wsemmarybutton13.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
-            this.Wsemmarybutton13.Size = new System.Drawing.Size(226, 50);
+            this.Wsemmarybutton13.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.Wsemmarybutton13.Size = new System.Drawing.Size(181, 40);
             this.Wsemmarybutton13.TabIndex = 5;
             this.Wsemmarybutton13.Text = "ملخص الميزان";
             this.Wsemmarybutton13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1038,11 +1036,11 @@ namespace LoBridge
             this.weightViewpanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.weightViewpanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.weightViewpanel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weightViewpanel1.Location = new System.Drawing.Point(0, 6);
+            this.weightViewpanel1.Location = new System.Drawing.Point(0, 5);
             this.weightViewpanel1.Margin = new System.Windows.Forms.Padding(0);
             this.weightViewpanel1.Name = "weightViewpanel1";
             this.weightViewpanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.weightViewpanel1.Size = new System.Drawing.Size(1529, 942);
+            this.weightViewpanel1.Size = new System.Drawing.Size(1221, 746);
             this.weightViewpanel1.TabIndex = 12;
             // 
             // WeightMenupanel3
@@ -1057,11 +1055,11 @@ namespace LoBridge
             this.WeightMenupanel3.Controls.Add(this.WeightINMenubutton3);
             this.WeightMenupanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.WeightMenupanel3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
-            this.WeightMenupanel3.Location = new System.Drawing.Point(1529, 6);
+            this.WeightMenupanel3.Location = new System.Drawing.Point(1221, 5);
             this.WeightMenupanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.WeightMenupanel3.MaximumSize = new System.Drawing.Size(226, 1200);
+            this.WeightMenupanel3.MaximumSize = new System.Drawing.Size(181, 960);
             this.WeightMenupanel3.Name = "WeightMenupanel3";
-            this.WeightMenupanel3.Size = new System.Drawing.Size(226, 942);
+            this.WeightMenupanel3.Size = new System.Drawing.Size(181, 746);
             this.WeightMenupanel3.TabIndex = 11;
             // 
             // StopWscreenBtn
@@ -1077,11 +1075,11 @@ namespace LoBridge
             this.StopWscreenBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.StopWscreenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StopWscreenBtn.ForeColor = System.Drawing.Color.White;
-            this.StopWscreenBtn.Location = new System.Drawing.Point(0, 272);
+            this.StopWscreenBtn.Location = new System.Drawing.Point(0, 216);
             this.StopWscreenBtn.Margin = new System.Windows.Forms.Padding(0);
             this.StopWscreenBtn.Name = "StopWscreenBtn";
-            this.StopWscreenBtn.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.StopWscreenBtn.Size = new System.Drawing.Size(226, 68);
+            this.StopWscreenBtn.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.StopWscreenBtn.Size = new System.Drawing.Size(181, 54);
             this.StopWscreenBtn.TabIndex = 7;
             this.StopWscreenBtn.Text = "ايقاف/تشغيل الميزان";
             this.StopWscreenBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1101,11 +1099,11 @@ namespace LoBridge
             this.listOutMenubutton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.listOutMenubutton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.listOutMenubutton1.ForeColor = System.Drawing.Color.White;
-            this.listOutMenubutton1.Location = new System.Drawing.Point(0, 204);
+            this.listOutMenubutton1.Location = new System.Drawing.Point(0, 162);
             this.listOutMenubutton1.Margin = new System.Windows.Forms.Padding(0);
             this.listOutMenubutton1.Name = "listOutMenubutton1";
-            this.listOutMenubutton1.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.listOutMenubutton1.Size = new System.Drawing.Size(226, 68);
+            this.listOutMenubutton1.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.listOutMenubutton1.Size = new System.Drawing.Size(181, 54);
             this.listOutMenubutton1.TabIndex = 5;
             this.listOutMenubutton1.Text = "عرض كروت التحميل";
             this.listOutMenubutton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1125,11 +1123,11 @@ namespace LoBridge
             this.ListWINMenubutton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.ListWINMenubutton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ListWINMenubutton1.ForeColor = System.Drawing.Color.White;
-            this.ListWINMenubutton1.Location = new System.Drawing.Point(0, 136);
+            this.ListWINMenubutton1.Location = new System.Drawing.Point(0, 108);
             this.ListWINMenubutton1.Margin = new System.Windows.Forms.Padding(0);
             this.ListWINMenubutton1.Name = "ListWINMenubutton1";
-            this.ListWINMenubutton1.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.ListWINMenubutton1.Size = new System.Drawing.Size(226, 68);
+            this.ListWINMenubutton1.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.ListWINMenubutton1.Size = new System.Drawing.Size(181, 54);
             this.ListWINMenubutton1.TabIndex = 2;
             this.ListWINMenubutton1.Text = "عرض كروت الاستلام";
             this.ListWINMenubutton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1149,11 +1147,11 @@ namespace LoBridge
             this.WeightOutMenubutton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.WeightOutMenubutton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.WeightOutMenubutton2.ForeColor = System.Drawing.Color.White;
-            this.WeightOutMenubutton2.Location = new System.Drawing.Point(0, 68);
+            this.WeightOutMenubutton2.Location = new System.Drawing.Point(0, 54);
             this.WeightOutMenubutton2.Margin = new System.Windows.Forms.Padding(0);
             this.WeightOutMenubutton2.Name = "WeightOutMenubutton2";
-            this.WeightOutMenubutton2.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.WeightOutMenubutton2.Size = new System.Drawing.Size(226, 68);
+            this.WeightOutMenubutton2.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.WeightOutMenubutton2.Size = new System.Drawing.Size(181, 54);
             this.WeightOutMenubutton2.TabIndex = 1;
             this.WeightOutMenubutton2.Text = "وزن صادر";
             this.WeightOutMenubutton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1176,8 +1174,8 @@ namespace LoBridge
             this.WeightINMenubutton3.Location = new System.Drawing.Point(0, 0);
             this.WeightINMenubutton3.Margin = new System.Windows.Forms.Padding(0);
             this.WeightINMenubutton3.Name = "WeightINMenubutton3";
-            this.WeightINMenubutton3.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.WeightINMenubutton3.Size = new System.Drawing.Size(226, 68);
+            this.WeightINMenubutton3.Padding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.WeightINMenubutton3.Size = new System.Drawing.Size(181, 54);
             this.WeightINMenubutton3.TabIndex = 0;
             this.WeightINMenubutton3.Text = "وزن وارد";
             this.WeightINMenubutton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1190,11 +1188,11 @@ namespace LoBridge
             this.commViewpanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.commViewpanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.commViewpanel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.commViewpanel1.Location = new System.Drawing.Point(0, 6);
+            this.commViewpanel1.Location = new System.Drawing.Point(0, 5);
             this.commViewpanel1.Margin = new System.Windows.Forms.Padding(0);
             this.commViewpanel1.Name = "commViewpanel1";
             this.commViewpanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.commViewpanel1.Size = new System.Drawing.Size(1529, 942);
+            this.commViewpanel1.Size = new System.Drawing.Size(1221, 746);
             this.commViewpanel1.TabIndex = 12;
             // 
             // commMenupanel3
@@ -1208,12 +1206,12 @@ namespace LoBridge
             this.commMenupanel3.Controls.Add(this.newCommbutton5);
             this.commMenupanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.commMenupanel3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
-            this.commMenupanel3.Location = new System.Drawing.Point(1529, 6);
+            this.commMenupanel3.Location = new System.Drawing.Point(1221, 5);
             this.commMenupanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.commMenupanel3.MaximumSize = new System.Drawing.Size(226, 1200);
+            this.commMenupanel3.MaximumSize = new System.Drawing.Size(181, 960);
             this.commMenupanel3.Name = "commMenupanel3";
-            this.commMenupanel3.Padding = new System.Windows.Forms.Padding(6);
-            this.commMenupanel3.Size = new System.Drawing.Size(226, 942);
+            this.commMenupanel3.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.commMenupanel3.Size = new System.Drawing.Size(181, 746);
             this.commMenupanel3.TabIndex = 13;
             // 
             // button1
@@ -1227,10 +1225,10 @@ namespace LoBridge
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Blue;
-            this.button1.Location = new System.Drawing.Point(-1, 168);
+            this.button1.Location = new System.Drawing.Point(-1, 134);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(226, 50);
+            this.button1.Size = new System.Drawing.Size(181, 40);
             this.button1.TabIndex = 5;
             this.button1.Text = "عرض اوزان التحميل";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1248,10 +1246,10 @@ namespace LoBridge
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Blue;
-            this.button2.Location = new System.Drawing.Point(-1, 118);
+            this.button2.Location = new System.Drawing.Point(-1, 94);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(226, 50);
+            this.button2.Size = new System.Drawing.Size(181, 40);
             this.button2.TabIndex = 2;
             this.button2.Text = "عرض اوزان الاستلام";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1269,10 +1267,10 @@ namespace LoBridge
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.Blue;
-            this.button3.Location = new System.Drawing.Point(-2, 68);
+            this.button3.Location = new System.Drawing.Point(-2, 54);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(226, 50);
+            this.button3.Size = new System.Drawing.Size(181, 40);
             this.button3.TabIndex = 1;
             this.button3.Text = "وزن تحميل";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1291,10 +1289,10 @@ namespace LoBridge
             this.newCommbutton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.newCommbutton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newCommbutton5.ForeColor = System.Drawing.Color.White;
-            this.newCommbutton5.Location = new System.Drawing.Point(-1, 18);
+            this.newCommbutton5.Location = new System.Drawing.Point(-1, 14);
             this.newCommbutton5.Margin = new System.Windows.Forms.Padding(0);
             this.newCommbutton5.Name = "newCommbutton5";
-            this.newCommbutton5.Size = new System.Drawing.Size(226, 59);
+            this.newCommbutton5.Size = new System.Drawing.Size(181, 47);
             this.newCommbutton5.TabIndex = 0;
             this.newCommbutton5.Text = "الاصناف";
             this.newCommbutton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1307,11 +1305,11 @@ namespace LoBridge
             this.transViewpanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.transViewpanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.transViewpanel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transViewpanel1.Location = new System.Drawing.Point(0, 6);
+            this.transViewpanel1.Location = new System.Drawing.Point(0, 5);
             this.transViewpanel1.Margin = new System.Windows.Forms.Padding(0);
             this.transViewpanel1.Name = "transViewpanel1";
             this.transViewpanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.transViewpanel1.Size = new System.Drawing.Size(1529, 942);
+            this.transViewpanel1.Size = new System.Drawing.Size(1221, 746);
             this.transViewpanel1.TabIndex = 14;
             // 
             // transMenupanel3
@@ -1326,11 +1324,11 @@ namespace LoBridge
             this.transMenupanel3.Controls.Add(this.newTruckbutton9);
             this.transMenupanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.transMenupanel3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
-            this.transMenupanel3.Location = new System.Drawing.Point(1529, 6);
+            this.transMenupanel3.Location = new System.Drawing.Point(1221, 5);
             this.transMenupanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.transMenupanel3.MaximumSize = new System.Drawing.Size(226, 1200);
+            this.transMenupanel3.MaximumSize = new System.Drawing.Size(181, 960);
             this.transMenupanel3.Name = "transMenupanel3";
-            this.transMenupanel3.Size = new System.Drawing.Size(226, 942);
+            this.transMenupanel3.Size = new System.Drawing.Size(181, 746);
             this.transMenupanel3.TabIndex = 15;
             // 
             // btnTruckTypes
@@ -1346,10 +1344,10 @@ namespace LoBridge
             this.btnTruckTypes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.btnTruckTypes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTruckTypes.ForeColor = System.Drawing.Color.White;
-            this.btnTruckTypes.Location = new System.Drawing.Point(0, 196);
-            this.btnTruckTypes.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.btnTruckTypes.Location = new System.Drawing.Point(0, 156);
+            this.btnTruckTypes.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.btnTruckTypes.Name = "btnTruckTypes";
-            this.btnTruckTypes.Size = new System.Drawing.Size(226, 49);
+            this.btnTruckTypes.Size = new System.Drawing.Size(181, 39);
             this.btnTruckTypes.TabIndex = 6;
             this.btnTruckTypes.Text = "انواع الشاحنات";
             this.btnTruckTypes.UseVisualStyleBackColor = false;
@@ -1366,10 +1364,10 @@ namespace LoBridge
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(0, 147);
-            this.button5.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.button5.Location = new System.Drawing.Point(0, 117);
+            this.button5.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(226, 49);
+            this.button5.Size = new System.Drawing.Size(181, 39);
             this.button5.TabIndex = 5;
             this.button5.Text = "عرض اوزان التحميل";
             this.button5.UseVisualStyleBackColor = false;
@@ -1386,10 +1384,10 @@ namespace LoBridge
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button7.Location = new System.Drawing.Point(0, 98);
-            this.button7.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.button7.Location = new System.Drawing.Point(0, 78);
+            this.button7.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(226, 49);
+            this.button7.Size = new System.Drawing.Size(181, 39);
             this.button7.TabIndex = 2;
             this.button7.Text = "تسجيل شركة نقل";
             this.button7.UseVisualStyleBackColor = false;
@@ -1406,10 +1404,10 @@ namespace LoBridge
             this.newDriverbutton8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.newDriverbutton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newDriverbutton8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.newDriverbutton8.Location = new System.Drawing.Point(0, 49);
-            this.newDriverbutton8.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.newDriverbutton8.Location = new System.Drawing.Point(0, 39);
+            this.newDriverbutton8.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.newDriverbutton8.Name = "newDriverbutton8";
-            this.newDriverbutton8.Size = new System.Drawing.Size(226, 49);
+            this.newDriverbutton8.Size = new System.Drawing.Size(181, 39);
             this.newDriverbutton8.TabIndex = 1;
             this.newDriverbutton8.Text = "تسجيل سائق";
             this.newDriverbutton8.UseVisualStyleBackColor = false;
@@ -1429,9 +1427,9 @@ namespace LoBridge
             this.newTruckbutton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newTruckbutton9.ForeColor = System.Drawing.Color.White;
             this.newTruckbutton9.Location = new System.Drawing.Point(0, 0);
-            this.newTruckbutton9.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.newTruckbutton9.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.newTruckbutton9.Name = "newTruckbutton9";
-            this.newTruckbutton9.Size = new System.Drawing.Size(226, 49);
+            this.newTruckbutton9.Size = new System.Drawing.Size(181, 39);
             this.newTruckbutton9.TabIndex = 0;
             this.newTruckbutton9.Text = "تسجيل";
             this.newTruckbutton9.UseVisualStyleBackColor = false;
@@ -1443,11 +1441,11 @@ namespace LoBridge
             this.userViewpanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.userViewpanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userViewpanel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userViewpanel1.Location = new System.Drawing.Point(0, 6);
+            this.userViewpanel1.Location = new System.Drawing.Point(0, 5);
             this.userViewpanel1.Margin = new System.Windows.Forms.Padding(0);
             this.userViewpanel1.Name = "userViewpanel1";
             this.userViewpanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.userViewpanel1.Size = new System.Drawing.Size(1529, 942);
+            this.userViewpanel1.Size = new System.Drawing.Size(1221, 746);
             this.userViewpanel1.TabIndex = 8;
             // 
             // userMenupanel3
@@ -1464,11 +1462,11 @@ namespace LoBridge
             this.userMenupanel3.Controls.Add(this.userProfilebutton16);
             this.userMenupanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.userMenupanel3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold);
-            this.userMenupanel3.Location = new System.Drawing.Point(1529, 6);
+            this.userMenupanel3.Location = new System.Drawing.Point(1221, 5);
             this.userMenupanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.userMenupanel3.MaximumSize = new System.Drawing.Size(226, 1200);
+            this.userMenupanel3.MaximumSize = new System.Drawing.Size(181, 960);
             this.userMenupanel3.Name = "userMenupanel3";
-            this.userMenupanel3.Size = new System.Drawing.Size(226, 942);
+            this.userMenupanel3.Size = new System.Drawing.Size(181, 746);
             this.userMenupanel3.TabIndex = 9;
             // 
             // refreshPerm
@@ -1484,10 +1482,10 @@ namespace LoBridge
             this.refreshPerm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.refreshPerm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshPerm.ForeColor = System.Drawing.Color.White;
-            this.refreshPerm.Location = new System.Drawing.Point(0, 330);
-            this.refreshPerm.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.refreshPerm.Location = new System.Drawing.Point(0, 264);
+            this.refreshPerm.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.refreshPerm.Name = "refreshPerm";
-            this.refreshPerm.Size = new System.Drawing.Size(226, 55);
+            this.refreshPerm.Size = new System.Drawing.Size(181, 44);
             this.refreshPerm.TabIndex = 7;
             this.refreshPerm.Text = "تحديث الصلاحيات";
             this.refreshPerm.UseVisualStyleBackColor = false;
@@ -1506,10 +1504,10 @@ namespace LoBridge
             this.logOutbutton13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.logOutbutton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logOutbutton13.ForeColor = System.Drawing.Color.White;
-            this.logOutbutton13.Location = new System.Drawing.Point(0, 275);
-            this.logOutbutton13.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.logOutbutton13.Location = new System.Drawing.Point(0, 220);
+            this.logOutbutton13.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.logOutbutton13.Name = "logOutbutton13";
-            this.logOutbutton13.Size = new System.Drawing.Size(226, 55);
+            this.logOutbutton13.Size = new System.Drawing.Size(181, 44);
             this.logOutbutton13.TabIndex = 3;
             this.logOutbutton13.Text = "تسجيل خروج";
             this.logOutbutton13.UseVisualStyleBackColor = false;
@@ -1528,10 +1526,10 @@ namespace LoBridge
             this.changePassbutton14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.changePassbutton14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.changePassbutton14.ForeColor = System.Drawing.Color.White;
-            this.changePassbutton14.Location = new System.Drawing.Point(0, 220);
-            this.changePassbutton14.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.changePassbutton14.Location = new System.Drawing.Point(0, 176);
+            this.changePassbutton14.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.changePassbutton14.Name = "changePassbutton14";
-            this.changePassbutton14.Size = new System.Drawing.Size(226, 55);
+            this.changePassbutton14.Size = new System.Drawing.Size(181, 44);
             this.changePassbutton14.TabIndex = 2;
             this.changePassbutton14.Text = "تغير كلمة المرور";
             this.changePassbutton14.UseVisualStyleBackColor = false;
@@ -1551,10 +1549,10 @@ namespace LoBridge
             this.btn_perm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.btn_perm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_perm.ForeColor = System.Drawing.Color.White;
-            this.btn_perm.Location = new System.Drawing.Point(0, 165);
-            this.btn_perm.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.btn_perm.Location = new System.Drawing.Point(0, 132);
+            this.btn_perm.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.btn_perm.Name = "btn_perm";
-            this.btn_perm.Size = new System.Drawing.Size(226, 55);
+            this.btn_perm.Size = new System.Drawing.Size(181, 44);
             this.btn_perm.TabIndex = 8;
             this.btn_perm.Text = "الصلاحيات";
             this.btn_perm.UseVisualStyleBackColor = false;
@@ -1573,10 +1571,10 @@ namespace LoBridge
             this.emailSettingbutton15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.emailSettingbutton15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.emailSettingbutton15.ForeColor = System.Drawing.Color.White;
-            this.emailSettingbutton15.Location = new System.Drawing.Point(0, 110);
-            this.emailSettingbutton15.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.emailSettingbutton15.Location = new System.Drawing.Point(0, 88);
+            this.emailSettingbutton15.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.emailSettingbutton15.Name = "emailSettingbutton15";
-            this.emailSettingbutton15.Size = new System.Drawing.Size(226, 55);
+            this.emailSettingbutton15.Size = new System.Drawing.Size(181, 44);
             this.emailSettingbutton15.TabIndex = 1;
             this.emailSettingbutton15.Text = "اعدادت الايميل";
             this.emailSettingbutton15.UseVisualStyleBackColor = false;
@@ -1595,10 +1593,10 @@ namespace LoBridge
             this.addNewUer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.addNewUer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewUer.ForeColor = System.Drawing.Color.White;
-            this.addNewUer.Location = new System.Drawing.Point(0, 55);
-            this.addNewUer.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.addNewUer.Location = new System.Drawing.Point(0, 44);
+            this.addNewUer.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.addNewUer.Name = "addNewUer";
-            this.addNewUer.Size = new System.Drawing.Size(226, 55);
+            this.addNewUer.Size = new System.Drawing.Size(181, 44);
             this.addNewUer.TabIndex = 6;
             this.addNewUer.Text = "المستخدمين";
             this.addNewUer.UseVisualStyleBackColor = false;
@@ -1618,9 +1616,9 @@ namespace LoBridge
             this.userProfilebutton16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userProfilebutton16.ForeColor = System.Drawing.Color.White;
             this.userProfilebutton16.Location = new System.Drawing.Point(0, 0);
-            this.userProfilebutton16.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.userProfilebutton16.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.userProfilebutton16.Name = "userProfilebutton16";
-            this.userProfilebutton16.Size = new System.Drawing.Size(226, 55);
+            this.userProfilebutton16.Size = new System.Drawing.Size(181, 44);
             this.userProfilebutton16.TabIndex = 0;
             this.userProfilebutton16.Text = "بيانات المستخدم";
             this.userProfilebutton16.UseVisualStyleBackColor = false;
@@ -1632,11 +1630,11 @@ namespace LoBridge
             this.SysViewpanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SysViewpanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SysViewpanel4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SysViewpanel4.Location = new System.Drawing.Point(0, 6);
+            this.SysViewpanel4.Location = new System.Drawing.Point(0, 5);
             this.SysViewpanel4.Margin = new System.Windows.Forms.Padding(0);
             this.SysViewpanel4.Name = "SysViewpanel4";
             this.SysViewpanel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.SysViewpanel4.Size = new System.Drawing.Size(1529, 942);
+            this.SysViewpanel4.Size = new System.Drawing.Size(1221, 746);
             this.SysViewpanel4.TabIndex = 8;
             // 
             // SysSettingMenupanel5
@@ -1647,12 +1645,12 @@ namespace LoBridge
             this.SysSettingMenupanel5.Controls.Add(this.settingsbutton25);
             this.SysSettingMenupanel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.SysSettingMenupanel5.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SysSettingMenupanel5.Location = new System.Drawing.Point(1529, 6);
+            this.SysSettingMenupanel5.Location = new System.Drawing.Point(1221, 5);
             this.SysSettingMenupanel5.Margin = new System.Windows.Forms.Padding(0);
-            this.SysSettingMenupanel5.MaximumSize = new System.Drawing.Size(226, 1132);
-            this.SysSettingMenupanel5.MinimumSize = new System.Drawing.Size(226, 1132);
+            this.SysSettingMenupanel5.MaximumSize = new System.Drawing.Size(181, 906);
+            this.SysSettingMenupanel5.MinimumSize = new System.Drawing.Size(181, 906);
             this.SysSettingMenupanel5.Name = "SysSettingMenupanel5";
-            this.SysSettingMenupanel5.Size = new System.Drawing.Size(226, 1132);
+            this.SysSettingMenupanel5.Size = new System.Drawing.Size(181, 906);
             this.SysSettingMenupanel5.TabIndex = 9;
             // 
             // settingsbutton25
@@ -1667,9 +1665,9 @@ namespace LoBridge
             this.settingsbutton25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsbutton25.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.settingsbutton25.Location = new System.Drawing.Point(0, 0);
-            this.settingsbutton25.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.settingsbutton25.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.settingsbutton25.Name = "settingsbutton25";
-            this.settingsbutton25.Size = new System.Drawing.Size(226, 49);
+            this.settingsbutton25.Size = new System.Drawing.Size(181, 39);
             this.settingsbutton25.TabIndex = 0;
             this.settingsbutton25.Text = "الاعدادت";
             this.settingsbutton25.UseVisualStyleBackColor = false;
@@ -1699,7 +1697,7 @@ namespace LoBridge
             this.MainTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.MainTab.RightToLeftLayout = true;
             this.MainTab.SelectedIndex = 7;
-            this.MainTab.Size = new System.Drawing.Size(1763, 986);
+            this.MainTab.Size = new System.Drawing.Size(1073, 576);
             this.MainTab.TabIndex = 0;
             this.MainTab.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.MainTab_Selecting_1);
             // 
@@ -1712,9 +1710,8 @@ namespace LoBridge
             this.lobsys.HorizontalScrollbarBarColor = true;
             this.lobsys.HorizontalScrollbarSize = 1;
             this.lobsys.Location = new System.Drawing.Point(4, 34);
-            this.lobsys.Margin = new System.Windows.Forms.Padding(4);
             this.lobsys.Name = "lobsys";
-            this.lobsys.Size = new System.Drawing.Size(1755, 948);
+            this.lobsys.Size = new System.Drawing.Size(1065, 538);
             this.lobsys.Style = MetroFramework.MetroColorStyle.Silver;
             this.lobsys.TabIndex = 0;
             this.lobsys.Text = "       LoBridge System            ";
@@ -1732,18 +1729,18 @@ namespace LoBridge
             this.OutboundPage.Controls.Add(this.OutMenupanel2);
             this.OutboundPage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.OutboundPage.HorizontalScrollbarBarColor = true;
-            this.OutboundPage.HorizontalScrollbarSize = 6;
+            this.OutboundPage.HorizontalScrollbarSize = 5;
             this.OutboundPage.ImageIndex = 10;
             this.OutboundPage.Location = new System.Drawing.Point(4, 34);
             this.OutboundPage.Margin = new System.Windows.Forms.Padding(0);
             this.OutboundPage.Name = "OutboundPage";
-            this.OutboundPage.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.OutboundPage.Size = new System.Drawing.Size(1755, 948);
+            this.OutboundPage.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.OutboundPage.Size = new System.Drawing.Size(1402, 751);
             this.OutboundPage.Style = MetroFramework.MetroColorStyle.Blue;
             this.OutboundPage.TabIndex = 2;
             this.OutboundPage.Text = "الصادر";
             this.OutboundPage.VerticalScrollbarBarColor = true;
-            this.OutboundPage.VerticalScrollbarSize = 6;
+            this.OutboundPage.VerticalScrollbarSize = 5;
             // 
             // OutGoingViewPanel
             // 
@@ -1756,12 +1753,12 @@ namespace LoBridge
             this.OutGoingViewPanel.CausesValidation = false;
             this.OutGoingViewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OutGoingViewPanel.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OutGoingViewPanel.Location = new System.Drawing.Point(0, 6);
+            this.OutGoingViewPanel.Location = new System.Drawing.Point(0, 5);
             this.OutGoingViewPanel.Margin = new System.Windows.Forms.Padding(0);
             this.OutGoingViewPanel.Name = "OutGoingViewPanel";
-            this.OutGoingViewPanel.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
+            this.OutGoingViewPanel.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.OutGoingViewPanel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.OutGoingViewPanel.Size = new System.Drawing.Size(1555, 942);
+            this.OutGoingViewPanel.Size = new System.Drawing.Size(1242, 746);
             this.OutGoingViewPanel.TabIndex = 6;
             this.OutGoingViewPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.OutGoingViewPanel_Paint);
             this.OutGoingViewPanel.MouseEnter += new System.EventHandler(this.OutGoingViewPanel_MouseEnter);
@@ -1779,17 +1776,16 @@ namespace LoBridge
             this.InboundPage.HorizontalScrollbarSize = 1;
             this.InboundPage.ImageIndex = 3;
             this.InboundPage.Location = new System.Drawing.Point(4, 34);
-            this.InboundPage.Margin = new System.Windows.Forms.Padding(4);
             this.InboundPage.Name = "InboundPage";
-            this.InboundPage.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.InboundPage.Size = new System.Drawing.Size(1755, 948);
+            this.InboundPage.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.InboundPage.Size = new System.Drawing.Size(1402, 751);
             this.InboundPage.Style = MetroFramework.MetroColorStyle.Silver;
             this.InboundPage.TabIndex = 1;
             this.InboundPage.Text = "     الوارد   ";
             this.InboundPage.VerticalScrollbar = true;
             this.InboundPage.VerticalScrollbarBarColor = true;
             this.InboundPage.VerticalScrollbarHighlightOnWheel = true;
-            this.InboundPage.VerticalScrollbarSize = 6;
+            this.InboundPage.VerticalScrollbarSize = 5;
             // 
             // ReportsPage
             // 
@@ -1802,10 +1798,9 @@ namespace LoBridge
             this.ReportsPage.HorizontalScrollbarSize = 1;
             this.ReportsPage.ImageIndex = 6;
             this.ReportsPage.Location = new System.Drawing.Point(4, 34);
-            this.ReportsPage.Margin = new System.Windows.Forms.Padding(4);
             this.ReportsPage.Name = "ReportsPage";
-            this.ReportsPage.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.ReportsPage.Size = new System.Drawing.Size(1755, 948);
+            this.ReportsPage.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.ReportsPage.Size = new System.Drawing.Size(1402, 751);
             this.ReportsPage.TabIndex = 3;
             this.ReportsPage.Text = "التقارير";
             this.ReportsPage.VerticalScrollbar = true;
@@ -1822,10 +1817,9 @@ namespace LoBridge
             this.WBridgePage.HorizontalScrollbarSize = 1;
             this.WBridgePage.ImageIndex = 9;
             this.WBridgePage.Location = new System.Drawing.Point(4, 34);
-            this.WBridgePage.Margin = new System.Windows.Forms.Padding(4);
             this.WBridgePage.Name = "WBridgePage";
-            this.WBridgePage.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.WBridgePage.Size = new System.Drawing.Size(1755, 948);
+            this.WBridgePage.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.WBridgePage.Size = new System.Drawing.Size(1402, 751);
             this.WBridgePage.TabIndex = 4;
             this.WBridgePage.Text = "الميزان   ";
             this.WBridgePage.VerticalScrollbar = true;
@@ -1842,10 +1836,9 @@ namespace LoBridge
             this.CatPage.HorizontalScrollbarSize = 1;
             this.CatPage.ImageIndex = 7;
             this.CatPage.Location = new System.Drawing.Point(4, 34);
-            this.CatPage.Margin = new System.Windows.Forms.Padding(4);
             this.CatPage.Name = "CatPage";
-            this.CatPage.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.CatPage.Size = new System.Drawing.Size(1755, 948);
+            this.CatPage.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.CatPage.Size = new System.Drawing.Size(1402, 751);
             this.CatPage.TabIndex = 5;
             this.CatPage.Text = "الاصناف   ";
             this.CatPage.VerticalScrollbar = true;
@@ -1862,10 +1855,9 @@ namespace LoBridge
             this.TransPage.HorizontalScrollbarSize = 1;
             this.TransPage.ImageIndex = 2;
             this.TransPage.Location = new System.Drawing.Point(4, 34);
-            this.TransPage.Margin = new System.Windows.Forms.Padding(4);
             this.TransPage.Name = "TransPage";
-            this.TransPage.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.TransPage.Size = new System.Drawing.Size(1755, 948);
+            this.TransPage.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.TransPage.Size = new System.Drawing.Size(1402, 751);
             this.TransPage.TabIndex = 6;
             this.TransPage.Text = "ادارة النقل    ";
             this.TransPage.VerticalScrollbar = true;
@@ -1883,10 +1875,9 @@ namespace LoBridge
             this.UserSettingsPage.HorizontalScrollbarSize = 1;
             this.UserSettingsPage.ImageIndex = 5;
             this.UserSettingsPage.Location = new System.Drawing.Point(4, 34);
-            this.UserSettingsPage.Margin = new System.Windows.Forms.Padding(4);
             this.UserSettingsPage.Name = "UserSettingsPage";
-            this.UserSettingsPage.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.UserSettingsPage.Size = new System.Drawing.Size(1755, 948);
+            this.UserSettingsPage.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.UserSettingsPage.Size = new System.Drawing.Size(1402, 751);
             this.UserSettingsPage.Style = MetroFramework.MetroColorStyle.White;
             this.UserSettingsPage.TabIndex = 7;
             this.UserSettingsPage.Text = "   اعدادات المستخدم     ";
@@ -1906,10 +1897,9 @@ namespace LoBridge
             this.SySettingsPage.HorizontalScrollbarSize = 1;
             this.SySettingsPage.ImageIndex = 4;
             this.SySettingsPage.Location = new System.Drawing.Point(4, 34);
-            this.SySettingsPage.Margin = new System.Windows.Forms.Padding(4);
             this.SySettingsPage.Name = "SySettingsPage";
-            this.SySettingsPage.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.SySettingsPage.Size = new System.Drawing.Size(1755, 948);
+            this.SySettingsPage.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.SySettingsPage.Size = new System.Drawing.Size(1402, 751);
             this.SySettingsPage.TabIndex = 8;
             this.SySettingsPage.Text = "   اعدادت النظام     ";
             this.SySettingsPage.VerticalScrollbar = true;
@@ -1925,17 +1915,16 @@ namespace LoBridge
             this.CamPage.HorizontalScrollbar = true;
             this.CamPage.HorizontalScrollbarBarColor = true;
             this.CamPage.HorizontalScrollbarHighlightOnWheel = true;
-            this.CamPage.HorizontalScrollbarSize = 6;
+            this.CamPage.HorizontalScrollbarSize = 5;
             this.CamPage.Location = new System.Drawing.Point(4, 34);
-            this.CamPage.Margin = new System.Windows.Forms.Padding(4);
             this.CamPage.Name = "CamPage";
-            this.CamPage.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.CamPage.Size = new System.Drawing.Size(1755, 948);
+            this.CamPage.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.CamPage.Size = new System.Drawing.Size(1402, 751);
             this.CamPage.TabIndex = 9;
             this.CamPage.Text = "   المراقبة   ";
             this.CamPage.VerticalScrollbar = true;
             this.CamPage.VerticalScrollbarBarColor = true;
-            this.CamPage.VerticalScrollbarSize = 6;
+            this.CamPage.VerticalScrollbarSize = 5;
             // 
             // campanel1
             // 
@@ -1944,11 +1933,11 @@ namespace LoBridge
             this.campanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.campanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.campanel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campanel1.Location = new System.Drawing.Point(0, 6);
+            this.campanel1.Location = new System.Drawing.Point(0, 5);
             this.campanel1.Margin = new System.Windows.Forms.Padding(0);
             this.campanel1.Name = "campanel1";
             this.campanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.campanel1.Size = new System.Drawing.Size(1529, 942);
+            this.campanel1.Size = new System.Drawing.Size(1221, 746);
             this.campanel1.TabIndex = 10;
             this.campanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.campanel1_Paint);
             // 
@@ -1963,12 +1952,12 @@ namespace LoBridge
             this.camMenu.Controls.Add(this.mealSCamBtn);
             this.camMenu.Dock = System.Windows.Forms.DockStyle.Right;
             this.camMenu.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.camMenu.Location = new System.Drawing.Point(1529, 6);
+            this.camMenu.Location = new System.Drawing.Point(1221, 5);
             this.camMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.camMenu.MaximumSize = new System.Drawing.Size(226, 1132);
-            this.camMenu.MinimumSize = new System.Drawing.Size(226, 875);
+            this.camMenu.MaximumSize = new System.Drawing.Size(181, 906);
+            this.camMenu.MinimumSize = new System.Drawing.Size(181, 700);
             this.camMenu.Name = "camMenu";
-            this.camMenu.Size = new System.Drawing.Size(226, 942);
+            this.camMenu.Size = new System.Drawing.Size(181, 746);
             this.camMenu.TabIndex = 11;
             // 
             // button4
@@ -1982,10 +1971,10 @@ namespace LoBridge
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.Blue;
-            this.button4.Location = new System.Drawing.Point(0, 138);
-            this.button4.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.button4.Location = new System.Drawing.Point(0, 111);
+            this.button4.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(226, 49);
+            this.button4.Size = new System.Drawing.Size(181, 39);
             this.button4.TabIndex = 8;
             this.button4.Text = "تحديث القائمة";
             this.button4.UseVisualStyleBackColor = false;
@@ -2002,10 +1991,10 @@ namespace LoBridge
             this.camSettingBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.camSettingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.camSettingBtn.ForeColor = System.Drawing.Color.Blue;
-            this.camSettingBtn.Location = new System.Drawing.Point(0, 89);
-            this.camSettingBtn.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.camSettingBtn.Location = new System.Drawing.Point(0, 72);
+            this.camSettingBtn.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.camSettingBtn.Name = "camSettingBtn";
-            this.camSettingBtn.Size = new System.Drawing.Size(226, 49);
+            this.camSettingBtn.Size = new System.Drawing.Size(181, 39);
             this.camSettingBtn.TabIndex = 6;
             this.camSettingBtn.Text = "اعدادات المراقبة";
             this.camSettingBtn.UseVisualStyleBackColor = false;
@@ -2018,10 +2007,9 @@ namespace LoBridge
             this.cam_NameComboBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.cam_NameComboBox.ForeColor = System.Drawing.Color.Blue;
             this.cam_NameComboBox.FormattingEnabled = true;
-            this.cam_NameComboBox.Location = new System.Drawing.Point(0, 49);
-            this.cam_NameComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.cam_NameComboBox.Location = new System.Drawing.Point(0, 39);
             this.cam_NameComboBox.Name = "cam_NameComboBox";
-            this.cam_NameComboBox.Size = new System.Drawing.Size(226, 40);
+            this.cam_NameComboBox.Size = new System.Drawing.Size(181, 33);
             this.cam_NameComboBox.TabIndex = 7;
             this.cam_NameComboBox.SelectedIndexChanged += new System.EventHandler(this.cam_NameComboBox_SelectedIndexChanged);
             this.cam_NameComboBox.Click += new System.EventHandler(this.cam_NameComboBox_Click);
@@ -2049,9 +2037,9 @@ namespace LoBridge
             this.mealSCamBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mealSCamBtn.ForeColor = System.Drawing.Color.Blue;
             this.mealSCamBtn.Location = new System.Drawing.Point(0, 0);
-            this.mealSCamBtn.Margin = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            this.mealSCamBtn.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.mealSCamBtn.Name = "mealSCamBtn";
-            this.mealSCamBtn.Size = new System.Drawing.Size(226, 49);
+            this.mealSCamBtn.Size = new System.Drawing.Size(181, 39);
             this.mealSCamBtn.TabIndex = 4;
             this.mealSCamBtn.Text = "عرض الكاميرات";
             this.mealSCamBtn.UseVisualStyleBackColor = false;
@@ -2077,10 +2065,10 @@ namespace LoBridge
             // 
             this.panel1.Controls.Add(this.MainTab);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(6, 6);
+            this.panel1.Location = new System.Drawing.Point(5, 5);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1763, 986);
+            this.panel1.Size = new System.Drawing.Size(1073, 576);
             this.panel1.TabIndex = 8;
             // 
             // cameraTableAdapter
@@ -2089,23 +2077,23 @@ namespace LoBridge
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(1775, 998);
+            this.ClientSize = new System.Drawing.Size(1083, 586);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
-            this.MinimumSize = new System.Drawing.Size(796, 786);
+            this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.MinimumSize = new System.Drawing.Size(640, 589);
             this.Name = "Home";
-            this.Padding = new System.Windows.Forms.Padding(6);
+            this.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "إدارة اللوجستيات و الموازين - Lobridge V6.0.3";
+            this.Text = "إدارة اللوجستيات و الموازين - Lobridge V6.0.4";
             this.TransparencyKey = System.Drawing.Color.LavenderBlush;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);
