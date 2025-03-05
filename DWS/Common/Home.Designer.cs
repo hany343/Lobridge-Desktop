@@ -2105,7 +2105,7 @@ namespace LoBridge
             this.Padding = new System.Windows.Forms.Padding(6);
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "إدارة اللوجستيات و الموازين - Lobridge V6.0.1";
+            this.Text = "إدارة اللوجستيات و الموازين - Lobridge V6.0.3";
             this.TransparencyKey = System.Drawing.Color.LavenderBlush;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Home_FormClosing);

@@ -73,7 +73,7 @@ namespace LoBridge
                             counted = "-pack";
                         }
 
-                        if (decimal.Parse(this.oUTDataset.Lcacrd1.Rows[0]["Net_Weight"].ToString()) == 0)
+                        if (decimal.Parse(this.oUTDataset.Lcacrd1.Rows[0]["S_weight"].ToString()) == 0 && decimal.Parse(this.oUTDataset.Lcacrd1.Rows[0]["S_weight"].ToString()) == 0)
                         {
                             counted = "-packnw";
                         }

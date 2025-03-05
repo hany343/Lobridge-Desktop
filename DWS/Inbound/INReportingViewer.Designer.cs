@@ -34,10 +34,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.mailtextBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.searchBtn = new System.Windows.Forms.Button();
+            this.textBox1search = new System.Windows.Forms.TextBox();
             this.iNdataset = new LoBridge.INdataset();
             this.iNRptTableAdapter = new LoBridge.INdatasetTableAdapters.INRptTableAdapter();
-            this.textBox1search = new System.Windows.Forms.TextBox();
-            this.searchBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iNdataset)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.crystalReportViewer1.ShowParameterPanelButton = false;
             this.crystalReportViewer1.ShowTextSearchButton = false;
             this.crystalReportViewer1.ShowZoomButton = false;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1110, 1022);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1110, 1016);
             this.crystalReportViewer1.TabIndex = 2;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
@@ -69,7 +69,7 @@
             this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitBtn.FlatAppearance.BorderSize = 0;
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitBtn.Location = new System.Drawing.Point(3, 7);
+            this.ExitBtn.Location = new System.Drawing.Point(244, 9);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(33, 30);
             this.ExitBtn.TabIndex = 114;
@@ -90,7 +90,7 @@
             // 
             this.mailtextBox1.Location = new System.Drawing.Point(395, 12);
             this.mailtextBox1.Name = "mailtextBox1";
-            this.mailtextBox1.Size = new System.Drawing.Size(184, 20);
+            this.mailtextBox1.Size = new System.Drawing.Size(184, 24);
             this.mailtextBox1.TabIndex = 116;
             // 
             // panel1
@@ -106,23 +106,6 @@
             this.panel1.Size = new System.Drawing.Size(1110, 39);
             this.panel1.TabIndex = 117;
             // 
-            // iNdataset
-            // 
-            this.iNdataset.DataSetName = "INdataset";
-            this.iNdataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // iNRptTableAdapter
-            // 
-            this.iNRptTableAdapter.ClearBeforeFill = true;
-            // 
-            // textBox1search
-            // 
-            this.textBox1search.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1search.Location = new System.Drawing.Point(904, 9);
-            this.textBox1search.Name = "textBox1search";
-            this.textBox1search.Size = new System.Drawing.Size(192, 26);
-            this.textBox1search.TabIndex = 117;
-            // 
             // searchBtn
             // 
             this.searchBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -135,12 +118,29 @@
             this.searchBtn.UseVisualStyleBackColor = false;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
+            // textBox1search
+            // 
+            this.textBox1search.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1search.Location = new System.Drawing.Point(904, 9);
+            this.textBox1search.Name = "textBox1search";
+            this.textBox1search.Size = new System.Drawing.Size(192, 30);
+            this.textBox1search.TabIndex = 117;
+            // 
+            // iNdataset
+            // 
+            this.iNdataset.DataSetName = "INdataset";
+            this.iNdataset.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // iNRptTableAdapter
+            // 
+            this.iNRptTableAdapter.ClearBeforeFill = true;
+            // 
             // INReportingViewer
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1110, 1061);
+            this.ClientSize = new System.Drawing.Size(1110, 1055);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.panel1);
             this.Name = "INReportingViewer";

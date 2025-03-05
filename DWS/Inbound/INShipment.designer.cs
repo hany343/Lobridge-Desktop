@@ -311,7 +311,7 @@ namespace LoBridge
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.comm_NAMEComboBox);
             this.panel1.Controls.Add(lading_PortLabel);
             this.panel1.Controls.Add(this.lading_PortTextBox);

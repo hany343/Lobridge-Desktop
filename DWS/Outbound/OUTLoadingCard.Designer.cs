@@ -461,7 +461,7 @@
             this.panel1.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(10, 53);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1226, 717);
             this.panel1.TabIndex = 34;
@@ -469,7 +469,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.BackColor = System.Drawing.Color.SteelBlue;
             this.groupBox2.CausesValidation = false;
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.noWcheckBox1);
@@ -495,9 +495,9 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Enabled = false;
             this.groupBox2.Location = new System.Drawing.Point(0, 219);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(1226, 534);
             this.groupBox2.TabIndex = 101;
             this.groupBox2.TabStop = false;
@@ -519,7 +519,7 @@
             this.noWcheckBox1.AutoSize = true;
             this.noWcheckBox1.BackColor = System.Drawing.Color.Transparent;
             this.noWcheckBox1.Location = new System.Drawing.Point(237, 24);
-            this.noWcheckBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.noWcheckBox1.Margin = new System.Windows.Forms.Padding(4);
             this.noWcheckBox1.Name = "noWcheckBox1";
             this.noWcheckBox1.Size = new System.Drawing.Size(102, 36);
             this.noWcheckBox1.TabIndex = 127;
@@ -533,7 +533,7 @@
             this.oldQty.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lading_OutBindingSource, "Qty", true));
             this.oldQty.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oldQty.Location = new System.Drawing.Point(690, 31);
-            this.oldQty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.oldQty.Margin = new System.Windows.Forms.Padding(4);
             this.oldQty.Name = "oldQty";
             this.oldQty.ReadOnly = true;
             this.oldQty.Size = new System.Drawing.Size(95, 35);
@@ -555,7 +555,7 @@
             this.reWeightBtn.AutoSize = true;
             this.reWeightBtn.BackColor = System.Drawing.Color.Transparent;
             this.reWeightBtn.Location = new System.Drawing.Point(54, 25);
-            this.reWeightBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reWeightBtn.Margin = new System.Windows.Forms.Padding(4);
             this.reWeightBtn.Name = "reWeightBtn";
             this.reWeightBtn.Size = new System.Drawing.Size(107, 36);
             this.reWeightBtn.TabIndex = 125;
@@ -579,9 +579,9 @@
             this.drivergroupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.drivergroupBox3.Font = new System.Drawing.Font("Sakkal Majalla", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.drivergroupBox3.Location = new System.Drawing.Point(54, 174);
-            this.drivergroupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.drivergroupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.drivergroupBox3.Name = "drivergroupBox3";
-            this.drivergroupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.drivergroupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.drivergroupBox3.Size = new System.Drawing.Size(466, 201);
             this.drivergroupBox3.TabIndex = 124;
             this.drivergroupBox3.TabStop = false;
@@ -592,7 +592,7 @@
             this.driver_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.driversBindingSource, "Driver_ID", true));
             this.driver_IDTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.driver_IDTextBox.Location = new System.Drawing.Point(224, 69);
-            this.driver_IDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.driver_IDTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.driver_IDTextBox.Name = "driver_IDTextBox";
             this.driver_IDTextBox.Size = new System.Drawing.Size(124, 34);
             this.driver_IDTextBox.TabIndex = 132;
@@ -631,7 +631,7 @@
             this.driver_NameComboBox.Font = new System.Drawing.Font("Sakkal Majalla", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.driver_NameComboBox.FormattingEnabled = true;
             this.driver_NameComboBox.Location = new System.Drawing.Point(99, 26);
-            this.driver_NameComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.driver_NameComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.driver_NameComboBox.Name = "driver_NameComboBox";
             this.driver_NameComboBox.Size = new System.Drawing.Size(249, 33);
             this.driver_NameComboBox.TabIndex = 93;
@@ -655,7 +655,7 @@
             this.liscense_numTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.driversBindingSource, "Liscense_num", true));
             this.liscense_numTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.liscense_numTextBox.Location = new System.Drawing.Point(99, 154);
-            this.liscense_numTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.liscense_numTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.liscense_numTextBox.Name = "liscense_numTextBox";
             this.liscense_numTextBox.ReadOnly = true;
             this.liscense_numTextBox.Size = new System.Drawing.Size(249, 34);
@@ -668,7 +668,7 @@
             this.n_CardTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.driversBindingSource, "N_Card", true));
             this.n_CardTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.n_CardTextBox.Location = new System.Drawing.Point(99, 111);
-            this.n_CardTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.n_CardTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.n_CardTextBox.Name = "n_CardTextBox";
             this.n_CardTextBox.Size = new System.Drawing.Size(249, 34);
             this.n_CardTextBox.TabIndex = 7;
@@ -693,9 +693,9 @@
             this.truckGroupBox3.Controls.Add(truck_numberLabel);
             this.truckGroupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.truckGroupBox3.Location = new System.Drawing.Point(638, 168);
-            this.truckGroupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.truckGroupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.truckGroupBox3.Name = "truckGroupBox3";
-            this.truckGroupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.truckGroupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.truckGroupBox3.Size = new System.Drawing.Size(468, 208);
             this.truckGroupBox3.TabIndex = 123;
             this.truckGroupBox3.TabStop = false;
@@ -706,7 +706,7 @@
             this.truck_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.truckBindingSource, "Truck_ID", true));
             this.truck_IDTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_IDTextBox.Location = new System.Drawing.Point(208, 76);
-            this.truck_IDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.truck_IDTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.truck_IDTextBox.Name = "truck_IDTextBox";
             this.truck_IDTextBox.Size = new System.Drawing.Size(148, 34);
             this.truck_IDTextBox.TabIndex = 132;
@@ -740,7 +740,7 @@
             this.truck_numberComboBox.Font = new System.Drawing.Font("Sakkal Majalla", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_numberComboBox.IntegralHeight = false;
             this.truck_numberComboBox.Location = new System.Drawing.Point(206, 32);
-            this.truck_numberComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.truck_numberComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.truck_numberComboBox.MaxDropDownItems = 5;
             this.truck_numberComboBox.Name = "truck_numberComboBox";
             this.truck_numberComboBox.Size = new System.Drawing.Size(150, 33);
@@ -754,7 +754,7 @@
             this.ownerTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.truckBindingSource, "Owner", true));
             this.ownerTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ownerTextBox.Location = new System.Drawing.Point(24, 161);
-            this.ownerTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ownerTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ownerTextBox.Name = "ownerTextBox";
             this.ownerTextBox.ReadOnly = true;
             this.ownerTextBox.Size = new System.Drawing.Size(332, 34);
@@ -766,7 +766,7 @@
             this.trailer_trafficTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.truckBindingSource, "Trailer_traffic", true));
             this.trailer_trafficTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trailer_trafficTextBox.Location = new System.Drawing.Point(24, 121);
-            this.trailer_trafficTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trailer_trafficTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.trailer_trafficTextBox.Name = "trailer_trafficTextBox";
             this.trailer_trafficTextBox.ReadOnly = true;
             this.trailer_trafficTextBox.Size = new System.Drawing.Size(124, 34);
@@ -778,7 +778,7 @@
             this.trailer_numberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.truckBindingSource, "Trailer_number", true));
             this.trailer_numberTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trailer_numberTextBox.Location = new System.Drawing.Point(208, 119);
-            this.trailer_numberTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trailer_numberTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.trailer_numberTextBox.Name = "trailer_numberTextBox";
             this.trailer_numberTextBox.ReadOnly = true;
             this.trailer_numberTextBox.Size = new System.Drawing.Size(148, 34);
@@ -790,7 +790,7 @@
             this.truck_trafficTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.truckBindingSource, "Truck_traffic", true));
             this.truck_trafficTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.truck_trafficTextBox.Location = new System.Drawing.Point(24, 80);
-            this.truck_trafficTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.truck_trafficTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.truck_trafficTextBox.Name = "truck_trafficTextBox";
             this.truck_trafficTextBox.ReadOnly = true;
             this.truck_trafficTextBox.Size = new System.Drawing.Size(124, 34);
@@ -800,7 +800,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(-222, 71);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(113, 41);
@@ -809,7 +809,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(-359, 151);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(249, 41);
@@ -834,7 +834,7 @@
             this.representativeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lading_OutBindingSource, "Representative", true));
             this.representativeTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.representativeTextBox.Location = new System.Drawing.Point(53, 122);
-            this.representativeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.representativeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.representativeTextBox.Name = "representativeTextBox";
             this.representativeTextBox.Size = new System.Drawing.Size(465, 35);
             this.representativeTextBox.TabIndex = 6;
@@ -851,7 +851,7 @@
             "ارضه",
             "وصال"});
             this.transType.Location = new System.Drawing.Point(638, 122);
-            this.transType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.transType.Margin = new System.Windows.Forms.Padding(4);
             this.transType.Name = "transType";
             this.transType.Size = new System.Drawing.Size(466, 33);
             this.transType.TabIndex = 3;
@@ -867,7 +867,7 @@
             "صب",
             "معبأ"});
             this.fill_TypeComboBox.Location = new System.Drawing.Point(642, 74);
-            this.fill_TypeComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fill_TypeComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.fill_TypeComboBox.MinimumSize = new System.Drawing.Size(465, 0);
             this.fill_TypeComboBox.Name = "fill_TypeComboBox";
             this.fill_TypeComboBox.Size = new System.Drawing.Size(465, 33);
@@ -877,7 +877,7 @@
             // 
             this.ladingIDTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ladingIDTextBox.Location = new System.Drawing.Point(424, 24);
-            this.ladingIDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ladingIDTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ladingIDTextBox.Name = "ladingIDTextBox";
             this.ladingIDTextBox.ReadOnly = true;
             this.ladingIDTextBox.Size = new System.Drawing.Size(110, 35);
@@ -890,7 +890,7 @@
             this.notesTextBox.BackColor = System.Drawing.Color.LightBlue;
             this.notesTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notesTextBox.Location = new System.Drawing.Point(52, 382);
-            this.notesTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.notesTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.notesTextBox.MaxLength = 600;
             this.notesTextBox.Multiline = true;
             this.notesTextBox.Name = "notesTextBox";
@@ -905,7 +905,7 @@
             this.lad_qty_requiredTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lading_OutBindingSource, "Qty", true));
             this.lad_qty_requiredTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lad_qty_requiredTextBox.Location = new System.Drawing.Point(984, 30);
-            this.lad_qty_requiredTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lad_qty_requiredTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.lad_qty_requiredTextBox.Name = "lad_qty_requiredTextBox";
             this.lad_qty_requiredTextBox.Size = new System.Drawing.Size(123, 35);
             this.lad_qty_requiredTextBox.TabIndex = 1;
@@ -923,7 +923,7 @@
             this.transCocomboBox1.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transCocomboBox1.FormattingEnabled = true;
             this.transCocomboBox1.Location = new System.Drawing.Point(53, 81);
-            this.transCocomboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.transCocomboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.transCocomboBox1.MinimumSize = new System.Drawing.Size(465, 0);
             this.transCocomboBox1.Name = "transCocomboBox1";
             this.transCocomboBox1.Size = new System.Drawing.Size(465, 33);
@@ -940,7 +940,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.BackColor = System.Drawing.Color.Silver;
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -964,9 +964,9 @@
             this.groupBox1.Controls.Add(comm_typeLabel);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox1.Size = new System.Drawing.Size(1226, 219);
             this.groupBox1.TabIndex = 100;
@@ -1037,7 +1037,7 @@
             this.order_Number1ComboBox.DataSource = this.orderForLadBindingSource;
             this.order_Number1ComboBox.DisplayMember = "Order_Number";
             this.order_Number1ComboBox.Location = new System.Drawing.Point(847, 31);
-            this.order_Number1ComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.order_Number1ComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.order_Number1ComboBox.MaxDropDownItems = 5;
             this.order_Number1ComboBox.Name = "order_Number1ComboBox";
             this.order_Number1ComboBox.Size = new System.Drawing.Size(259, 40);
@@ -1056,7 +1056,7 @@
             this.AllowedtextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderForLadBindingSource, "Allowed_qty", true));
             this.AllowedtextBox2.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AllowedtextBox2.Location = new System.Drawing.Point(260, 166);
-            this.AllowedtextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AllowedtextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.AllowedtextBox2.Name = "AllowedtextBox2";
             this.AllowedtextBox2.ReadOnly = true;
             this.AllowedtextBox2.Size = new System.Drawing.Size(354, 35);
@@ -1068,7 +1068,7 @@
             this.orderqtyTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderForLadBindingSource, "Qty", true));
             this.orderqtyTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderqtyTextBox.Location = new System.Drawing.Point(260, 31);
-            this.orderqtyTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderqtyTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.orderqtyTextBox.Name = "orderqtyTextBox";
             this.orderqtyTextBox.ReadOnly = true;
             this.orderqtyTextBox.Size = new System.Drawing.Size(354, 35);
@@ -1081,7 +1081,7 @@
             this.cust_NAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderForLadBindingSource, "Cust_NAME", true));
             this.cust_NAMETextBox.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cust_NAMETextBox.Location = new System.Drawing.Point(752, 80);
-            this.cust_NAMETextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cust_NAMETextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cust_NAMETextBox.Name = "cust_NAMETextBox";
             this.cust_NAMETextBox.ReadOnly = true;
             this.cust_NAMETextBox.Size = new System.Drawing.Size(354, 35);
@@ -1092,7 +1092,7 @@
             // 
             this.reservedQtextBox1.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reservedQtextBox1.Location = new System.Drawing.Point(260, 121);
-            this.reservedQtextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reservedQtextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.reservedQtextBox1.Name = "reservedQtextBox1";
             this.reservedQtextBox1.ReadOnly = true;
             this.reservedQtextBox1.Size = new System.Drawing.Size(354, 35);
@@ -1104,7 +1104,7 @@
             this.comm_NAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderForLadBindingSource, "Comm_NAME", true));
             this.comm_NAMETextBox.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comm_NAMETextBox.Location = new System.Drawing.Point(753, 171);
-            this.comm_NAMETextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comm_NAMETextBox.Margin = new System.Windows.Forms.Padding(4);
             this.comm_NAMETextBox.Name = "comm_NAMETextBox";
             this.comm_NAMETextBox.ReadOnly = true;
             this.comm_NAMETextBox.Size = new System.Drawing.Size(354, 35);
@@ -1117,7 +1117,7 @@
             this.orderremain_QtyTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderForLadBindingSource, "Remain_Qty", true));
             this.orderremain_QtyTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderremain_QtyTextBox.Location = new System.Drawing.Point(260, 76);
-            this.orderremain_QtyTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderremain_QtyTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.orderremain_QtyTextBox.Name = "orderremain_QtyTextBox";
             this.orderremain_QtyTextBox.ReadOnly = true;
             this.orderremain_QtyTextBox.Size = new System.Drawing.Size(354, 35);
@@ -1131,7 +1131,7 @@
             this.contract_idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderForLadBindingSource, "Contract_Number", true));
             this.contract_idTextBox.Font = new System.Drawing.Font("Sakkal Majalla", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contract_idTextBox.Location = new System.Drawing.Point(753, 126);
-            this.contract_idTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contract_idTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.contract_idTextBox.Name = "contract_idTextBox";
             this.contract_idTextBox.ReadOnly = true;
             this.contract_idTextBox.Size = new System.Drawing.Size(354, 35);
@@ -1143,7 +1143,7 @@
             // 
             this.truck_IDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lading_OutBindingSource, "Truck_ID", true));
             this.truck_IDTextBox1.Location = new System.Drawing.Point(259, 566);
-            this.truck_IDTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.truck_IDTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.truck_IDTextBox1.Name = "truck_IDTextBox1";
             this.truck_IDTextBox1.Size = new System.Drawing.Size(124, 41);
             this.truck_IDTextBox1.TabIndex = 125;
@@ -1152,7 +1152,7 @@
             // 
             this.driver_IDTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lading_OutBindingSource, "Driver_ID", true));
             this.driver_IDTextBox1.Location = new System.Drawing.Point(430, 570);
-            this.driver_IDTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.driver_IDTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.driver_IDTextBox1.Name = "driver_IDTextBox1";
             this.driver_IDTextBox1.Size = new System.Drawing.Size(124, 41);
             this.driver_IDTextBox1.TabIndex = 126;
@@ -1161,7 +1161,7 @@
             // 
             this.order_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lading_OutBindingSource, "Order_ID", true));
             this.order_IDTextBox.Location = new System.Drawing.Point(602, 570);
-            this.order_IDTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.order_IDTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.order_IDTextBox.Name = "order_IDTextBox";
             this.order_IDTextBox.Size = new System.Drawing.Size(124, 41);
             this.order_IDTextBox.TabIndex = 131;
@@ -1300,7 +1300,7 @@
             this.ExitBtn.FlatAppearance.BorderSize = 0;
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBtn.Location = new System.Drawing.Point(1180, 14);
-            this.ExitBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ExitBtn.Margin = new System.Windows.Forms.Padding(4);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(48, 41);
             this.ExitBtn.TabIndex = 112;

@@ -355,6 +355,11 @@ namespace LoBridge
             {
                 return false;
             }
+            if(truck_TypeComboBox.Text.Trim().Length < 1)
+            {
+                MessageBox.Show("اختر نوع الشاحنة");
+                return false;
+            }
             return true;
         }
         private bool checkOrderQty()

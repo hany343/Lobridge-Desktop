@@ -586,7 +586,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.BackColor = System.Drawing.Color.SteelBlue;
             this.groupBox2.Controls.Add(this.btn_loadports);
             this.groupBox2.Controls.Add(this.linkLabel2);
             this.groupBox2.Controls.Add(this.drivergroupBox3);
@@ -965,7 +965,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.BackColor = System.Drawing.Color.Silver;
             this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Controls.Add(label8);
             this.groupBox1.Controls.Add(label7);
@@ -1399,6 +1399,7 @@
             this.tableAdapterManager.LogsTableAdapter = null;
             this.tableAdapterManager.RepresentativeTableAdapter = this.representativeTableAdapter;
             this.tableAdapterManager.Transport_CoTableAdapter = null;
+            this.tableAdapterManager.Truck_TypesTableAdapter = null;
             this.tableAdapterManager.TruckTableAdapter = this.truckTableAdapter;
             this.tableAdapterManager.UpdateOrder = LoBridge.DLWSDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.User_PermTableAdapter = null;
